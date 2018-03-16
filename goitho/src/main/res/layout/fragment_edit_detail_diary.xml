@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_back"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:src="@drawable/ic_back"
+                android:padding="@dimen/distance_5dp"/>
+
+            <TextView
+                android:id="@+id/txt_title_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_add_detail_diary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_save"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:text="@string/text_save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp"
+                android:padding="@dimen/distance_5dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.goitho.customerapp.widgets.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/distance_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/distance_10dp"
+                android:paddingStart="@dimen/distance_5dp"
+                android:paddingEnd="@dimen/distance_5dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:background="@drawable/bg_round_corner_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <Spinner
+                    android:id="@+id/spin_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:popupBackground="@android:drawable/dialog_holo_light_frame" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_type_action"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <Spinner
+                    android:id="@+id/spin_type_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:popupBackground="@android:drawable/dialog_holo_light_frame" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time"
+                    android:textSize="@dimen/text_17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_grey_dark"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_datetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lúc hh:mm:ss dd/MM/yyyy"
+                        android:textSize="@dimen/text_15sp"
+                        android:textColor="@color/text_grey"
+                        android:layout_marginStart="@dimen/distance_10dp"
+                        android:layout_marginEnd="@dimen/distance_10dp" />
+                    <ImageView
+                        android:id="@+id/img_calendar"
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/size_50dp"
+                        android:src="@drawable/ic_calender"
+                        android:padding="@dimen/distance_10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_note"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp" />
+
+                <EditText
+                    android:id="@+id/et_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:hint="@string/text_input_note"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_image"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_add"
+                        android:layout_width="@dimen/size_80dp"
+                        android:layout_height="@dimen/size_80dp"
+                        android:src="@drawable/ic_plus"
+                        android:padding="@dimen/distance_15dp"
+                        android:background="@drawable/bg_color_border_imageview"
+                        android:layout_marginEnd="@dimen/distance_10dp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_80dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+                <GridView
+                    android:id="@+id/grid"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:numColumns="3"
+                    android:gravity="center"
+                    android:columnWidth="@dimen/size_90dp"
+                    android:layout_marginTop="@dimen/distance_3dp"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:horizontalSpacing="20dp"
+                    android:verticalSpacing="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/distance_3dp"
+                android:layout_marginStart="@dimen/distance_10dp"
+                android:layout_marginEnd="@dimen/distance_10dp"
+                android:paddingStart="@dimen/distance_5dp"
+                android:paddingEnd="@dimen/distance_5dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:background="@drawable/bg_round_corner_layout"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã số đất thừa"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_field_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_field_area"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diện tích (m2)"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_field_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_fertilizer"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loại phân bón/thuốc"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_fertilizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_fertilizer_id"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã số lô(thuốc)"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_fertilizer_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_dosage"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liều lượng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_dosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:inputType="text"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_quantity"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số lượng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_stock"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tồn (kg/lít)"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_goal"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mục đích sử dụng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_equiment"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thiết bị sử dụng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_equiment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_isolation_time"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian cách ly"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp">
+
+                    <EditText
+                        android:id="@+id/et_isolation_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/text_15sp"
+                        android:backgroundTint="@color/smoke"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <Spinner
+                        android:id="@+id/spin_use"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vệ sinh dụng cụ"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đã vệ sinh"
+                        android:textColor="@color/text_grey"
+                        android:checked="true" android:layout_marginEnd="@dimen/distance_15dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chưa vệ sinh"
+                        android:textColor="@color/text_grey"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/distance_3dp"
+                android:layout_marginStart="@dimen/distance_10dp"
+                android:layout_marginEnd="@dimen/distance_10dp"
+                android:paddingStart="@dimen/distance_5dp"
+                android:paddingEnd="@dimen/distance_5dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:background="@drawable/bg_round_corner_layout"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loại phân bón/thuốc"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_fertilizer_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_fertilizer_id_buy"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã số lô(thuốc)"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_fertilizer_id_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_quantity_buy"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số lượng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_quantity_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:inputType="text"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_quality_buy"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chất lượng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_quality_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_company"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên công ty"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:nextFocusDown="@+id/et_store"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cửa hàng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <EditText
+                    android:id="@+id/et_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text_15sp"
+                    android:backgroundTint="@color/smoke"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày hết hạng"
+                    android:textSize="@dimen/text_17sp"
+                    android:textColor="@color/text_grey_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/distance_10dp"
+                    android:layout_marginEnd="@dimen/distance_10dp"
+                    android:layout_marginTop="@dimen/distance_3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/txt_exp_date_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/text_15sp"
+                        android:layout_marginStart="@dimen/distance_10dp"
+                        android:gravity="center_vertical"/>
+                    <ImageView
+                        android:id="@+id/img_calendar_buy"
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/size_50dp"
+                        android:src="@drawable/ic_calender"
+                        android:padding="@dimen/distance_10dp"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_place"
+                android:textSize="@dimen/text_17sp"
+                android:textColor="@color/text_grey_dark"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/distance_25dp"
+                android:layout_marginEnd="@dimen/distance_10dp"
+                android:layout_marginBottom="@dimen/distance_5dp"
+                android:layout_marginTop="@dimen/distance_5dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_250dp"
+                android:id="@+id/mapFragmentContainer"
+                android:layout_marginTop="@dimen/distance_3dp"
+                android:layout_marginStart="@dimen/distance_10dp"
+                android:layout_marginEnd="@dimen/distance_10dp"
+                android:layout_marginBottom="@dimen/distance_5dp"/>
+        </LinearLayout>
+
+    </com.goitho.customerapp.widgets.CustomScrollView>
+
+</LinearLayout>

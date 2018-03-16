@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.fernandocejas.frodo'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.androidCompileSdkVersion
+    buildToolsVersion globalConfiguration.androidBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+        versionCode globalConfiguration.androidVersionCode
+        versionName globalConfiguration.androidVersionName
+    }
+
+    publishNonDefault true
+
+    productFlavors {
+        dev {
+
+        }
+
+        prod {
+
+        }
+    }
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.appDependencies
+
+    compile appDependencies.facebookSDK
+    compile appDependencies.googlePlatServices
+    compile appDependencies.firebaseMessaging
+    compile appDependencies.firebaseCrash
+
+}

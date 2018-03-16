@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">GoiThoCustomer</string>
+
+    <string name="permission_setting">Setting</string>
+    <string name="permission_close">Close</string>
+    <string name="permission_confirm">Confirm</string>
+    <string name="text_login_with_permission">Đăng nhập với tư cách là</string>
+    <string name="text_employee">Nhân viên</string>
+    <string name="text_farmer">Nông hộ</string>
+    <string name="text_login">Đăng nhập</string>
+    <string name="text_forgot_password">Quên mật khẩu ?</string>
+    <string name="text_back">Trở về</string>
+    <string name="text_login_farmer">Đăng nhập nông dân</string>
+    <string name="text_login_employee">Đăng nhập nhân viên</string>
+    <string name="text_choose_farmer">Lựa chọn nông hộ</string>
+    <string name="text_famer_id">Mã nông hộ:</string>
+    <string name="text_address">Địa chỉ:</string>
+    <string name="text_diary">Nhật ký sản xuất</string>
+    <string name="text_search">Tìm kiếm</string>
+
+    <string name="text_day">Theo ngày</string>
+    <string name="text_week">Theo tuần</string>
+    <string name="text_month">Theo tháng</string>
+    <string name="text_product">Theo sản phẩm</string>
+    <string name="text_logout">Đăng xuất</string>
+    <string name="text_add_diary">Thêm nhật ký</string>
+    <string name="text_famer_rate">Đánh giá nông hộ:</string>
+    <string-array name="array_spinner_search">
+        <item>@string/text_day</item>
+        <item>@string/text_week</item>
+        <item>@string/text_month</item>
+        <item>@string/text_product</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="text_toolbar_certificate">Thông tin chuẩn an toàn thực phẩm</string>
+    <string name="text_safety">Chuẩn an toàn</string>
+    <string name="text_note">Ghi chú</string>
+    <string name="text_note_empty">Chưa có ghi chú</string>
+    <string name="text_image">Hình ảnh</string>
+    <string name="text_edit_detail_diary">Chỉnh sửa nhật ký</string>
+    <string name="text_add_detail_diary">Thêm nhật ký</string>
+    <string name="text_edit_profile">Chỉnh sửa trang cá nhân</string>
+    <string name="text_type_action">Loại việc</string>
+    <string name="text_time">Thời gian</string>
+    <string name="text_updated">đã cập nhật lúc</string>
+    <string name="day">Ngày</string>
+    <string name="time">lần</string>
+    <string name="text_no_data">Chưa có</string>
+    <string name="text_add_image">Bạn có thêm hình ảnh?</string>
+    <string name="text_agree">Đồng ý</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_diary_day">Nhật ký ngày</string>
+    <string name="text_save_address">Bạn có muốn lưu địa chỉ không?</string>
+    <string name="text_at">Lúc</string>
+    <string name="text_add_product">Thêm sản phẩm</string>
+    <string name="product">Sản phẩm</string>
+    <string name="text_info_certificate">Thông tin chuẩn an toàn thực phẩm</string>
+    <string name="text_add_action">Tạo loại việc</string>
+    <string name="text_add">Thêm</string>
+    <string name="text_action_for_product">Tên loại việc cho sản phẩm</string>
+    <string name="text_delete_action">Xóa loại việc</string>
+    <string name="text_delete_action_question">Bạn có chắc muốn xóa loại việc</string>
+    <string name="text_input_password">Vui lòng nhập mật khẩu</string>
+    <string name="text_accept_delete_action">Tôi muốn xóa</string>
+    <string name="text_history_updated">Lịch sử cập nhật</string>
+    <string name="text_intro">Công ty nông nghiệp DTK</string>
+    <string name="text_intro1" >Nhà cung cấp rau củ sạch</string>
+    <string name="text_begin">Bắt đầu</string>
+    <string name="text_username">Tên tài khoản</string>
+    <string name="text_password">Mật khẩu</string>
+    <string name="text_hi">Xin chào</string>
+    <string name="text_login_to_continue">Đăng nhập để tiếp tục</string>
+    <string name="text_dont_have_account">Không có tài khoản?</string>
+    <string name="text_register">Đăng ký ngay</string>
+    <string name="text_search_farmer"><i>Tìm kiếm nông hộ</i></string>
+    <string name="text_action">Hoạt động: </string>
+    <string name="text_profile">Thông tin cá nhân</string>
+    <string name="text_message">Tin nhắn</string>
+    <string name="text_noti">Thông báo</string>
+    <string name="text_setting">Cài đặt</string>
+
+    <string name="text_sweet_dialog_title">Thông báo</string>
+    <string name="text_sweet_dialog_confirm_text">Đồng ý</string>
+    <string name="text_sweet_dialog_confirm_text_exit">Thoát</string>
+    <string name="text_sweet_dialog_confirm_text_cancel">Hủy</string>
+    <string name="text_sweet_dialog_check_username_password">Vui lòng kiểm tra tài khoản và mật khẩu</string>
+    <string name="text_progress_dialog">Vui lòng đợi ...</string>
+    <string name="text_sweet_dialog_error">Đã có lỗi xảy ra, vui lòng thử lại ...</string>
+    <string name="text_id">Mã:</string>
+    <string name="text_farmer_id">Mã nông hộ:</string>
+    <string name="text_employee_id">Mã nhân viên:</string>
+    <string name="text_sweet_text_empty">Không được bỏ trống</string>
+    <string name="text_delete_action_description">Nếu bạn xóa loại việc này, các nhật ký trước đây mà bạn nhập với loại việc </string>
+    <string name="text_will_be_deleted"> sẽ bị xóa</string>
+    <string name="text_famer_phone">Số điện thoại:</string>
+    <string name="text_place">Địa điểm</string>
+    <string name="text_save">Lưu</string>
+    <string name="text_add_image1">Thêm ảnh</string>
+    <string name="text_product_name">Tên sản phẩm:</string>
+    <string name="text_product_title">Sản phẩm</string>
+    <string name="text_action_title">Hành động</string>
+    <string name="text_empty">Chưa có</string>
+    <string name="text_list_farmer">Danh sách nông hộ</string>
+    <string name="text_take_picture">Chụp ảnh</string>
+    <string name="text_pick_picture">Chọn ảnh</string>
+    <string name="text_input_note">Vui lòng nhập ghi chú</string>
+</resources>

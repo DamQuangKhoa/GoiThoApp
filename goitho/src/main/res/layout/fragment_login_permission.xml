@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_login_with_permission"
+        android:textSize="@dimen/text_17sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/distance_10dp"/>
+
+    <Button
+        android:id="@+id/btn_employee"
+        android:layout_width="@dimen/size_250dp"
+        android:layout_height="@dimen/size_55dp"
+        android:text="@string/text_employee"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_round_corner_button_white_background"
+        android:padding="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_110dp"/>
+
+    <View
+        android:layout_width="@dimen/size_200dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+
+        android:layout_marginTop="@dimen/distance_25dp"
+        android:layout_marginBottom="@dimen/distance_25dp"/>
+
+    <Button
+        android:id="@+id/btn_farmer"
+        android:layout_width="@dimen/size_250dp"
+        android:layout_height="@dimen/size_55dp"
+        android:text="@string/text_farmer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_round_corner_button_white_stroke"
+        android:padding="@dimen/distance_15dp" />
+
+</LinearLayout>

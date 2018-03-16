@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:src="@drawable/ic_back"
+                android:padding="@dimen/distance_5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_delete_action"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:padding="@dimen/distance_5dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn có chắc muốn xóa loại việc Tưới nước ?"
+        android:textColor="@color/text_grey_dark"
+        android:textSize="@dimen/text_15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:layout_marginStart="@dimen/distance_55dp"
+        android:layout_marginEnd="@dimen/distance_55dp"/>
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nếu bạn xóa loại việc này, các nhật ký trước đây mà bạn nhập với loại việc Tưới việc sẽ bị xóa"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/text_15sp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:layout_marginStart="@dimen/distance_55dp"
+        android:layout_marginEnd="@dimen/distance_55dp"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/size_200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_grey"
+        android:hint="@string/text_input_password"
+        android:backgroundTint="@color/smoke"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_15dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="@dimen/size_200dp"
+        android:layout_height="@dimen/size_50dp"
+        android:text="@string/text_accept_delete_action"
+        android:textSize="@dimen/text_15sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/distance_15dp"/>
+
+</LinearLayout>

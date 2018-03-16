@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.fernandocejas.frodo'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.androidCompileSdkVersion
+    buildToolsVersion globalConfiguration.androidBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+        versionCode globalConfiguration.androidVersionCode
+        versionName globalConfiguration.androidVersionName
+    }
+
+//    publishNonDefault true
+//
+//    buildTypes {
+//        release {
+//
+//        }
+//        debug {
+//
+//        }
+//    }
+//
+//    productFlavors {
+//        dev {
+//
+//        }
+//        prod {
+//
+//        }
+//    }
+
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.appDependencies
+
+    compile appDependencies.rxJava
+    compile appDependencies.rxAndroid
+    compile appDependencies.retrofitRxJava
+    compile appDependencies.retrofitConverter
+    compile appDependencies.retrofit
+
+    compile project(path: ':data')
+
+//    devDataDebugCompile project(path: ':data', configuration: 'devDebug')
+//
+//    prodDataDebugCompile project(path: ':data', configuration: 'devRelease')
+//
+//    devDataReleaseCompile project(path: ':data', configuration: 'prodDebug')
+//
+//    prodDataReleaseCompile project(path: ':data', configuration: 'prodRelease')
+}

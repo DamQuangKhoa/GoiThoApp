@@ -1,0 +1,485 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.8.6 built on Friday Jun 5, 2015 at 23:41:42 GMT
+---- Dump Properties ---
+Dump file: ajcore.20171126.022653.739.txt
+Dump reason: java.util.EmptyStackException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.util.EmptyStackException
+	at java.util.Stack.peek(Stack.java:102)
+	at java.util.Stack.pop(Stack.java:84)
+	at org.aspectj.bridge.context.CompilationAndWeavingContext.leavingPhase(CompilationAndWeavingContext.java:163)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1417)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1184)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterCompiling(AjPipeliningCompilerAdapter.java:375)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$afterReturning$org_aspectj_ajdt_internal_compiler_CompilerAdapter$2$f9cc9ca0(CompilerAdapter.aj:78)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:421)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1036)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:272)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:185)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main$run.call(Unknown Source)
+	at com.fernandocejas.frodo.plugin.FrodoPlugin$_apply_closure4$_closure5.doCall(FrodoPlugin.groovy:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:430)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:596)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:577)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:95)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:76)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:62)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:88)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskArtifactStateTaskExecuter.execute(ResolveTaskArtifactStateTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker$1.execute(DefaultTaskGraphExecuter.java:236)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker$1.execute(DefaultTaskGraphExecuter.java:228)
+	at org.gradle.internal.Transformers$4.transform(Transformers.java:169)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:106)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:61)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:228)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:215)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:77)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:58)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+---- System Properties ---
+java.vendor=JetBrains s.r.o
+sun.java.launcher=SUN_STANDARD
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+idea.paths.selector=AndroidStudio3.0
+jnidispatch.path=C:\Users\MSI\.AndroidStudio3.0\system\tmp\jna6184382292960266460.dll
+winp.unpack.dll.to.parent.dir=false
+os.name=Windows 10
+sun.boot.class.path=S:\Programs\Android\Android Studio\jre\jre\lib\resources.jar;S:\Programs\Android\Android Studio\jre\jre\lib\rt.jar;S:\Programs\Android\Android Studio\jre\jre\lib\sunrsasign.jar;S:\Programs\Android\Android Studio\jre\jre\lib\jsse.jar;S:\Programs\Android\Android Studio\jre\jre\lib\jce.jar;S:\Programs\Android\Android Studio\jre\jre\lib\charsets.jar;S:\Programs\Android\Android Studio\jre\jre\lib\jfr.jar;S:\Programs\Android\Android Studio\jre\jre\classes
+sun.desktop=windows
+java.vm.specification.vendor=Oracle Corporation
+java.runtime.version=1.8.0_152-release-915-b01
+jna.loaded=true
+jb.vmOptionsFile=S:\Programs\Android\Android Studio\bin\studio64.exe.vmoptions
+io.netty.serviceThreadPrefix=Netty 
+user.name=MSI
+java.rmi.server.disableHttp=true
+user.language=en
+sun.boot.library.path=S:\Programs\Android\Android Studio\jre\jre\bin
+idea.fatal.error.notification=disabled
+jna.nosys=true
+java.version=1.8.0_152-release
+swing.bufferPerWindow=true
+user.timezone=Asia/Bangkok
+java.net.preferIPv4Stack=true
+sun.arch.data.model=64
+java.util.concurrent.ForkJoinPool.common.threadFactory=com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory
+jna.tmpdir=C:\Users\MSI\.AndroidStudio3.0\system\tmp
+java.endorsed.dirs=S:\Programs\Android\Android Studio\jre\jre\lib\endorsed
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+file.encoding.pkg=sun.io
+file.separator=\
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+user.country=US
+jna.boot.library.path=
+java.home=S:\Programs\Android\Android Studio\jre\jre
+java.util.concurrent.ForkJoinPool.common.parallelism=8
+java.vm.info=mixed mode
+os.version=10.0
+path.separator=;
+java.vm.version=25.152-b01
+idea.no.launcher=false
+user.variant=
+idea.max.content.load.filesize=20000
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+sun.io.unicode.encoding=UnicodeLittle
+awt.toolkit=sun.awt.windows.WToolkit
+idea.cycle.buffer.size=1024
+ide.new.welcome.screen.force=true
+io.netty.processId=20448
+log4j.defaultInitOverride=true
+user.script=
+idea.platform.prefix=AndroidStudio
+idea.dynamic.classpath=false
+user.home=C:\Users\MSI
+__idea.mac.env.lock=unlocked
+java.specification.vendor=Oracle Corporation
+library.jansi.path=C:\Users\MSI\.gradle\native\jansi\1.14\windows64
+java.library.path=S:\Programs\Android\Android Studio\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\Soft\Git\cmd;C:\Users\MSI\AppData\Local\Microsoft\WindowsApps;;.
+java.vendor.url=https://www.jetbrains.com/
+java.vm.vendor=JetBrains s.r.o
+external.system.remote.process.idle.ttl.ms=-1
+crashlytics.logger.home=C:\Users\MSI\.crashlytics\com.crashlytics.tools\crashlytics.log
+java.runtime.name=OpenJDK Runtime Environment
+sun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 3.3
+java.class.path=C:\Users\MSI\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9\gradle-3.3\lib\gradle-launcher-3.3.jar
+io.netty.machineId=28:f0:76:ff:fe:16:65:0e
+java.vm.specification.name=Java Virtual Machine Specification
+idea.xdebug.key=-Xdebug
+idea.popup.weight=heavy
+java.vm.specification.version=1.8
+sun.cpu.endian=little
+sun.os.patch.level=
+java.io.tmpdir=C:\Users\MSI\AppData\Local\Temp\
+java.vendor.url.bug=https://youtrack.jetbrains.com
+java.rmi.server.hostname=localhost
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+idea.max.intellisense.filesize=2500
+java.ext.dirs=S:\Programs\Android\Android Studio\jre\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+idea.jre.check=true
+user.dir=S:\Projects Android\DTKApp
+line.separator=
+
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding=Cp1252
+studio.record.file=C:\Users\MSI\.AndroidStudio3.0\system\tmp\AndroidStudio.1cb6a2d8-33c3-44f9-a281-a91fad6baba1
+java.specification.version=1.8
+---- Command Line ---
+-showWeaveInfo
+-1.5
+-inpath
+S:\Projects Android\DTKApp\app\build\retrolambda\devDebug
+-aspectpath
+C:\Users\MSI\.android\build-cache\34087b63d3d3417b940c5f28528ece6f224fc5ef\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.0.2\de8416eda7b2fd7c25836b140c39e1cbf10542f6\dagger-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar;C:\Users\MSI\.android\build-cache\932452b363d1eb0ee37aa13065696da9ac4fcb9f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\53c378f6d2eace55f7d797ca5aabf74099e497ae\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\libs\internal_impl-25.0.0.jar;C:\Users\MSI\.android\build-cache\22787ec5a89589c94469a39f58fa2c4a47dcf0f1\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7031c9b303c9e2890100e02281a123246b41ce96\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4a25aea68bcaa0b4ee567e52045bfc2ea959e421\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\22e680606012a3c560df7d5d96103e54d955b4cf\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d9f3a5d6bcf63974ed5898138fa06d8b030a3efd\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b68a22dc8164cb9379da10c90b5319ba0b3027aa\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.8\cf615176cd1177edf71d3c9605f8dc148fede6be\otto-1.3.8.jar;C:\Users\MSI\.android\build-cache\9b7c5d1e3d6e89f3acb4fcb5e0658487c25198d0\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.googlecode.libphonenumber\libphonenumber\8.0.0\ce021971974ee6a26572e43eaba7edf184c3c63d\libphonenumber-8.0.0.jar;C:\Users\MSI\.android\build-cache\0ab00cba211b80801784c59b4bba7ac3a1029984\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e069779301a7e206400674b83f580887ce4bed7c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5d074ff7c615f9dd76b3771ddbbb3fc12b548110\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\fdb0f5553f484829b8dfdae1562a99141c485263\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\37f8d27d964e9331e285edc7b13da37a2b6dc791\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\17ac7ea933c8db1ef23bb7c574382ea82bfdcd81\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ca3662dfa2be3ce5e55ed48ab84c86a540d794f1\output\jars\classes.jar;S:\Projects Android\DTKApp\utils\build\intermediates\bundles\default\classes.jar;S:\Projects Android\DTKApp\domain\build\intermediates\bundles\default\classes.jar;S:\Projects Android\DTKApp\data\build\intermediates\bundles\default\classes.jar;C:\Users\MSI\.android\build-cache\fa9d22456ba913e08a0febbdd4b54fedaf0d2d59\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.2\a60c039ba54c73d1133b72178e1b04133c73d13d\adapter-rxjava-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.1\b494968f6050d494de55dc3ce005e59c7eb40012\rxjava-1.1.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.2\f8d87f15b94b8d74e7ccf61d7eedb558811cdb30\converter-gson-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.2\43eeae0b9fb087bb3194ba59ab63a38a32fbf3e\retrofit-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar;C:\Users\MSI\.android\build-cache\6b0127c800e0ce6f1c7ce4186141ff051c4120d8\output\jars\classes.jar;S:\Projects Android\DTKApp\thirdparty\build\intermediates\bundles\devDebug\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.fernandocejas.frodo\frodo-api\0.8.3\3709f3ceb3fa644bb032a45f327dbbff87635ef3\frodo-api-0.8.3.jar;C:\Users\MSI\.android\build-cache\9e175e70b5ffec59396a6b099f8a427e0310c7f3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\344a8688b7b4e67974b1968ea021f70907b787ef\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\2.2.0\cd37966f459edfec260524927da6c63e9bd9e2ff\realm-annotations-2.2.0.jar;C:\Users\MSI\.android\build-cache\6b41615255f5138133202c10ae4cb413178b7c3e\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c7fca63cdd6db21c8320ce40895fcb9da276251\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\f43d53ca8818a83bf705efad1317730c72101730\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\af9c6f2f4228b82652bd2fbbbb645ee5ac669e9c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2f212eae6f0d00071a67d3e661cd610bfd8266a7\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\842580e783fe56ef990bdd753ae71b6a13a21ddb\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar;C:\Users\MSI\.android\build-cache\aaacad7ed686504686aca637a1dbaa4f447d88f5\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ff91ffd2b57fcad94331fc57e211447b4af3bc3b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\1f558d5e4ffdb664ba4e8547bcfe05dc0a248033\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a9bc9b9fbf533643931fcfb4cede00a7b0331db9\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar;C:\Users\MSI\.android\build-cache\47596431f0a7d7cdaed9f9f23e38dc99e711bceb\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\9c34a7c7222afc63904501eaf0f071885231feaa\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b9754991f9cc380a32a16d385febed10e6310275\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\caf5e5fa69a88addc374a518e97a058bfc726475\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a0ee32ae298301c6f62ff5dd347511cee6985b51\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a1dec65e07578b67fd548e0d3744b82530e2d02b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\131066b4f4de172b98d583b638bc5cca83d89b97\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\3df5481711b324022f84746ba592f599429a5cad\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6ee84c7143333336d5ecd12fa7c60fd205f2ddd3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\libs\internal_impl-24.0.0.jar;C:\Users\MSI\.android\build-cache\b4670e190f2ee0a5502ecde5d94e27350b648ee1\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b462e1e0d316d79c84fccfddb8d9cea070556638\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e4b09dae3ddb86b137f4236a16c6af9dbc9c22c8\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\100e497ec15b15b6d4d53832fca479c1ce92f824\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\38fa7527601673d9dbd3737d35d51c3432af315a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4f1862b07d19ffdca4b1409622ef481c97fecd47\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ad6035c695868a196d664ba8fff6009ccf138026\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\598325189a4c5da7203020a8be30ee671494b71a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\c0943ebec2c2134d0f3c68eddd44a28ba3e2c779\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d7ed351ba36b1e16673af8e97056d6907e7a499b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ca79fd67264a9b8476ad50f720161880b56227be\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\63b9efae3c16dd941a066a9de282c154a24a6a42\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5f1acb7e51b6f1563ff61c02e92c8e206cb01cc6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6006b48030cb0dc04e9e7d293db566f977cd6b08\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b0d94dabfed5067985ac700db823cb4651eb3e8f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4c6f3cbd811243b3c1c929bd246d348e158a8fa5\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8f5f25a9dc433a4f6f2e62ef3eb913ac16474076\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8a8033152c40762e2395fa05bb116a9a1c29fea3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\09bfe1d633b028cc281e8e0602606624e152bdfe\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\454d74ceac727fe9b4ad38ee12c5e000023191fa\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7a31d81a04288188ab60c6b392e596ae6988e285\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\41d1ec1bcc5eaceff05697133bf4ab998596061c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\09fc467e336e477d3034db1a0bacc097a550a649\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\fa384c85851db226bec70c3d4cd88ac1c628e1cd\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6d6e42a5429f629bc1807feb2663aa25367a1e6d\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4034718f7bdfabb889d1fd22d70e74bbd928ebe9\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\145b27e5d3f3887c49e73bb6c9e5621be98b495e\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\1a9ceb2cb307a0b231239e404b8e2b0c360d6455\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\92eaadd2faf9b1dad337cc483d2057fbce6a9b04\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\358dde73e6264597c8b9060731da27a60c891b5b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\32594b5c66f14053bbb3f46cb91e26c989779a14\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\899df935dd159881183845e044a48baf0a03d705\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\419fbba10e075a0e972cc6c8a0f16dff3632da1b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\3a079494dd79a9ed415f9a48d7c784842cff819d\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\01e9d23dfb4b43fc53a61f55b5cbaeb07f454157\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\58e8df94439737477badfc8bd3af1a85aeb4ae14\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\49373e7bf3bbeb98352de1b65fa1748d4db450af\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\9ed189d2d13316d7d4189c8d7dfeeeab7b2a703a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\975f6dfe0c942eae999bf336b51c1e89ec0a92b6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8fa96370d01505287f9e72b517a9623496e3ac6a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2bab2776702b39eedeada22b8269b07e24c78c7f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e9742092e2b2a965c4523ecd999041c40d0602e6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\529c3be9e1fbba767a40f43c7cfa7f346d00e081\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d88da5c0f748fb4720f8ff7c2d5ea5bc87f70554\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2610d3157f032af83c7fa9dac22ca90c0ec2c0fc\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7dd6afecd0845c93036661af11258e9f80dbad02\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\f4536c346558ebe6a55a06aeb320295aac08cdc9\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\77a7d05d279ff9fd60a4598e41443f1ccb785b21\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5fd1ad2d6e4f2e18b1419622014eea7ea88e8500\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d84ae34e3d4579d4edd3ba73f253577363529329\output\jars\classes.jar;S:\Programs\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.8.6\a7db7ea5f7bb18a1cbd9f24edd0e666504800be\aspectjrt-1.8.6.jar;C:\Users\MSI\.android\build-cache\83528e869364912e95c38ab8fa6b9e9f68a8e895\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.annotation\jsr250-api\1.0\5025422767732a1ab45d93abfea846513d742dcf\jsr250-api-1.0.jar;S:\Programs\Android\Android Studio\jre\jre\lib\rt.jar
+-d
+S:\Projects Android\DTKApp\app\build\retrolambda\devDebug
+-classpath
+C:\Users\MSI\.android\build-cache\34087b63d3d3417b940c5f28528ece6f224fc5ef\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.0.2\de8416eda7b2fd7c25836b140c39e1cbf10542f6\dagger-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar;C:\Users\MSI\.android\build-cache\932452b363d1eb0ee37aa13065696da9ac4fcb9f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\53c378f6d2eace55f7d797ca5aabf74099e497ae\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\libs\internal_impl-25.0.0.jar;C:\Users\MSI\.android\build-cache\22787ec5a89589c94469a39f58fa2c4a47dcf0f1\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7031c9b303c9e2890100e02281a123246b41ce96\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4a25aea68bcaa0b4ee567e52045bfc2ea959e421\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\22e680606012a3c560df7d5d96103e54d955b4cf\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d9f3a5d6bcf63974ed5898138fa06d8b030a3efd\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b68a22dc8164cb9379da10c90b5319ba0b3027aa\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.8\cf615176cd1177edf71d3c9605f8dc148fede6be\otto-1.3.8.jar;C:\Users\MSI\.android\build-cache\9b7c5d1e3d6e89f3acb4fcb5e0658487c25198d0\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.googlecode.libphonenumber\libphonenumber\8.0.0\ce021971974ee6a26572e43eaba7edf184c3c63d\libphonenumber-8.0.0.jar;C:\Users\MSI\.android\build-cache\0ab00cba211b80801784c59b4bba7ac3a1029984\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e069779301a7e206400674b83f580887ce4bed7c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5d074ff7c615f9dd76b3771ddbbb3fc12b548110\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\fdb0f5553f484829b8dfdae1562a99141c485263\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\37f8d27d964e9331e285edc7b13da37a2b6dc791\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\17ac7ea933c8db1ef23bb7c574382ea82bfdcd81\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ca3662dfa2be3ce5e55ed48ab84c86a540d794f1\output\jars\classes.jar;S:\Projects Android\DTKApp\utils\build\intermediates\bundles\default\classes.jar;S:\Projects Android\DTKApp\domain\build\intermediates\bundles\default\classes.jar;S:\Projects Android\DTKApp\data\build\intermediates\bundles\default\classes.jar;C:\Users\MSI\.android\build-cache\fa9d22456ba913e08a0febbdd4b54fedaf0d2d59\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.2\a60c039ba54c73d1133b72178e1b04133c73d13d\adapter-rxjava-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.1\b494968f6050d494de55dc3ce005e59c7eb40012\rxjava-1.1.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.2\f8d87f15b94b8d74e7ccf61d7eedb558811cdb30\converter-gson-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.2\43eeae0b9fb087bb3194ba59ab63a38a32fbf3e\retrofit-2.0.2.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar;C:\Users\MSI\.android\build-cache\6b0127c800e0ce6f1c7ce4186141ff051c4120d8\output\jars\classes.jar;S:\Projects Android\DTKApp\thirdparty\build\intermediates\bundles\devDebug\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.fernandocejas.frodo\frodo-api\0.8.3\3709f3ceb3fa644bb032a45f327dbbff87635ef3\frodo-api-0.8.3.jar;C:\Users\MSI\.android\build-cache\9e175e70b5ffec59396a6b099f8a427e0310c7f3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\344a8688b7b4e67974b1968ea021f70907b787ef\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\2.2.0\cd37966f459edfec260524927da6c63e9bd9e2ff\realm-annotations-2.2.0.jar;C:\Users\MSI\.android\build-cache\6b41615255f5138133202c10ae4cb413178b7c3e\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8c7fca63cdd6db21c8320ce40895fcb9da276251\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\f43d53ca8818a83bf705efad1317730c72101730\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\af9c6f2f4228b82652bd2fbbbb645ee5ac669e9c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2f212eae6f0d00071a67d3e661cd610bfd8266a7\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\842580e783fe56ef990bdd753ae71b6a13a21ddb\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar;C:\Users\MSI\.android\build-cache\aaacad7ed686504686aca637a1dbaa4f447d88f5\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ff91ffd2b57fcad94331fc57e211447b4af3bc3b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\1f558d5e4ffdb664ba4e8547bcfe05dc0a248033\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a9bc9b9fbf533643931fcfb4cede00a7b0331db9\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar;C:\Users\MSI\.android\build-cache\47596431f0a7d7cdaed9f9f23e38dc99e711bceb\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\9c34a7c7222afc63904501eaf0f071885231feaa\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b9754991f9cc380a32a16d385febed10e6310275\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\caf5e5fa69a88addc374a518e97a058bfc726475\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a0ee32ae298301c6f62ff5dd347511cee6985b51\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\a1dec65e07578b67fd548e0d3744b82530e2d02b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\131066b4f4de172b98d583b638bc5cca83d89b97\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\3df5481711b324022f84746ba592f599429a5cad\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6ee84c7143333336d5ecd12fa7c60fd205f2ddd3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\libs\internal_impl-24.0.0.jar;C:\Users\MSI\.android\build-cache\b4670e190f2ee0a5502ecde5d94e27350b648ee1\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b462e1e0d316d79c84fccfddb8d9cea070556638\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e4b09dae3ddb86b137f4236a16c6af9dbc9c22c8\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\100e497ec15b15b6d4d53832fca479c1ce92f824\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\38fa7527601673d9dbd3737d35d51c3432af315a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4f1862b07d19ffdca4b1409622ef481c97fecd47\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ad6035c695868a196d664ba8fff6009ccf138026\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\598325189a4c5da7203020a8be30ee671494b71a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\c0943ebec2c2134d0f3c68eddd44a28ba3e2c779\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d7ed351ba36b1e16673af8e97056d6907e7a499b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\ca79fd67264a9b8476ad50f720161880b56227be\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\63b9efae3c16dd941a066a9de282c154a24a6a42\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5f1acb7e51b6f1563ff61c02e92c8e206cb01cc6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6006b48030cb0dc04e9e7d293db566f977cd6b08\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\b0d94dabfed5067985ac700db823cb4651eb3e8f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4c6f3cbd811243b3c1c929bd246d348e158a8fa5\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8f5f25a9dc433a4f6f2e62ef3eb913ac16474076\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8a8033152c40762e2395fa05bb116a9a1c29fea3\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\09bfe1d633b028cc281e8e0602606624e152bdfe\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\454d74ceac727fe9b4ad38ee12c5e000023191fa\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7a31d81a04288188ab60c6b392e596ae6988e285\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\41d1ec1bcc5eaceff05697133bf4ab998596061c\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\09fc467e336e477d3034db1a0bacc097a550a649\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\fa384c85851db226bec70c3d4cd88ac1c628e1cd\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\6d6e42a5429f629bc1807feb2663aa25367a1e6d\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\4034718f7bdfabb889d1fd22d70e74bbd928ebe9\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\145b27e5d3f3887c49e73bb6c9e5621be98b495e\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\1a9ceb2cb307a0b231239e404b8e2b0c360d6455\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\92eaadd2faf9b1dad337cc483d2057fbce6a9b04\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\358dde73e6264597c8b9060731da27a60c891b5b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\32594b5c66f14053bbb3f46cb91e26c989779a14\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\899df935dd159881183845e044a48baf0a03d705\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\419fbba10e075a0e972cc6c8a0f16dff3632da1b\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\3a079494dd79a9ed415f9a48d7c784842cff819d\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\01e9d23dfb4b43fc53a61f55b5cbaeb07f454157\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\58e8df94439737477badfc8bd3af1a85aeb4ae14\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\49373e7bf3bbeb98352de1b65fa1748d4db450af\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\9ed189d2d13316d7d4189c8d7dfeeeab7b2a703a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\975f6dfe0c942eae999bf336b51c1e89ec0a92b6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\8fa96370d01505287f9e72b517a9623496e3ac6a\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2bab2776702b39eedeada22b8269b07e24c78c7f\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\e9742092e2b2a965c4523ecd999041c40d0602e6\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\529c3be9e1fbba767a40f43c7cfa7f346d00e081\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d88da5c0f748fb4720f8ff7c2d5ea5bc87f70554\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\2610d3157f032af83c7fa9dac22ca90c0ec2c0fc\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\7dd6afecd0845c93036661af11258e9f80dbad02\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\f4536c346558ebe6a55a06aeb320295aac08cdc9\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\77a7d05d279ff9fd60a4598e41443f1ccb785b21\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\5fd1ad2d6e4f2e18b1419622014eea7ea88e8500\output\jars\classes.jar;C:\Users\MSI\.android\build-cache\d84ae34e3d4579d4edd3ba73f253577363529329\output\jars\classes.jar;S:\Programs\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.8.6\a7db7ea5f7bb18a1cbd9f24edd0e666504800be\aspectjrt-1.8.6.jar;C:\Users\MSI\.android\build-cache\83528e869364912e95c38ab8fa6b9e9f68a8e895\output\jars\classes.jar;C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.annotation\jsr250-api\1.0\5025422767732a1ab45d93abfea846513d742dcf\jsr250-api-1.0.jar;S:\Programs\Android\Android Studio\jre\jre\lib\rt.jar
+-bootclasspath
+S:\Programs\Android\Sdk\platforms\android-25\android.jar
+---- Full Classpath ---
+S:\Programs\Android\Sdk\platforms\android-25\android.jar(34622170 bytes)
+S:\Projects Android\DTKApp\app\build\retrolambda\devDebug(7 entries)
+C:\Users\MSI\.android\build-cache\34087b63d3d3417b940c5f28528ece6f224fc5ef\output\jars\classes.jar(21329 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.0.2\de8416eda7b2fd7c25836b140c39e1cbf10542f6\dagger-2.0.2.jar(17463 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar(2497 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar(55462 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar(8081 bytes)
+C:\Users\MSI\.android\build-cache\932452b363d1eb0ee37aa13065696da9ac4fcb9f\output\jars\classes.jar(89735 bytes)
+C:\Users\MSI\.android\build-cache\53c378f6d2eace55f7d797ca5aabf74099e497ae\output\jars\classes.jar(80950 bytes)
+C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\classes.jar(47651 bytes)
+C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\libs\internal_impl-25.0.0.jar(7490 bytes)
+C:\Users\MSI\.android\build-cache\22787ec5a89589c94469a39f58fa2c4a47dcf0f1\output\jars\classes.jar(44099 bytes)
+C:\Users\MSI\.android\build-cache\7031c9b303c9e2890100e02281a123246b41ce96\output\jars\classes.jar(120153 bytes)
+C:\Users\MSI\.android\build-cache\4a25aea68bcaa0b4ee567e52045bfc2ea959e421\output\jars\classes.jar(356070 bytes)
+C:\Users\MSI\.android\build-cache\22e680606012a3c560df7d5d96103e54d955b4cf\output\jars\classes.jar(356404 bytes)
+C:\Users\MSI\.android\build-cache\d9f3a5d6bcf63974ed5898138fa06d8b030a3efd\output\jars\classes.jar(102739 bytes)
+C:\Users\MSI\.android\build-cache\b68a22dc8164cb9379da10c90b5319ba0b3027aa\output\jars\classes.jar(40347 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar(120459 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.8\cf615176cd1177edf71d3c9605f8dc148fede6be\otto-1.3.8.jar(19213 bytes)
+C:\Users\MSI\.android\build-cache\9b7c5d1e3d6e89f3acb4fcb5e0658487c25198d0\output\jars\classes.jar(75737 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.googlecode.libphonenumber\libphonenumber\8.0.0\ce021971974ee6a26572e43eaba7edf184c3c63d\libphonenumber-8.0.0.jar(326861 bytes)
+C:\Users\MSI\.android\build-cache\0ab00cba211b80801784c59b4bba7ac3a1029984\output\jars\classes.jar(4930 bytes)
+C:\Users\MSI\.android\build-cache\e069779301a7e206400674b83f580887ce4bed7c\output\jars\classes.jar(18942 bytes)
+C:\Users\MSI\.android\build-cache\5d074ff7c615f9dd76b3771ddbbb3fc12b548110\output\jars\classes.jar(161065 bytes)
+C:\Users\MSI\.android\build-cache\fdb0f5553f484829b8dfdae1562a99141c485263\output\jars\classes.jar(61829 bytes)
+C:\Users\MSI\.android\build-cache\37f8d27d964e9331e285edc7b13da37a2b6dc791\output\jars\classes.jar(240902 bytes)
+C:\Users\MSI\.android\build-cache\17ac7ea933c8db1ef23bb7c574382ea82bfdcd81\output\jars\classes.jar(26913 bytes)
+C:\Users\MSI\.android\build-cache\ca3662dfa2be3ce5e55ed48ab84c86a540d794f1\output\jars\classes.jar(26751 bytes)
+S:\Projects Android\DTKApp\utils\build\intermediates\bundles\default\classes.jar(1297 bytes)
+S:\Projects Android\DTKApp\domain\build\intermediates\bundles\default\classes.jar(4610 bytes)
+S:\Projects Android\DTKApp\data\build\intermediates\bundles\default\classes.jar(34363 bytes)
+C:\Users\MSI\.android\build-cache\fa9d22456ba913e08a0febbdd4b54fedaf0d2d59\output\jars\classes.jar(6382 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.2\a60c039ba54c73d1133b72178e1b04133c73d13d\adapter-rxjava-2.0.2.jar(19611 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.1\b494968f6050d494de55dc3ce005e59c7eb40012\rxjava-1.1.1.jar(1001969 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.2\f8d87f15b94b8d74e7ccf61d7eedb558811cdb30\converter-gson-2.0.2.jar(5490 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar(230882 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.2\43eeae0b9fb087bb3194ba59ab63a38a32fbf3e\retrofit-2.0.2.jar(86225 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar(344481 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar(76036 bytes)
+C:\Users\MSI\.android\build-cache\6b0127c800e0ce6f1c7ce4186141ff051c4120d8\output\jars\classes.jar(166 bytes)
+S:\Projects Android\DTKApp\thirdparty\build\intermediates\bundles\devDebug\classes.jar(1178 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.fernandocejas.frodo\frodo-api\0.8.3\3709f3ceb3fa644bb032a45f327dbbff87635ef3\frodo-api-0.8.3.jar(2566 bytes)
+C:\Users\MSI\.android\build-cache\9e175e70b5ffec59396a6b099f8a427e0310c7f3\output\jars\classes.jar(279303 bytes)
+C:\Users\MSI\.android\build-cache\344a8688b7b4e67974b1968ea021f70907b787ef\output\jars\classes.jar(27542 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\2.2.0\cd37966f459edfec260524927da6c63e9bd9e2ff\realm-annotations-2.2.0.jar(3350 bytes)
+C:\Users\MSI\.android\build-cache\6b41615255f5138133202c10ae4cb413178b7c3e\output\jars\classes.jar(944 bytes)
+C:\Users\MSI\.android\build-cache\8c7fca63cdd6db21c8320ce40895fcb9da276251\output\jars\classes.jar(34041 bytes)
+C:\Users\MSI\.android\build-cache\f43d53ca8818a83bf705efad1317730c72101730\output\jars\classes.jar(101092 bytes)
+C:\Users\MSI\.android\build-cache\af9c6f2f4228b82652bd2fbbbb645ee5ac669e9c\output\jars\classes.jar(386246 bytes)
+C:\Users\MSI\.android\build-cache\2f212eae6f0d00071a67d3e661cd610bfd8266a7\output\jars\classes.jar(22453 bytes)
+C:\Users\MSI\.android\build-cache\842580e783fe56ef990bdd753ae71b6a13a21ddb\output\jars\classes.jar(41712 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar(541078 bytes)
+C:\Users\MSI\.android\build-cache\aaacad7ed686504686aca637a1dbaa4f447d88f5\output\jars\classes.jar(58806 bytes)
+C:\Users\MSI\.android\build-cache\ff91ffd2b57fcad94331fc57e211447b4af3bc3b\output\jars\classes.jar(14299 bytes)
+C:\Users\MSI\.android\build-cache\1f558d5e4ffdb664ba4e8547bcfe05dc0a248033\output\jars\classes.jar(9334 bytes)
+C:\Users\MSI\.android\build-cache\a9bc9b9fbf533643931fcfb4cede00a7b0331db9\output\jars\classes.jar(347493 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar(384 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar(25020 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar(38092 bytes)
+C:\Users\MSI\.android\build-cache\47596431f0a7d7cdaed9f9f23e38dc99e711bceb\output\jars\classes.jar(166 bytes)
+C:\Users\MSI\.android\build-cache\9c34a7c7222afc63904501eaf0f071885231feaa\output\jars\classes.jar(930854 bytes)
+C:\Users\MSI\.android\build-cache\b9754991f9cc380a32a16d385febed10e6310275\output\jars\classes.jar(349442 bytes)
+C:\Users\MSI\.android\build-cache\caf5e5fa69a88addc374a518e97a058bfc726475\output\jars\classes.jar(2397 bytes)
+C:\Users\MSI\.android\build-cache\a0ee32ae298301c6f62ff5dd347511cee6985b51\output\jars\classes.jar(25459 bytes)
+C:\Users\MSI\.android\build-cache\a1dec65e07578b67fd548e0d3744b82530e2d02b\output\jars\classes.jar(90082 bytes)
+C:\Users\MSI\.android\build-cache\131066b4f4de172b98d583b638bc5cca83d89b97\output\jars\classes.jar(67175 bytes)
+C:\Users\MSI\.android\build-cache\3df5481711b324022f84746ba592f599429a5cad\output\jars\classes.jar(275399 bytes)
+C:\Users\MSI\.android\build-cache\6ee84c7143333336d5ecd12fa7c60fd205f2ddd3\output\jars\classes.jar(228801 bytes)
+C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\classes.jar(219699 bytes)
+C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\libs\internal_impl-24.0.0.jar(20305 bytes)
+C:\Users\MSI\.android\build-cache\b4670e190f2ee0a5502ecde5d94e27350b648ee1\output\jars\classes.jar(23661 bytes)
+C:\Users\MSI\.android\build-cache\b462e1e0d316d79c84fccfddb8d9cea070556638\output\jars\classes.jar(696027 bytes)
+C:\Users\MSI\.android\build-cache\e4b09dae3ddb86b137f4236a16c6af9dbc9c22c8\output\jars\classes.jar(15576 bytes)
+C:\Users\MSI\.android\build-cache\100e497ec15b15b6d4d53832fca479c1ce92f824\output\jars\classes.jar(39958 bytes)
+C:\Users\MSI\.android\build-cache\38fa7527601673d9dbd3737d35d51c3432af315a\output\jars\classes.jar(37947 bytes)
+C:\Users\MSI\.android\build-cache\4f1862b07d19ffdca4b1409622ef481c97fecd47\output\jars\classes.jar(60116 bytes)
+C:\Users\MSI\.android\build-cache\ad6035c695868a196d664ba8fff6009ccf138026\output\jars\classes.jar(192597 bytes)
+C:\Users\MSI\.android\build-cache\598325189a4c5da7203020a8be30ee671494b71a\output\jars\classes.jar(241147 bytes)
+C:\Users\MSI\.android\build-cache\c0943ebec2c2134d0f3c68eddd44a28ba3e2c779\output\jars\classes.jar(314051 bytes)
+C:\Users\MSI\.android\build-cache\d7ed351ba36b1e16673af8e97056d6907e7a499b\output\jars\classes.jar(114195 bytes)
+C:\Users\MSI\.android\build-cache\ca79fd67264a9b8476ad50f720161880b56227be\output\jars\classes.jar(73303 bytes)
+C:\Users\MSI\.android\build-cache\63b9efae3c16dd941a066a9de282c154a24a6a42\output\jars\classes.jar(8771 bytes)
+C:\Users\MSI\.android\build-cache\5f1acb7e51b6f1563ff61c02e92c8e206cb01cc6\output\jars\classes.jar(437229 bytes)
+C:\Users\MSI\.android\build-cache\6006b48030cb0dc04e9e7d293db566f977cd6b08\output\jars\classes.jar(721701 bytes)
+C:\Users\MSI\.android\build-cache\b0d94dabfed5067985ac700db823cb4651eb3e8f\output\jars\classes.jar(432496 bytes)
+C:\Users\MSI\.android\build-cache\4c6f3cbd811243b3c1c929bd246d348e158a8fa5\output\jars\classes.jar(9987 bytes)
+C:\Users\MSI\.android\build-cache\8f5f25a9dc433a4f6f2e62ef3eb913ac16474076\output\jars\classes.jar(39120 bytes)
+C:\Users\MSI\.android\build-cache\8a8033152c40762e2395fa05bb116a9a1c29fea3\output\jars\classes.jar(131671 bytes)
+C:\Users\MSI\.android\build-cache\09bfe1d633b028cc281e8e0602606624e152bdfe\output\jars\classes.jar(18411 bytes)
+C:\Users\MSI\.android\build-cache\454d74ceac727fe9b4ad38ee12c5e000023191fa\output\jars\classes.jar(51195 bytes)
+C:\Users\MSI\.android\build-cache\7a31d81a04288188ab60c6b392e596ae6988e285\output\jars\classes.jar(118577 bytes)
+C:\Users\MSI\.android\build-cache\41d1ec1bcc5eaceff05697133bf4ab998596061c\output\jars\classes.jar(191097 bytes)
+C:\Users\MSI\.android\build-cache\09fc467e336e477d3034db1a0bacc097a550a649\output\jars\classes.jar(14471 bytes)
+C:\Users\MSI\.android\build-cache\fa384c85851db226bec70c3d4cd88ac1c628e1cd\output\jars\classes.jar(139735 bytes)
+C:\Users\MSI\.android\build-cache\6d6e42a5429f629bc1807feb2663aa25367a1e6d\output\jars\classes.jar(100653 bytes)
+C:\Users\MSI\.android\build-cache\4034718f7bdfabb889d1fd22d70e74bbd928ebe9\output\jars\classes.jar(55685 bytes)
+C:\Users\MSI\.android\build-cache\145b27e5d3f3887c49e73bb6c9e5621be98b495e\output\jars\classes.jar(274959 bytes)
+C:\Users\MSI\.android\build-cache\1a9ceb2cb307a0b231239e404b8e2b0c360d6455\output\jars\classes.jar(29117 bytes)
+C:\Users\MSI\.android\build-cache\92eaadd2faf9b1dad337cc483d2057fbce6a9b04\output\jars\classes.jar(217273 bytes)
+C:\Users\MSI\.android\build-cache\358dde73e6264597c8b9060731da27a60c891b5b\output\jars\classes.jar(167525 bytes)
+C:\Users\MSI\.android\build-cache\32594b5c66f14053bbb3f46cb91e26c989779a14\output\jars\classes.jar(119451 bytes)
+C:\Users\MSI\.android\build-cache\899df935dd159881183845e044a48baf0a03d705\output\jars\classes.jar(169869 bytes)
+C:\Users\MSI\.android\build-cache\419fbba10e075a0e972cc6c8a0f16dff3632da1b\output\jars\classes.jar(23299 bytes)
+C:\Users\MSI\.android\build-cache\3a079494dd79a9ed415f9a48d7c784842cff819d\output\jars\classes.jar(298257 bytes)
+C:\Users\MSI\.android\build-cache\01e9d23dfb4b43fc53a61f55b5cbaeb07f454157\output\jars\classes.jar(253148 bytes)
+C:\Users\MSI\.android\build-cache\58e8df94439737477badfc8bd3af1a85aeb4ae14\output\jars\classes.jar(333432 bytes)
+C:\Users\MSI\.android\build-cache\49373e7bf3bbeb98352de1b65fa1748d4db450af\output\jars\classes.jar(19134 bytes)
+C:\Users\MSI\.android\build-cache\9ed189d2d13316d7d4189c8d7dfeeeab7b2a703a\output\jars\classes.jar(14954 bytes)
+C:\Users\MSI\.android\build-cache\975f6dfe0c942eae999bf336b51c1e89ec0a92b6\output\jars\classes.jar(4241 bytes)
+C:\Users\MSI\.android\build-cache\8fa96370d01505287f9e72b517a9623496e3ac6a\output\jars\classes.jar(233028 bytes)
+C:\Users\MSI\.android\build-cache\2bab2776702b39eedeada22b8269b07e24c78c7f\output\jars\classes.jar(31352 bytes)
+C:\Users\MSI\.android\build-cache\e9742092e2b2a965c4523ecd999041c40d0602e6\output\jars\classes.jar(17708 bytes)
+C:\Users\MSI\.android\build-cache\529c3be9e1fbba767a40f43c7cfa7f346d00e081\output\jars\classes.jar(24072 bytes)
+C:\Users\MSI\.android\build-cache\d88da5c0f748fb4720f8ff7c2d5ea5bc87f70554\output\jars\classes.jar(336603 bytes)
+C:\Users\MSI\.android\build-cache\2610d3157f032af83c7fa9dac22ca90c0ec2c0fc\output\jars\classes.jar(589 bytes)
+C:\Users\MSI\.android\build-cache\7dd6afecd0845c93036661af11258e9f80dbad02\output\jars\classes.jar(167284 bytes)
+C:\Users\MSI\.android\build-cache\f4536c346558ebe6a55a06aeb320295aac08cdc9\output\jars\classes.jar(323375 bytes)
+C:\Users\MSI\.android\build-cache\77a7d05d279ff9fd60a4598e41443f1ccb785b21\output\jars\classes.jar(263859 bytes)
+C:\Users\MSI\.android\build-cache\5fd1ad2d6e4f2e18b1419622014eea7ea88e8500\output\jars\classes.jar(104566 bytes)
+C:\Users\MSI\.android\build-cache\d84ae34e3d4579d4edd3ba73f253577363529329\output\jars\classes.jar(772671 bytes)
+S:\Programs\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar(22926 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.8.6\a7db7ea5f7bb18a1cbd9f24edd0e666504800be\aspectjrt-1.8.6.jar(117529 bytes)
+C:\Users\MSI\.android\build-cache\83528e869364912e95c38ab8fa6b9e9f68a8e895\output\jars\classes.jar(91811 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.annotation\jsr250-api\1.0\5025422767732a1ab45d93abfea846513d742dcf\jsr250-api-1.0.jar(5848 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\rt.jar(62701390 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\access-bridge-64.jar(196869 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\cldrdata.jar(3860502 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\dnsns.jar(8286 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\jaccess.jar(44516 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\localedata.jar(1179101 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\nashorn.jar(2033194 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\sunec.jar(38260 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\sunjce_provider.jar(261554 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\sunmscapi.jar(29490 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\sunpkcs11.jar(239017 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\ext\zipfs.jar(68932 bytes)
+C:\Users\MSI\.android\build-cache\34087b63d3d3417b940c5f28528ece6f224fc5ef\output\jars\classes.jar(21329 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.0.2\de8416eda7b2fd7c25836b140c39e1cbf10542f6\dagger-2.0.2.jar(17463 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar(2497 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar(55462 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar(8081 bytes)
+C:\Users\MSI\.android\build-cache\932452b363d1eb0ee37aa13065696da9ac4fcb9f\output\jars\classes.jar(89735 bytes)
+C:\Users\MSI\.android\build-cache\53c378f6d2eace55f7d797ca5aabf74099e497ae\output\jars\classes.jar(80950 bytes)
+C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\classes.jar(47651 bytes)
+C:\Users\MSI\.android\build-cache\8c1dc0da99bca868f547a294b8974bac2a36a3ef\output\jars\libs\internal_impl-25.0.0.jar(7490 bytes)
+C:\Users\MSI\.android\build-cache\22787ec5a89589c94469a39f58fa2c4a47dcf0f1\output\jars\classes.jar(44099 bytes)
+C:\Users\MSI\.android\build-cache\7031c9b303c9e2890100e02281a123246b41ce96\output\jars\classes.jar(120153 bytes)
+C:\Users\MSI\.android\build-cache\4a25aea68bcaa0b4ee567e52045bfc2ea959e421\output\jars\classes.jar(356070 bytes)
+C:\Users\MSI\.android\build-cache\22e680606012a3c560df7d5d96103e54d955b4cf\output\jars\classes.jar(356404 bytes)
+C:\Users\MSI\.android\build-cache\d9f3a5d6bcf63974ed5898138fa06d8b030a3efd\output\jars\classes.jar(102739 bytes)
+C:\Users\MSI\.android\build-cache\b68a22dc8164cb9379da10c90b5319ba0b3027aa\output\jars\classes.jar(40347 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar(120459 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.8\cf615176cd1177edf71d3c9605f8dc148fede6be\otto-1.3.8.jar(19213 bytes)
+C:\Users\MSI\.android\build-cache\9b7c5d1e3d6e89f3acb4fcb5e0658487c25198d0\output\jars\classes.jar(75737 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.googlecode.libphonenumber\libphonenumber\8.0.0\ce021971974ee6a26572e43eaba7edf184c3c63d\libphonenumber-8.0.0.jar(326861 bytes)
+C:\Users\MSI\.android\build-cache\0ab00cba211b80801784c59b4bba7ac3a1029984\output\jars\classes.jar(4930 bytes)
+C:\Users\MSI\.android\build-cache\e069779301a7e206400674b83f580887ce4bed7c\output\jars\classes.jar(18942 bytes)
+C:\Users\MSI\.android\build-cache\5d074ff7c615f9dd76b3771ddbbb3fc12b548110\output\jars\classes.jar(161065 bytes)
+C:\Users\MSI\.android\build-cache\fdb0f5553f484829b8dfdae1562a99141c485263\output\jars\classes.jar(61829 bytes)
+C:\Users\MSI\.android\build-cache\37f8d27d964e9331e285edc7b13da37a2b6dc791\output\jars\classes.jar(240902 bytes)
+C:\Users\MSI\.android\build-cache\17ac7ea933c8db1ef23bb7c574382ea82bfdcd81\output\jars\classes.jar(26913 bytes)
+C:\Users\MSI\.android\build-cache\ca3662dfa2be3ce5e55ed48ab84c86a540d794f1\output\jars\classes.jar(26751 bytes)
+S:\Projects Android\DTKApp\utils\build\intermediates\bundles\default\classes.jar(1297 bytes)
+S:\Projects Android\DTKApp\domain\build\intermediates\bundles\default\classes.jar(4610 bytes)
+S:\Projects Android\DTKApp\data\build\intermediates\bundles\default\classes.jar(34363 bytes)
+C:\Users\MSI\.android\build-cache\fa9d22456ba913e08a0febbdd4b54fedaf0d2d59\output\jars\classes.jar(6382 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.0.2\a60c039ba54c73d1133b72178e1b04133c73d13d\adapter-rxjava-2.0.2.jar(19611 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.1\b494968f6050d494de55dc3ce005e59c7eb40012\rxjava-1.1.1.jar(1001969 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.2\f8d87f15b94b8d74e7ccf61d7eedb558811cdb30\converter-gson-2.0.2.jar(5490 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar(230882 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.2\43eeae0b9fb087bb3194ba59ab63a38a32fbf3e\retrofit-2.0.2.jar(86225 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar(344481 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar(76036 bytes)
+C:\Users\MSI\.android\build-cache\6b0127c800e0ce6f1c7ce4186141ff051c4120d8\output\jars\classes.jar(166 bytes)
+S:\Projects Android\DTKApp\thirdparty\build\intermediates\bundles\devDebug\classes.jar(1178 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.fernandocejas.frodo\frodo-api\0.8.3\3709f3ceb3fa644bb032a45f327dbbff87635ef3\frodo-api-0.8.3.jar(2566 bytes)
+C:\Users\MSI\.android\build-cache\9e175e70b5ffec59396a6b099f8a427e0310c7f3\output\jars\classes.jar(279303 bytes)
+C:\Users\MSI\.android\build-cache\344a8688b7b4e67974b1968ea021f70907b787ef\output\jars\classes.jar(27542 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\2.2.0\cd37966f459edfec260524927da6c63e9bd9e2ff\realm-annotations-2.2.0.jar(3350 bytes)
+C:\Users\MSI\.android\build-cache\6b41615255f5138133202c10ae4cb413178b7c3e\output\jars\classes.jar(944 bytes)
+C:\Users\MSI\.android\build-cache\8c7fca63cdd6db21c8320ce40895fcb9da276251\output\jars\classes.jar(34041 bytes)
+C:\Users\MSI\.android\build-cache\f43d53ca8818a83bf705efad1317730c72101730\output\jars\classes.jar(101092 bytes)
+C:\Users\MSI\.android\build-cache\af9c6f2f4228b82652bd2fbbbb645ee5ac669e9c\output\jars\classes.jar(386246 bytes)
+C:\Users\MSI\.android\build-cache\2f212eae6f0d00071a67d3e661cd610bfd8266a7\output\jars\classes.jar(22453 bytes)
+C:\Users\MSI\.android\build-cache\842580e783fe56ef990bdd753ae71b6a13a21ddb\output\jars\classes.jar(41712 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar(541078 bytes)
+C:\Users\MSI\.android\build-cache\aaacad7ed686504686aca637a1dbaa4f447d88f5\output\jars\classes.jar(58806 bytes)
+C:\Users\MSI\.android\build-cache\ff91ffd2b57fcad94331fc57e211447b4af3bc3b\output\jars\classes.jar(14299 bytes)
+C:\Users\MSI\.android\build-cache\1f558d5e4ffdb664ba4e8547bcfe05dc0a248033\output\jars\classes.jar(9334 bytes)
+C:\Users\MSI\.android\build-cache\a9bc9b9fbf533643931fcfb4cede00a7b0331db9\output\jars\classes.jar(347493 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar(384 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar(25020 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar(38092 bytes)
+C:\Users\MSI\.android\build-cache\47596431f0a7d7cdaed9f9f23e38dc99e711bceb\output\jars\classes.jar(166 bytes)
+C:\Users\MSI\.android\build-cache\9c34a7c7222afc63904501eaf0f071885231feaa\output\jars\classes.jar(930854 bytes)
+C:\Users\MSI\.android\build-cache\b9754991f9cc380a32a16d385febed10e6310275\output\jars\classes.jar(349442 bytes)
+C:\Users\MSI\.android\build-cache\caf5e5fa69a88addc374a518e97a058bfc726475\output\jars\classes.jar(2397 bytes)
+C:\Users\MSI\.android\build-cache\a0ee32ae298301c6f62ff5dd347511cee6985b51\output\jars\classes.jar(25459 bytes)
+C:\Users\MSI\.android\build-cache\a1dec65e07578b67fd548e0d3744b82530e2d02b\output\jars\classes.jar(90082 bytes)
+C:\Users\MSI\.android\build-cache\131066b4f4de172b98d583b638bc5cca83d89b97\output\jars\classes.jar(67175 bytes)
+C:\Users\MSI\.android\build-cache\3df5481711b324022f84746ba592f599429a5cad\output\jars\classes.jar(275399 bytes)
+C:\Users\MSI\.android\build-cache\6ee84c7143333336d5ecd12fa7c60fd205f2ddd3\output\jars\classes.jar(228801 bytes)
+C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\classes.jar(219699 bytes)
+C:\Users\MSI\.android\build-cache\dd673d985d0a4e8080d5c0ee0ae96a07ec657598\output\jars\libs\internal_impl-24.0.0.jar(20305 bytes)
+C:\Users\MSI\.android\build-cache\b4670e190f2ee0a5502ecde5d94e27350b648ee1\output\jars\classes.jar(23661 bytes)
+C:\Users\MSI\.android\build-cache\b462e1e0d316d79c84fccfddb8d9cea070556638\output\jars\classes.jar(696027 bytes)
+C:\Users\MSI\.android\build-cache\e4b09dae3ddb86b137f4236a16c6af9dbc9c22c8\output\jars\classes.jar(15576 bytes)
+C:\Users\MSI\.android\build-cache\100e497ec15b15b6d4d53832fca479c1ce92f824\output\jars\classes.jar(39958 bytes)
+C:\Users\MSI\.android\build-cache\38fa7527601673d9dbd3737d35d51c3432af315a\output\jars\classes.jar(37947 bytes)
+C:\Users\MSI\.android\build-cache\4f1862b07d19ffdca4b1409622ef481c97fecd47\output\jars\classes.jar(60116 bytes)
+C:\Users\MSI\.android\build-cache\ad6035c695868a196d664ba8fff6009ccf138026\output\jars\classes.jar(192597 bytes)
+C:\Users\MSI\.android\build-cache\598325189a4c5da7203020a8be30ee671494b71a\output\jars\classes.jar(241147 bytes)
+C:\Users\MSI\.android\build-cache\c0943ebec2c2134d0f3c68eddd44a28ba3e2c779\output\jars\classes.jar(314051 bytes)
+C:\Users\MSI\.android\build-cache\d7ed351ba36b1e16673af8e97056d6907e7a499b\output\jars\classes.jar(114195 bytes)
+C:\Users\MSI\.android\build-cache\ca79fd67264a9b8476ad50f720161880b56227be\output\jars\classes.jar(73303 bytes)
+C:\Users\MSI\.android\build-cache\63b9efae3c16dd941a066a9de282c154a24a6a42\output\jars\classes.jar(8771 bytes)
+C:\Users\MSI\.android\build-cache\5f1acb7e51b6f1563ff61c02e92c8e206cb01cc6\output\jars\classes.jar(437229 bytes)
+C:\Users\MSI\.android\build-cache\6006b48030cb0dc04e9e7d293db566f977cd6b08\output\jars\classes.jar(721701 bytes)
+C:\Users\MSI\.android\build-cache\b0d94dabfed5067985ac700db823cb4651eb3e8f\output\jars\classes.jar(432496 bytes)
+C:\Users\MSI\.android\build-cache\4c6f3cbd811243b3c1c929bd246d348e158a8fa5\output\jars\classes.jar(9987 bytes)
+C:\Users\MSI\.android\build-cache\8f5f25a9dc433a4f6f2e62ef3eb913ac16474076\output\jars\classes.jar(39120 bytes)
+C:\Users\MSI\.android\build-cache\8a8033152c40762e2395fa05bb116a9a1c29fea3\output\jars\classes.jar(131671 bytes)
+C:\Users\MSI\.android\build-cache\09bfe1d633b028cc281e8e0602606624e152bdfe\output\jars\classes.jar(18411 bytes)
+C:\Users\MSI\.android\build-cache\454d74ceac727fe9b4ad38ee12c5e000023191fa\output\jars\classes.jar(51195 bytes)
+C:\Users\MSI\.android\build-cache\7a31d81a04288188ab60c6b392e596ae6988e285\output\jars\classes.jar(118577 bytes)
+C:\Users\MSI\.android\build-cache\41d1ec1bcc5eaceff05697133bf4ab998596061c\output\jars\classes.jar(191097 bytes)
+C:\Users\MSI\.android\build-cache\09fc467e336e477d3034db1a0bacc097a550a649\output\jars\classes.jar(14471 bytes)
+C:\Users\MSI\.android\build-cache\fa384c85851db226bec70c3d4cd88ac1c628e1cd\output\jars\classes.jar(139735 bytes)
+C:\Users\MSI\.android\build-cache\6d6e42a5429f629bc1807feb2663aa25367a1e6d\output\jars\classes.jar(100653 bytes)
+C:\Users\MSI\.android\build-cache\4034718f7bdfabb889d1fd22d70e74bbd928ebe9\output\jars\classes.jar(55685 bytes)
+C:\Users\MSI\.android\build-cache\145b27e5d3f3887c49e73bb6c9e5621be98b495e\output\jars\classes.jar(274959 bytes)
+C:\Users\MSI\.android\build-cache\1a9ceb2cb307a0b231239e404b8e2b0c360d6455\output\jars\classes.jar(29117 bytes)
+C:\Users\MSI\.android\build-cache\92eaadd2faf9b1dad337cc483d2057fbce6a9b04\output\jars\classes.jar(217273 bytes)
+C:\Users\MSI\.android\build-cache\358dde73e6264597c8b9060731da27a60c891b5b\output\jars\classes.jar(167525 bytes)
+C:\Users\MSI\.android\build-cache\32594b5c66f14053bbb3f46cb91e26c989779a14\output\jars\classes.jar(119451 bytes)
+C:\Users\MSI\.android\build-cache\899df935dd159881183845e044a48baf0a03d705\output\jars\classes.jar(169869 bytes)
+C:\Users\MSI\.android\build-cache\419fbba10e075a0e972cc6c8a0f16dff3632da1b\output\jars\classes.jar(23299 bytes)
+C:\Users\MSI\.android\build-cache\3a079494dd79a9ed415f9a48d7c784842cff819d\output\jars\classes.jar(298257 bytes)
+C:\Users\MSI\.android\build-cache\01e9d23dfb4b43fc53a61f55b5cbaeb07f454157\output\jars\classes.jar(253148 bytes)
+C:\Users\MSI\.android\build-cache\58e8df94439737477badfc8bd3af1a85aeb4ae14\output\jars\classes.jar(333432 bytes)
+C:\Users\MSI\.android\build-cache\49373e7bf3bbeb98352de1b65fa1748d4db450af\output\jars\classes.jar(19134 bytes)
+C:\Users\MSI\.android\build-cache\9ed189d2d13316d7d4189c8d7dfeeeab7b2a703a\output\jars\classes.jar(14954 bytes)
+C:\Users\MSI\.android\build-cache\975f6dfe0c942eae999bf336b51c1e89ec0a92b6\output\jars\classes.jar(4241 bytes)
+C:\Users\MSI\.android\build-cache\8fa96370d01505287f9e72b517a9623496e3ac6a\output\jars\classes.jar(233028 bytes)
+C:\Users\MSI\.android\build-cache\2bab2776702b39eedeada22b8269b07e24c78c7f\output\jars\classes.jar(31352 bytes)
+C:\Users\MSI\.android\build-cache\e9742092e2b2a965c4523ecd999041c40d0602e6\output\jars\classes.jar(17708 bytes)
+C:\Users\MSI\.android\build-cache\529c3be9e1fbba767a40f43c7cfa7f346d00e081\output\jars\classes.jar(24072 bytes)
+C:\Users\MSI\.android\build-cache\d88da5c0f748fb4720f8ff7c2d5ea5bc87f70554\output\jars\classes.jar(336603 bytes)
+C:\Users\MSI\.android\build-cache\2610d3157f032af83c7fa9dac22ca90c0ec2c0fc\output\jars\classes.jar(589 bytes)
+C:\Users\MSI\.android\build-cache\7dd6afecd0845c93036661af11258e9f80dbad02\output\jars\classes.jar(167284 bytes)
+C:\Users\MSI\.android\build-cache\f4536c346558ebe6a55a06aeb320295aac08cdc9\output\jars\classes.jar(323375 bytes)
+C:\Users\MSI\.android\build-cache\77a7d05d279ff9fd60a4598e41443f1ccb785b21\output\jars\classes.jar(263859 bytes)
+C:\Users\MSI\.android\build-cache\5fd1ad2d6e4f2e18b1419622014eea7ea88e8500\output\jars\classes.jar(104566 bytes)
+C:\Users\MSI\.android\build-cache\d84ae34e3d4579d4edd3ba73f253577363529329\output\jars\classes.jar(772671 bytes)
+S:\Programs\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar(22926 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.8.6\a7db7ea5f7bb18a1cbd9f24edd0e666504800be\aspectjrt-1.8.6.jar(117529 bytes)
+C:\Users\MSI\.android\build-cache\83528e869364912e95c38ab8fa6b9e9f68a8e895\output\jars\classes.jar(91811 bytes)
+C:\Users\MSI\.gradle\caches\modules-2\files-2.1\javax.annotation\jsr250-api\1.0\5025422767732a1ab45d93abfea846513d742dcf\jsr250-api-1.0.jar(5848 bytes)
+S:\Programs\Android\Android Studio\jre\jre\lib\rt.jar(62701390 bytes)
+---- Compiler Messages ---
+info Pipelining compilation
+info weaver operating in reweavable mode.  Need to verify any required types exist.
+info woven class android.support.v7.palette.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\palette\R.class)
+info woven class com.demo.architect.presentation.view.ChipCloud$1 (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\view\ChipCloud$1.class)
+info woven class com.afollestad.materialdialogs.commons.R$id (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\afollestad\materialdialogs\commons\R$id.class)
+info woven class com.demo.architect.presentation.app.di.JobExecutor (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\di\JobExecutor.class)
+info woven class android.support.v7.appcompat.R$layout (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\appcompat\R$layout.class)
+info woven class com.wdullaer.materialdatetimepicker.R$id (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\wdullaer\materialdatetimepicker\R$id.class)
+info woven class com.demo.architect.presentation.view.RoundedImageView (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\view\RoundedImageView.class)
+info woven class com.crashlytics.android.beta.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\crashlytics\android\beta\R.class)
+info woven class com.google.firebase.messaging.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\firebase\messaging\R.class)
+info woven class com.demo.architect.presentation.BuildConfig (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\BuildConfig.class)
+info woven class com.afollestad.materialdialogs.R$drawable (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\afollestad\materialdialogs\R$drawable.class)
+info woven class android.support.v7.recyclerview.R$attr (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\recyclerview\R$attr.class)
+info woven class com.google.android.gms.gass.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\android\gms\gass\R.class)
+info woven class com.demo.architect.presentation.app.permission.PermissionInstance (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\permission\PermissionInstance.class)
+info woven class com.demo.architect.presentation.app.di.module.RepositoryModule_ProvideBillRepositoryFactory (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\di\module\RepositoryModule_ProvideBillRepositoryFactory.class)
+info woven class me.zhanghai.android.materialprogressbar.R$bool (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\me\zhanghai\android\materialprogressbar\R$bool.class)
+info woven class com.demo.architect.presentation.app.base.BaseActivity$1 (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\base\BaseActivity$1.class)
+info woven class com.demo.architect.thirdparty.R$id (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\thirdparty\R$id.class)
+info woven class com.google.android.gms.cast.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\android\gms\cast\R.class)
+info woven class android.support.v7.appcompat.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\appcompat\R.class)
+info woven class com.demo.architect.presentation.app.di.ActivityScope (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\di\ActivityScope.class)
+info woven class com.google.firebase.database.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\firebase\database\R.class)
+info woven class com.afollestad.materialdialogs.R$string (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\afollestad\materialdialogs\R$string.class)
+info woven class com.demo.architect.presentation.view.FloatStoreToolbar$FloatStoreToolbarListener (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\view\FloatStoreToolbar$FloatStoreToolbarListener.class)
+info woven class com.demo.architect.presentation.view.FloatStoreToolbar (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\view\FloatStoreToolbar.class)
+info woven class com.facebook.R$drawable (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\R$drawable.class)
+info woven class com.google.firebase.database.connection.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\firebase\database\connection\R.class)
+info woven class android.support.v7.mediarouter.R$layout (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\mediarouter\R$layout.class)
+info woven class com.demo.architect.presentation.screen.dashboard.DashboardBrowseContract (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\screen\dashboard\DashboardBrowseContract.class)
+info woven class com.facebook.common.R$attr (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\common\R$attr.class)
+info woven class com.demo.architect.presentation.screen.dashboard.DashboardMultiModule (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\screen\dashboard\DashboardMultiModule.class)
+info woven class android.support.customtabs.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\customtabs\R.class)
+info woven class android.support.v7.recyclerview.R$dimen (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\recyclerview\R$dimen.class)
+info woven class com.demo.architect.presentation.app.permission.PermissionActivity$2 (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\permission\PermissionActivity$2.class)
+info woven class com.google.android.gms.instantapps.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\android\gms\instantapps\R.class)
+info woven class com.demo.architect.presentation.app.bus.BusEvent$BaseEvent (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\bus\BusEvent$BaseEvent.class)
+info woven class com.facebook.core.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\core\R.class)
+info woven class com.fernandocejas.frodo.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\fernandocejas\frodo\R.class)
+info woven class com.squareup.timessquare.R$attr (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\squareup\timessquare\R$attr.class)
+info woven class com.demo.architect.presentation.Manifest (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\Manifest.class)
+info woven class com.facebook.messenger.R$layout (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\messenger\R$layout.class)
+info woven class com.demo.architect.presentation.view.StoreToolbar$1 (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\view\StoreToolbar$1.class)
+info woven class com.facebook.messenger.R$drawable (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\messenger\R$drawable.class)
+info woven class com.facebook.share.R$attr (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\facebook\share\R$attr.class)
+info woven class com.demo.architect.presentation.app.bus.MainThreadBus (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\bus\MainThreadBus.class)
+info woven class com.demo.architect.presentation.app.di.module.ApplicationModule_ProvideThreadExecutorFactory (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\di\module\ApplicationModule_ProvideThreadExecutorFactory.class)
+info woven class android.support.v7.mediarouter.R$interpolator (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\mediarouter\R$interpolator.class)
+info woven class com.google.android.gms.fitness.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\android\gms\fitness\R.class)
+info woven class com.afollestad.materialdialogs.R$integer (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\afollestad\materialdialogs\R$integer.class)
+info woven class com.google.firebase.R (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\firebase\R.class)
+info woven class android.support.v7.mediarouter.R$integer (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\android\support\v7\mediarouter\R$integer.class)
+info woven class com.google.android.gms.R$dimen (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\google\android\gms\R$dimen.class)
+info woven class com.wdullaer.materialdatetimepicker.R$layout (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\wdullaer\materialdatetimepicker\R$layout.class)
+info woven class com.squareup.timessquare.R$layout (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\squareup\timessquare\R$layout.class)
+info woven class com.demo.architect.presentation.screen.dashboard.DashboardHomePresenter (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\screen\dashboard\DashboardHomePresenter.class)
+info woven class com.demo.architect.presentation.app.di.module.RepositoryModule_ProvideDatabaseRealmFactory (from S:\Projects Android\DTKApp\app\build\retrolambda\devDebug\com\demo\architect\presentation\app\di\module\RepositoryModule_ProvideDatabaseRealmFactory.class)

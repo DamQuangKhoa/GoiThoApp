@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "176793568262",
+    "firebase_url": "https://dtk-app-a6cb3.firebaseio.com",
+    "project_id": "dtk-app-a6cb3",
+    "storage_bucket": "dtk-app-a6cb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176793568262:android:314e724de17262d3",
+        "android_client_info": {
+          "package_name": "com.goitho.customerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176793568262-25gde2sf0k9p6p11pivmp5em111cpj71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goitho.customerapp",
+            "certificate_hash": "841bb262848e7f3ce4e48eaf9a4a2c7bd5e48d2a"
+          }
+        },
+        {
+          "client_id": "176793568262-6ntrvoj8qai2thd0tki9rpsoo4pvgfdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbyWTj4RM9VX4ZpsMwIfqYa_Q7wyw3h5g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176793568262-6ntrvoj8qai2thd0tki9rpsoo4pvgfdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

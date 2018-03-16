@@ -1,0 +1,137 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath "com.fernandocejas.frodo:frodo-plugin:0.8.3"
+        classpath "io.realm:realm-gradle-plugin:2.2.0"
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.google.firebase:firebase-plugins:1.0.5'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.google.com' }
+    }
+    ext {
+        //Android
+        androidBuildToolsVersion = "26.0.1"
+        androidMinSdkVersion = 19
+        androidTargetSdkVersion = 25
+        androidCompileSdkVersion = 26
+        androidVersionCode = 2
+        androidVersionName = "1.0.1"
+
+        //Android support
+        androidAppcombatVersion = '25.+'
+        androidRecyclerviewVersion = '25.+'
+        androidCardviewVersion = '25.+'
+        androidDesignVersion = '25.+'
+        androidCustomtabsVersion = '25.+'
+        androidMultidexVersion = "1.0.1"
+        androidAnnotationsVersion = '21.0.3'
+
+        //thirdparty
+        facebookSDKVersion = "4.+"
+        facebookAccountKitSDKVersion = "4.+"
+
+        googlePlatServicesVersion = "10.0.1"
+        firebaseMessagingVersion = "10.0.1"
+        firebaseCrashVersion = "10.0.1"
+
+        //Libraries
+        daggerVersion = '2.0.2'
+        butterKnifeVersion = '7.0.1'
+        recyclerViewVersion = '25.0.1'
+        rxJavaVersion = '1.0.14'
+        rxJava2Version = '2.0.1'
+        rxAndroidVersion = '1.0.1'
+        javaxAnnotationVersion = '1.0'
+        javaxInjectVersion = '1'
+        gsonVersion = '2.3'
+        okHttpVersion = '2.5.0'
+        retrofitVersion = '2.0.2'
+        okHttpVersion = '3.4.1'
+        okHttplogVersion = '3.4.1'
+        androidTimeSquareVersion = "1.6.5"
+        picassoVersion = "2.5.2"
+        ottoBusVersion = "1.3.8"
+        androidGifVersion = "1.2.5"
+        libPhoneNumberVersion = "8.0.0"
+        crashlyticsVersion = "2.6.6"
+        calligraphyVersion = "2.2.0"
+        androidFlexboxVersion = "0.2.5"
+
+        //Testing
+        robolectricVersion = '3.0'
+        jUnitVersion = '4.12'
+        assertJVersion = '1.7.1'
+        mockitoVersion = '1.9.5'
+        dexmakerVersion = '1.0'
+        espressoVersion = '2.0'
+        testingSupportLibVersion = '0.1'
+
+        leakCanaryVersion = '1.3.1'
+
+        appDependencies = [
+                daggerCompiler     : "com.google.dagger:dagger-compiler:${daggerVersion}",
+                dagger             : "com.google.dagger:dagger:${daggerVersion}",
+                butterKnife        : "com.jakewharton:butterknife:${butterKnifeVersion}",
+                recyclerView       : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+                rxJava             : "io.reactivex:rxjava:${rxJavaVersion}",
+                rxJava2             : "io.reactivex:rxjava2:rxandroid:${rxJava2Version}",
+                rxAndroid          : "io.reactivex:rxandroid:${rxAndroidVersion}",
+                javaxAnnotation    : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+                retrofitRxJava     : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+                retrofitConverter  : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                retrofit           : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                materialDialog     : 'com.afollestad.material-dialogs:commons:0.9.1.0',
+                datePicker         : 'com.wdullaer:materialdatetimepicker:2.5.0',
+                okHttp             : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                okHttplog          : "com.squareup.okhttp3:logging-interceptor:${okHttplogVersion}",
+
+                androidAppcombat   : "com.android.support:appcompat-v7:${androidAppcombatVersion}",
+                androidRecyclerview: "com.android.support:recyclerview-v7:${androidRecyclerviewVersion}",
+                androidCardview    : "com.android.support:cardview-v7:${androidCardviewVersion}",
+                androidDesign      : "com.android.support:design:${androidDesignVersion}",
+                androidCustomtabs  : "com.android.support:customtabs:${androidCustomtabsVersion}",
+
+                facebookSDK        : "com.facebook.android:facebook-android-sdk:${facebookSDKVersion}",
+                facebookAccountKitSDK : "com.facebook.android:account-kit-sdk:${facebookAccountKitSDKVersion}",
+
+                googlePlatServices : "com.google.android.gms:play-services:${googlePlatServicesVersion}",
+                firebaseMessaging  : "com.google.firebase:firebase-messaging:${firebaseMessagingVersion}",
+                firebaseCrash      : "com.google.firebase:firebase-crash:${firebaseCrashVersion}",
+
+                androidMultidex    : "com.android.support:multidex:${androidMultidexVersion}",
+
+                androidTimeSquare  : "com.squareup:android-times-square:${androidTimeSquareVersion}@aar",
+                picasso            : "com.squareup.picasso:picasso:${picassoVersion}",
+                ottoBus            : "com.squareup:otto:${ottoBusVersion}",
+                androidGif         : "pl.droidsonroids.gif:android-gif-drawable:${androidGifVersion}",
+                libPhoneNumber     : "com.googlecode.libphonenumber:libphonenumber:${libPhoneNumberVersion}",
+                crashlytics        : "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}@aar",
+                calligraphy        : "uk.co.chrisjenx:calligraphy:${calligraphyVersion}",
+                androidFlexbox     : "com.google.android:flexbox:${androidFlexboxVersion}",
+
+
+        ]
+
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

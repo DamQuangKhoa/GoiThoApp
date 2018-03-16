@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.fernandocejas.frodo'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.google.firebase.firebase-crash'
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.androidCompileSdkVersion
+    buildToolsVersion globalConfiguration.androidBuildToolsVersion
+
+    defaultConfig {
+        applicationId "com.goitho.customerapp"
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+        versionCode globalConfiguration.androidVersionCode
+        versionName globalConfiguration.androidVersionName
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    publishNonDefault true
+
+    signingConfigs {
+        dtkAppRelease {
+            keyAlias 'dtk'
+            keyPassword '26021993'
+            storeFile file('../protected/dtk-app-pro-release.jks')
+            storePassword '26021993'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.dtkAppRelease
+        }
+
+        debug {
+
+        }
+    }
+
+
+    productFlavors {
+        dev {
+
+        }
+
+        prod {
+
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                exclude 'io/realm/ValidationList.java'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+}
+
+configurations {
+    devDebugCompile
+    prodDebugCompile
+    devReleaseCompile
+    prodReleaseCompile
+}
+
+dependencies {
+    def appDependencies = rootProject.ext.appDependencies
+
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'cn.pedant.sweetalert:library:1.3'
+    apt appDependencies.daggerCompiler
+
+    compile appDependencies.dagger
+    compile appDependencies.butterKnife
+    compile appDependencies.recyclerView
+    compile appDependencies.rxJava
+    compile appDependencies.rxAndroid
+    compile appDependencies.retrofitRxJava
+    compile appDependencies.retrofitConverter
+    compile appDependencies.retrofit
+    compile(appDependencies.okHttp) {
+        transitive = true
+    }
+    compile(appDependencies.okHttplog) {
+        transitive = true
+    }
+    compile appDependencies.materialDialog
+    compile appDependencies.datePicker
+
+    provided appDependencies.javaxAnnotation
+
+    compile appDependencies.androidAppcombat
+    compile appDependencies.androidRecyclerview
+    compile appDependencies.androidCardview
+    compile appDependencies.androidDesign
+    compile appDependencies.androidCustomtabs
+
+    compile appDependencies.androidMultidex
+
+    compile appDependencies.androidTimeSquare
+    compile appDependencies.picasso
+    compile appDependencies.ottoBus
+    compile appDependencies.androidGif
+    compile appDependencies.libPhoneNumber
+    compile(appDependencies.crashlytics) {
+        transitive = true
+    }
+    compile appDependencies.calligraphy
+    compile appDependencies.androidFlexbox
+
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+
+
+    compile project(path: ':utils')
+    compile project(path: ':domain')
+
+    devDebugCompile project(path: ':thirdparty', configuration: 'devDebug')
+
+    devReleaseCompile project(path: ':thirdparty', configuration: 'devRelease')
+
+    prodDebugCompile project(path: ':thirdparty', configuration: 'prodDebug')
+
+    prodReleaseCompile project(path: ':thirdparty', configuration: 'prodRelease')
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'
