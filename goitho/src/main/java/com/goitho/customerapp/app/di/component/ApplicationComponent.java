@@ -29,9 +29,12 @@ import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.login_permission.LoginPermissionComponent;
 import com.goitho.customerapp.screen.login_permission.LoginPermissionModule;
+import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
+import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
+import com.goitho.customerapp.screen.register.RegisterComponent;
+import com.goitho.customerapp.screen.register.RegisterModule;
 import com.goitho.customerapp.screen.splash.SplashComponent;
 import com.goitho.customerapp.screen.splash.SplashModule;
-
 
 import javax.inject.Singleton;
 
@@ -54,15 +57,27 @@ public interface ApplicationComponent {
 
     void inject(BaseFragment fragment);
 
-    SplashComponent plus (SplashModule splashModule);
-    LoginComponent plus (LoginModule loginModule);
-    LoginPermissionComponent plus (LoginPermissionModule loginPermissionModule);
-    FarmerComponent plus (FarmerModule farmerModule);
-    DiaryComponent plus (DiaryModule diaryModule);
-    DetailDiaryComponent plus (DetailDiaryModule detailDiaryModule);
-    EditProfileComponent plus (EditProfileModule editProfileModule);
-    CertificateComponent plus (CertificateModule certificateModule);
-    EditDetailDiaryComponent plus (EditDetailDiaryModule editDetailDiaryModule);
+    SplashComponent plus(SplashModule splashModule);
+
+    LoginComponent plus(LoginModule loginModule);
+
+    RegisterComponent plus(RegisterModule registerModule);
+
+    PhoneVerificationComponent plus(PhoneVerificationModule phoneVerificationModule);
+
+    LoginPermissionComponent plus(LoginPermissionModule loginPermissionModule);
+
+    FarmerComponent plus(FarmerModule farmerModule);
+
+    DiaryComponent plus(DiaryModule diaryModule);
+
+    DetailDiaryComponent plus(DetailDiaryModule detailDiaryModule);
+
+    EditProfileComponent plus(EditProfileModule editProfileModule);
+
+    CertificateComponent plus(CertificateModule certificateModule);
+
+    EditDetailDiaryComponent plus(EditDetailDiaryModule editDetailDiaryModule);
 
     AddActionComponent plus(AddActionModule addActionModule);
 

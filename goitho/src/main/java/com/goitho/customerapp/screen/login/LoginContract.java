@@ -9,15 +9,12 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface LoginContract {
     interface View extends BaseView<Presenter> {
-        void startFarmerActivity();
-
-        void startDiaryActivity(String farmerId);
+        void startRegisterActivity();
 
         void showError();
     }
 
     interface Presenter extends BasePresenter {
-        void loginFarmer(String email, String password);
-        void loginEmployee(String email, String password);
+
     }
 }

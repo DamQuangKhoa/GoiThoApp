@@ -7,7 +7,7 @@
     <color name="transparent">#00000000</color>
     <color name="smoke">#bcbcbc</color>
     <color name="dust">#fbfbff</color>
-    <color name="white">#ffffff</color>
+    <color name="whiteThree">#ffffff</color>
     <color name="brown">#290101</color>
     <color name="red">#ff0008</color>
     <color name="black">#FF000000</color>
@@ -23,16 +23,29 @@
     <color name="star_yellow">#FEF200</color>
     <color name="star_grey">#959595</color>
 
-
-
-
-
-
+    <color name="tangerine">#ff851c</color>
+    <color name="peach">#ffb77f</color>
+    <color name="mangoTwo">#ff9824</color>
+    <color name="pumpkinOrange">#FF8217</color>
+    <color name="apricot">#FFC772</color>
+    <color name="lightOrange">#ffa03b</color>
+    <color name="mango38">#26ff9b2e</color>
+    <color name="whiteTwo">#e0e0e0</color>
+    <color name="coolGrey">#abacae</color>
+    <color name="white">#F3F3F3</color>
+    <color name="whiteFive">#f5f5f5</color>
+    <color name="lightNavyTwo">#1553A3</color>
+    <color name="lightNavyThree">#195ca1</color>
     <color name="darkSkyBlue">#3f99dd</color>
+    <color name="darkSkyBlueTwo">#3f99dd</color>
+    <color name="lightNavyFour">#1551a2</color>
     <color name="lightNavy">#1551a2</color>
-
-
-
+    <color name="pinkishGrey">#cfcfcf</color>
+    <color name="whiteFour">#f0f0f0</color>
+    <color name="tomato">#ef3c3c</color>
+    <color name="azul">#147fe7</color>
+    <color name="dodgerBlue">#43acf6</color>
+    <color name="deepSkyBlue">#0f7be6</color>
 
 
 </resources>

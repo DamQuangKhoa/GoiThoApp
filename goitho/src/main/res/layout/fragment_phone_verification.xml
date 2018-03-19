@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteFour">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_cover" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_logo"
+            android:layout_marginTop="@dimen/distance_16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_phone_verification"
+                android:textColor="@color/lightNavyThree"
+                android:textSize="@dimen/text_22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_16dp"
+                android:gravity="center"
+                android:text="@string/text_content_verification"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_16dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/otp_one_edit_text"
+                    android:layout_width="@dimen/distance_68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="A"
+                    android:maxLength="1"
+                    android:textColor="@color/lightNavyThree"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_36sp"
+                    android:nextFocusLeft="@+id/otp_one_edit_text"
+                    android:nextFocusRight="@+id/otp_two_edit_text" />
+
+                <EditText
+                    android:id="@+id/otp_two_edit_text"
+                    android:layout_width="@dimen/distance_68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textColor="@color/lightNavyThree"
+                    android:textStyle="bold"
+                    android:text="A"
+                    android:textSize="@dimen/text_36sp"
+                    android:nextFocusLeft="@+id/otp_one_edit_text"
+                    android:nextFocusRight="@+id/otp_three_edit_text" />
+
+                <EditText
+                    android:id="@+id/otp_three_edit_text"
+                    android:layout_width="@dimen/distance_68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:text="3"
+                    android:textColor="@color/lightNavyThree"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_36sp"
+                    android:nextFocusLeft="@+id/otp_two_edit_text"
+                    android:nextFocusRight="@+id/otp_four_edit_text" />
+
+                <EditText
+                    android:id="@+id/otp_four_edit_text"
+                    android:layout_width="@dimen/distance_68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textColor="@color/lightNavyThree"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_36sp"
+                    android:text="5"
+                    android:nextFocusLeft="@+id/otp_three_edit_text"
+                    android:nextFocusRight="@+id/otp_four_edit_text" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_16dp"
+                android:id="@+id/txt_error_code"
+                android:gravity="center"
+                android:text="@string/text_code_error"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/text_16sp" />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="@dimen/size_319dp"
+                android:layout_height="@dimen/size_42dp"
+                android:layout_marginTop="@dimen/distance_16dp"
+                android:background="@drawable/bg_round_corner_button_yellow_background"
+                android:text="@string/text_verification"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_16dp"
+                android:id="@+id/txt_send_code"
+                android:text="@string/text_send_verification_code"
+                android:textColor="@color/lightNavyTwo"
+                android:textSize="@dimen/text_16sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

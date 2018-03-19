@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.facebook.android:facebook-places-4.31.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/57dbe43f05f042c9c42c21582017cef41df6c71f/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/57dbe43f05f042c9c42c21582017cef41df6c71f/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

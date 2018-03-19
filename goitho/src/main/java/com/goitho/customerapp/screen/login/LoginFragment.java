@@ -12,9 +12,7 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.constants.Constants;
-import com.goitho.customerapp.screen.diary.DiaryActivity;
-import com.goitho.customerapp.screen.farmer.FarmerActivity;
+import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import butterknife.Bind;
@@ -29,8 +27,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     private LoginContract.Presenter mPresenter;
-
-    private boolean isEmployee;
 
     @Bind(R.id.et_id)
     EditText etId;
@@ -70,14 +66,9 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         ButterKnife.bind(this, view);
-        getIntent();
         return view;
     }
 
-
-    private void getIntent() {
-        isEmployee = getActivity().getIntent().getExtras().getBoolean(Constants.KEY_LOGIN_ACTIVITY);
-    }
 
     @Override
     public void setPresenter(LoginContract.Presenter presenter) {
@@ -108,22 +99,18 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     @OnClick(R.id.btn_login)
     public void login() {
-        if (isEmployee) {
-            mPresenter.loginEmployee(etId.getText().toString(), etPassword.getText().toString());
-        } else {
-            mPresenter.loginFarmer(etId.getText().toString(), etPassword.getText().toString());
-        }
+
+    }
+
+
+    @OnClick(R.id.txt_register)
+    public void register() {
+        startRegisterActivity();
     }
 
     @Override
-    public void startFarmerActivity() {
-        FarmerActivity.start(getActivity());
-        getActivity().finish();
-    }
-
-    @Override
-    public void startDiaryActivity(String farmerId) {
-        DiaryActivity.start(getActivity(), farmerId);
+    public void startRegisterActivity() {
+        RegisterActivity.start(getActivity());
         getActivity().finish();
     }
 

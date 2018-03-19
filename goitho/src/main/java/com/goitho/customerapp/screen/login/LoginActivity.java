@@ -27,9 +27,8 @@ public class LoginActivity extends BaseActivity {
 
     LoginFragment fragment;
 
-    public static void start(Context context, @NonNull boolean isEmployee) {
+    public static void start(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
-        intent.putExtra(Constants.KEY_LOGIN_ACTIVITY, isEmployee);
         context.startActivity(intent);
     }
 
@@ -54,7 +53,7 @@ public class LoginActivity extends BaseActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
 // finally change the color
-        window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+        window.setStatusBarColor(getResources().getColor(R.color.transparent));
     }
 
     private void initFragment() {
