@@ -68,8 +68,8 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.V
     }
 
     private void setBackground() {
-        int heightCover = imgCover.getHeight();
-        int heightLogo = imgLogo.getHeight();
+        int heightCover = imgCover.getDrawable().getIntrinsicHeight();
+        int heightLogo = imgLogo.getDrawable().getIntrinsicHeight();
         RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams) layout.getLayoutParams();
         relativeParams.setMargins(0, (heightCover - (heightLogo / 2)), 0, 0);  // left, top, right, bottom
         layout.setLayoutParams(relativeParams);
@@ -116,13 +116,11 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.V
     @Override
     public void startLoginActivity() {
         LoginActivity.start(getActivity());
-        getActivity().finish();
     }
 
     @Override
     public void startVerificationActivity() {
         PhoneVerificationActivity.start(getActivity());
-        getActivity().finish();
     }
 
 

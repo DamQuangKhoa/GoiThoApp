@@ -44,6 +44,7 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
     @Bind(R.id.txt_send_code)
     TextView txtSendCode;
 
+
     public PhoneVerificationFragment() {
         // Required empty public constructor
     }
@@ -74,8 +75,8 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
     }
 
     private void setBackground() {
-        int heightCover = imgCover.getHeight();
-        int heightLogo = imgLogo.getHeight();
+        int heightCover = imgCover.getDrawable().getIntrinsicHeight();
+        int heightLogo = imgLogo.getDrawable().getIntrinsicHeight();
         RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams) layout.getLayoutParams();
         relativeParams.setMargins(0, (heightCover - (heightLogo/2)), 0, 0);  // left, top, right, bottom
         layout.setLayoutParams(relativeParams);

@@ -56,4 +56,14 @@
     <dimen name="distance_45dp">45dp</dimen>
     <dimen name="text_22sp">22sp</dimen>
     <dimen name="text_16sp">16sp</dimen>
+    <dimen name="size_310dp">310dp</dimen>
+    <dimen name="size_43dp">43dp</dimen>
+    <dimen name="text_28sp">28sp</dimen>
+    <dimen name="distance_23dp">23dp</dimen>
+    <dimen name="size_2dp">2dp</dimen>
+    <dimen name="size_68dp">68dp</dimen>
+    <dimen name="distance_12dp">12dp</dimen>
+    <dimen name="size_312dp">312dp</dimen>
+    <dimen name="size_280dp">280dp</dimen>
+    <dimen name="size_36dp">36dp</dimen>
 </resources>

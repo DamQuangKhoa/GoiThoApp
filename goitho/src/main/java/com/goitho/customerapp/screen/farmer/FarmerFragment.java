@@ -32,7 +32,6 @@ import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.screen.certificate.CertificateActivity;
 import com.goitho.customerapp.screen.diary.DiaryActivity;
 import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
-import com.goitho.customerapp.screen.login_permission.LoginPermissionActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.squareup.picasso.Picasso;
 
@@ -305,7 +304,6 @@ public class FarmerFragment extends BaseFragment implements FarmerContract.View 
                 .pushFarmerObject(null);
         SharedPreferenceHelper.getInstance(CoreApplication.getInstance())
                 .pushEmployeeObject(null);
-        LoginPermissionActivity.start(getActivity());
         getActivity().finish();
     }
 }

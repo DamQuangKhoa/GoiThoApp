@@ -46,6 +46,10 @@
     <color name="azul">#147fe7</color>
     <color name="dodgerBlue">#43acf6</color>
     <color name="deepSkyBlue">#0f7be6</color>
+    <color name="lightblue">#9dc3f5</color>
+    <color name="dodgerBlueTwo">#43acf7</color>
+    <color name="deepSkyBlueTwo">#0f7be7</color>
+    <color name="warmGreyTwo">#979797</color>
 
 
 </resources>

@@ -1,9 +1,12 @@
-package com.goitho.customerapp.screen.login_permission;
+package com.goitho.customerapp.screen.landing;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
+import com.goitho.customerapp.app.CoreApplication;
+import com.goitho.customerapp.manager.UserManager;
 
 import javax.inject.Inject;
 
@@ -11,16 +14,16 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class LoginPermissionPresenter implements LoginPermissionContract.Presenter{
+public class LandingPresenter implements LandingContract.Presenter{
 
-    private final String TAG = LoginPermissionPresenter.class.getName();
-    private final LoginPermissionContract.View view;
+    private final String TAG = LandingPresenter.class.getName();
+    private final LandingContract.View view;
 
     @Inject
     LocalRepository localRepository;
 
     @Inject
-    LoginPermissionPresenter(@NonNull LoginPermissionContract.View view) {
+    LandingPresenter(@NonNull LandingContract.View view) {
         this.view = view;
     }
 
@@ -32,7 +35,7 @@ public class LoginPermissionPresenter implements LoginPermissionContract.Present
 
     @Override
     public void start() {
-        Log.d(TAG, TAG + ".start() called");
+
     }
 
     @Override

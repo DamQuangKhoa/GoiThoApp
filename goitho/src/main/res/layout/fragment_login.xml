@@ -59,6 +59,7 @@
                         android:ellipsize="end"
                         android:hint="@string/text_phone"
                         android:paddingLeft="@dimen/distance_16dp"
+                        android:inputType="phone"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:textColorHint="@color/black"
@@ -76,6 +77,7 @@
                         android:drawablePadding="@dimen/distance_10dp"
                         android:drawableStart="@drawable/ic_lock"
                         android:ellipsize="end"
+                        android:inputType="textPassword"
                         android:hint="@string/text_password"
                         android:paddingLeft="@dimen/distance_16dp"
                         android:paddingRight="@dimen/distance_16dp"
@@ -133,6 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:id="@+id/img_logo"
                 android:src="@drawable/ic_logo" />
         </RelativeLayout>
     </RelativeLayout>

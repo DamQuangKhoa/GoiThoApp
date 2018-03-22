@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.splash;
+package com.goitho.customerapp.screen.landing;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,12 @@ import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.diary.DiaryActivity;
 import com.goitho.customerapp.screen.farmer.FarmerActivity;
-import com.goitho.customerapp.screen.login_permission.LoginPermissionActivity;
+import com.goitho.customerapp.screen.login.LoginActivity;
+import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.widgets.scviewpager.SCViewPager;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -22,19 +25,19 @@ import butterknife.OnClick;
  * Created by MSI on 26/11/2017.
  */
 
-public class SplashFragment extends BaseFragment implements SplashContract.View {
+public class LandingFragment extends BaseFragment implements LandingContract.View {
 
-    private SplashContract.Presenter mPresenter;
+    private LandingContract.Presenter mPresenter;
 
 
 
-    public SplashFragment() {
+    public LandingFragment() {
         // Required empty public constructor
     }
 
 
-    public static SplashFragment newInstance() {
-        SplashFragment fragment = new SplashFragment();
+    public static LandingFragment newInstance() {
+        LandingFragment fragment = new LandingFragment();
         return fragment;
     }
 
@@ -52,7 +55,7 @@ public class SplashFragment extends BaseFragment implements SplashContract.View 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_splash, container, false);
+        View view = inflater.inflate(R.layout.fragment_landing, container, false);
         ButterKnife.bind(this, view);
 
 
@@ -61,7 +64,7 @@ public class SplashFragment extends BaseFragment implements SplashContract.View 
     }
 
     @Override
-    public void setPresenter(SplashContract.Presenter presenter) {
+    public void setPresenter(LandingContract.Presenter presenter) {
         this.mPresenter = Precondition.checkNotNull(presenter);
     }
 
@@ -87,28 +90,24 @@ public class SplashFragment extends BaseFragment implements SplashContract.View 
         mPresenter.stop();
     }
 
-    @OnClick(R.id.btn_begin)
-    public void begin(){
-        SharedPreferenceHelper.getInstance(CoreApplication.getInstance())
-                .pushWasStartedBoolean(true);
-        startLoginPermission();
+    @OnClick(R.id.btn_register)
+    public void register(){
+        startRegisterActivity();
+    }
+
+
+    @OnClick(R.id.btn_login)
+    public void login(){
+        startLoginActivity();
     }
 
     @Override
-    public void startDiaryActivity(String id) {
-        DiaryActivity.start(getActivity(), id);
-        getActivity().finish();
+    public void startRegisterActivity() {
+        RegisterActivity.start(getActivity());
     }
 
     @Override
-    public void startFarmerActivity() {
-        FarmerActivity.start(getActivity());
-        getActivity().finish();
-    }
-
-    @Override
-    public void startLoginPermission() {
-        LoginPermissionActivity.start(getActivity());
-        getActivity().finish();
+    public void startLoginActivity() {
+        LoginActivity.start(getActivity());
     }
 }

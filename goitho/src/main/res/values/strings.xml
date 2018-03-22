@@ -113,4 +113,12 @@
     <string name="text_take_picture">Chụp ảnh</string>
     <string name="text_pick_picture">Chọn ảnh</string>
     <string name="text_input_note">Vui lòng nhập ghi chú</string>
+    <string name="text_touch_register">CHẠM ĐỂ ĐĂNG KÝ</string>
+    <string name="text_install">App Chủ Nhà</string>
+    <string name="text_content_install">Không Lo Tìm Thợ</string>
+    <string name="text_content_install2">Kết nối ngay với hàng ngàn thợ sửa chữa
+        \n chuyên nghiệp</string>
+    <string name="text_content_forget_pass">Nhập dãy 4 ký tự bao gồm chữ và số trong \n
+        tin nhắn xác minh tại đây</string>
+    <string name="text_get_pass">Lấy mật khẩu mới</string>
 </resources>

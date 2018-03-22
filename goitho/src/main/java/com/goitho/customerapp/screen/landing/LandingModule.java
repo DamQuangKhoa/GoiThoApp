@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.splash;
+package com.goitho.customerapp.screen.landing;
 
 import android.support.annotation.NonNull;
 
@@ -10,16 +10,16 @@ import dagger.Provides;
  */
 
 @Module
-public class SplashModule {
-    private final SplashContract.View SplashContractView;
+public class LandingModule {
+    private final LandingContract.View SplashContractView;
 
-    public SplashModule(SplashContract.View SplashContractView) {
+    public LandingModule(LandingContract.View SplashContractView) {
         this.SplashContractView = SplashContractView;
     }
 
     @Provides
     @NonNull
-    SplashContract.View provideSplashContractView() {
+    LandingContract.View provideSplashContractView() {
         return this.SplashContractView;
     }
 }

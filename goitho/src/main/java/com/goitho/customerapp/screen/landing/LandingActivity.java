@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.login_permission;
+package com.goitho.customerapp.screen.landing;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity;
 
 import javax.inject.Inject;
 
@@ -18,15 +19,14 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class LoginPermissionActivity extends BaseActivity {
+public class LandingActivity extends BaseActivity {
     @Inject
-    LoginPermissionPresenter LoginPermissionPresenter;
+    LandingPresenter SplashPresenter;
 
-    LoginPermissionFragment fragment;
-
+    LandingFragment fragment;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, LoginPermissionActivity.class);
+        Intent intent = new Intent(context, LandingActivity.class);
         context.startActivity(intent);
     }
 
@@ -39,30 +39,23 @@ public class LoginPermissionActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new LoginPermissionModule(fragment))
+                .plus(new LandingModule(fragment))
                 .inject(this);
 
-        Window window = this.getWindow();
-
-// clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-// finally change the color
-        window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+        Window w = getWindow(); // in Activity's onCreate() for instance
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
     }
 
     private void initFragment() {
-        fragment = (LoginPermissionFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (LandingFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = LoginPermissionFragment.newInstance();
+            fragment = LandingFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(LoginPermissionFragment fragment, int frameId) {
+    private void addFragmentToBackStack(LandingFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);

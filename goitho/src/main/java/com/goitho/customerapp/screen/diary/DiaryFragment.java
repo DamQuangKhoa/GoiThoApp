@@ -40,7 +40,6 @@ import com.goitho.customerapp.screen.detail_diary.DetailDiaryActivity;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryActivity;
 import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
 import com.goitho.customerapp.screen.farmer.FarmerActivity;
-import com.goitho.customerapp.screen.login_permission.LoginPermissionActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.squareup.picasso.Picasso;
 
@@ -393,7 +392,6 @@ public class DiaryFragment extends BaseFragment implements DiaryContract.View {
                 .pushFarmerObject(null);
         SharedPreferenceHelper.getInstance(CoreApplication.getInstance())
                 .pushEmployeeObject(null);
-        LoginPermissionActivity.start(getActivity());
         getActivity().finish();
     }
 
@@ -404,7 +402,6 @@ public class DiaryFragment extends BaseFragment implements DiaryContract.View {
                 .pushFarmerObject(null);
         SharedPreferenceHelper.getInstance(CoreApplication.getInstance())
                 .pushEmployeeObject(null);
-        LoginPermissionActivity.start(getActivity());
         getActivity().finish();
     }
 

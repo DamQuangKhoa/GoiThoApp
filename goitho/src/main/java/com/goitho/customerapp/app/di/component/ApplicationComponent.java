@@ -25,16 +25,17 @@ import com.goitho.customerapp.screen.farmer.FarmerComponent;
 import com.goitho.customerapp.screen.farmer.FarmerModule;
 import com.goitho.customerapp.screen.history.HistoryComponent;
 import com.goitho.customerapp.screen.history.HistoryModule;
+import com.goitho.customerapp.screen.landing.LandingComponent;
+import com.goitho.customerapp.screen.landing.LandingModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
-import com.goitho.customerapp.screen.login_permission.LoginPermissionComponent;
-import com.goitho.customerapp.screen.login_permission.LoginPermissionModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
 import com.goitho.customerapp.screen.register.RegisterModule;
-import com.goitho.customerapp.screen.splash.SplashComponent;
-import com.goitho.customerapp.screen.splash.SplashModule;
+import com.goitho.customerapp.screen.user.UserComponent;
+import com.goitho.customerapp.screen.user.UserFragment;
+import com.goitho.customerapp.screen.user.UserModule;
 
 import javax.inject.Singleton;
 
@@ -57,15 +58,16 @@ public interface ApplicationComponent {
 
     void inject(BaseFragment fragment);
 
-    SplashComponent plus(SplashModule splashModule);
 
     LoginComponent plus(LoginModule loginModule);
+
+    UserComponent plus(UserModule userModule);
+
+    LandingComponent plus(LandingModule landingModule);
 
     RegisterComponent plus(RegisterModule registerModule);
 
     PhoneVerificationComponent plus(PhoneVerificationModule phoneVerificationModule);
-
-    LoginPermissionComponent plus(LoginPermissionModule loginPermissionModule);
 
     FarmerComponent plus(FarmerModule farmerModule);
 
