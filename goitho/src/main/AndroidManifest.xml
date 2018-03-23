@@ -78,6 +78,7 @@
         <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity"/>
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

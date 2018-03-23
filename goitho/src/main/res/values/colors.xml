@@ -50,6 +50,10 @@
     <color name="dodgerBlueTwo">#43acf7</color>
     <color name="deepSkyBlueTwo">#0f7be7</color>
     <color name="warmGreyTwo">#979797</color>
-
-
+    <color name="yellowishOrange">#faa31b</color>
+    <color name="butterscotch">#fdb747</color>
+    <color name="iceBlueTwo">#fdfeff</color>
+    <color name="iceBlueThree">#eff6ff</color>
+    <color name="whiteSix">#f8f8f8</color>
+    <color name="whiteSeven">#dcdcdc</color>
 </resources>

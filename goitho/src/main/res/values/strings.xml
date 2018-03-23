@@ -8,19 +8,24 @@
     <string name="text_employee">Nhân viên</string>
     <string name="text_farmer">Nông hộ</string>
     <string name="text_login">Đăng nhập</string>
+    <string name="text_update">Cập nhật</string>
+    <string name="text_capture">Chụp ảnh</string>
+    <string name="text_choose_album">Chọn từ Albums</string>
+    <string name="text_complete">Hoàn thành</string>
     <string name="text_register_account">Đăng ký tài khoản</string>
     <string name="text_phone_verification">Xác minh số điện thoại</string>
     <string name="text_content_verification">Nhập dãy 4 ký tự bao gồm chữ và số trong \n tin nhắn xác minh tại đây</string>
     <string name="text_forgot_password">Quên mật khẩu ?</string>
-    <string name="text_back">Trở về</string>
+    <string name="text_back"><u>Quay lại</u></string>
     <string name="text_login_farmer">Đăng nhập nông dân</string>
     <string name="text_login_employee">Đăng nhập nhân viên</string>
     <string name="text_choose_farmer">Lựa chọn nông hộ</string>
     <string name="text_famer_id">Mã nông hộ:</string>
-    <string name="text_address">Địa chỉ:</string>
+    <string name="text_address">Địa chỉ 1</string>
+    <string name="text_address_2">Địa chỉ 2</string>
     <string name="text_diary">Nhật ký sản xuất</string>
     <string name="text_search">Tìm kiếm</string>
-
+    <string name="text_close">Đóng</string>
     <string name="text_day">Theo ngày</string>
     <string name="text_week">Theo tuần</string>
     <string name="text_month">Theo tháng</string>
@@ -71,13 +76,16 @@
     <string name="text_intro1">Nhà cung cấp rau củ sạch</string>
     <string name="text_begin">Bắt đầu</string>
     <string name="text_username">Tên đăng nhập</string>
+    <string name="text_name">Họ tên</string>
     <string name="text_phone">Số điện thoại</string>
     <string name="text_password">Mật khẩu</string>
     <string name="text_hi">Xin chào</string>
+
     <string name="text_login_to_continue">Đăng nhập để tiếp tục</string>
     <string name="text_dont_have_account">Chưa có tài khoản? Đăng ký ngay</string>
     <string name="text_have_account">Bạn đã có tài khoản? Đăng nhập ngay</string>
     <string name="text_register">Đăng ký</string>
+    <string name="text_edit_account">Sửa tài khoản</string>
     <string name="text_verification">Xác minh</string>
     <string name="text_send_verification_code">Gửi lại mã xác minh</string>
     <string name="text_code_error">Mã xác minh không chính xác. \n Vui lòng nhập lại</string>
@@ -121,4 +129,15 @@
     <string name="text_content_forget_pass">Nhập dãy 4 ký tự bao gồm chữ và số trong \n
         tin nhắn xác minh tại đây</string>
     <string name="text_get_pass">Lấy mật khẩu mới</string>
+    <string name="text_toolbar_profile">THÔNG TIN TÀI KHOẢN</string>
+    <string name="text_register_success">TẠO TÀI KHOẢN THÀNH CÔNG</string>
+    <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
+        công trên hệ thống Gọi Thợ. Hãy luôn mở \n App Gọi Thợ và bật chế độ báo Notification \n
+        để nhận những công việc hấp dẫn.</string>
+    <string name="text_go_home">VỀ TRANG CHỦ</string>
+    <string name="text_manager_account">QUẢN LÝ TÀI KHOẢN</string>
+    <string name="text_content_add_profile">Để kích hoạt tài khoản, hãy cung cấp đầy đủ các \n thông tin sau</string>
+    <string name="text_choose_avatar">Chọn hình đại diện</string>
+    <string name="text_email">Email</string>
+    <string name="text_content_edit">Chỉ thay đổi được mật khẩu và số điện thoại</string>
 </resources>

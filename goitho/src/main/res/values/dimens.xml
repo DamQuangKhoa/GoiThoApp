@@ -66,4 +66,8 @@
     <dimen name="size_312dp">312dp</dimen>
     <dimen name="size_280dp">280dp</dimen>
     <dimen name="size_36dp">36dp</dimen>
+    <dimen name="size_76dp">76dp</dimen>
+    <dimen name="size_170dp">170dp</dimen>
+    <dimen name="size_350dp">350dp</dimen>
+    <dimen name="size_454dp">454dp</dimen>
 </resources>

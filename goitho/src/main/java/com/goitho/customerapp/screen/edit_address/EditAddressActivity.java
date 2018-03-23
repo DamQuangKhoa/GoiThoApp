@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.edit_profile;
+package com.goitho.customerapp.screen.edit_address;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,14 +19,14 @@ import javax.inject.Inject;
  * Created by Skull on 29/11/2017.
  */
 
-public class EditProfileActivity extends BaseActivity {
+public class EditAddressActivity extends BaseActivity {
     @Inject
-    EditProfilePresenter presenter;
+    EditAddressPresenter presenter;
 
-    EditProfileFragment fragment;
+    EditAddressFragment fragment;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, EditProfileActivity.class);
+        Intent intent = new Intent(context, EditAddressActivity.class);
         context.startActivity(intent);
     }
 
@@ -39,7 +39,7 @@ public class EditProfileActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new EditProfileModule(fragment))
+                .plus(new EditAddressModule(fragment))
                 .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
@@ -51,14 +51,14 @@ public class EditProfileActivity extends BaseActivity {
     }
 
     private void initFragment() {
-        fragment = (EditProfileFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (EditAddressFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = EditProfileFragment.newInstance();
+            fragment = EditAddressFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(EditProfileFragment fragment, int frameId) {
+    private void addFragmentToBackStack(EditAddressFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);
