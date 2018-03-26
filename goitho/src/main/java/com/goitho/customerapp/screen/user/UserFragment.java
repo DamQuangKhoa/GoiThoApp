@@ -28,18 +28,39 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     private UserContract.Presenter mPresenter;
 
+    @Bind(R.id.txt_username)
+    TextView txtUsername;
 
-    @Bind(R.id.img_cover)
-    ImageView imgCover;
+    @Bind(R.id.txt_address)
+    TextView txtAddress;
 
-    @Bind(R.id.img_logo)
-    ImageView imgLogo;
+    @Bind(R.id.img_avatar)
+    ImageView imgAvatar;
 
-    @Bind(R.id.layout)
-    RelativeLayout layout;
+    @Bind(R.id.txt_phone)
+    TextView txtPhone;
 
-    @Bind(R.id.txt_send_code)
-    TextView txtSendCode;
+    @Bind(R.id.txt_value)
+    TextView txtValue;
+
+    @Bind(R.id.txt_edited)
+    TextView txtEdited;
+
+    @Bind(R.id.txt_point)
+    TextView txtPoint;
+
+    @Bind(R.id.txt_password)
+    TextView txtPassword;
+
+    @Bind(R.id.txt_name)
+    TextView txtName;
+
+    @Bind(R.id.txt_email)
+    TextView txtEmail;
+
+    @Bind(R.id.layout_add_address)
+    RelativeLayout rlAddAddress;
+
 
     public UserFragment() {
         // Required empty public constructor
@@ -64,20 +85,13 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_phone_verification, container, false);
+        View view = inflater.inflate(R.layout.fragment_user, container, false);
         ButterKnife.bind(this, view);
-        setBackground();
+
         return view;
     }
 
-    private void setBackground() {
-        int heightCover = imgCover.getHeight();
-        int heightLogo = imgLogo.getHeight();
-        RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams) layout.getLayoutParams();
-        relativeParams.setMargins(0, (heightCover - (heightLogo/2)), 0, 0);  // left, top, right, bottom
-        layout.setLayoutParams(relativeParams);
-        txtSendCode.setPaintFlags(txtSendCode.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-    }
+
 
     @Override
     public void setPresenter(UserContract.Presenter presenter) {
@@ -106,10 +120,21 @@ public class UserFragment extends BaseFragment implements UserContract.View {
         mPresenter.stop();
     }
 
-    @OnClick(R.id.btn_login)
-    public void login() {
+    @OnClick(R.id.btn_edit_address)
+    public void editAddress() {
 
     }
+
+    @OnClick(R.id.btn_delete)
+    public void deleteAddress() {
+
+    }
+
+    @OnClick(R.id.btn_edit_info)
+    public void editInfo() {
+
+    }
+
 
 
     @Override

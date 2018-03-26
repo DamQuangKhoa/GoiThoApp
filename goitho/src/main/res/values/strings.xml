@@ -17,6 +17,8 @@
     <string name="text_content_verification">Nhập dãy 4 ký tự bao gồm chữ và số trong \n tin nhắn xác minh tại đây</string>
     <string name="text_forgot_password">Quên mật khẩu ?</string>
     <string name="text_back"><u>Quay lại</u></string>
+    <string name="text_edit">Sửa</string>
+    <string name="text_delete_address">Xóa địa chỉ</string>
     <string name="text_login_farmer">Đăng nhập nông dân</string>
     <string name="text_login_employee">Đăng nhập nhân viên</string>
     <string name="text_choose_farmer">Lựa chọn nông hộ</string>
@@ -31,6 +33,10 @@
     <string name="text_month">Theo tháng</string>
     <string name="text_product">Theo sản phẩm</string>
     <string name="text_logout">Đăng xuất</string>
+    <string name="text_edited">Đã sửa</string>
+    <string name="text_">Giá trị</string>
+    <string name="text_value">Giá trị</string>
+    <string name="text_point">Điểm tích lũy</string>
     <string name="text_add_diary">Thêm nhật ký</string>
     <string name="text_famer_rate">Đánh giá nông hộ:</string>
     <string-array name="array_spinner_search">
@@ -81,6 +87,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_intro1">Nhà cung cấp rau củ sạch</string>
     <string name="text_begin">Bắt đầu</string>
     <string name="text_username">Tên đăng nhập</string>
+    <string name="text_personal">Cá nhân</string>
     <string name="text_name">Họ tên</string>
     <string name="text_phone">Số điện thoại</string>
     <string name="text_password">Mật khẩu</string>
@@ -135,6 +142,9 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
         tin nhắn xác minh tại đây</string>
     <string name="text_get_pass">Lấy mật khẩu mới</string>
     <string name="text_toolbar_profile">THÔNG TIN TÀI KHOẢN</string>
+    <string name="text_address_profile">ĐỊA CHỈ SỬA CHỮA</string>
+
+    <string name="text_toolbar_account">TÀI KHOẢN</string>
     <string name="text_register_success">TẠO TÀI KHOẢN THÀNH CÔNG</string>
     <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
         công trên hệ thống Gọi Thợ. Hãy luôn mở \n App Gọi Thợ và bật chế độ báo Notification \n

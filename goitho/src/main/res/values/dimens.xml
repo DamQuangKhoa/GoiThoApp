@@ -75,4 +75,16 @@
     <dimen name="distance_11dp">11dp</dimen>
     <dimen name="size_49dp">49dp</dimen>
     <dimen name="distance_19dp">19dp</dimen>
+    <dimen name="distance_4dp">4dp</dimen>
+    <dimen name="size_48dp">48dp</dimen>
+    <dimen name="size_46dp">46dp</dimen>
+    <dimen name="size_339dp">339dp</dimen>
+    <dimen name="size_74dp">74dp</dimen>
+    <dimen name="size_24dp">24dp</dimen>
+    <dimen name="size_227dp">227dp</dimen>
+    <dimen name="size_222dp">222dp</dimen>
+    <dimen name="distance_21dp">21dp</dimen>
+    <dimen name="size_124dp">124dp</dimen>
+    <dimen name="size_34dp">34dp</dimen>
+    <dimen name="distance_30dp">30dp</dimen>
 </resources>

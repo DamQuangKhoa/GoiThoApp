@@ -26,6 +26,7 @@
     <color name="tangerine">#ff851c</color>
     <color name="peach">#ffb77f</color>
     <color name="mangoTwo">#ff9824</color>
+    <color name="mangoFour">#ff9a2a</color>
     <color name="pumpkinOrange">#FF8217</color>
     <color name="apricot">#FFC772</color>
     <color name="mangoSix">#ff8a22</color>
@@ -59,4 +60,5 @@
     <color name="whiteSix">#f8f8f8</color>
     <color name="whiteSeven">#dcdcdc</color>
     <color name="whiteFifteen">#f6f6f6</color>
+    <color name="whiteNine">#f4f4f4</color>
 </resources>

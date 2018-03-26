@@ -74,6 +74,8 @@ public interface ApplicationComponent {
 
     UserComponent plus(UserModule userModule);
 
+    EditAddressComponent plus(EditAddressModule editAddressModule);
+
     LandingComponent plus(LandingModule landingModule);
 
     RegisterComponent plus(RegisterModule registerModule);
