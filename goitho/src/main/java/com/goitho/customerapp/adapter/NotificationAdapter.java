@@ -56,13 +56,9 @@ public class NotificationAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_notification, null);
-        Resources r = context.getResources();
-        int px = Math.round(TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 15, r.getDisplayMetrics()));
         LinearLayout layout = view.findViewById(R.id.layout_main);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 79);
-        lp.setMargins(px, 0, px, 0);
         layout.setLayoutParams(lp);
 
         TextView txtTitle = (TextView) view.findViewById(R.id.txt_title);
