@@ -134,7 +134,7 @@ public class FarmerFragment extends BaseFragment implements FarmerContract.View 
         llProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditProfileActivity.start(getActivity(), true);
+                EditProfileActivity.start(getActivity());
             }
         });
 

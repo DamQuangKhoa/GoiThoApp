@@ -10,10 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.goitho.employeeapp.R;
-import com.goitho.employeeapp.app.base.BaseFragment;
-import com.goitho.employeeapp.screen.register.RegisterActivity;
-import com.goitho.employeeapp.util.Precondition;
+import com.goitho.customerapp.R;
+import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.app.di.Precondition;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -66,6 +66,11 @@
     <string name="text_add_action">Tạo loại việc</string>
     <string name="text_add">Thêm</string>
     <string name="text_account">Tài khoản</string>
+    <string name="text_notification">Thông báo</string>
+    <string name="text_order_history">Lịch sử đơn hàng</string>
+    <string name="text_content_notification">Gọi Thợ đã nhận được thông tin của bạn. \n
+        Chúng tôi sẽ tiến hành kiểm tra và reset \n các chỉ số tài khoản. \n
+Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống </string>
     <string name="text_action_for_product">Tên loại việc cho sản phẩm</string>
     <string name="text_delete_action">Xóa loại việc</string>
     <string name="text_delete_action_question">Bạn có chắc muốn xóa loại việc</string>
@@ -140,4 +145,6 @@
     <string name="text_choose_avatar">Chọn hình đại diện</string>
     <string name="text_email">Email</string>
     <string name="text_content_edit">Chỉ thay đổi được mật khẩu và số điện thoại</string>
+    <string name="text_doing">Đang sửa</string>
+    <string name="text_completed">Đã hoàn thành</string>
 </resources>

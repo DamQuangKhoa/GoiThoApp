@@ -28,6 +28,7 @@
     <color name="mangoTwo">#ff9824</color>
     <color name="pumpkinOrange">#FF8217</color>
     <color name="apricot">#FFC772</color>
+    <color name="mangoSix">#ff8a22</color>
     <color name="lightOrange">#ffa03b</color>
     <color name="mango38">#26ff9b2e</color>
     <color name="whiteTwo">#e0e0e0</color>
@@ -39,6 +40,7 @@
     <color name="darkSkyBlue">#3f99dd</color>
     <color name="darkSkyBlueTwo">#3f99dd</color>
     <color name="lightNavyFour">#1551a2</color>
+    <color name="lightNavyFive">#1552a3</color>
     <color name="lightNavy">#1551a2</color>
     <color name="pinkishGrey">#cfcfcf</color>
     <color name="whiteFour">#f0f0f0</color>
@@ -56,4 +58,5 @@
     <color name="iceBlueThree">#eff6ff</color>
     <color name="whiteSix">#f8f8f8</color>
     <color name="whiteSeven">#dcdcdc</color>
+    <color name="whiteFifteen">#f6f6f6</color>
 </resources>

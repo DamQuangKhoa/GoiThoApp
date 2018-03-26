@@ -11,12 +11,16 @@ import com.goitho.customerapp.screen.add_action.AddActionComponent;
 import com.goitho.customerapp.screen.add_action.AddActionModule;
 import com.goitho.customerapp.screen.certificate.CertificateComponent;
 import com.goitho.customerapp.screen.certificate.CertificateModule;
+import com.goitho.customerapp.screen.dashboard.DashboardComponent;
+import com.goitho.customerapp.screen.dashboard.DashboardModule;
 import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
+import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
+import com.goitho.customerapp.screen.edit_address.EditAddressModule;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryComponent;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryModule;
 import com.goitho.customerapp.screen.edit_profile.EditProfileComponent;
@@ -29,10 +33,16 @@ import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
+import com.goitho.customerapp.screen.notification.NotificationComponent;
+import com.goitho.customerapp.screen.notification.NotificationModule;
+import com.goitho.customerapp.screen.order.OrderComponent;
+import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
 import com.goitho.customerapp.screen.register.RegisterModule;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessModule;
 import com.goitho.customerapp.screen.user.UserComponent;
 import com.goitho.customerapp.screen.user.UserFragment;
 import com.goitho.customerapp.screen.user.UserModule;
@@ -60,6 +70,7 @@ public interface ApplicationComponent {
 
 
     LoginComponent plus(LoginModule loginModule);
+    OrderComponent plus(OrderModule orderModule);
 
     UserComponent plus(UserModule userModule);
 
@@ -86,4 +97,12 @@ public interface ApplicationComponent {
     DeleteActionComponent plus(DeleteActionModule deleteActionModule);
 
     HistoryComponent plus(HistoryModule historyModule);
+
+    DashboardComponent plus(DashboardModule dashboardModule);
+
+    NotificationComponent plus(NotificationModule notificationModule);
+
+    RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
+
+    EditAddressComponent plus(EditAddressModule editAddressModule);
 }

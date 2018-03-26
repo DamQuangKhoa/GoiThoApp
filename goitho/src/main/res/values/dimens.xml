@@ -19,7 +19,7 @@
     <dimen name="size_50dp">50dp</dimen>
     <dimen name="size_40dp">40dp</dimen>
     <dimen name="distance_25dp">25dp</dimen>
-    <dimen name="size_toolbar">47dp</dimen>
+    <dimen name="size_toolbar">67dp</dimen>
     <dimen name="distance_5dp">5dp</dimen>
     <dimen name="size_120dp">120dp</dimen>
     <dimen name="text_13sp">13sp</dimen>
@@ -70,4 +70,9 @@
     <dimen name="size_170dp">170dp</dimen>
     <dimen name="size_350dp">350dp</dimen>
     <dimen name="size_454dp">454dp</dimen>
+    <dimen name="size_79dp">79dp</dimen>
+    <dimen name="size_214dp">214dp</dimen>
+    <dimen name="distance_11dp">11dp</dimen>
+    <dimen name="size_49dp">49dp</dimen>
+    <dimen name="distance_19dp">19dp</dimen>
 </resources>

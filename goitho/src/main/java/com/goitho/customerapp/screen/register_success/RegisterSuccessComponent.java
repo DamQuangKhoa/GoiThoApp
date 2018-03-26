@@ -1,6 +1,6 @@
 package com.goitho.customerapp.screen.register_success;
 
-import com.goitho.employeeapp.app.di.ActivityScope;
+import com.goitho.customerapp.app.di.ActivityScope;
 
 import dagger.Subcomponent;
 

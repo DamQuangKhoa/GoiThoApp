@@ -59,11 +59,6 @@
 
         <activity android:name="com.goitho.customerapp.app.permission.PermissionActivity" />
         <activity android:name="com.goitho.customerapp.screen.splash.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.goitho.customerapp.screen.login.LoginActivity" />
         <activity android:name="com.goitho.customerapp.screen.farmer.FarmerActivity" />
@@ -79,6 +74,13 @@
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

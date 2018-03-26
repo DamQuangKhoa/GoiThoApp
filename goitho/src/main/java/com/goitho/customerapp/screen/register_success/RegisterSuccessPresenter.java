@@ -11,11 +11,6 @@ import com.demo.architect.domain.usecase.GetListFarmerUsecase;
 import com.demo.architect.domain.usecase.GetProductUsecase;
 import com.demo.architect.domain.usecase.LoginEmployeeUsecase;
 import com.demo.architect.domain.usecase.LoginFarmerUsecase;
-import com.goitho.employeeapp.app.CoreApplication;
-import com.goitho.employeeapp.constants.Constants;
-import com.goitho.employeeapp.manager.FarmerManager;
-import com.goitho.employeeapp.manager.ProductManager;
-import com.goitho.employeeapp.manager.UserManager;
 
 import javax.inject.Inject;
 

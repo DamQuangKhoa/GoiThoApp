@@ -1,35 +1,31 @@
-package com.goitho.customerapp.screen.register_success;
+package com.goitho.customerapp.screen.dashboard;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.demo.architect.data.model.ActivityEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.constants.Constants;
 
 import javax.inject.Inject;
 
 /**
- * Created by MSI on 26/11/2017.
+ * Created by Skull on 14/12/2017.
  */
 
-public class RegisterSuccessActivity extends BaseActivity {
+public class DashboardActivity extends BaseActivity {
     @Inject
-    RegisterSuccessPresenter LoginPresenter;
+    DashboardPresenter dashboardPresenter;
 
-    RegisterSuccessFragment fragment;
-
-    public static void start(Context context) {
-        Intent intent = new Intent(context, RegisterSuccessActivity.class);
-        context.startActivity(intent);
-    }
+    DashboardFragment fragment;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,27 +36,35 @@ public class RegisterSuccessActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new RegisterSuccessModule(fragment))
+                .plus(new DashboardModule(fragment))
                 .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
+        }
     }
 
     private void initFragment() {
-        fragment = (RegisterSuccessFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (DashboardFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = RegisterSuccessFragment.newInstance();
+            fragment = DashboardFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(RegisterSuccessFragment fragment, int frameId) {
+    private void addFragmentToBackStack(DashboardFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    public static void start(Context context, ActivityEntity entity) {
+        Intent intent = new Intent(context, DashboardActivity.class);
+        intent.putExtra(Constants.KEY_EDIT_DETAIL_DIARY_ACTIVITY, entity);
+        context.startActivity(intent);
     }
 }

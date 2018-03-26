@@ -1,10 +1,9 @@
-package com.goitho.customerapp.screen.register_success;
+package com.goitho.customerapp.screen.notification;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,14 +19,14 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class RegisterSuccessActivity extends BaseActivity {
+public class NotificationActivity extends BaseActivity {
     @Inject
-    RegisterSuccessPresenter LoginPresenter;
+    NotificationPresenter registerPresenter;
 
-    RegisterSuccessFragment fragment;
+    NotificationFragment fragment;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, RegisterSuccessActivity.class);
+        Intent intent = new Intent(context, NotificationActivity.class);
         context.startActivity(intent);
     }
 
@@ -40,23 +39,25 @@ public class RegisterSuccessActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new RegisterSuccessModule(fragment))
+                .plus(new NotificationModule(fragment))
                 .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
+        }
     }
 
     private void initFragment() {
-        fragment = (RegisterSuccessFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (NotificationFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = RegisterSuccessFragment.newInstance();
+            fragment = NotificationFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(RegisterSuccessFragment fragment, int frameId) {
+    private void addFragmentToBackStack(NotificationFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);
