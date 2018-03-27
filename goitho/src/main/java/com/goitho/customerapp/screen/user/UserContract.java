@@ -9,7 +9,8 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface UserContract {
     interface View extends BaseView<Presenter> {
-
+        void startEditProfileActivity();
+        void startEditAddressActivity();
         void showError();
     }
 

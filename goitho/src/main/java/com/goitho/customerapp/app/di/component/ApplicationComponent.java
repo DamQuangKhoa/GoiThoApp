@@ -106,5 +106,4 @@ public interface ApplicationComponent {
 
     RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
 
-    EditAddressComponent plus(EditAddressModule editAddressModule);
 }

@@ -74,7 +74,8 @@
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity">
+        <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.user.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -95,7 +96,7 @@
 
         <activity
             android:name="com.goitho.customerapp.screen.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps"/>
     </application>
 
 </manifest>

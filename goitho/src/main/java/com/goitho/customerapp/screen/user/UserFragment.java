@@ -2,7 +2,6 @@ package com.goitho.customerapp.screen.user;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,8 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
+import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import butterknife.Bind;
@@ -31,6 +32,9 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     @Bind(R.id.txt_username)
     TextView txtUsername;
 
+    @Bind(R.id.txt_username2)
+    TextView txtUsername2;
+
     @Bind(R.id.txt_address)
     TextView txtAddress;
 
@@ -39,6 +43,9 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     @Bind(R.id.txt_phone)
     TextView txtPhone;
+
+    @Bind(R.id.txt_phone2)
+    TextView txtPhone2;
 
     @Bind(R.id.txt_value)
     TextView txtValue;
@@ -54,6 +61,9 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     @Bind(R.id.txt_name)
     TextView txtName;
+
+    @Bind(R.id.txt_name2)
+    TextView txtName2;
 
     @Bind(R.id.txt_email)
     TextView txtEmail;
@@ -87,10 +97,9 @@ public class UserFragment extends BaseFragment implements UserContract.View {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_user, container, false);
         ButterKnife.bind(this, view);
-
+        txtUsername.setText("thangnt");
         return view;
     }
-
 
 
     @Override
@@ -122,7 +131,7 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     @OnClick(R.id.btn_edit_address)
     public void editAddress() {
-
+        startEditAddressActivity();
     }
 
     @OnClick(R.id.btn_delete)
@@ -132,10 +141,28 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     @OnClick(R.id.btn_edit_info)
     public void editInfo() {
+        startEditProfileActivity();
+    }
+
+    @OnClick(R.id.layout_add_address)
+    public void addAddress() {
 
     }
 
+    @OnClick(R.id.txt_logout)
+    public void logout() {
 
+    }
+
+    @Override
+    public void startEditProfileActivity() {
+        EditProfileActivity.start(getContext());
+    }
+
+    @Override
+    public void startEditAddressActivity() {
+        EditAddressActivity.start(getContext());
+    }
 
     @Override
     public void showError() {
