@@ -36,9 +36,14 @@
     <string name="text_edited">Đã sửa</string>
     <string name="text_value">Giá trị</string>
     <string name="text_survey">Hẹn khảo sát</string>
-    <string name="text_review_orders">Đánh giá đơn hàng ></string>
+    <string name="text_review_orders">Đánh giá đơn hàng</string>
     <string name="text_review">Đánh giá</string>
+    <string name="text_call_center">Trung tâm hỗ trợ</string>
     <string name="text_reason">Lý do hủy</string>
+    <string name="text_">Lý do hủy</string>
+    <string name="text_status_exhibition">Trạng thái đơn hàng</string>
+    <string name="text_need_repair">Cần sửa</string>
+    <string name="text_repair_fee">Phí sửa chữa</string>
     <string name="text_repair">Yêu cầu sửa chữa</string>
     <string name="text_point">Điểm tích lũy</string>
     <string name="text_add_diary">Thêm nhật ký</string>

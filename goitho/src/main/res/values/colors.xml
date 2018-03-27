@@ -30,11 +30,13 @@
     <color name="pumpkinOrange">#FF8217</color>
     <color name="apricot">#FFC772</color>
     <color name="mangoSix">#ff8a22</color>
+    <color name="mangoSeven">#ff9b2e</color>
     <color name="lightOrange">#ffa03b</color>
     <color name="mango38">#26ff9b2e</color>
     <color name="whiteTwo">#e0e0e0</color>
     <color name="coolGrey">#abacae</color>
     <color name="white">#F3F3F3</color>
+    <color name="greyishBrown">#555555</color>
     <color name="whiteFive">#f5f5f5</color>
     <color name="lightNavyTwo">#1553A3</color>
     <color name="lightNavyThree">#195ca1</color>
@@ -62,4 +64,5 @@
     <color name="whiteFifteen">#f6f6f6</color>
     <color name="whiteNine">#f4f4f4</color>
     <color name="blackThree">#393939</color>
+    <color name="turtleGreen">#77b653</color>
 </resources>
