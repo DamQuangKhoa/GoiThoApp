@@ -83,6 +83,7 @@
     <string name="text_account">Tài khoản</string>
     <string name="text_notification">Thông báo</string>
     <string name="text_order_history">Lịch sử đơn hàng</string>
+    <string name="text_title_home">SỬA CHỮA MỌI HƯ HỎNG</string>
     <string name="text_content_notification">Gọi Thợ đã nhận được thông tin của bạn. \n
         Chúng tôi sẽ tiến hành kiểm tra và reset \n các chỉ số tài khoản. \n
 Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống </string>
@@ -116,7 +117,12 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_message">Tin nhắn</string>
     <string name="text_noti">Thông báo</string>
     <string name="text_setting">Cài đặt</string>
-
+    <string name="text_order">ĐẶT LỊCH SỬA CHỮA</string>
+    <string name="text_promotion">KHUYẾN MÃI</string>
+    <string name="text_order_hotline">ĐẶT LỊCH QUA HOTLINE</string>
+    <string name="text_appointment">Lịch hẹn</string>
+    <string name="text_order_doing">ĐƠN HÀNG ĐANG SỬA</string>
+    <string name="text_take_care_home">MẸO CHĂM SÓC NHÀ CỬA</string>
     <string name="text_sweet_dialog_title">Thông báo</string>
     <string name="text_sweet_dialog_confirm_text">Đồng ý</string>
     <string name="text_sweet_dialog_confirm_text_exit">Thoát</string>

@@ -4,17 +4,17 @@ package com.demo.architect.data.model;
  * Created by Yen on 3/27/2018.
  */
 
-public class ExhibitionEntity {
+public class OrderEntity {
     private String content;
     private String timeEdit;
     private int status;
     private int point;
     private String reason;
 
-    public ExhibitionEntity() {
+    public OrderEntity() {
     }
 
-    public ExhibitionEntity(String content, String timeEdit, int status, int point, String reason) {
+    public OrderEntity(String content, String timeEdit, int status, int point, String reason) {
         this.content = content;
         this.timeEdit = timeEdit;
         this.status = status;

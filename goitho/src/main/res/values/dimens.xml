@@ -94,4 +94,8 @@
     <dimen name="size_52dp">52dp</dimen>
     <dimen name="distance_9dp">9dp</dimen>
     <dimen name="size_256dp">256dp</dimen>
+    <dimen name="distance_29dp">29dp</dimen>
+    <dimen name="distance_34dp">34dp</dimen>
+    <dimen name="distance_13dp">13dp</dimen>
+    <dimen name="distance_7dp">7dp</dimen>
 </resources>

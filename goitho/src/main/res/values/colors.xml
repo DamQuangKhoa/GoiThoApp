@@ -65,4 +65,12 @@
     <color name="whiteNine">#f4f4f4</color>
     <color name="blackThree">#393939</color>
     <color name="turtleGreen">#77b653</color>
+    <color name="deepSkyBlue39">#640f7be6</color>
+    <color name="fadedOrange">#f6aa63</color>
+    <color name="aquaMarine">#48dca9</color>
+    <color name="greenyBlue">#38b3ae</color>
+    <color name="greenyBlue37">#5e3ab7ae</color>
+    <color name="pinkishGreyTwo">#bdbdbd</color>
+    <color name="paleOrange">#ffad50</color>
+    <color name="whiteSixteen">#d4d4d4</color>
 </resources>

@@ -25,25 +25,24 @@ import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryComponent;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryModule;
 import com.goitho.customerapp.screen.edit_profile.EditProfileComponent;
 import com.goitho.customerapp.screen.edit_profile.EditProfileModule;
-import com.goitho.customerapp.screen.exhibition.ExhibitionComponent;
-import com.goitho.customerapp.screen.exhibition.ExhibitionModule;
-import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelComponent;
-import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelModule;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingComponent;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingModule;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingPresenter;
-import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneComponent;
-import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneModule;
 import com.goitho.customerapp.screen.farmer.FarmerComponent;
 import com.goitho.customerapp.screen.farmer.FarmerModule;
 import com.goitho.customerapp.screen.history.HistoryComponent;
 import com.goitho.customerapp.screen.history.HistoryModule;
+import com.goitho.customerapp.screen.home.HomeComponent;
+import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
 import com.goitho.customerapp.screen.notification.NotificationModule;
+import com.goitho.customerapp.screen.order_cancel.OrderCancelComponent;
+import com.goitho.customerapp.screen.order_cancel.OrderCancelModule;
+import com.goitho.customerapp.screen.order_doing.OrderDoingComponent;
+import com.goitho.customerapp.screen.order_doing.OrderDoingModule;
+import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
+import com.goitho.customerapp.screen.order_done.OrderDoneModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
@@ -110,11 +109,13 @@ public interface ApplicationComponent {
     NotificationComponent plus(NotificationModule notificationModule);
 
     RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
-    ExhibitionDoingComponent plus(ExhibitionDoingModule exhibitionDoingModule);
 
-    ExhibitionDoneComponent plus(ExhibitionDoneModule exhibitionDoingModule);
+    OrderDoingComponent plus(OrderDoingModule exhibitionDoingModule);
 
-    ExhibitionCancelComponent plus(ExhibitionCancelModule exhibitionDoingModule);
+    OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
+    OrderCancelComponent plus(OrderCancelModule exhibitionDoingModule);
+
+    HomeComponent plus(HomeModule homeModule);
 
 }
