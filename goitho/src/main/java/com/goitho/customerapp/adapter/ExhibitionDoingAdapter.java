@@ -1,8 +1,6 @@
 package com.goitho.customerapp.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.demo.architect.data.model.ExhibitionEntity;
 import com.demo.architect.data.model.NotificationEntity;
 import com.goitho.customerapp.R;
 
@@ -20,20 +19,20 @@ import java.util.List;
  * Created by Skull on 11/12/2017.
  */
 
-public class NotificationAdapter extends BaseAdapter {
+public class ExhibitionDoingAdapter extends BaseAdapter {
     Context context;
-    List<NotificationEntity> list;
+    List<ExhibitionEntity> list;
     LayoutInflater inflter;
     private OnNextItemListener listener;
 
-    public NotificationAdapter(Context applicationContext, List<NotificationEntity> list, OnNextItemListener listener) {
+    public ExhibitionDoingAdapter(Context applicationContext, List<ExhibitionEntity> list, OnNextItemListener listener) {
         this.context = applicationContext;
         this.list = list;
         inflter = (LayoutInflater.from(applicationContext));
         this.listener = listener;
     }
 
-    public void setData(List<NotificationEntity> list) {
+    public void setData(List<ExhibitionEntity> list) {
         this.list = list;
         notifyDataSetChanged();
     }
@@ -55,23 +54,23 @@ public class NotificationAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflter.inflate(R.layout.item_notification, null);
+        view = inflter.inflate(R.layout.item_exhibition_doing, null);
 //        LinearLayout layout = view.findViewById(R.id.layout_main);
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                79);
+//                86);
 //        layout.setLayoutParams(lp);
 
-        TextView txtTitle = (TextView) view.findViewById(R.id.txt_title);
-        txtTitle.setText(list.get(i).getTitle());
         TextView txtContent = (TextView) view.findViewById(R.id.txt_content);
         txtContent.setText(list.get(i).getContent());
-        ImageView imgNoti = (ImageView) view.findViewById(R.id.img_noti);
-        if (list.get(i).getType() == 1) {
-            imgNoti.setVisibility(View.GONE);
-        }
-        if (list.get(i).getTitle() == null) {
-            txtTitle.setVisibility(View.GONE);
-        }
+        TextView txtTime = (TextView) view.findViewById(R.id.txt_time);
+        txtTime.setText(list.get(i).getTimeEdit());
+        ImageView imgNext = (ImageView) view.findViewById(R.id.img_next);
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onNextItem(i);
+            }
+        });
         return view;
     }
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_main"
+    android:background="@drawable/bg_white_stroke"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginStart="@dimen/distance_12dp"
+        android:layout_marginEnd="@dimen/distance_12dp"
+        android:layout_marginTop="@dimen/distance_16dp"
+        android:layout_marginBottom="@dimen/distance_16dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_repair"
+            android:textStyle="bold"
+            android:textColor="@color/blackThree"
+            android:textSize="@dimen/text_12sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng ABC123"
+            android:id="@+id/txt_content"
+            android:layout_marginTop="@dimen/distance_4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/warmGreyTwo"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/distance_12dp"
+        android:layout_marginEnd="@dimen/distance_12dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/distance_16dp"
+        android:layout_marginBottom="@dimen/distance_16dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_survey"
+            android:textColor="@color/blackThree"
+            android:textStyle="bold"
+            android:id="@+id/txt_title"
+            android:textSize="@dimen/text_12sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng ABC123"
+            android:id="@+id/txt_time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:layout_weight="0"
+        android:id="@+id/img_next"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/distance_12dp"/>
+</LinearLayout>

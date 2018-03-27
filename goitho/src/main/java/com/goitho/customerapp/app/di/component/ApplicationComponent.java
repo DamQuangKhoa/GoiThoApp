@@ -25,6 +25,15 @@ import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryComponent;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryModule;
 import com.goitho.customerapp.screen.edit_profile.EditProfileComponent;
 import com.goitho.customerapp.screen.edit_profile.EditProfileModule;
+import com.goitho.customerapp.screen.exhibition.ExhibitionComponent;
+import com.goitho.customerapp.screen.exhibition.ExhibitionModule;
+import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelComponent;
+import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelModule;
+import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingComponent;
+import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingModule;
+import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingPresenter;
+import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneComponent;
+import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneModule;
 import com.goitho.customerapp.screen.farmer.FarmerComponent;
 import com.goitho.customerapp.screen.farmer.FarmerModule;
 import com.goitho.customerapp.screen.history.HistoryComponent;
@@ -35,8 +44,6 @@ import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
 import com.goitho.customerapp.screen.notification.NotificationModule;
-import com.goitho.customerapp.screen.order.OrderComponent;
-import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
@@ -44,7 +51,6 @@ import com.goitho.customerapp.screen.register.RegisterModule;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessModule;
 import com.goitho.customerapp.screen.user.UserComponent;
-import com.goitho.customerapp.screen.user.UserFragment;
 import com.goitho.customerapp.screen.user.UserModule;
 
 import javax.inject.Singleton;
@@ -70,7 +76,6 @@ public interface ApplicationComponent {
 
 
     LoginComponent plus(LoginModule loginModule);
-    OrderComponent plus(OrderModule orderModule);
 
     UserComponent plus(UserModule userModule);
 
@@ -105,5 +110,11 @@ public interface ApplicationComponent {
     NotificationComponent plus(NotificationModule notificationModule);
 
     RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
+    ExhibitionDoingComponent plus(ExhibitionDoingModule exhibitionDoingModule);
+
+    ExhibitionDoneComponent plus(ExhibitionDoneModule exhibitionDoingModule);
+
+    ExhibitionCancelComponent plus(ExhibitionCancelModule exhibitionDoingModule);
+
 
 }

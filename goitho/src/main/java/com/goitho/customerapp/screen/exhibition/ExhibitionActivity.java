@@ -1,7 +1,8 @@
-package com.goitho.customerapp.screen.order;
+package com.goitho.customerapp.screen.exhibition;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
@@ -19,19 +20,17 @@ import javax.inject.Inject;
  * Created by Skull on 27/11/2017.
  */
 
-public class OrderActivity extends BaseActivity {
-    @Inject
-    OrderPresenter DiaryPresenter;
+public class ExhibitionActivity extends BaseActivity {
 
-    OrderFragment fragment;
+    ExhibitionFragment fragment;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, OrderActivity.class);
+        Intent intent = new Intent(context, ExhibitionActivity.class);
         context.startActivity(intent);
     }
 
     public static void start(Context context, String farmerId) {
-        Intent intent = new Intent(context, OrderActivity.class);
+        Intent intent = new Intent(context, ExhibitionActivity.class);
         intent.putExtra(Constants.KEY_FARMER_ID, farmerId);
         context.startActivity(intent);
     }
@@ -43,31 +42,22 @@ public class OrderActivity extends BaseActivity {
 
         initFragment();
 
-        // Create the presenter
-        CoreApplication.getInstance().getApplicationComponent()
-                .plus(new OrderModule(fragment))
-                .inject(this);
-
-        Window window = this.getWindow();
-        // clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-// finally change the color
-        window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+        Window w = getWindow(); // in Activity's onCreate() for instance
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
+        }
     }
 
     private void initFragment() {
-        fragment = (OrderFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (ExhibitionFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = OrderFragment.newInstance();
+            fragment = ExhibitionFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(OrderFragment fragment, int frameId) {
+    private void addFragmentToBackStack(ExhibitionFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);

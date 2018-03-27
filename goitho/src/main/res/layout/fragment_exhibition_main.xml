@@ -36,13 +36,13 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_49dp"
-        android:layout_below="@+id/toolbar_dashboard"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        app:tabTextColor="@color/white"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="#80ff8a22"
         app:tabSelectedTextColor="@color/mangoSix"
         android:background="@color/whiteThree"
-        app:tabIndicatorColor="#80ff8a22"
+        app:tabIndicatorColor="@color/mangoSix"
         app:tabIndicatorHeight="5dp"
         >
         <android.support.design.widget.TabItem
@@ -66,12 +66,10 @@
             />
 
 
-
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
-        android:layout_below="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
