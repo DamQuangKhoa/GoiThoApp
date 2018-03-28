@@ -98,4 +98,8 @@
     <dimen name="distance_34dp">34dp</dimen>
     <dimen name="distance_13dp">13dp</dimen>
     <dimen name="distance_7dp">7dp</dimen>
+    <dimen name="distance_53dp">53dp</dimen>
+    <dimen name="size_56dp">56dp</dimen>
+    <dimen name="distance_6dp">6dp</dimen>
+    <dimen name="distance_119dp">119dp</dimen>
 </resources>

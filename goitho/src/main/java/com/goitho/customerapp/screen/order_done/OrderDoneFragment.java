@@ -13,6 +13,7 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.OrderDoneAdapter;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,18 +72,13 @@ public class OrderDoneFragment extends BaseFragment implements OrderDoneContract
         adapter = new OrderDoneAdapter(getActivity(), new ArrayList<OrderEntity>(),
                 new OrderDoneAdapter.OnNextItemListener() {
                     @Override
-                    public void onNextItem(int position) {
-
+                    public void onNextItem(OrderEntity item) {
+                        DetailOrderActivity.start(getContext(), item);
                     }
                 });
 
         lvOrder.setAdapter(adapter);
-        lvOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-            }
-        });
 
     }
 

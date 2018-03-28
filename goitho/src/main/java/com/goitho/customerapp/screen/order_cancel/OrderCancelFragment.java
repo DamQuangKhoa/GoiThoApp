@@ -13,6 +13,7 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.OrderCancelAdapter;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,14 +74,15 @@ public class OrderCancelFragment extends BaseFragment implements OrderCancelCont
 
     }
     private void initListView() {
-        adapter = new OrderCancelAdapter(getContext(), new ArrayList<OrderEntity>());
+        adapter = new OrderCancelAdapter(getContext(), new ArrayList<OrderEntity>(),
+                new OrderCancelAdapter.OnNextItemListener() {
+                    @Override
+                    public void onNextItem(OrderEntity item) {
+                        DetailOrderActivity.start(getContext(), item);
+                    }
+                });
         lvOrder.setAdapter(adapter);
-        lvOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-            }
-        });
     }
 
 

@@ -15,6 +15,8 @@ public class ImageEntity {
         this.rscImage = rscImage;
     }
 
+
+
     public Integer getRscImage() {
         return rscImage;
     }

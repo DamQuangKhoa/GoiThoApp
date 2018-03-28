@@ -19,7 +19,7 @@
     <style name="TabLayoutTextStyle">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:textAllCaps">false</item>
     </style>
     <style name="spinnerItemStyle">
         <item name="android:padding">5dp</item>

@@ -17,6 +17,9 @@ import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
+import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
+import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
+import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
@@ -117,5 +120,7 @@ public interface ApplicationComponent {
     OrderCancelComponent plus(OrderCancelModule exhibitionDoingModule);
 
     HomeComponent plus(HomeModule homeModule);
+
+    DetailOrderComponent plus(DetailOrderModule detailOrderModule);
 
 }

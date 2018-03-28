@@ -1,10 +1,12 @@
 package com.demo.architect.data.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Yen on 3/27/2018.
  */
 
-public class OrderEntity {
+public class OrderEntity implements Serializable {
     private String content;
     private String timeEdit;
     private int status;

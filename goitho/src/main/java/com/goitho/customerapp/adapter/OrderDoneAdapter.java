@@ -21,7 +21,7 @@ public class OrderDoneAdapter extends BaseAdapter {
     Context context;
     List<OrderEntity> list;
     LayoutInflater inflter;
-    private OnNextItemListener listener;
+    private final OnNextItemListener listener;
 
     public OrderDoneAdapter(Context applicationContext, List<OrderEntity> list, OnNextItemListener listener) {
         this.context = applicationContext;
@@ -53,7 +53,7 @@ public class OrderDoneAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_exhibition_done, null);
-//        LinearLayout layout = view.findViewById(R.id.layout_main);
+        LinearLayout layout = view.findViewById(R.id.layout_main);
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
 //                86);
 //        layout.setLayoutParams(lp);
@@ -68,12 +68,18 @@ public class OrderDoneAdapter extends BaseAdapter {
         } else {
             llEvaluate.setVisibility(View.GONE);
         }
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onNextItem(list.get(i));
+            }
+        });
         return view;
     }
 
 
     public interface OnNextItemListener {
-        void onNextItem(int position);
+        void onNextItem(OrderEntity item);
     }
 
 

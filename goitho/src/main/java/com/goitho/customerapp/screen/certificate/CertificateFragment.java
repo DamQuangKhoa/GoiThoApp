@@ -114,12 +114,7 @@ public class CertificateFragment extends BaseFragment implements CertificateCont
             }
         }
         listImage.addAll(imagesFromGallery);
-        adapter= new ImageAdapter(listImage, getActivity(),
-                new ImageAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(ImageEntity item) {
-                    }
-                });
+        adapter= new ImageAdapter(listImage, getActivity());
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.HORIZONTAL, false);

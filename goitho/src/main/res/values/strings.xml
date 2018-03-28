@@ -39,12 +39,14 @@
     <string name="text_review_orders">Đánh giá đơn hàng</string>
     <string name="text_review">Đánh giá</string>
     <string name="text_call_center">Trung tâm hỗ trợ</string>
+    <string name="text_open_order">Mở lại đơn hàng</string>
     <string name="text_reason">Lý do hủy</string>
-    <string name="text_">Lý do hủy</string>
     <string name="text_status_exhibition">Trạng thái đơn hàng</string>
     <string name="text_need_repair">Cần sửa</string>
     <string name="text_repair_fee">Phí sửa chữa</string>
+    <string name="text_content">Nội dung</string>
     <string name="text_repair">Yêu cầu sửa chữa</string>
+    <string name="text_title_order_cancel">ĐƠN HÀNG ĐÃ HUỶ</string>
     <string name="text_point">Điểm tích lũy</string>
     <string name="text_add_diary">Thêm nhật ký</string>
     <string name="text_famer_rate">Đánh giá nông hộ:</string>
@@ -65,6 +67,8 @@
     <string name="text_edit_profile">Chỉnh sửa trang cá nhân</string>
     <string name="text_type_action">Loại việc</string>
     <string name="text_time">Thời gian</string>
+    <string name="text_picture">Ảnh hiện trạng</string>
+    <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
     <string name="time">lần</string>

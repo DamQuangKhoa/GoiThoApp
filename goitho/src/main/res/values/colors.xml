@@ -73,4 +73,9 @@
     <color name="pinkishGreyTwo">#bdbdbd</color>
     <color name="paleOrange">#ffad50</color>
     <color name="whiteSixteen">#d4d4d4</color>
+    <color name="whiteSeventeen">#d9d9d9</color>
+    <color name="whiteEighteen">#e9e9e9</color>
+    <color name="fadedOrangeTwo">#f09243</color>
+    <color name="whiteNineteen">#dedede</color>
+
 </resources>

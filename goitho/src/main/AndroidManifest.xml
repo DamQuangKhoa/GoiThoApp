@@ -76,6 +76,7 @@
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
         <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity"/>
         <activity android:name="com.goitho.customerapp.screen.order.OrderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

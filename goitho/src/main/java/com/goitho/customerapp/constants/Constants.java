@@ -19,4 +19,5 @@ public class Constants {
     public static final int KEY_RESULT = 666;
     public static final String NEW_ACTIVITY = "NEW_ACTIVITY";
     public static final String OLD_ACTIVITY = "OLD_ACTIVITY_ID";
+    public static final String KEY_DETAIL_ORDER_ACTIVITY = "DETAIL_ORDER_ACTIVITY";
 }

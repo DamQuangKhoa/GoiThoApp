@@ -21,12 +21,13 @@ public class OrderCancelAdapter extends BaseAdapter {
     Context context;
     List<OrderEntity> list;
     LayoutInflater inflter;
-    private OnNextItemListener listener;
+    private final OnNextItemListener listener;
 
-    public OrderCancelAdapter(Context applicationContext, List<OrderEntity> list) {
+    public OrderCancelAdapter(Context applicationContext, List<OrderEntity> list, OnNextItemListener listener) {
         this.context = applicationContext;
         this.list = list;
         inflter = (LayoutInflater.from(applicationContext));
+        this.listener = listener;
     }
 
     public void setData(List<OrderEntity> list) {
@@ -52,7 +53,7 @@ public class OrderCancelAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_exhibition_cancel, null);
-//        LinearLayout layout = view.findViewById(R.id.layout_main);
+        LinearLayout layout = view.findViewById(R.id.layout_main);
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
 //                86);
 //        layout.setLayoutParams(lp);
@@ -60,12 +61,18 @@ public class OrderCancelAdapter extends BaseAdapter {
         txtContent.setText(list.get(i).getContent());
         TextView txtReason = (TextView) view.findViewById(R.id.txt_reason);
         txtReason.setText(list.get(i).getReason());
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onNextItem(list.get(i));
+            }
+        });
         return view;
     }
 
 
     public interface OnNextItemListener {
-        void onNextItem(int position);
+        void onNextItem(OrderEntity item);
     }
 
 

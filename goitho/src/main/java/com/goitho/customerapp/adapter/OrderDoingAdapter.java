@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.demo.architect.data.model.OrderEntity;
-import com.demo.architect.data.model.NotificationEntity;
 import com.goitho.customerapp.R;
 
 import java.util.List;
@@ -55,7 +54,7 @@ public class OrderDoingAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_exhibition_doing, null);
-//        LinearLayout layout = view.findViewById(R.id.layout_main);
+        LinearLayout layout = view.findViewById(R.id.layout_main);
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
 //                86);
 //        layout.setLayoutParams(lp);
@@ -68,7 +67,13 @@ public class OrderDoingAdapter extends BaseAdapter {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onNextItem(i);
+                listener.onNextItem(list.get(i));
+            }
+        });
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onNextItem(list.get(i));
             }
         });
         return view;
@@ -76,7 +81,7 @@ public class OrderDoingAdapter extends BaseAdapter {
 
 
     public interface OnNextItemListener {
-        void onNextItem(int position);
+        void onNextItem(OrderEntity item);
     }
 
 

@@ -367,12 +367,7 @@ public class EditDetailDiaryFragment extends BaseFragment implements EditDetailD
 
     private void initRecyclerView() {
         listImage = new ArrayList<>();
-        adapter = new ImageAdapter(new ArrayList<ImageEntity>(), getActivity(),
-                new ImageAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(ImageEntity item) {
-                    }
-                });
+        adapter = new ImageAdapter(new ArrayList<ImageEntity>(), getActivity());
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.HORIZONTAL, false);
