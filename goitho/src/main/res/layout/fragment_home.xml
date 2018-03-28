@@ -42,7 +42,8 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:paddingBottom="@dimen/distance_47dp"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/img_cover"
@@ -54,7 +55,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img_cover"
+            android:id="@+id/layout_content"
             android:layout_marginEnd="@dimen/distance_8dp"
             android:layout_marginStart="@dimen/distance_8dp"
             android:orientation="vertical">
@@ -64,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_blue_stroke_background"
                 android:paddingBottom="@dimen/distance_9dp"
+                android:id="@+id/layout_order_repair"
                 android:paddingEnd="@dimen/distance_29dp"
                 android:paddingStart="@dimen/distance_15dp"
                 android:paddingTop="@dimen/distance_9dp">
@@ -203,6 +205,7 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/distance_10dp"
                         android:paddingEnd="@dimen/distance_13dp"
+                        android:orientation="vertical"
                         android:layout_weight="2"
                         >
                         <TextView
@@ -236,6 +239,7 @@
                         android:paddingTop="@dimen/distance_10dp"
                         android:paddingEnd="@dimen/distance_13dp"
                         android:layout_marginStart="@dimen/distance_10dp"
+                        android:orientation="vertical"
                         android:layout_weight="1"
                         >
                         <TextView
@@ -259,14 +263,62 @@
                 </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_take_care_home"
-                android:textColor="@color/lightNavyTwo"
-                android:textSize="@dimen/text_17sp"
+                android:paddingStart="@dimen/distance_30dp"
+                android:paddingEnd="@dimen/distance_24dp"
                 android:layout_marginTop="@dimen/distance_19dp"
-                android:textStyle="bold"/>
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_take_care_home"
+                    android:textColor="@color/lightNavyTwo"
+                    android:textSize="@dimen/text_17sp"
+                    android:textStyle="bold"/>
+
+                <StackView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/distance_20dp"
+                    android:verticalScrollbarPosition="defaultPosition"
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/sv_blog">
+
+                </StackView>
+                <Button
+                    android:layout_width="@dimen/size_148dp"
+                    android:layout_marginTop="@dimen/size_24dp"
+                    android:layout_height="@dimen/size_34dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_round_corner_button_blue_stroke_background"
+                    android:text="@string/text_blog_goi_tho"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteThree"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/distance_30dp"
+                android:paddingEnd="@dimen/distance_24dp"
+                android:layout_marginTop="@dimen/distance_19dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_customer_talk_app"
+                    android:textColor="@color/lightNavyTwo"
+                    android:textSize="@dimen/text_17sp"
+                    android:textStyle="bold"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/distance_20dp"
+                    android:id="@+id/rv_rating"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

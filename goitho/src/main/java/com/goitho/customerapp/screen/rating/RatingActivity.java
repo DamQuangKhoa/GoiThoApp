@@ -1,8 +1,7 @@
-package com.goitho.customerapp.screen.notification;
+package com.goitho.customerapp.screen.rating;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
@@ -12,6 +11,9 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.screen.register.RegisterFragment;
+import com.goitho.customerapp.screen.register.RegisterModule;
+import com.goitho.customerapp.screen.register.RegisterPresenter;
 
 import javax.inject.Inject;
 
@@ -19,14 +21,14 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class NotificationActivity extends BaseActivity {
+public class RatingActivity extends BaseActivity {
     @Inject
-    NotificationPresenter registerPresenter;
+    RatingPresenter ratingPresenter;
 
-    NotificationFragment fragment;
+    RatingFragment fragment;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, NotificationActivity.class);
+        Intent intent = new Intent(context, RatingActivity.class);
         context.startActivity(intent);
     }
 
@@ -39,25 +41,22 @@ public class NotificationActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new NotificationModule(fragment))
+                .plus(new RatingModule(fragment))
                 .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
-        }
     }
 
     private void initFragment() {
-        fragment = (NotificationFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (RatingFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = NotificationFragment.newInstance();
+            fragment = RatingFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(NotificationFragment fragment, int frameId) {
+    private void addFragmentToBackStack(RatingFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);

@@ -27,7 +27,7 @@ import butterknife.ButterKnife;
  * Created by Skull on 27/11/2017.
  */
 
-public class OrderFragment extends BaseFragment {
+public class OrderFragment extends BaseFragment implements OrderContract.View{
 
     @Bind(R.id.tabs)
     TabLayout tabLayout;
@@ -110,6 +110,22 @@ public class OrderFragment extends BaseFragment {
     public void onPause() {
         super.onPause();
     }
+
+    @Override
+    public void setPresenter(OrderContract.Presenter presenter) {
+
+    }
+
+    @Override
+    public void showProgressBar() {
+
+    }
+
+    @Override
+    public void hideProgressBar() {
+
+    }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
 

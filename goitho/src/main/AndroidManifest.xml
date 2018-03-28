@@ -74,10 +74,10 @@
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
         <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.order.OrderActivity">
+        <activity android:name=".screen.rating.RatingActivity"/>
+        <activity android:name=".screen.dashboard.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

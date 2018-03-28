@@ -15,6 +15,8 @@ import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
 import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
 import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.widgets.CircleTransform;
+import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -97,7 +99,7 @@ public class UserFragment extends BaseFragment implements UserContract.View {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_user, container, false);
         ButterKnife.bind(this, view);
-        txtUsername.setText("thangnt");
+
         return view;
     }
 
@@ -180,5 +182,11 @@ public class UserFragment extends BaseFragment implements UserContract.View {
                     })
                     .show();
         }
+    }
+
+    @Override
+    public void showContent() {
+        txtUsername.setText("thangnt");
+        Picasso.with(getContext()).load(R.drawable.image).transform(new CircleTransform()).into(imgAvatar);
     }
 }

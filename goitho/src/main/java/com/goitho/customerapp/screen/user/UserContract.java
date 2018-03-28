@@ -12,6 +12,7 @@ public interface UserContract {
         void startEditProfileActivity();
         void startEditAddressActivity();
         void showError();
+        void showContent();
     }
 
     interface Presenter extends BasePresenter {

@@ -11,7 +11,8 @@ public interface EditAddressContract {
     interface View extends BaseView<Presenter> {
         void startDialogLibraryCapture();
         void showError();
-
+        void startCamera();
+        void startGallery();
     }
 
     interface Presenter extends BasePresenter {

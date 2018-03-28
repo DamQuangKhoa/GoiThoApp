@@ -1,6 +1,7 @@
 package com.goitho.customerapp.screen.detail_order;
 
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -63,4 +64,7 @@ public class DetailOrderPresenter implements DetailOrderContract.Presenter {
         return list;
 
     }
+
+
+
 }

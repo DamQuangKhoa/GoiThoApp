@@ -11,6 +11,6 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(modules = {NotificationModule.class})
 public interface NotificationComponent {
-    void inject(NotificationActivity fragment);
+    void inject(NotificationFragment fragment);
 
 }

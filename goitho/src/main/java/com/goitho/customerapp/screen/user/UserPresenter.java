@@ -11,7 +11,7 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class UserPresenter implements UserContract.Presenter{
+public class UserPresenter implements UserContract.Presenter {
 
     private final String TAG = UserPresenter.class.getName();
     private final UserContract.View view;
@@ -33,7 +33,7 @@ public class UserPresenter implements UserContract.Presenter{
     @Override
     public void start() {
         Log.d(TAG, TAG + ".start() called");
-
+        view.showContent();
 
     }
 

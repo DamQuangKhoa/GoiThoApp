@@ -26,19 +26,19 @@
             android:singleLine="true"/>
     </LinearLayout>
 
-    <com.flyco.tablayout.widget.MsgView
+    <com.goitho.customerapp.widgets.customtablayout.widget.MsgView
         android:id="@+id/rtv_msg_tip"
         xmlns:mv="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="13.8dp"
+        android:layout_height="13.8dp"
         android:layout_toRightOf="@+id/ll_tap"
         android:gravity="center"
         android:textColor="#ffffff"
-        android:textSize="11.5sp"
+        android:textSize="10sp"
         android:visibility="gone"
-        mv:mv_backgroundColor="#FD481F"
+        mv:mv_backgroundColor="@color/pumpkinOrange"
         mv:mv_isRadiusHalfHeight="true"
-        mv:mv_strokeColor="#ffffff"
-        mv:mv_strokeWidth="1dp"/>
+        mv:mv_strokeColor="@color/transparent"
+        mv:mv_strokeWidth="0dp"/>
 
 </RelativeLayout>

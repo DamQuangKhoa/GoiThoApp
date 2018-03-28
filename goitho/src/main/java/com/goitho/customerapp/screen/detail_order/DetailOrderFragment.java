@@ -1,7 +1,9 @@
 package com.goitho.customerapp.screen.detail_order;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +19,7 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.ImageAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.screen.rating.RatingActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import java.util.ArrayList;
@@ -114,10 +117,10 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
             case 2:
                 cvCancel.setVisibility(GONE);
                 llOpen.setVisibility(GONE);
-                if (order.getPoint() > 0){
+                if (order.getPoint() > 0) {
 
                     llRating.setVisibility(GONE);
-                }else {
+                } else {
                     cvRating.setVisibility(GONE);
                 }
                 break;
@@ -167,12 +170,26 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     }
 
     @OnClick(R.id.img_back)
-    public void back(){
+    public void back() {
         getActivity().finish();
+    }
+
+    @OnClick(R.id.layout_rating)
+    public void rating() {
+        startRatingActivity();
     }
 
     @Override
     public void showListImage(ArrayList<ImageEntity> mList) {
         adapter.setData(mList);
     }
+
+    @Override
+    public void startRatingActivity() {
+        RatingActivity.start(getContext());
+    }
+
+
+
+
 }

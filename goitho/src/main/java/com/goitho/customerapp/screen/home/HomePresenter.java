@@ -3,7 +3,9 @@ package com.goitho.customerapp.screen.home;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.demo.architect.data.model.BlogEntity;
 import com.demo.architect.data.model.NotificationEntity;
+import com.demo.architect.data.model.RatingEntity;
 import com.demo.architect.data.repository.base.local.LocalRepository;
 
 import java.util.ArrayList;
@@ -38,6 +40,8 @@ public class HomePresenter implements HomeContract.Presenter {
     @Override
     public void start() {
         Log.d(TAG, TAG + ".start() called");
+        view.showRatingList(ratingList());
+        view.showBlogList(blogList());
     }
 
     @Override
@@ -45,4 +49,22 @@ public class HomePresenter implements HomeContract.Presenter {
         Log.d(TAG, TAG + ".stop() called");
     }
 
+    @Override
+    public ArrayList<RatingEntity> ratingList() {
+        ArrayList<RatingEntity> list = new ArrayList<>();
+        for (int i=0; i<10; i++){
+            list.add(new RatingEntity());
+        }
+        return list;
+    }
+
+    @Override
+    public List<BlogEntity> blogList() {
+        List<BlogEntity> list = new ArrayList<>();
+        for (int i = 0; i<3; i++){
+            list.add(new BlogEntity("Trang trí nội thất theo phong cách châu Âu ", "Sep 10, 2017",
+                    1237, 815));
+        }
+        return list;
+    }
 }

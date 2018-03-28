@@ -2,13 +2,10 @@ package com.goitho.customerapp.dialogs;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 
@@ -18,9 +15,13 @@ import com.goitho.customerapp.R;
  */
 public class CustomDialogLibraryCapture extends DialogFragment {
 
-    private OnClickListener listener;
-    public void setListener(OnClickListener listener){
-        this.listener = listener;
+    private OnOpenCameraListener onOpenCameraListener;
+    private OnOpenGalleryListener onOpenGalleryListener;
+
+    public void setListener(OnOpenCameraListener onOpenCameraListener,
+                            OnOpenGalleryListener onOpenGalleryListener) {
+        this.onOpenCameraListener = onOpenCameraListener;
+        this.onOpenGalleryListener = onOpenGalleryListener;
     }
 
     @Override
@@ -29,33 +30,38 @@ public class CustomDialogLibraryCapture extends DialogFragment {
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
                 , WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
-        dialog.setContentView(R.layout.dialog_forget_password);
+        dialog.setContentView(R.layout.dialog_library_capture);
         dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
         dialog.findViewById(R.id.txt_camera).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                startActivity(intent);
+                dismiss();
+                onOpenCameraListener.onOpenCamera();
             }
         });
         dialog.findViewById(R.id.txt_choose_album).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                dismiss();
+                onOpenGalleryListener.onOpenGallery();
             }
         });
         dialog.findViewById(R.id.txt_close).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();
-                //listener.onClick(etUsername.getText().toString(), etPhone.getText().toString());
+
             }
         });
 
         return dialog;
     }
 
-    public interface OnClickListener {
-        void onClick(String username, String phone);
+    public interface OnOpenCameraListener {
+        void onOpenCamera();
+    }
+
+    public interface OnOpenGalleryListener {
+        void onOpenGallery();
     }
 }

@@ -102,4 +102,11 @@
     <dimen name="size_56dp">56dp</dimen>
     <dimen name="distance_6dp">6dp</dimen>
     <dimen name="distance_119dp">119dp</dimen>
+    <dimen name="size_148dp">148dp</dimen>
+    <dimen name="distance_47dp">47dp</dimen>
+    <dimen name="distance_18dp">18dp</dimen>
+    <dimen name="text_10sp">10sp</dimen>
+    <dimen name="distance_17dp">17dp</dimen>
+    <dimen name="distance_28dp">28dp</dimen>
+    <dimen name="distance_50dp">50dp</dimen>
 </resources>

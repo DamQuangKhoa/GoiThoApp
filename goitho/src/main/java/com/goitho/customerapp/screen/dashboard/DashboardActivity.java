@@ -22,8 +22,6 @@ import javax.inject.Inject;
  */
 
 public class DashboardActivity extends BaseActivity {
-    @Inject
-    DashboardPresenter dashboardPresenter;
 
     DashboardFragment fragment;
 
@@ -35,9 +33,7 @@ public class DashboardActivity extends BaseActivity {
         initFragment();
 
         // Create the presenter
-        CoreApplication.getInstance().getApplicationComponent()
-                .plus(new DashboardModule(fragment))
-                .inject(this);
+
 
         Window w = getWindow(); // in Activity's onCreate() for instance
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

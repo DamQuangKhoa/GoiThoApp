@@ -36,10 +36,10 @@
     <string name="text_edited">Đã sửa</string>
     <string name="text_value">Giá trị</string>
     <string name="text_survey">Hẹn khảo sát</string>
-    <string name="text_review_orders">Đánh giá đơn hàng</string>
+    <string name="text_rating_orders">Đánh giá đơn hàng</string>
     <string name="text_review">Đánh giá</string>
     <string name="text_call_center">Trung tâm hỗ trợ</string>
-    <string name="text_open_order">Mở lại đơn hàng</string>
+    <string name="text_blog_goi_tho">Blog gọi thợ</string>
     <string name="text_reason">Lý do hủy</string>
     <string name="text_status_exhibition">Trạng thái đơn hàng</string>
     <string name="text_need_repair">Cần sửa</string>
@@ -86,6 +86,8 @@
     <string name="text_add">Thêm</string>
     <string name="text_account">Tài khoản</string>
     <string name="text_notification">Thông báo</string>
+    <string name="text_ok">OK</string>
+    <string name="text_no_rating">Xin vui lòng cho Gọi Thợ biết đánh giá \n của bạn</string>
     <string name="text_order_history">Lịch sử đơn hàng</string>
     <string name="text_title_home">SỬA CHỮA MỌI HƯ HỎNG</string>
     <string name="text_content_notification">Gọi Thợ đã nhận được thông tin của bạn. \n
@@ -106,7 +108,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_phone">Số điện thoại</string>
     <string name="text_password">Mật khẩu</string>
     <string name="text_hi">Xin chào</string>
-
     <string name="text_login_to_continue">Đăng nhập để tiếp tục</string>
     <string name="text_dont_have_account">Chưa có tài khoản? Đăng ký ngay</string>
     <string name="text_have_account">Bạn đã có tài khoản? Đăng nhập ngay</string>
@@ -121,7 +122,8 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_message">Tin nhắn</string>
     <string name="text_noti">Thông báo</string>
     <string name="text_setting">Cài đặt</string>
-    <string name="text_order">ĐẶT LỊCH SỬA CHỮA</string>
+    <string name="text_order">Đặt lịch sửa chữa</string>
+    <string name="text_send_rating">Gửi đánh giá</string>
     <string name="text_promotion">KHUYẾN MÃI</string>
     <string name="text_order_hotline">ĐẶT LỊCH QUA HOTLINE</string>
     <string name="text_appointment">Lịch hẹn</string>
@@ -130,6 +132,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_sweet_dialog_title">Thông báo</string>
     <string name="text_sweet_dialog_confirm_text">Đồng ý</string>
     <string name="text_sweet_dialog_confirm_text_exit">Thoát</string>
+    <string name="text_customer_talk_app">KHÁCH HÀNG NÓI VỀ GỌI THỢ</string>
     <string name="text_sweet_dialog_confirm_text_cancel">Hủy</string>
     <string name="text_sweet_dialog_check_username_password">Vui lòng kiểm tra tài khoản và mật khẩu</string>
     <string name="text_progress_dialog">Vui lòng đợi ...</string>
@@ -176,4 +179,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_content_edit">Chỉ thay đổi được mật khẩu và số điện thoại</string>
     <string name="text_doing">Đang sửa</string>
     <string name="text_completed">Đã hoàn thành</string>
+    <string name="text_open_order">Mở lại đơn hàng</string>
+    <string name="text_comment">Nhận xét</string>
 </resources>

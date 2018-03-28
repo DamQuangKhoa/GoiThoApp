@@ -17,6 +17,7 @@ import java.util.List;
 public interface DetailOrderContract {
     interface View extends BaseView<Presenter> {
         void showListImage(ArrayList<ImageEntity> mList);
+        void startRatingActivity();
     }
 
     interface Presenter extends BasePresenter {

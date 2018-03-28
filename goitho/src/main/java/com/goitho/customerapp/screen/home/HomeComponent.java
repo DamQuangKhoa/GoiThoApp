@@ -11,6 +11,6 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(modules = {HomeModule.class})
 public interface HomeComponent {
-    void inject(HomeActivity fragment);
+    void inject(HomeFragment fragment);
 
 }

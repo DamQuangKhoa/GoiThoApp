@@ -40,14 +40,20 @@ import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
 import com.goitho.customerapp.screen.notification.NotificationModule;
+import com.goitho.customerapp.screen.order.OrderComponent;
+import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.order_cancel.OrderCancelComponent;
 import com.goitho.customerapp.screen.order_cancel.OrderCancelModule;
 import com.goitho.customerapp.screen.order_doing.OrderDoingComponent;
 import com.goitho.customerapp.screen.order_doing.OrderDoingModule;
 import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
 import com.goitho.customerapp.screen.order_done.OrderDoneModule;
+import com.goitho.customerapp.screen.order_repair.OrderRepairContract;
+import com.goitho.customerapp.screen.order_repair.OrderRepairModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
+import com.goitho.customerapp.screen.rating.RatingComponent;
+import com.goitho.customerapp.screen.rating.RatingModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
 import com.goitho.customerapp.screen.register.RegisterModule;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
@@ -107,7 +113,9 @@ public interface ApplicationComponent {
 
     HistoryComponent plus(HistoryModule historyModule);
 
-    DashboardComponent plus(DashboardModule dashboardModule);
+    DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
+                            OrderRepairModule orderRepairModule,
+                            NotificationModule notificationModule, UserModule userModule);
 
     NotificationComponent plus(NotificationModule notificationModule);
 
@@ -122,5 +130,9 @@ public interface ApplicationComponent {
     HomeComponent plus(HomeModule homeModule);
 
     DetailOrderComponent plus(DetailOrderModule detailOrderModule);
+
+    OrderComponent plus(OrderModule orderModule);
+
+    RatingComponent plus(RatingModule ratingModule);
 
 }
