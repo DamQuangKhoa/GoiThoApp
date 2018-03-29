@@ -14,18 +14,22 @@ import android.widget.RelativeLayout;
 import android.widget.StackView;
 
 import com.demo.architect.data.model.BlogEntity;
+import com.demo.architect.data.model.OrderEntity;
 import com.demo.architect.data.model.RatingEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.BlogAdapter;
 import com.goitho.customerapp.adapter.RatingAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.widgets.customStackView.CustomStackView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by MSI on 26/11/2017.
@@ -49,7 +53,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     LinearLayout layout;
 
     @Bind(R.id.sv_blog)
-    StackView svBlog;
+    CustomStackView svBlog;
 
     private int heightLayout = 0;
 
@@ -86,16 +90,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     private void initStackView() {
 
-        blogAdapter = new BlogAdapter(getContext(), new ArrayList<BlogEntity>(),
-                new BlogAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(int position) {
 
-                    }
-                });
-        svBlog.setInAnimation(getContext(), android.R.animator.fade_in);
-        svBlog.setOutAnimation(getContext(), android.R.animator.fade_out);
-        svBlog.setAdapter(blogAdapter);
 
     }
 
@@ -152,6 +147,10 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
         mPresenter.stop();
     }
 
+    @OnClick(R.id.cv_order)
+    public void order(){
+        startDetailOrder();
+    }
     @Override
     public void showRatingList(ArrayList<RatingEntity> list) {
         ratingAdapter.setData(list);
@@ -159,6 +158,20 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     @Override
     public void showBlogList(List<BlogEntity> list) {
-        blogAdapter.setData(list);
+        blogAdapter = new BlogAdapter(getContext(),list,
+                new BlogAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(int position) {
+
+                    }
+                });
+        svBlog.initStack(3);
+        svBlog.setAdapter(blogAdapter);
+    }
+
+    @Override
+    public void startDetailOrder() {
+        DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
+      
     }
 }

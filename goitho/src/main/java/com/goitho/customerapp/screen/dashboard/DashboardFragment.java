@@ -9,24 +9,26 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.home.HomeFragment;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.home.HomePresenter;
+import com.goitho.customerapp.screen.landing.LandingFragment;
 import com.goitho.customerapp.screen.notification.NotificationFragment;
 import com.goitho.customerapp.screen.notification.NotificationModule;
 import com.goitho.customerapp.screen.notification.NotificationPresenter;
 import com.goitho.customerapp.screen.order.OrderFragment;
 import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.order.OrderPresenter;
-import com.goitho.customerapp.screen.order_repair.OrderRepairComponent;
-import com.goitho.customerapp.screen.order_repair.OrderRepairContract;
-import com.goitho.customerapp.screen.order_repair.OrderRepairFragment;
-import com.goitho.customerapp.screen.order_repair.OrderRepairModule;
-import com.goitho.customerapp.screen.order_repair.OrderRepairPresenter;
+import com.goitho.customerapp.screen.booking.BookingFragment;
+import com.goitho.customerapp.screen.booking.BookingPresenter;
 import com.goitho.customerapp.screen.user.UserFragment;
 import com.goitho.customerapp.screen.user.UserModule;
 import com.goitho.customerapp.screen.user.UserPresenter;
@@ -35,7 +37,6 @@ import com.goitho.customerapp.widgets.customtablayout.CustomTabLayout;
 import com.goitho.customerapp.widgets.customtablayout.TabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.CustomTabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.OnTabSelectListener;
-import com.goitho.customerapp.widgets.customtablayout.widget.MsgView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +45,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Skull on 14/12/2017.
@@ -66,7 +68,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     OrderPresenter orderPresenter;
 
     @Inject
-    OrderRepairPresenter orderRepairPresenter;
+    BookingPresenter orderRepairPresenter;
 
     @Bind(R.id.tabs)
     CustomTabLayout tabLayout;
@@ -78,7 +80,8 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     private OrderFragment orderFragment;
     private NotificationFragment notificationFragment;
     private UserFragment userFragment;
-    private OrderRepairFragment orderRepairFragment;
+    private BookingFragment orderRepairFragment;
+    private LandingFragment landingFragment;
 
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private String[] mTitles = {"Trang chủ", "Đơn hàng", "", "Tin nhắn", "Tài khoản"};
@@ -133,16 +136,19 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         }
 
         if (orderRepairFragment == null) {
-            orderRepairFragment = OrderRepairFragment.newInstance();
+            orderRepairFragment = BookingFragment.newInstance();
         }
 
         if (userFragment == null) {
             userFragment = UserFragment.newInstance();
         }
+        if (landingFragment == null){
+            landingFragment = LandingFragment.newInstance();
+        }
         CoreApplication.getInstance().getApplicationComponent()
                 .plus(new HomeModule(homeFragment),
                         new OrderModule(orderFragment),
-                        new OrderRepairModule(orderRepairFragment),
+                        new BookingModule(orderRepairFragment),
                         new NotificationModule(notificationFragment),
                         new UserModule(userFragment))
                 .inject(this);
@@ -207,7 +213,12 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         adapter.addFragment(orderFragment);
         adapter.addFragment(orderRepairFragment);
         adapter.addFragment(notificationFragment);
-        adapter.addFragment(userFragment);
+        if (SharedPreferenceHelper.getInstance(getContext())
+                .getBoolean(Constants.KEY_CHECK_LOGIN, false)){
+            adapter.addFragment(userFragment);
+        }else {
+            adapter.addFragment(landingFragment);
+        }
         viewPager.setAdapter(adapter);
         viewPager.setPagingEnabled(false);
     }
@@ -215,7 +226,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
     @Override
     public void setPresenter(DashboardContract.Presenter presenter) {
-
     }
 
     @Override
@@ -237,6 +247,17 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @OnClick(R.id.layout_booking)
+    public void booking(){
+        tabLayout.setCurrentTab(2);
+        viewPager.setCurrentItem(2);
+    }
+
+    @Override
+    public void setupView(boolean login) {
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -261,5 +282,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         }
 
     }
+
 
 }

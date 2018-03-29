@@ -9,6 +9,7 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface EditAddressContract {
     interface View extends BaseView<Presenter> {
+        void startRegisterSuccessActivity();
         void startDialogLibraryCapture();
         void showError();
         void startCamera();

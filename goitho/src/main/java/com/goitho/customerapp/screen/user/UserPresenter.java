@@ -3,7 +3,10 @@ package com.goitho.customerapp.screen.user;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
+import com.goitho.customerapp.app.CoreApplication;
+import com.goitho.customerapp.constants.Constants;
 
 import javax.inject.Inject;
 
@@ -43,4 +46,9 @@ public class UserPresenter implements UserContract.Presenter {
     }
 
 
+    @Override
+    public void logout() {
+        SharedPreferenceHelper.getInstance(CoreApplication.getInstance()).pushBoolean(Constants.KEY_CHECK_LOGIN, false);
+        view.startDashboardActivity();
+    }
 }

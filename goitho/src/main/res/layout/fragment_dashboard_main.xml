@@ -22,10 +22,9 @@
     <com.goitho.customerapp.widgets.customtablayout.CustomTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="@dimen/size_49dp"
         android:layout_alignParentBottom="true"
         android:background="@color/iceBlueFour"
-        app:tl_indicator_color="#2C97DE"
         app:tl_indicator_height="0dp"
         app:tl_textSelectColor="@color/lightOrange"
         app:tl_textUnselectColor="@color/coolGrey"
@@ -38,6 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/distance_5dp"
         android:gravity="center"
+        android:id="@+id/layout_booking"
         android:orientation="vertical">
 
         <ImageView

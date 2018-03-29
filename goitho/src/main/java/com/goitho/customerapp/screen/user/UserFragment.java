@@ -12,8 +12,12 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.dialogs.CustomDialogLogOut;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
+import com.goitho.customerapp.screen.dashboard.DashboardFragment;
 import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
 import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
+import com.goitho.customerapp.screen.landing.LandingActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;
@@ -29,6 +33,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class UserFragment extends BaseFragment implements UserContract.View {
 
+    private static final String TAG = UserFragment.class.getName();
     private UserContract.Presenter mPresenter;
 
     @Bind(R.id.txt_username)
@@ -153,7 +158,7 @@ public class UserFragment extends BaseFragment implements UserContract.View {
 
     @OnClick(R.id.txt_logout)
     public void logout() {
-
+        startDialogLogOut();
     }
 
     @Override
@@ -164,6 +169,24 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     @Override
     public void startEditAddressActivity() {
         EditAddressActivity.start(getContext());
+    }
+
+    @Override
+    public void startDialogLogOut() {
+        CustomDialogLogOut dialog = new CustomDialogLogOut();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setListener(new CustomDialogLogOut.OnYesClickListener() {
+            @Override
+            public void onYesClick() {
+                mPresenter.logout();
+            }
+        });
+    }
+
+    @Override
+    public void startDashboardActivity() {
+        DashboardActivity.start(getContext());
+        getActivity().finish();
     }
 
     @Override

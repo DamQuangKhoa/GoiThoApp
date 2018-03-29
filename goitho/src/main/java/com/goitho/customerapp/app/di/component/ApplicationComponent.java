@@ -9,15 +9,16 @@ import com.goitho.customerapp.app.di.module.RepositoryModule;
 import com.goitho.customerapp.app.di.module.UseCaseModule;
 import com.goitho.customerapp.screen.add_action.AddActionComponent;
 import com.goitho.customerapp.screen.add_action.AddActionModule;
+import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.certificate.CertificateComponent;
 import com.goitho.customerapp.screen.certificate.CertificateModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
+import com.goitho.customerapp.screen.dashboard.DashboardComponent2;
 import com.goitho.customerapp.screen.dashboard.DashboardModule;
 import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
-import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
 import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
 import com.goitho.customerapp.screen.diary.DiaryComponent;
@@ -48,8 +49,6 @@ import com.goitho.customerapp.screen.order_doing.OrderDoingComponent;
 import com.goitho.customerapp.screen.order_doing.OrderDoingModule;
 import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
 import com.goitho.customerapp.screen.order_done.OrderDoneModule;
-import com.goitho.customerapp.screen.order_repair.OrderRepairContract;
-import com.goitho.customerapp.screen.order_repair.OrderRepairModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.rating.RatingComponent;
@@ -114,7 +113,7 @@ public interface ApplicationComponent {
     HistoryComponent plus(HistoryModule historyModule);
 
     DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
-                            OrderRepairModule orderRepairModule,
+                            BookingModule bookingModule,
                             NotificationModule notificationModule, UserModule userModule);
 
     NotificationComponent plus(NotificationModule notificationModule);
@@ -134,5 +133,6 @@ public interface ApplicationComponent {
     OrderComponent plus(OrderModule orderModule);
 
     RatingComponent plus(RatingModule ratingModule);
+    DashboardComponent2 plus(DashboardModule dashboardModule);
 
 }

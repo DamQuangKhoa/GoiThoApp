@@ -18,6 +18,7 @@ public interface DetailOrderContract {
     interface View extends BaseView<Presenter> {
         void showListImage(ArrayList<ImageEntity> mList);
         void startRatingActivity();
+        void startDialogCancelOrder();
     }
 
     interface Presenter extends BasePresenter {

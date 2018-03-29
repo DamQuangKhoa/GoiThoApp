@@ -16,10 +16,9 @@
         app:contentInsetRight="0dp"
         app:contentInsetStart="0dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -27,21 +26,49 @@
                 android:id="@+id/img_back"
                 android:layout_width="@dimen/size_40dp"
                 android:layout_height="@dimen/size_40dp"
+                android:layout_centerVertical="true"
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 
             <TextView
+                android:id="@+id/txt_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/distance_8dp"
+                android:layout_toRightOf="@+id/img_back"
                 android:gravity="center"
-                android:id="@+id/txt_title"
                 android:text="Đơn hàng A1234"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:id="@+id/layout_cancel"
+                android:layout_marginEnd="@dimen/distance_14dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close" />
+
+                <TextView
+                    android:id="@+id/txt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_cancel_order"
+                    android:textColor="@color/whiteThree"
+                    android:textSize="@dimen/text_14sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
@@ -111,10 +138,10 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/txt_title_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/text_repair_fee"
-                        android:id="@+id/txt_title_price"
                         android:textColor="@color/greyishBrown"
                         android:textSize="@dimen/text_12sp"
                         android:textStyle="bold" />
@@ -296,7 +323,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_edit_order" />
+                        android:src="@drawable/ic_add_image" />
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -482,6 +509,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/layout_open"
             android:layout_width="match_parent"
@@ -495,10 +523,11 @@
                 android:layout_gravity="center"
                 android:background="@drawable/bg_round_corner_button_yellow_background"
                 android:gravity="center"
+                android:id="@+id/layout_open_order"
                 android:orientation="horizontal"
+                android:paddingBottom="@dimen/distance_2dp"
                 android:paddingEnd="@dimen/distance_20dp"
                 android:paddingStart="@dimen/distance_2dp"
-                android:paddingBottom="@dimen/distance_2dp"
                 android:paddingTop="@dimen/distance_2dp">
 
                 <ImageView
@@ -509,9 +538,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/distance_2dp"
                     android:text="@string/text_open_order"
                     android:textColor="@color/whiteThree"
-                    android:layout_marginStart="@dimen/distance_2dp"
                     android:textSize="@dimen/text_14sp"
                     android:textStyle="bold" />
             </LinearLayout>

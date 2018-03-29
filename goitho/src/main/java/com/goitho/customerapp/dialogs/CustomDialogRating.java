@@ -20,7 +20,7 @@ public class CustomDialogRating extends DialogFragment {
         Dialog dialog = new Dialog(getActivity());
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-                , WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+                , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         dialog.setContentView(R.layout.dialog_rating);
         dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
         dialog.findViewById(R.id.txt_close).setOnClickListener(new View.OnClickListener() {

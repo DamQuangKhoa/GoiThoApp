@@ -16,6 +16,7 @@ public interface HomeContract {
     interface View extends BaseView<Presenter> {
         void showRatingList(ArrayList<RatingEntity> list);
         void showBlogList(List<BlogEntity> list);
+        void startDetailOrder();
     }
 
     interface Presenter extends BasePresenter {

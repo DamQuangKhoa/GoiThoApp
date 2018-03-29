@@ -1,4 +1,4 @@
-package com.goitho.customerapp.widgets.customeCodeInput.model;
+package com.goitho.customerapp.widgets.customCodeInput.model;
 
 /**
  * @author Adrián García Lomas

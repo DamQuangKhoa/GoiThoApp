@@ -1,9 +1,7 @@
 package com.goitho.customerapp.screen.detail_order;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +17,8 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.ImageAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.dialogs.CustomDialogCancelOrder;
+import com.goitho.customerapp.dialogs.CustomDialogReasonCancel;
 import com.goitho.customerapp.screen.rating.RatingActivity;
 import com.goitho.customerapp.util.Precondition;
 
@@ -69,6 +69,9 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
 
     @Bind(R.id.layout_open)
     LinearLayout llOpen;
+
+    @Bind(R.id.layout_cancel)
+    LinearLayout llCancel;
     private OrderEntity order;
 
     public DetailOrderFragment() {
@@ -123,11 +126,13 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
                 } else {
                     cvRating.setVisibility(GONE);
                 }
+                llCancel.setVisibility(GONE);
                 break;
             case 3:
                 cvStatus.setVisibility(GONE);
                 cvRating.setVisibility(GONE);
                 llButton.setVisibility(GONE);
+                llCancel.setVisibility(GONE);
                 break;
         }
 
@@ -179,6 +184,16 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
         startRatingActivity();
     }
 
+    @OnClick(R.id.layout_cancel)
+    public void cancel() {
+        startDialogCancelOrder();
+    }
+
+    @OnClick(R.id.layout_open_order)
+    public void openOrder(){
+        DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
+        getActivity().finish();
+    }
     @Override
     public void showListImage(ArrayList<ImageEntity> mList) {
         adapter.setData(mList);
@@ -189,7 +204,25 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
         RatingActivity.start(getContext());
     }
 
-
+    @Override
+    public void startDialogCancelOrder() {
+        CustomDialogCancelOrder dialog = new CustomDialogCancelOrder();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setListener(new CustomDialogCancelOrder.OnCancelClickListener() {
+            @Override
+            public void onCancelClick() {
+                DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 3, 0, ""));
+                getActivity().finish();
+            }
+        }, new CustomDialogCancelOrder.OnNoCheckListener() {
+            @Override
+            public void onNoCheck() {
+                CustomDialogReasonCancel dialogReasonCancel = new CustomDialogReasonCancel();
+                dialogReasonCancel.show(getActivity().getFragmentManager(),
+                        TAG + "CustomDialogReasonCancel");
+            }
+        });
+    }
 
 
 }

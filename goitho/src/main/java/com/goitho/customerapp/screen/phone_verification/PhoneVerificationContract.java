@@ -9,6 +9,7 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface PhoneVerificationContract {
     interface View extends BaseView<Presenter> {
+        void startEditAddressActivity();
 
         void showError();
     }

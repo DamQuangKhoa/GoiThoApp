@@ -14,6 +14,7 @@ import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
 import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.screen.certificate.CertificateModule;
 
 import javax.inject.Inject;
 
@@ -23,6 +24,8 @@ import javax.inject.Inject;
 
 public class DashboardActivity extends BaseActivity {
 
+    @Inject
+    DashboardPresenter dashboardPresenter;
     DashboardFragment fragment;
 
     @Override
@@ -33,10 +36,12 @@ public class DashboardActivity extends BaseActivity {
         initFragment();
 
         // Create the presenter
-
+        CoreApplication.getInstance().getApplicationComponent()
+                .plus(new DashboardModule(fragment))
+                .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
         }
@@ -58,9 +63,8 @@ public class DashboardActivity extends BaseActivity {
         transaction.commit();
     }
 
-    public static void start(Context context, ActivityEntity entity) {
+    public static void start(Context context) {
         Intent intent = new Intent(context, DashboardActivity.class);
-        intent.putExtra(Constants.KEY_EDIT_DETAIL_DIARY_ACTIVITY, entity);
         context.startActivity(intent);
     }
 }

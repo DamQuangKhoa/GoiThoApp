@@ -10,11 +10,12 @@ import com.goitho.customerapp.app.base.BaseView;
 public interface LoginContract {
     interface View extends BaseView<Presenter> {
         void startRegisterActivity();
+        void startDialogDashboardActivity();
         void startDialogForgetPass();
 
     }
 
     interface Presenter extends BasePresenter {
-
+        void login();
     }
 }

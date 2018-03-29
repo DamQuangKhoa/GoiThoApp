@@ -1,23 +1,18 @@
 package com.goitho.customerapp.screen.register_success;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * Created by MSI on 26/11/2017.
@@ -86,15 +81,18 @@ public class RegisterSuccessFragment extends BaseFragment implements RegisterSuc
 
     @OnClick(R.id.btn_gohome)
     public void goHome() {
-    }
-
-    @OnClick(R.id.btn_manager_account)
-    public void managerAccount() {
-    }
-
-    @OnClick(R.id.img_back)
-    public void back(){
+        startDashboardActivity();
         getActivity().finish();
     }
 
+    @OnClick(R.id.img_back)
+    public void back() {
+        getActivity().finish();
+    }
+
+    @Override
+    public void startDashboardActivity() {
+        DashboardActivity.start(getActivity());
+        getActivity().finish();
+    }
 }

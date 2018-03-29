@@ -19,6 +19,8 @@ import com.demo.architect.data.model.offline.ImageEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessActivity;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;
@@ -92,6 +94,7 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
 
     @OnClick(R.id.btn_complete)
     public void complete() {
+        startRegisterSuccessActivity();
         getActivity().finish();
     }
 
@@ -130,6 +133,11 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
     @OnClick(R.id.img_back)
     public void back() {
         getActivity().finish();
+    }
+
+    @Override
+    public void startRegisterSuccessActivity() {
+        RegisterSuccessActivity.start(getContext());
     }
 
     @Override

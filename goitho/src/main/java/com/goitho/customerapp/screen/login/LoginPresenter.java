@@ -56,4 +56,10 @@ public class LoginPresenter implements LoginContract.Presenter{
         Log.d(TAG, TAG + ".stop() called");
     }
 
+    @Override
+    public void login() {
+        SharedPreferenceHelper.getInstance(CoreApplication.getInstance()).pushBoolean(Constants.KEY_CHECK_LOGIN, true);
+        view.startDialogDashboardActivity();
+
+    }
 }

@@ -20,8 +20,7 @@ import javax.inject.Inject;
  */
 
 public class LandingActivity extends BaseActivity {
-    @Inject
-    LandingPresenter SplashPresenter;
+
 
     LandingFragment fragment;
 
@@ -37,10 +36,7 @@ public class LandingActivity extends BaseActivity {
 
         initFragment();
 
-        // Create the presenter
-        CoreApplication.getInstance().getApplicationComponent()
-                .plus(new LandingModule(fragment))
-                .inject(this);
+
 
         Window w = getWindow(); // in Activity's onCreate() for instance
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

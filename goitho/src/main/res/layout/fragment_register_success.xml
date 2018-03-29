@@ -9,7 +9,7 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_76dp"
+        android:layout_height="@dimen/size_toolbar"
         android:background="@drawable/bg_toolbar"
         android:orientation="horizontal"
         android:id="@+id/toolbar"
@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/layout_back"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
@@ -45,31 +44,7 @@
                 android:textAllCaps="true"
                 android:layout_marginStart="5dp"/>
 
-            <RelativeLayout
-                android:id="@+id/rl_noti"
-                android:layout_width="@dimen/size_40dp"
-                android:layout_height="@dimen/size_40dp">
-                <ImageView
-                    android:id="@+id/img_noti"
-                    android:layout_width="@dimen/size_40dp"
-                    android:layout_height="@dimen/size_40dp"
-                    android:padding="@dimen/distance_10dp"
-                    android:src="@drawable/ic_mail_toolbar"/>
 
-                <TextView
-                    android:id="@+id/txt_noti_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:text="4"
-                    android:textColor="@color/white"
-                    android:textSize="10sp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginTop="@dimen/distance_5dp"
-                    android:background="@drawable/bg_textview_noti_toolbar"
-                    android:gravity="center"/>
-            </RelativeLayout>
 
         </LinearLayout>
 
@@ -107,7 +82,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_marginTop="@dimen/distance_24dp"
+            android:layout_marginTop="@dimen/distance_34dp"
             android:textSize="@dimen/text_12sp"
             android:text="@string/text_content_register_success"
             />
@@ -115,21 +90,12 @@
             android:id="@+id/btn_gohome"
             android:layout_width="@dimen/size_310dp"
             android:layout_height="@dimen/size_43dp"
-            android:layout_marginTop="@dimen/distance_24dp"
+            android:layout_marginTop="@dimen/distance_34dp"
             android:background="@drawable/bg_round_corner_button_blue_stroke_background"
             android:text="@string/text_go_home"
             android:textColor="@color/whiteThree"
             android:textSize="@dimen/text_14sp" />
-        <Button
-            android:id="@+id/btn_manager_account"
-            android:layout_width="@dimen/size_310dp"
-            android:layout_height="@dimen/size_43dp"
-            android:layout_marginTop="@dimen/distance_16dp"
-            android:background="@drawable/bg_round_corner_button_white_stroke"
-            android:text="@string/text_manager_account"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_14sp"
-            android:layout_marginBottom="@dimen/distance_2dp"/>
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.goitho.customerapp.widgets.customeCodeInput.data;
+package com.goitho.customerapp.widgets.customCodeInput.data;
 
 import java.util.Stack;
 

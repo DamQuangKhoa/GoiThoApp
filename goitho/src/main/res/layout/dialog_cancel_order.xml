@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightNavy90"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_content_cancel"
+        android:textColor="@color/whiteThree"
+        android:layout_marginBottom="@dimen/distance_26dp"
+        android:textSize="@dimen/text_14sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distance_8dp"
+        android:layout_marginStart="@dimen/distance_8dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        app:cardCornerRadius="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_corner_ice_blue_background"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_reason_cancel"
+                android:textColor="@color/black"
+                android:id="@+id/cb_reason"
+                android:layout_marginTop="@dimen/distance_24dp"
+                android:layout_marginStart="@dimen/distance_41dp"
+                android:layout_marginEnd="@dimen/distance_50dp"
+                android:textSize="@dimen/text_17sp"
+                android:buttonTint="@color/lightNavyTwo"
+                android:paddingStart="@dimen/distance_13dp"
+                android:layout_marginBottom="@dimen/distance_22dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whiteTwentyOne"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_reason_cancel2"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/distance_18dp"
+                android:layout_marginStart="@dimen/distance_41dp"
+                android:layout_marginEnd="@dimen/distance_50dp"
+                android:textSize="@dimen/text_17sp"
+                android:id="@+id/cb_reason2"
+                android:buttonTint="@color/lightNavyTwo"
+                android:paddingStart="@dimen/distance_13dp"
+                android:layout_marginBottom="@dimen/distance_19dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whiteTwentyOne"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_reason_cancel3"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/distance_18dp"
+                android:layout_marginStart="@dimen/distance_41dp"
+                android:layout_marginEnd="@dimen/distance_50dp"
+                android:buttonTint="@color/lightNavyTwo"
+                android:id="@+id/cb_reason3"
+                android:paddingStart="@dimen/distance_13dp"
+                android:textSize="@dimen/text_17sp"
+                android:layout_marginBottom="@dimen/distance_23dp"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_29dp"
+        android:gravity="center"
+        android:id="@+id/layout_cancel"
+        android:layout_marginEnd="@dimen/distance_8dp"
+        android:layout_marginStart="@dimen/distance_8dp"
+        android:background="@drawable/bg_orange_stroke_background">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_confirm_cancel"
+            android:layout_marginTop="@dimen/distance_16dp"
+            android:layout_marginBottom="@dimen/distance_16dp"
+            android:textColor="@color/whiteThree"
+            android:textSize="@dimen/text_14sp"
+            android:textStyle="bold" />
+
+       />
+    </RelativeLayout>
+
+
+</LinearLayout>

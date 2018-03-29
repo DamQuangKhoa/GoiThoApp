@@ -19,7 +19,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -157,7 +156,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/distance_16dp"
                     android:layout_toRightOf="@+id/img_icon2"
-                    android:text="@string/text_order_hotline"
+                    android:text="@string/text_promotion"
                     android:textColor="@color/whiteThree"
                     android:textSize="@dimen/text_15sp"
                     android:textStyle="bold" />
@@ -173,6 +172,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/cv_order"
                 android:layout_marginTop="@dimen/distance_34dp"
                 app:cardCornerRadius="@dimen/distance_14dp">
 
@@ -280,15 +280,15 @@
                     android:textSize="@dimen/text_17sp"
                     android:textStyle="bold"/>
 
-                <com.goitho.customerapp.widgets.CustomStackView
+                <com.goitho.customerapp.widgets.customStackView.CustomStackView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="332dp"
+                    android:rotation="-180"
                     android:layout_marginTop="@dimen/distance_20dp"
-                    android:rotation="90"
-                    android:scaleX="-1"
                     android:verticalScrollbarPosition="defaultPosition"
                     android:animateLayoutChanges="true"
-                    android:id="@+id/sv_blog"/>
+                    android:id="@+id/sv_blog"
+                    />
 
                 <Button
                     android:layout_width="@dimen/size_148dp"

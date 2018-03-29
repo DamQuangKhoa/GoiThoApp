@@ -1,14 +1,12 @@
-package com.goitho.customerapp.widgets.customeCodeInput;
+package com.goitho.customerapp.widgets.customCodeInput;
 
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -21,13 +19,11 @@ import android.view.inputmethod.InputMethodManager;
 
 
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.widgets.customeCodeInput.data.FixedStack;
-import com.goitho.customerapp.widgets.customeCodeInput.model.Underline;
+import com.goitho.customerapp.widgets.customCodeInput.data.FixedStack;
+import com.goitho.customerapp.widgets.customCodeInput.model.Underline;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static android.graphics.Typeface.BOLD;
 
 /**
  * @author Adrián García Lomas

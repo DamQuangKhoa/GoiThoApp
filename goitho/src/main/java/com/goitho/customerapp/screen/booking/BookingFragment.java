@@ -1,44 +1,31 @@
-package com.goitho.customerapp.screen.order_repair;
+package com.goitho.customerapp.screen.booking;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
-import com.demo.architect.data.model.OrderEntity;
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.adapter.OrderDoneAdapter;
-import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
-import com.goitho.customerapp.screen.order.OrderContract;
-import com.goitho.customerapp.screen.order.OrderPresenter;
 import com.goitho.customerapp.util.Precondition;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.inject.Inject;
-
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
  * Created by Skull on 27/11/2017.
  */
 
-public class OrderRepairFragment extends BaseFragment implements OrderRepairContract.View {
+public class BookingFragment extends BaseFragment implements BookingContract.View {
 
-    private OrderRepairContract.Presenter mPresenter;
-    public OrderRepairFragment() {
+    private BookingContract.Presenter mPresenter;
+    public BookingFragment() {
         // Required empty public constructor
     }
 
 
-    public static OrderRepairFragment newInstance() {
-        OrderRepairFragment fragment = new OrderRepairFragment();
+    public static BookingFragment newInstance() {
+        BookingFragment fragment = new BookingFragment();
         return fragment;
     }
 
@@ -56,7 +43,7 @@ public class OrderRepairFragment extends BaseFragment implements OrderRepairCont
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_order, container, false);
+        View view = inflater.inflate(R.layout.fragment_booking, container, false);
 
         ButterKnife.bind(this, view);
 
@@ -64,7 +51,7 @@ public class OrderRepairFragment extends BaseFragment implements OrderRepairCont
     }
 
     @Override
-    public void setPresenter(OrderRepairContract.Presenter presenter) {
+    public void setPresenter(BookingContract.Presenter presenter) {
         this.mPresenter = Precondition.checkNotNull(presenter);
     }
 

@@ -23,7 +23,6 @@
             android:id="@+id/layout_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -124,7 +123,7 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="3dp"
+                        android:layout_width="1dp"
                         android:layout_height="@dimen/size_46dp"
                         android:background="@color/whiteThree" />
 
@@ -153,7 +152,7 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="3dp"
+                        android:layout_width="1dp"
                         android:layout_height="@dimen/size_46dp"
                         android:background="@color/whiteThree" />
 

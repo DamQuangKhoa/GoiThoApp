@@ -11,10 +11,13 @@ public interface UserContract {
     interface View extends BaseView<Presenter> {
         void startEditProfileActivity();
         void startEditAddressActivity();
+        void startDialogLogOut();
+        void startDashboardActivity();
         void showError();
         void showContent();
     }
 
     interface Presenter extends BasePresenter {
+        void logout();
     }
 }
