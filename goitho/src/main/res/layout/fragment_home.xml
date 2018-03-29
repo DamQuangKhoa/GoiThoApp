@@ -37,8 +37,10 @@
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
-<ScrollView
+<android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -278,15 +280,16 @@
                     android:textSize="@dimen/text_17sp"
                     android:textStyle="bold"/>
 
-                <StackView
+                <com.goitho.customerapp.widgets.CustomStackView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/distance_20dp"
+                    android:rotation="90"
+                    android:scaleX="-1"
                     android:verticalScrollbarPosition="defaultPosition"
                     android:animateLayoutChanges="true"
-                    android:id="@+id/sv_blog">
+                    android:id="@+id/sv_blog"/>
 
-                </StackView>
                 <Button
                     android:layout_width="@dimen/size_148dp"
                     android:layout_marginTop="@dimen/size_24dp"
@@ -321,5 +324,5 @@
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>
 </LinearLayout>

@@ -30,6 +30,7 @@ import com.goitho.customerapp.screen.order_repair.OrderRepairPresenter;
 import com.goitho.customerapp.screen.user.UserFragment;
 import com.goitho.customerapp.screen.user.UserModule;
 import com.goitho.customerapp.screen.user.UserPresenter;
+import com.goitho.customerapp.widgets.CustomViewPager;
 import com.goitho.customerapp.widgets.customtablayout.CustomTabLayout;
 import com.goitho.customerapp.widgets.customtablayout.TabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.CustomTabEntity;
@@ -71,7 +72,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     CustomTabLayout tabLayout;
 
     @Bind(R.id.viewpager)
-    ViewPager viewPager;
+    CustomViewPager viewPager;
 
     private HomeFragment homeFragment;
     private OrderFragment orderFragment;
@@ -200,7 +201,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     }
 
 
-    private void setupViewPager(ViewPager viewPager) {
+    private void setupViewPager(CustomViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(homeFragment);
         adapter.addFragment(orderFragment);
@@ -208,6 +209,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         adapter.addFragment(notificationFragment);
         adapter.addFragment(userFragment);
         viewPager.setAdapter(adapter);
+        viewPager.setPagingEnabled(false);
     }
 
 

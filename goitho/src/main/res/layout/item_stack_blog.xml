@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="262dp"
+    android:rotation="90"
+    android:scaleX="-1"
+    android:layout_width="332dp"
+    android:gravity="center"
     android:layout_height="332dp"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="262dp"
+        android:layout_width="332dp"
         android:layout_height="332dp">
         <ImageView
             android:layout_width="262dp"
             android:layout_height="332dp"
             android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
             android:id="@+id/img_cover_blog"
             android:src="@drawable/img_blog" />
 
@@ -18,8 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/distance_18dp"
-            android:layout_marginStart="@dimen/distance_18dp"
+            android:layout_marginEnd="@dimen/distance_53dp"
+            android:layout_marginStart="@dimen/distance_53dp"
             android:layout_marginBottom="@dimen/distance_23dp"
             android:orientation="vertical">
 
