@@ -9,6 +9,8 @@ import com.goitho.customerapp.app.di.module.RepositoryModule;
 import com.goitho.customerapp.app.di.module.UseCaseModule;
 import com.goitho.customerapp.screen.add_action.AddActionComponent;
 import com.goitho.customerapp.screen.add_action.AddActionModule;
+import com.goitho.customerapp.screen.blog.BlogComponent;
+import com.goitho.customerapp.screen.blog.BlogModule;
 import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.certificate.CertificateComponent;
 import com.goitho.customerapp.screen.certificate.CertificateModule;
@@ -51,6 +53,8 @@ import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
 import com.goitho.customerapp.screen.order_done.OrderDoneModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
+import com.goitho.customerapp.screen.post.PostComponent;
+import com.goitho.customerapp.screen.post.PostModule;
 import com.goitho.customerapp.screen.rating.RatingComponent;
 import com.goitho.customerapp.screen.rating.RatingModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
@@ -133,6 +137,10 @@ public interface ApplicationComponent {
     OrderComponent plus(OrderModule orderModule);
 
     RatingComponent plus(RatingModule ratingModule);
+
     DashboardComponent2 plus(DashboardModule dashboardModule);
 
+    BlogComponent plus(BlogModule blogModule);
+
+    PostComponent plus(PostModule postModule);
 }

@@ -138,6 +138,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_order">Đặt lịch sửa chữa</string>
     <string name="text_send_rating">Gửi đánh giá</string>
     <string name="text_promotion">KHUYẾN MÃI</string>
+    <string name="text_related_posts">Bài viết liên quan</string>
     <string name="text_order_hotline">ĐẶT LỊCH QUA HOTLINE</string>
     <string name="text_confirm_cancel">XÁC NHẬN HUỶ</string>
     <string name="text_appointment">Lịch hẹn</string>
@@ -195,4 +196,5 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_open_order">Mở lại đơn hàng</string>
     <string name="text_comment">Nhận xét</string>
     <string name="text_booking">Đặt lịch</string>
+    <string name="text_blog">Blog</string>
 </resources>

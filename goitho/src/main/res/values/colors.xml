@@ -58,6 +58,7 @@
     <color name="yellowishOrange">#faa31b</color>
     <color name="butterscotch">#fdb747</color>
     <color name="iceBlueTwo">#fdfeff</color>
+    <color name="iceBlue">#f4f8ff</color>
     <color name="iceBlueFive">#fbfcff</color>
     <color name="iceBlueThree">#eff6ff</color>
     <color name="whiteSix">#f8f8f8</color>
@@ -83,4 +84,5 @@
     <color name="black10">#1a000000</color>
     <color name="lightNavy90">#e51451a2</color>
     <color name="whiteTwentyOne">#e6e6e6</color>
+    <color name="pinkishGreyThree">#c0c0c0</color>
 </resources>

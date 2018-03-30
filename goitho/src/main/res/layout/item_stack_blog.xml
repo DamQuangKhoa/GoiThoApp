@@ -51,6 +51,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sep 10, 2017"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/distance_2dp"
                     android:id="@+id/txt_datetime"
                     android:textColor="@color/whiteThree"
                     android:textSize="@dimen/text_12sp" />
@@ -67,6 +69,8 @@
                     android:layout_height="wrap_content"
                     android:text="1237"
                     android:textColor="@color/whiteThree"
+                    android:drawableStart="@drawable/ic_watch"
+                    android:drawablePadding="@dimen/distance_2dp"
                     android:id="@+id/txt_view"
                     android:textSize="@dimen/text_12sp" />
                 <View
@@ -80,6 +84,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="815"
+                    android:drawableStart="@drawable/ic_like"
+                    android:drawablePadding="@dimen/distance_2dp"
                     android:id="@+id/txt_like"
                     android:textColor="@color/whiteThree"
                     android:textSize="@dimen/text_12sp" />
