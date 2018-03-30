@@ -16,10 +16,6 @@
 
 package com.goitho.customerapp.widgets.customStackView.utilities;
 
-/**
- * Created by Bartosz Lipinski
- * 12.12.14
- */
 public class ValueInterpolator {
 
     private float mRangeMapFromMin;

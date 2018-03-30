@@ -20,6 +20,9 @@ public interface DetailOrderContract {
         void startRatingActivity();
         void startDialogCancelOrder();
         void startDialogEditContentOrder();
+        void startDialogLibraryCapture();
+        void startCamera();
+        void startGallery();
     }
 
     interface Presenter extends BasePresenter {

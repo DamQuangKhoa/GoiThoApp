@@ -22,10 +22,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_order_history"
+                android:layout_marginStart="@dimen/distance_19dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_16sp"
-                android:layout_marginStart="@dimen/distance_8dp"
+                android:textAllCaps="true"
                 android:gravity="center"/>
 
         </LinearLayout>

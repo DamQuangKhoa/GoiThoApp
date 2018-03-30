@@ -1,6 +1,7 @@
 package com.goitho.customerapp.screen.detail_order;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,10 +20,14 @@ import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogCancelOrder;
 import com.goitho.customerapp.dialogs.CustomDialogEditContentOrder;
+import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.dialogs.CustomDialogReasonCancel;
 import com.goitho.customerapp.screen.rating.RatingActivity;
 import com.goitho.customerapp.util.Precondition;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -30,6 +35,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static android.view.View.GONE;
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by MSI on 26/11/2017.
@@ -38,7 +44,8 @@ import static android.view.View.GONE;
 public class DetailOrderFragment extends BaseFragment implements DetailOrderContract.View {
     private final String TAG = DetailOrderFragment.class.getName();
     private DetailOrderContract.Presenter mPresenter;
-
+    public static final int REQUEST_CODE_PICK_IMAGE = 666;
+    public static final int REQUEST_CODE_TAKE_IMAGE = 667;
     private ImageAdapter adapter;
 
     @Bind(R.id.rv_image)
@@ -206,7 +213,12 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
 
     @OnClick(R.id.img_edit_content)
     public void editContent() {
+        startDialogEditContentOrder();
+    }
 
+    @OnClick(R.id.img_add_image)
+    public void addImage() {
+        startDialogLibraryCapture();
     }
 
     @Override
@@ -242,7 +254,7 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     @Override
     public void startDialogEditContentOrder() {
         CustomDialogEditContentOrder dialog = new CustomDialogEditContentOrder();
-        dialog.show(getActivity().getFragmentManager(),TAG );
+        dialog.show(getActivity().getFragmentManager(), TAG);
         dialog.setListener(new CustomDialogEditContentOrder.OnSaveClickListener() {
             @Override
             public void onSaveClick(String content) {
@@ -250,6 +262,55 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
             }
 
         });
+    }
+
+    @Override
+    public void startDialogLibraryCapture() {
+        CustomDialogLibraryCapture dialog = new CustomDialogLibraryCapture();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setListener(new CustomDialogLibraryCapture.OnOpenCameraListener() {
+            @Override
+            public void onOpenCamera() {
+                startCamera();
+            }
+        }, new CustomDialogLibraryCapture.OnOpenGalleryListener() {
+            @Override
+            public void onOpenGallery() {
+                startGallery();
+            }
+        });
+    }
+
+    @Override
+    public void startCamera() {
+
+        Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(takePicture, REQUEST_CODE_TAKE_IMAGE);
+    }
+
+    @Override
+    public void startGallery() {
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, REQUEST_CODE_PICK_IMAGE);
+
+    }
+
+
+    private static File persistImage(Bitmap bitmap, String name) {
+        File filesDir = getApplicationContext().getFilesDir();
+        File imageFile = new File(filesDir, name + ".png");
+
+        OutputStream os;
+        try {
+            os = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
+            os.flush();
+            os.close();
+        } catch (Exception e) {
+        }
+
+        return imageFile;
     }
 
 
