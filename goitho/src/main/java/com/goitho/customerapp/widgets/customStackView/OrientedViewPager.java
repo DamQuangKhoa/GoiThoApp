@@ -72,10 +72,10 @@ public class OrientedViewPager extends ViewGroup {
     private static final boolean USE_CACHE = false;
 
     private static final int DEFAULT_OFFSCREEN_PAGES = 1;
-    private static final int MAX_SETTLE_DURATION = 600; // ms
+    private static final int MAX_SETTLE_DURATION = 30; // ms
     private static final int MIN_DISTANCE_FOR_FLING = 25; // dips
 
-    private static final int DEFAULT_GUTTER_SIZE = 16; // dips
+    private static final int DEFAULT_GUTTER_SIZE = 30; // dips
 
     private static final int MIN_FLING_VELOCITY = 400; // dips
 

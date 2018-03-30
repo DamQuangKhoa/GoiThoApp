@@ -18,6 +18,7 @@ import com.goitho.customerapp.adapter.ImageAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogCancelOrder;
+import com.goitho.customerapp.dialogs.CustomDialogEditContentOrder;
 import com.goitho.customerapp.dialogs.CustomDialogReasonCancel;
 import com.goitho.customerapp.screen.rating.RatingActivity;
 import com.goitho.customerapp.util.Precondition;
@@ -72,6 +73,9 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
 
     @Bind(R.id.layout_cancel)
     LinearLayout llCancel;
+    @Bind(R.id.txt_content)
+    TextView txtContent;
+
     private OrderEntity order;
 
     public DetailOrderFragment() {
@@ -190,10 +194,21 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     }
 
     @OnClick(R.id.layout_open_order)
-    public void openOrder(){
+    public void openOrder() {
         DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
         getActivity().finish();
     }
+
+    @OnClick(R.id.img_edit_rating)
+    public void editRating() {
+        RatingActivity.start(getContext());
+    }
+
+    @OnClick(R.id.img_edit_content)
+    public void editContent() {
+
+    }
+
     @Override
     public void showListImage(ArrayList<ImageEntity> mList) {
         adapter.setData(mList);
@@ -221,6 +236,19 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
                 dialogReasonCancel.show(getActivity().getFragmentManager(),
                         TAG + "CustomDialogReasonCancel");
             }
+        });
+    }
+
+    @Override
+    public void startDialogEditContentOrder() {
+        CustomDialogEditContentOrder dialog = new CustomDialogEditContentOrder();
+        dialog.show(getActivity().getFragmentManager(),TAG );
+        dialog.setListener(new CustomDialogEditContentOrder.OnSaveClickListener() {
+            @Override
+            public void onSaveClick(String content) {
+                txtContent.setText(content);
+            }
+
         });
     }
 
