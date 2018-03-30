@@ -12,6 +12,8 @@ import com.goitho.customerapp.screen.add_action.AddActionModule;
 import com.goitho.customerapp.screen.blog.BlogComponent;
 import com.goitho.customerapp.screen.blog.BlogModule;
 import com.goitho.customerapp.screen.booking.BookingModule;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessComponent;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
 import com.goitho.customerapp.screen.certificate.CertificateComponent;
 import com.goitho.customerapp.screen.certificate.CertificateModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
@@ -143,4 +145,6 @@ public interface ApplicationComponent {
     BlogComponent plus(BlogModule blogModule);
 
     PostComponent plus(PostModule postModule);
+
+    BookingSuccessComponent plus(BookingSuccessModule bookingSuccessModule);
 }

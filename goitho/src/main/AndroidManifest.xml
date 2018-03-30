@@ -86,6 +86,7 @@
         <activity android:name=".screen.dashboard.DashboardActivity" />
         <activity android:name=".screen.blog.BlogActivity"/>
         <activity android:name=".screen.post.PostActivity"/>
+        <activity android:name=".screen.booking_success.BookingSuccessActivity"/>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
