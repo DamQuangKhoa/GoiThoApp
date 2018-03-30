@@ -128,7 +128,6 @@ public class StackPageTransformer implements ViewPager.PageTransformer {
 
         float availableSpaceUnit = 0.5f * dimen * (1 - mOverlapFactor) * (1 - mZeroPositionScale);
         switch (mGravity) {
-
             case TOP:
                 mAboveStackSpace = 0;
                 mBelowStackSpace = 2 * availableSpaceUnit;

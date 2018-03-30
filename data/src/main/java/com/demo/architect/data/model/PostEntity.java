@@ -1,19 +1,22 @@
 package com.demo.architect.data.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Yen on 3/28/2018.
  */
 
-public class BlogEntity {
+public class PostEntity implements Serializable{
     private String title;
+    private String urlImage;
     private String dateCreate;
     private int view;
     private int like;
 
-    public BlogEntity() {
+    public PostEntity() {
     }
 
-    public BlogEntity(String title, String dateCreate, int view, int like) {
+    public PostEntity(String title, String dateCreate, int view, int like) {
         this.title = title;
         this.dateCreate = dateCreate;
         this.view = view;

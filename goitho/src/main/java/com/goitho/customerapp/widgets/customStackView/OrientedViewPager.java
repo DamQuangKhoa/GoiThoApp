@@ -72,12 +72,12 @@ public class OrientedViewPager extends ViewGroup {
     private static final boolean USE_CACHE = false;
 
     private static final int DEFAULT_OFFSCREEN_PAGES = 1;
-    private static final int MAX_SETTLE_DURATION = 600; // ms
+    private static final int MAX_SETTLE_DURATION = 2000; // ms
     private static final int MIN_DISTANCE_FOR_FLING = 25; // dips
 
-    private static final int DEFAULT_GUTTER_SIZE = 16; // dips
+    private static final int DEFAULT_GUTTER_SIZE = 30; // dips
 
-    private static final int MIN_FLING_VELOCITY = 400; // dips
+    private static final int MIN_FLING_VELOCITY = 30; // dips
 
     private static final int[] LAYOUT_ATTRS = new int[]{
             android.R.attr.layout_gravity
@@ -731,7 +731,7 @@ public class OrientedViewPager extends ViewGroup {
         int duration = 0;
         velocity = Math.abs(velocity);
         if (velocity > 0) {
-            duration = 4 * Math.round(1000 * Math.abs(distance / velocity));
+            duration = 5 * Math.round(1000 * Math.abs(distance / velocity));
         } else {
             final float pageSize = size * mAdapter.getPageWidth(mCurItem);
             final float pageDelta = (float) Math.abs(dx) / (pageSize + mPageMargin);

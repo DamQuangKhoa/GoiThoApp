@@ -19,6 +19,10 @@ public interface DetailOrderContract {
         void showListImage(ArrayList<ImageEntity> mList);
         void startRatingActivity();
         void startDialogCancelOrder();
+        void startDialogEditContentOrder();
+        void startDialogLibraryCapture();
+        void startCamera();
+        void startGallery();
     }
 
     interface Presenter extends BasePresenter {

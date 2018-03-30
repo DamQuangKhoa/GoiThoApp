@@ -71,18 +71,8 @@ public class RatingAdapter extends RecyclerView.Adapter<RatingAdapter.RatingHold
             image = (ImageView) v.findViewById(R.id.img_avatar);
         }
 
-        private void bind(final ImageEntity item, final RatingAdapter.OnItemClickListener listener) {
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(item);
-                }
-            });
-        }
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(ImageEntity item);
-    }
+
 }

@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import com.demo.architect.data.model.offline.ImageEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessActivity;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
@@ -88,6 +89,7 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_address, container, false);
         ButterKnife.bind(this, view);
+
         return view;
     }
 

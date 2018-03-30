@@ -30,7 +30,7 @@
                 android:id="@+id/txt_toolbar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/distance_10dp"
+                android:layout_marginStart="@dimen/distance_19dp"
                 android:layout_weight="1"
                 android:gravity="start|center_vertical"
                 android:text="@string/text_toolbar_account"

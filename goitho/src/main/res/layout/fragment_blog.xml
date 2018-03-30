@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/iceBlue"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar"
+        android:layout_weight="0"
+        android:background="@drawable/bg_round_corner_blue_background"
+        android:orientation="horizontal"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/distance_10dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/distance_8dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:gravity="center"
+                android:text="@string/text_blog"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_23dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:id="@+id/layout_cover"
+            android:paddingEnd="@dimen/distance_8dp"
+            android:paddingStart="@dimen/distance_8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:id="@+id/img_cover_blog"
+                android:src="@drawable/img_cover_blog" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/distance_2dp"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:paddingEnd="@dimen/distance_25dp"
+                android:paddingStart="@dimen/distance_25dp">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trang trí nội thất theo phong cách châu Âu "
+                    android:textColor="@color/whiteThree"
+                    android:textSize="@dimen/text_15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/distance_13dp"
+                    android:background="@color/whiteTwenty" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/distance_15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_datetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_2dp"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:text="Sep 10, 2017"
+                        android:textColor="@color/whiteThree"
+                        android:textSize="@dimen/text_12sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/distance_7dp"
+                        android:layout_marginStart="@dimen/distance_11dp"
+                        android:background="@color/whiteThree" />
+
+                    <TextView
+                        android:id="@+id/txt_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_2dp"
+                        android:drawableStart="@drawable/ic_watch"
+                        android:text="1237"
+                        android:textColor="@color/whiteThree"
+                        android:textSize="@dimen/text_12sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/distance_7dp"
+                        android:layout_marginStart="@dimen/distance_6dp"
+                        android:background="@color/whiteThree" />
+
+                    <TextView
+                        android:id="@+id/txt_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_2dp"
+                        android:drawableStart="@drawable/ic_like"
+                        android:text="815"
+                        android:textColor="@color/whiteThree"
+                        android:textSize="@dimen/text_12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_22dp"
+            android:layout_below="@+id/layout_cover"
+            android:id="@+id/rv_blog"
+            android:paddingEnd="@dimen/distance_8dp"
+            android:paddingStart="@dimen/distance_8dp" />
+    </RelativeLayout>
+</LinearLayout>

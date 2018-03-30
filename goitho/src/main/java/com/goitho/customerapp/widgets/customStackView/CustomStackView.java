@@ -26,8 +26,8 @@ import android.util.AttributeSet;
  */
 public class CustomStackView extends OrientedViewPager {
     private static final float DEFAULT_CURRENT_PAGE_SCALE = 0.8f;
-    private static final float DEFAULT_TOP_STACKED_SCALE = 0.7f;
-    private static final float DEFAULT_OVERLAP_FACTOR = 0.4f;
+    private static final float DEFAULT_TOP_STACKED_SCALE = 0.4f;
+    private static final float DEFAULT_OVERLAP_FACTOR = 0.8f;
 
     public CustomStackView(Context context) {
         super(context);

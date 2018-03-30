@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/whiteFifteen">
+    android:background="@color/whiteFifteen"
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_toolbar"
         android:background="@drawable/bg_round_corner_blue_background"
         android:orientation="horizontal"
+        app:contentInsetEnd="0dp"
         app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
         app:contentInsetRight="0dp"
-        app:contentInsetEnd="0dp">
+        app:contentInsetStart="0dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/distance_19dp"
+                android:gravity="center"
                 android:text="@string/text_notification"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textStyle="bold"
                 android:textSize="@dimen/text_16sp"
-                android:layout_marginStart="@dimen/distance_8dp"
-                android:gravity="center"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 
     <ListView
+        android:id="@+id/lv_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_notification"
-        android:padding="@dimen/distance_15dp"
         android:layout_marginTop="@dimen/distance_4dp"
         android:background="@color/whiteFifteen"
         android:divider="@android:color/transparent"
         android:dividerHeight="@dimen/distance_11dp"
-        />
+        android:padding="@dimen/distance_15dp" />
 </LinearLayout>

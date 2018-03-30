@@ -5,21 +5,20 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.StackView;
 
-import com.demo.architect.data.model.BlogEntity;
+import com.demo.architect.data.model.PostEntity;
 import com.demo.architect.data.model.OrderEntity;
 import com.demo.architect.data.model.RatingEntity;
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.adapter.BlogAdapter;
+import com.goitho.customerapp.adapter.BlogStackAdapter;
 import com.goitho.customerapp.adapter.RatingAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.blog.BlogActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.customStackView.CustomStackView;
@@ -39,7 +38,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     private final String TAG = HomeFragment.class.getName();
     private HomeContract.Presenter mPresenter;
 
-    private BlogAdapter blogAdapter;
+    private BlogStackAdapter blogAdapter;
 
     @Bind(R.id.rv_rating)
     RecyclerView rvRating;
@@ -89,8 +88,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     }
 
     private void initStackView() {
-
-
 
     }
 
@@ -151,15 +148,21 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     public void order(){
         startDetailOrder();
     }
+
+    @OnClick(R.id.btn_blog)
+    public void blog(){
+        BlogActivity.start(getContext());
+    }
+
     @Override
     public void showRatingList(ArrayList<RatingEntity> list) {
         ratingAdapter.setData(list);
     }
 
     @Override
-    public void showBlogList(List<BlogEntity> list) {
-        blogAdapter = new BlogAdapter(getContext(),list,
-                new BlogAdapter.OnItemClickListener() {
+    public void showBlogList(List<PostEntity> list) {
+        blogAdapter = new BlogStackAdapter(getContext(),list,
+                new BlogStackAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(int position) {
 

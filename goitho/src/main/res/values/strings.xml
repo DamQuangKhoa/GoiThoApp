@@ -39,6 +39,7 @@
     <string name="text_rating_orders">Đánh giá đơn hàng</string>
     <string name="text_review">Đánh giá</string>
     <string name="text_call_center">Trung tâm hỗ trợ</string>
+    <string name="text_create_account">Tạo tài khoản mới với thông tin trên</string>
     <string name="text_blog_goi_tho">Blog gọi thợ</string>
     <string name="text_reason">Lý do hủy</string>
     <string name="text_status_exhibition">Trạng thái đơn hàng</string>
@@ -67,7 +68,9 @@
     <string name="text_edit_profile">Chỉnh sửa trang cá nhân</string>
     <string name="text_type_action">Loại việc</string>
     <string name="text_time">Thời gian</string>
+    <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
+    <string name="text_id_promotion">Mã Khuyến mãi:</string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -93,6 +96,7 @@
     <string name="text_add">Thêm</string>
     <string name="text_account">Tài khoản</string>
     <string name="text_notification">Thông báo</string>
+    <string name="text_enter_content">Nhập nội dung</string>
     <string name="text_ok">OK</string>
     <string name="text_yes">Có</string>
     <string name="text_no">Không</string>
@@ -137,6 +141,9 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_order">Đặt lịch sửa chữa</string>
     <string name="text_send_rating">Gửi đánh giá</string>
     <string name="text_promotion">KHUYẾN MÃI</string>
+    <string name="text_booking_success">ĐẶT LỊCH THÀNH CÔNG</string>
+    <string name="text_content_booking_success">Mã đơn hàng: A123. Gọi Thợ sẽ liên hệ với bạn sau ít \n phút để xác nhận thông tin.</string>
+    <string name="text_related_posts">Bài viết liên quan</string>
     <string name="text_order_hotline">ĐẶT LỊCH QUA HOTLINE</string>
     <string name="text_confirm_cancel">XÁC NHẬN HUỶ</string>
     <string name="text_appointment">Lịch hẹn</string>
@@ -183,7 +190,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_register_success">TẠO TÀI KHOẢN THÀNH CÔNG</string>
     <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
         công trên hệ thống Gọi Thợ. Hãy luôn mở App Chủ Nhà nhé.</string>
-    <string name="text_go_home">VỀ TRANG CHỦ</string>
+    <string name="text_go_home">Về trang chủ</string>
     <string name="text_manager_account">QUẢN LÝ TÀI KHOẢN</string>
     <string name="text_content_add_profile">Để kích hoạt tài khoản, hãy cung cấp đầy đủ các \n thông tin sau</string>
     <string name="text_choose_avatar">Chọn hình đại diện</string>
@@ -194,4 +201,5 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_open_order">Mở lại đơn hàng</string>
     <string name="text_comment">Nhận xét</string>
     <string name="text_booking">Đặt lịch</string>
+    <string name="text_blog">Blog</string>
 </resources>

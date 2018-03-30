@@ -7,16 +7,15 @@
     android:orientation="horizontal"
     android:weightSum="3">
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:layout_marginStart="@dimen/distance_14dp"
         android:layout_marginEnd="@dimen/distance_12dp"
-        android:layout_marginTop="@dimen/distance_16dp"
         android:layout_marginBottom="@dimen/distance_16dp"
         android:orientation="vertical"
+        android:layout_marginTop="@dimen/distance_16dp"
         android:layout_gravity="center">
 
         <TextView
@@ -25,30 +24,32 @@
             android:text="@string/text_repair"
             android:textStyle="bold"
             android:textColor="@color/blackThree"
+            android:id="@+id/txt_title"
             android:textSize="@dimen/text_12sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đơn hàng ABC123"
+            android:text="Đơn hàng ABC123 dfgdfgdfgdfgfgfgfgfgfgfg"
             android:layout_marginTop="@dimen/distance_4dp"
+            android:layout_below="@+id/txt_title"
             android:id="@+id/txt_content"
             android:textColor="@color/black"
             android:textSize="@dimen/text_14sp"/>
-    </LinearLayout>
+    </RelativeLayout>
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/warmGreyTwo"
         />
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_marginStart="@dimen/distance_12dp"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/distance_16dp"
         android:layout_marginBottom="@dimen/distance_16dp"
         android:layout_marginEnd="@dimen/distance_12dp"
+        android:layout_marginTop="@dimen/distance_16dp"
         android:layout_gravity="center">
 
         <TextView
@@ -56,14 +57,17 @@
             android:layout_height="wrap_content"
             android:text="@string/text_reason"
             android:textStyle="bold"
+            android:id="@+id/txt_cancel"
             android:textColor="@color/blackThree"
             android:textSize="@dimen/text_12sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đơn hàng ABC123"
+            android:text="Đơn hàng"
+            android:layout_marginTop="@dimen/distance_4dp"
             android:id="@+id/txt_reason"
+            android:layout_below="@+id/txt_cancel"
             android:textColor="@color/black"
             android:textSize="@dimen/text_14sp"/>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
