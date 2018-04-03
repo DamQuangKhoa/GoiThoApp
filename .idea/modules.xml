@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GoiTho-AppKhach.iml" filepath="$PROJECT_DIR$/GoiTho-AppKhach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GoiTho.iml" filepath="$PROJECT_DIR$/GoiTho.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/goitho/goitho.iml" filepath="$PROJECT_DIR$/goitho/goitho.iml" />

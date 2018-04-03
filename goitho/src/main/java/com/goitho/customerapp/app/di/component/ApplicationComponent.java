@@ -17,6 +17,8 @@ import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
+import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionComponent;
+import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionModule;
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
@@ -40,6 +42,8 @@ import com.goitho.customerapp.screen.history.HistoryComponent;
 import com.goitho.customerapp.screen.history.HistoryModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
+import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionComponent;
+import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
@@ -116,5 +120,6 @@ public interface ApplicationComponent {
 
     ExhibitionCancelComponent plus(ExhibitionCancelModule exhibitionDoingModule);
 
-
+    ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
+    DetailPromotionComponent plus(DetailPromotionModule exhibitionDoingModule);
 }

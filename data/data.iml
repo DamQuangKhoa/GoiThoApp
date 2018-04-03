@@ -110,6 +110,5 @@
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.6.1@jar" level="project" />
     <orderEntry type="library" exported="" name="io.reactivex:rxjava:1.1.1@jar" level="project" />
     <orderEntry type="library" exported="" name="com.getkeepsafe.relinker:relinker-1.2.2" level="project" />
-    <orderEntry type="library" exported="" name="android-android-26" level="project" />
   </component>
 </module>

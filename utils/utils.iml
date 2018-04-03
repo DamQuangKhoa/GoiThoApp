@@ -102,6 +102,5 @@
     <orderEntry type="library" exported="" name="com.fernandocejas.frodo:frodo-runtime-0.8.3" level="project" />
     <orderEntry type="library" exported="" name="io.realm:realm-android-library-2.2.0" level="project" />
     <orderEntry type="library" exported="" name="com.getkeepsafe.relinker:relinker-1.2.2" level="project" />
-    <orderEntry type="library" exported="" name="android-android-26" level="project" />
   </component>
 </module>

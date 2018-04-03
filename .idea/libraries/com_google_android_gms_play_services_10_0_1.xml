@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.google.android.gms:play-services-10.0.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/f457dcfb4454e858c7caa30409e3aea85077e027/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/f457dcfb4454e858c7caa30409e3aea85077e027/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/ac96a3cc8bb6fd1416a2f00bcfef5fba6aabdc40/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ac96a3cc8bb6fd1416a2f00bcfef5fba6aabdc40/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

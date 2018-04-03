@@ -32,6 +32,8 @@
         <!-- begin facebook -->
         <activity
             android:name="com.facebook.FacebookActivity"
+
+
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
 
@@ -57,10 +59,11 @@
             android:name="io.fabric.ApiKey"
             android:value="28a7e9cbed367e5cf9bdaf8f677fe2aac9a0a6bd" />
 
+        <activity android:name="com.goitho.customerapp.screen.login.LoginActivity" />
         <activity android:name="com.goitho.customerapp.app.permission.PermissionActivity" />
         <activity android:name="com.goitho.customerapp.screen.splash.SplashActivity">
         </activity>
-        <activity android:name="com.goitho.customerapp.screen.login.LoginActivity" />
+        <activity android:name="com.goitho.customerapp.screen.exhibition.ExhibitionActivity"/> // start app
         <activity android:name="com.goitho.customerapp.screen.farmer.FarmerActivity" />
         <activity android:name="com.goitho.customerapp.screen.diary.DiaryActivity" />
         <activity android:name="com.goitho.customerapp.screen.detail_diary.DetailDiaryActivity" />
@@ -76,7 +79,10 @@
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
         <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.exhibition.ExhibitionActivity">
+        <activity android:name="com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionActivity"/>
+
+
+        <activity android:name="com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

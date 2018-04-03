@@ -10,7 +10,7 @@
     <color name="whiteThree">#ffffff</color>
     <color name="brown">#290101</color>
     <color name="red">#ff0008</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="grey">#d2d2d2</color>
     <color name="grey_dark">#6e6e6e</color>
     <color name="text">#C3F4D7</color>
