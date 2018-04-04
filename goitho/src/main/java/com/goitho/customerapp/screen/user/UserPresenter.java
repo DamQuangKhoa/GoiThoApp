@@ -3,7 +3,10 @@ package com.goitho.customerapp.screen.user;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
+import com.goitho.customerapp.app.CoreApplication;
+import com.goitho.customerapp.constants.Constants;
 
 import javax.inject.Inject;
 
@@ -11,7 +14,7 @@ import javax.inject.Inject;
  * Created by MSI on 26/11/2017.
  */
 
-public class UserPresenter implements UserContract.Presenter{
+public class UserPresenter implements UserContract.Presenter {
 
     private final String TAG = UserPresenter.class.getName();
     private final UserContract.View view;
@@ -33,7 +36,7 @@ public class UserPresenter implements UserContract.Presenter{
     @Override
     public void start() {
         Log.d(TAG, TAG + ".start() called");
-
+        view.showContent();
 
     }
 
@@ -43,4 +46,9 @@ public class UserPresenter implements UserContract.Presenter{
     }
 
 
+    @Override
+    public void logout() {
+        SharedPreferenceHelper.getInstance(CoreApplication.getInstance()).pushBoolean(Constants.KEY_CHECK_LOGIN, false);
+        view.startDashboardActivity();
+    }
 }

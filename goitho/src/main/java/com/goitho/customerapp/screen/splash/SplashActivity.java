@@ -7,6 +7,7 @@ import android.view.WindowManager;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseActivity;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.landing.LandingActivity;
 
 /**
@@ -40,7 +41,7 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onFinish() {
-                LandingActivity.start(SplashActivity.this);
+                DashboardActivity.start(SplashActivity.this);
                 finish();
             }
         };

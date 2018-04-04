@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/distance_16dp"
         android:layout_marginEnd="@dimen/distance_12dp"
-        android:layout_marginStart="@dimen/distance_12dp"
+        android:layout_marginStart="@dimen/distance_16dp"
         android:layout_marginTop="@dimen/distance_16dp"
         android:layout_weight="2"
         android:orientation="vertical">
@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_review_orders"
+                android:text="@string/text_rating_orders"
                 android:textStyle="bold"
                 android:textColor="@color/whiteThree"
                 android:textSize="@dimen/text_12sp" />

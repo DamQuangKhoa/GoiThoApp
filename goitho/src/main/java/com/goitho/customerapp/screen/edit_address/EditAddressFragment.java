@@ -1,23 +1,47 @@
 package com.goitho.customerapp.screen.edit_address;
 
-import android.graphics.Paint;
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
+import com.demo.architect.data.model.offline.ImageEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessActivity;
+import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
 import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.widgets.CircleTransform;
+import com.squareup.picasso.Picasso;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static android.app.Activity.RESULT_OK;
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by Skull on 29/11/2017.
@@ -27,7 +51,8 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
 
     private static final String TAG = EditAddressFragment.class.getName();
     private EditAddressContract.Presenter mPresenter;
-
+    public static final int REQUEST_CODE_PICK_IMAGE = 666;
+    public static final int REQUEST_CODE_TAKE_IMAGE = 667;
     @Bind(R.id.et_name)
     EditText etName;
 
@@ -40,6 +65,8 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
     @Bind(R.id.et_email)
     EditText etEmail;
 
+    @Bind(R.id.img_avatar)
+    ImageView imgAvatar;
 
     public EditAddressFragment() {
         // Required empty public constructor
@@ -62,19 +89,20 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_address, container, false);
         ButterKnife.bind(this, view);
+
         return view;
     }
 
 
-
     @OnClick(R.id.btn_complete)
     public void complete() {
+        startRegisterSuccessActivity();
         getActivity().finish();
     }
 
     @OnClick(R.id.layoutCapture)
-    public void capture(){
-
+    public void capture() {
+        startDialogLibraryCapture();
     }
 
     @Override
@@ -104,10 +132,31 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         mPresenter.stop();
     }
 
+    @OnClick(R.id.img_back)
+    public void back() {
+        getActivity().finish();
+    }
+
+    @Override
+    public void startRegisterSuccessActivity() {
+        RegisterSuccessActivity.start(getContext());
+    }
+
     @Override
     public void startDialogLibraryCapture() {
         CustomDialogLibraryCapture dialog = new CustomDialogLibraryCapture();
         dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setListener(new CustomDialogLibraryCapture.OnOpenCameraListener() {
+            @Override
+            public void onOpenCamera() {
+                startCamera();
+            }
+        }, new CustomDialogLibraryCapture.OnOpenGalleryListener() {
+            @Override
+            public void onOpenGallery() {
+                startGallery();
+            }
+        });
 
     }
 
@@ -115,5 +164,55 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
     public void showError() {
 
     }
+
+    @Override
+    public void startCamera() {
+
+        Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(takePicture, REQUEST_CODE_TAKE_IMAGE);
+    }
+
+    @Override
+    public void startGallery() {
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, REQUEST_CODE_PICK_IMAGE);
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_PICK_IMAGE) {
+            final Uri imageUri = data.getData();
+            Picasso.with(getContext()).load(imageUri).transform(new CircleTransform()).into(imgAvatar);
+
+        }
+
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_IMAGE) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
+            imgAvatar.setImageBitmap(photo);
+        }
+    }
+
+    private static File persistImage(Bitmap bitmap, String name) {
+        File filesDir = getApplicationContext().getFilesDir();
+        File imageFile = new File(filesDir, name + ".png");
+
+        OutputStream os;
+        try {
+            os = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
+            os.flush();
+            os.close();
+        } catch (Exception e) {
+            Log.e(TAG, "Error writing bitmap", e);
+        }
+
+        return imageFile;
+    }
+
+
 
 }

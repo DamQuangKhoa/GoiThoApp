@@ -51,4 +51,8 @@ public class DashboardPresenter implements DashboardContract.Presenter{
         Log.d(TAG, TAG + ".stop() called");
     }
 
+    @Override
+    public void checkLogin() {
+
+    }
 }

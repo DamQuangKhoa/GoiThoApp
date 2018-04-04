@@ -11,6 +11,6 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(modules = {LandingModule.class})
 public interface LandingComponent {
-    void inject(LandingActivity activity);
+    void inject(LandingFragment fragment);
 
 }

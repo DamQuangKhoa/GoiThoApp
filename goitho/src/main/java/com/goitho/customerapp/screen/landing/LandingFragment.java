@@ -17,6 +17,8 @@ import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.scviewpager.SCViewPager;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,9 +29,8 @@ import butterknife.OnClick;
 
 public class LandingFragment extends BaseFragment implements LandingContract.View {
 
-    private LandingContract.Presenter mPresenter;
-
-
+    @Inject
+    LandingPresenter mPresenter;
 
     public LandingFragment() {
         // Required empty public constructor
@@ -56,6 +57,10 @@ public class LandingFragment extends BaseFragment implements LandingContract.Vie
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_landing, container, false);
+        // Create the presenter
+        CoreApplication.getInstance().getApplicationComponent()
+                .plus(new LandingModule(this))
+                .inject(this);
         ButterKnife.bind(this, view);
 
 
@@ -65,7 +70,7 @@ public class LandingFragment extends BaseFragment implements LandingContract.Vie
 
     @Override
     public void setPresenter(LandingContract.Presenter presenter) {
-        this.mPresenter = Precondition.checkNotNull(presenter);
+        //this.mPresenter = Precondition.checkNotNull(presenter);
     }
 
     @Override

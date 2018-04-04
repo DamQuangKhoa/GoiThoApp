@@ -7,14 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogForgetPassword;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
@@ -74,8 +73,6 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
     }
 
 
-
-
     @Override
     public void setPresenter(LoginContract.Presenter presenter) {
         this.mPresenter = Precondition.checkNotNull(presenter);
@@ -105,7 +102,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     @OnClick(R.id.btn_login)
     public void login() {
-
+        mPresenter.login();
     }
 
 
@@ -123,6 +120,12 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
     @Override
     public void startRegisterActivity() {
         RegisterActivity.start(getActivity());
+    }
+
+    @Override
+    public void startDialogDashboardActivity() {
+        DashboardActivity.start(getContext());
+        getActivity().finishAffinity();
     }
 
     @Override

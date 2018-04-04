@@ -150,6 +150,20 @@ public class BaseActivity extends AppCompatActivity
 
         }
 
+        if (this.findViewById(android.R.id.content).findViewById(R.id.fragmentContainer) != null)
+            this.findViewById(android.R.id.content).findViewById(R.id.fragmentContainer).setPadding(0, getStatusBarHeight(), 0, 0);
+
+        Window w = getWindow(); // in Activity's onCreate() for instance
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    }
+
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

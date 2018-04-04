@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="@dimen/size_180dp"
-        android:layout_height="@dimen/size_76dp"
-        android:layout_centerInParent="true"
-        app:cardCornerRadius="10dp">
 
-        <LinearLayout
-            android:layout_width="@dimen/size_180dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_camera"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/distance_4dp"
+            android:layout_marginTop="@dimen/distance_2dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:padding="@dimen/distance_8dp"
+            android:text="@string/text_capture"
+            android:textColor="@color/deepSkyBlueTwo"
+            android:textSize="@dimen/text_14sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/text_capture"
-                android:id="@+id/txt_camera"
-                android:layout_marginBottom="@dimen/distance_2dp"
-                android:textColor="@color/deepSkyBlueTwo"
-                android:textSize="@dimen/text_14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/whiteSeven" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/whiteSeven"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="@dimen/distance_2dp"
-                android:id="@+id/txt_choose_album"
-                android:text="@string/text_choose_album"
-                android:textColor="@color/deepSkyBlueTwo"
-                android:textSize="@dimen/text_14sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/whiteSeven"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/text_close"
-                android:paddingTop="@dimen/distance_2dp"
-                android:textStyle="bold"
-                android:textColor="@color/deepSkyBlueTwo"
-                android:id="@+id/txt_close"
-                android:textSize="@dimen/text_14sp" />
+        <TextView
+            android:id="@+id/txt_choose_album"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/distance_20dp"
+            android:layout_marginStart="@dimen/distance_20dp"
+            android:gravity="center"
+            android:padding="@dimen/distance_8dp"
+            android:text="@string/text_choose_album"
+            android:textColor="@color/deepSkyBlueTwo"
+            android:textSize="@dimen/text_14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/whiteSeven" />
+
+        <TextView
+            android:id="@+id/txt_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/distance_8dp"
+            android:paddingTop="@dimen/distance_2dp"
+            android:text="@string/text_close"
+            android:textColor="@color/deepSkyBlueTwo"
+            android:textSize="@dimen/text_14sp"
+            android:textStyle="bold" />
 
 
+    </LinearLayout>
 
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-</RelativeLayout>
+</android.support.v7.widget.CardView>

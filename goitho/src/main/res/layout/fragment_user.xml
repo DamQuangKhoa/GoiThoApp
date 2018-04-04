@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whiteNine"
+    android:paddingBottom="@dimen/distance_24dp"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -22,7 +23,6 @@
             android:id="@+id/layout_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -30,7 +30,7 @@
                 android:id="@+id/txt_toolbar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/distance_10dp"
+                android:layout_marginStart="@dimen/distance_19dp"
                 android:layout_weight="1"
                 android:gravity="start|center_vertical"
                 android:text="@string/text_toolbar_account"
@@ -123,7 +123,7 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="3dp"
+                        android:layout_width="1dp"
                         android:layout_height="@dimen/size_46dp"
                         android:background="@color/whiteThree" />
 
@@ -152,7 +152,7 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="3dp"
+                        android:layout_width="1dp"
                         android:layout_height="@dimen/size_46dp"
                         android:background="@color/whiteThree" />
 
@@ -185,9 +185,11 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:layout_width="@dimen/size_339dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_46dp"
+                android:layout_marginStart="@dimen/distance_18dp"
+                android:layout_marginEnd="@dimen/distance_18dp"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/distance_16dp"
                 android:paddingRight="@dimen/distance_16dp">
@@ -213,14 +215,16 @@
             </RelativeLayout>
 
             <android.support.v7.widget.CardView
-                android:layout_width="@dimen/size_339dp"
-                android:layout_height="@dimen/size_227dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/distance_16dp"
+                android:layout_marginStart="@dimen/distance_18dp"
+                android:layout_marginEnd="@dimen/distance_18dp"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="@dimen/size_339dp"
-                    android:layout_height="@dimen/size_222dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="vertical"
                     android:weightSum="5">
@@ -231,6 +235,8 @@
                         android:layout_height="0dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
+                        android:layout_marginTop="@dimen/distance_17dp"
+                        android:layout_marginBottom="@dimen/distance_10dp"
                         android:layout_weight="1"
                         android:gravity="start|center_vertical"
                         android:text="@string/text_username"
@@ -248,6 +254,8 @@
                         android:layout_height="0dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
+                        android:layout_marginTop="@dimen/distance_11dp"
+                        android:layout_marginBottom="@dimen/distance_11dp"
                         android:layout_weight="1"
                         android:gravity="left|center_vertical"
                         android:text="@string/text_password"
@@ -264,6 +272,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
+                        android:layout_marginTop="@dimen/distance_11dp"
+                        android:layout_marginBottom="@dimen/distance_11dp"
                         android:layout_marginRight="@dimen/distance_21dp"
                         android:layout_weight="1"
                         android:gravity="left|center_vertical"
@@ -282,6 +292,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
+                        android:layout_marginTop="@dimen/distance_11dp"
+                        android:layout_marginBottom="@dimen/distance_11dp"
                         android:layout_marginRight="@dimen/distance_21dp"
                         android:layout_weight="1"
                         android:gravity="left|center_vertical"
@@ -301,6 +313,8 @@
                         android:layout_height="0dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
+                        android:layout_marginTop="@dimen/distance_11dp"
+                        android:layout_marginBottom="@dimen/distance_19dp"
                         android:layout_weight="1"
                         android:gravity="left|center_vertical"
                         android:text="@string/text_email"
@@ -314,11 +328,13 @@
 
             <RelativeLayout
                 android:id="@+id/layout_add_address"
-                android:layout_width="@dimen/size_339dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_46dp"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/distance_16dp"
+                android:layout_marginStart="@dimen/distance_18dp"
+                android:layout_marginEnd="@dimen/distance_18dp"
                 android:paddingRight="@dimen/distance_16dp">
 
                 <TextView
@@ -349,25 +365,26 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="@dimen/size_339dp"
-                android:layout_height="@dimen/size_227dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/distance_18dp"
+                android:layout_marginEnd="@dimen/distance_18dp"
                 android:layout_marginTop="@dimen/distance_16dp"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="@dimen/size_339dp"
-                    android:layout_height="@dimen/size_222dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:weightSum="5">
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/distance_8dp"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
-                        android:layout_marginTop="@dimen/distance_16dp"
+                        android:layout_marginTop="@dimen/distance_14dp"
                         android:layout_weight="1"
                         android:gravity="start|center_vertical"
                         android:text="@string/text_personal"
@@ -382,11 +399,10 @@
                     <TextView
                         android:id="@+id/txt_address"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
-                        android:layout_marginTop="@dimen/distance_16dp"
-                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/distance_21dp"
                         android:drawableLeft="@drawable/ic_username"
                         android:drawablePadding="@dimen/distance_8dp"
                         android:gravity="left|center_vertical"
@@ -397,15 +413,13 @@
                     <TextView
                         android:id="@+id/txt_phone2"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
-                        android:layout_marginTop="@dimen/distance_8dp"
-                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/distance_16dp"
                         android:drawableLeft="@drawable/ic_phone"
                         android:drawablePadding="@dimen/distance_8dp"
                         android:gravity="left|center_vertical"
-                        android:paddingTop="@dimen/distance_2dp"
                         android:text="@string/text_phone"
                         android:textColor="@color/black"
                         android:textSize="@dimen/text_14sp" />
@@ -413,15 +427,13 @@
                     <TextView
                         android:id="@+id/txt_name2"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
-                        android:layout_marginTop="@dimen/distance_8dp"
-                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/distance_16dp"
                         android:drawableLeft="@drawable/ic_username"
                         android:drawablePadding="@dimen/distance_8dp"
                         android:gravity="left|center_vertical"
-                        android:paddingTop="@dimen/distance_2dp"
                         android:text="@string/text_name"
                         android:textColor="@color/black"
                         android:textSize="@dimen/text_14sp" />
@@ -432,6 +444,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/distance_21dp"
                         android:layout_marginRight="@dimen/distance_21dp"
+                        android:layout_marginBottom="@dimen/distance_28dp"
                         android:layout_marginTop="@dimen/distance_24dp">
 
                         <Button
@@ -469,7 +482,6 @@
                 android:drawableStart="@drawable/ic_logout"
                 android:text="@string/text_logout"
                 android:textColor="@color/mangoFour"
-
                 />
         </LinearLayout>
     </ScrollView>

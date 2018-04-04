@@ -36,15 +36,18 @@
     <string name="text_edited">Đã sửa</string>
     <string name="text_value">Giá trị</string>
     <string name="text_survey">Hẹn khảo sát</string>
-    <string name="text_review_orders">Đánh giá đơn hàng</string>
+    <string name="text_rating_orders">Đánh giá đơn hàng</string>
     <string name="text_review">Đánh giá</string>
     <string name="text_call_center">Trung tâm hỗ trợ</string>
+    <string name="text_create_account">Tạo tài khoản mới với thông tin trên</string>
+    <string name="text_blog_goi_tho">Blog gọi thợ</string>
     <string name="text_reason">Lý do hủy</string>
-    <string name="text_">Lý do hủy</string>
     <string name="text_status_exhibition">Trạng thái đơn hàng</string>
     <string name="text_need_repair">Cần sửa</string>
     <string name="text_repair_fee">Phí sửa chữa</string>
+    <string name="text_content">Nội dung</string>
     <string name="text_repair">Yêu cầu sửa chữa</string>
+    <string name="text_title_order_cancel">ĐƠN HÀNG ĐÃ HUỶ</string>
     <string name="text_point">Điểm tích lũy</string>
     <string name="text_add_diary">Thêm nhật ký</string>
     <string name="text_famer_rate">Đánh giá nông hộ:</string>
@@ -65,6 +68,10 @@
     <string name="text_edit_profile">Chỉnh sửa trang cá nhân</string>
     <string name="text_type_action">Loại việc</string>
     <string name="text_time">Thời gian</string>
+    <string name="text_info_contact">Thông tin liên hệ</string>
+    <string name="text_picture">Ảnh hiện trạng</string>
+    <string name="text_id_promotion">Mã Khuyến mãi:</string>
+    <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
     <string name="time">lần</string>
@@ -72,6 +79,13 @@
     <string name="text_add_image">Bạn có thêm hình ảnh?</string>
     <string name="text_agree">Đồng ý</string>
     <string name="text_cancel">Hủy</string>
+
+    <string name="text_reason_cancel">Báo giá cao so với thị trường.</string>
+    <string name="text_reason_cancel2">Không hài lòng với thợ.</string>
+    <string name="text_reason_cancel3">Tạm dừng, sẽ sửa sau.</string>
+    <string name="text_content_cancel">Xin vui lòng cho Gọi Thợ biết nguyên nhân huỷ \n đơn hàng để
+        chúng tôi có thể phục vụ bạn tốt \n hơn trong lần tới.</string>
+    <string name="text_cancel_order">Hủy đơn</string>
     <string name="text_diary_day">Nhật ký ngày</string>
     <string name="text_save_address">Bạn có muốn lưu địa chỉ không?</string>
     <string name="text_at">Lúc</string>
@@ -82,7 +96,16 @@
     <string name="text_add">Thêm</string>
     <string name="text_account">Tài khoản</string>
     <string name="text_notification">Thông báo</string>
+    <string name="text_enter_content">Nhập nội dung</string>
+    <string name="text_ok">OK</string>
+    <string name="text_yes">Có</string>
+    <string name="text_no">Không</string>
+    <string name="text_no_rating">Xin vui lòng cho Gọi Thợ biết đánh giá \n của bạn</string>
+    <string name="text_content_logout">Bạn có muốn đăng xuất không?</string>
+    <string name="text_no_reason">Xin vui lòng cho Gọi Thợ biết nguyên \n nhân hủy đơn hàng để chúng tôi
+    có thể \n phục vụ bạn tốt hơn trong lần tới</string>
     <string name="text_order_history">Lịch sử đơn hàng</string>
+    <string name="text_title_home">SỬA CHỮA MỌI HƯ HỎNG</string>
     <string name="text_content_notification">Gọi Thợ đã nhận được thông tin của bạn. \n
         Chúng tôi sẽ tiến hành kiểm tra và reset \n các chỉ số tài khoản. \n
 Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống </string>
@@ -101,7 +124,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_phone">Số điện thoại</string>
     <string name="text_password">Mật khẩu</string>
     <string name="text_hi">Xin chào</string>
-
     <string name="text_login_to_continue">Đăng nhập để tiếp tục</string>
     <string name="text_dont_have_account">Chưa có tài khoản? Đăng ký ngay</string>
     <string name="text_have_account">Bạn đã có tài khoản? Đăng nhập ngay</string>
@@ -116,10 +138,21 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_message">Tin nhắn</string>
     <string name="text_noti">Thông báo</string>
     <string name="text_setting">Cài đặt</string>
-
+    <string name="text_order">Đặt lịch sửa chữa</string>
+    <string name="text_send_rating">Gửi đánh giá</string>
+    <string name="text_promotion">KHUYẾN MÃI</string>
+    <string name="text_booking_success">ĐẶT LỊCH THÀNH CÔNG</string>
+    <string name="text_content_booking_success">Mã đơn hàng: A123. Gọi Thợ sẽ liên hệ với bạn sau ít \n phút để xác nhận thông tin.</string>
+    <string name="text_related_posts">Bài viết liên quan</string>
+    <string name="text_order_hotline">ĐẶT LỊCH QUA HOTLINE</string>
+    <string name="text_confirm_cancel">XÁC NHẬN HUỶ</string>
+    <string name="text_appointment">Lịch hẹn</string>
+    <string name="text_order_doing">ĐƠN HÀNG ĐANG SỬA</string>
+    <string name="text_take_care_home">MẸO CHĂM SÓC NHÀ CỬA</string>
     <string name="text_sweet_dialog_title">Thông báo</string>
     <string name="text_sweet_dialog_confirm_text">Đồng ý</string>
     <string name="text_sweet_dialog_confirm_text_exit">Thoát</string>
+    <string name="text_customer_talk_app">KHÁCH HÀNG NÓI VỀ GỌI THỢ</string>
     <string name="text_sweet_dialog_confirm_text_cancel">Hủy</string>
     <string name="text_sweet_dialog_check_username_password">Vui lòng kiểm tra tài khoản và mật khẩu</string>
     <string name="text_progress_dialog">Vui lòng đợi ...</string>
@@ -156,9 +189,8 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_toolbar_account">TÀI KHOẢN</string>
     <string name="text_register_success">TẠO TÀI KHOẢN THÀNH CÔNG</string>
     <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
-        công trên hệ thống Gọi Thợ. Hãy luôn mở \n App Gọi Thợ và bật chế độ báo Notification \n
-        để nhận những công việc hấp dẫn.</string>
-    <string name="text_go_home">VỀ TRANG CHỦ</string>
+        công trên hệ thống Gọi Thợ. Hãy luôn mở App Chủ Nhà nhé.</string>
+    <string name="text_go_home">Về trang chủ</string>
     <string name="text_manager_account">QUẢN LÝ TÀI KHOẢN</string>
     <string name="text_content_add_profile">Để kích hoạt tài khoản, hãy cung cấp đầy đủ các \n thông tin sau</string>
     <string name="text_choose_avatar">Chọn hình đại diện</string>
@@ -166,4 +198,15 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_content_edit">Chỉ thay đổi được mật khẩu và số điện thoại</string>
     <string name="text_doing">Đang sửa</string>
     <string name="text_completed">Đã hoàn thành</string>
+    <string name="text_open_order">Mở lại đơn hàng</string>
+    <string name="text_comment">Nhận xét</string>
+    <string name="text_booking">Đặt lịch</string>
+    <string name="text_blog">Blog</string>
+    <string name="promotion_welcome">Chào mừng thành viên mới</string>
+    <string name="promotion_text">Mã khuyến mãi:</string>
+    <string name="promotion_expired">Hạn sử dụng:</string>
+    <string name="promotion_rules">Điều khoản sử dụng:</string>
+    <string name="promotion_button_text">TRUNG TÂM HỖ TRỢ</string>
+    <string name="promotion_text_example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis finibus massa, eget feugiat justo ullamcorper quis. Aenean et neque eu nisi eleifend ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae mi est. Quisque eget nulla nulla. Etiam eget bibendum ligula. Cras venenatis, nunc nec convallis accumsan, mi lacus bibendum elit, vitae vestibulum felis enim nec orci.</string>
+    <string name="promotion_date">01/03/2018</string>
 </resources>

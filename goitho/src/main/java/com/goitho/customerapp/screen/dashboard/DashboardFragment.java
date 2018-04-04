@@ -1,9 +1,7 @@
 package com.goitho.customerapp.screen.dashboard;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -11,13 +9,30 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
-import com.demo.architect.data.model.ActivityEntity;
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.adapter.HistoryAdapter;
+import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
-import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.screen.booking.BookingModule;
+import com.goitho.customerapp.screen.home.HomeFragment;
+import com.goitho.customerapp.screen.home.HomeModule;
+import com.goitho.customerapp.screen.home.HomePresenter;
+import com.goitho.customerapp.screen.landing.LandingFragment;
+import com.goitho.customerapp.screen.notification.NotificationFragment;
+import com.goitho.customerapp.screen.notification.NotificationModule;
+import com.goitho.customerapp.screen.notification.NotificationPresenter;
+import com.goitho.customerapp.screen.order.OrderFragment;
+import com.goitho.customerapp.screen.order.OrderModule;
+import com.goitho.customerapp.screen.order.OrderPresenter;
+import com.goitho.customerapp.screen.booking.BookingFragment;
+import com.goitho.customerapp.screen.booking.BookingPresenter;
+import com.goitho.customerapp.screen.user.UserFragment;
+import com.goitho.customerapp.screen.user.UserModule;
+import com.goitho.customerapp.screen.user.UserPresenter;
+import com.goitho.customerapp.widgets.CustomViewPager;
 import com.goitho.customerapp.widgets.customtablayout.CustomTabLayout;
 import com.goitho.customerapp.widgets.customtablayout.TabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.CustomTabEntity;
@@ -26,10 +41,11 @@ import com.goitho.customerapp.widgets.customtablayout.listener.OnTabSelectListen
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * Created by Skull on 14/12/2017.
@@ -39,18 +55,42 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
     private DashboardContract.Presenter mPresenter;
 
+    @Inject
+    HomePresenter homePresenter;
+
+    @Inject
+    UserPresenter userPresenter;
+
+    @Inject
+    NotificationPresenter notificationPresenter;
+
+    @Inject
+    OrderPresenter orderPresenter;
+
+    @Inject
+    BookingPresenter orderRepairPresenter;
+
     @Bind(R.id.tabs)
     CustomTabLayout tabLayout;
 
     @Bind(R.id.viewpager)
-    ViewPager viewPager;
+    CustomViewPager viewPager;
+
+    private HomeFragment homeFragment;
+    private OrderFragment orderFragment;
+    private NotificationFragment notificationFragment;
+    private UserFragment userFragment;
+    private BookingFragment orderRepairFragment;
+    private LandingFragment landingFragment;
 
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
-    private String[] mTitles = {"首页", "消息", "联系人", "更多"};
-    private int[] mIconUnselectIds = {
-         };
-    private int[] mIconSelectIds = {
-           };
+    private String[] mTitles = {"Trang chủ", "Đơn hàng", "", "Tin nhắn", "Tài khoản"};
+    private int[] mIconUnselectIds = {R.drawable.ic_home_main_unselete, R.drawable.ic_order_main_unselete,
+            R.drawable.ic_back, R.drawable.ic_mess_main_unselete, R.drawable.ic_user_main_unselete
+    };
+    private int[] mIconSelectIds = {R.drawable.ic_home_main_selete, R.drawable.ic_order_main_selete,
+            R.drawable.ic_back, R.drawable.ic_mess_main_unselete, R.drawable.ic_user_main_selete
+    };
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -78,12 +118,44 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dashboard_main, container, false);
         ButterKnife.bind(this, view);
-
+        configFragments();
+        initView();
         return view;
     }
 
+    private void configFragments() {
+        if (homeFragment == null) {
+            homeFragment = HomeFragment.newInstance();
+        }
 
-    private void initView(View view) {
+        if (notificationFragment == null) {
+            notificationFragment = NotificationFragment.newInstance();
+        }
+        if (orderFragment == null) {
+            orderFragment = OrderFragment.newInstance();
+        }
+
+        if (orderRepairFragment == null) {
+            orderRepairFragment = BookingFragment.newInstance();
+        }
+
+        if (userFragment == null) {
+            userFragment = UserFragment.newInstance();
+        }
+        if (landingFragment == null){
+            landingFragment = LandingFragment.newInstance();
+        }
+        CoreApplication.getInstance().getApplicationComponent()
+                .plus(new HomeModule(homeFragment),
+                        new OrderModule(orderFragment),
+                        new BookingModule(orderRepairFragment),
+                        new NotificationModule(notificationFragment),
+                        new UserModule(userFragment))
+                .inject(this);
+
+    }
+
+    private void initView() {
 
         setupViewPager(viewPager);
         setupTabItem(tabLayout);
@@ -97,9 +169,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
             @Override
             public void onTabReselect(int position) {
-                if (position == 0) {
 
-                }
             }
         });
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -118,36 +188,44 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
             }
         });
-        setCurrentHome();
-    }
-
-    public void setCurrentHome() {
         tabLayout.setCurrentTab(0);
         viewPager.setCurrentItem(0);
+
     }
+
 
     private void setupTabItem(CustomTabLayout tabLayout) {
 
-        for (int i = 0; i < 4; i++) {
-            mTabEntities.add(new TabEntity(mTitles[i],mIconSelectIds[i], mIconUnselectIds[i]));
+        for (int i = 0; i < 5; i++) {
+            mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
         tabLayout.setTabData(mTabEntities);
+        tabLayout.showMsg(3, 5);
+        tabLayout.setMsgMargin(3, -20, 8);
+
+
     }
 
 
-    private void setupViewPager(ViewPager viewPager) {
+    private void setupViewPager(CustomViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-//        adapter.addFragment(dashboardHomeFragment);
-//        adapter.addFragment(notificationFragment);
-//        adapter.addFragment(barcodeFragment);
-//        adapter.addFragment(userFragment);
+        adapter.addFragment(homeFragment);
+        adapter.addFragment(orderFragment);
+        adapter.addFragment(orderRepairFragment);
+        adapter.addFragment(notificationFragment);
+        if (SharedPreferenceHelper.getInstance(getContext())
+                .getBoolean(Constants.KEY_CHECK_LOGIN, false)){
+            adapter.addFragment(userFragment);
+        }else {
+            adapter.addFragment(landingFragment);
+        }
         viewPager.setAdapter(adapter);
+        viewPager.setPagingEnabled(false);
     }
 
 
     @Override
     public void setPresenter(DashboardContract.Presenter presenter) {
-        this.mPresenter = Precondition.checkNotNull(presenter);
     }
 
     @Override
@@ -163,14 +241,25 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Override
     public void onResume() {
         super.onResume();
-        mPresenter.start();
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mPresenter.stop();
     }
+
+    @OnClick(R.id.layout_booking)
+    public void booking(){
+        tabLayout.setCurrentTab(2);
+        viewPager.setCurrentItem(2);
+    }
+
+    @Override
+    public void setupView(boolean login) {
+
+    }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
 
@@ -192,24 +281,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
             mFragmentList.add(fragment);
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "HOME";
-                case 1:
-                    return "ĐỊA ĐIỂM";
-                case 2:
-                    return "DỊCH VỤ";
-                case 3:
-                    return "ĐƠN HÀNG";
-                case 4:
-                    return "CÂU HỎI";
-                case 5:
-                    return "CÀI ĐẶT";
-            }
-            return mFragmentList.get(position).getClass().getSimpleName();
-        }
     }
+
 
 }

@@ -50,7 +50,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_12sp" />
 
-            <com.goitho.customerapp.widgets.customeCodeInput.CodeInput
+            <com.goitho.customerapp.widgets.customCodeInput.CodeInput
                 android:layout_marginTop="@dimen/distance_24dp"
                 android:id="@+id/codeInput"
                 android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                 android:textColor="@color/tomato"
                 android:textSize="@dimen/text_16sp" />
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_verification"
                 android:layout_width="@dimen/size_319dp"
                 android:layout_height="@dimen/size_42dp"
                 android:layout_marginTop="@dimen/distance_24dp"

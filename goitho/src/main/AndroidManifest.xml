@@ -20,11 +20,11 @@
 
     <application
         android:name=".app.CoreApplication"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
@@ -62,6 +62,11 @@
         <activity android:name="com.goitho.customerapp.screen.login.LoginActivity" />
         <activity android:name="com.goitho.customerapp.app.permission.PermissionActivity" />
         <activity android:name="com.goitho.customerapp.screen.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.goitho.customerapp.screen.exhibition.ExhibitionActivity"/> // start app
         <activity android:name="com.goitho.customerapp.screen.farmer.FarmerActivity" />
@@ -73,6 +78,7 @@
         <activity android:name="com.goitho.customerapp.screen.add_action.AddActionActivity" />
         <activity android:name="com.goitho.customerapp.screen.delete_action.DeleteActionActivity" />
         <activity android:name="com.goitho.customerapp.screen.history.HistoryActivity" />
+<<<<<<< HEAD
         <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity"/>
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
@@ -89,6 +95,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+=======
+        <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity" />
+        <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity" />
+        <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity" />
+        <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity" />
+        <activity android:name="com.goitho.customerapp.screen.user.UserActivity" />
+        <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity" />
+        <activity android:name=".screen.register_success.RegisterSuccessActivity" />
+        <activity android:name=".screen.rating.RatingActivity" />
+        <activity android:name=".screen.dashboard.DashboardActivity" />
+        <activity android:name=".screen.blog.BlogActivity"/>
+        <activity android:name=".screen.post.PostActivity"/>
+        <activity android:name=".screen.booking_success.BookingSuccessActivity"/>
+>>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -104,7 +124,7 @@
 
         <activity
             android:name="com.goitho.customerapp.screen.MapsActivity"
-            android:label="@string/title_activity_maps"/>
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>

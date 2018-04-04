@@ -10,7 +10,7 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface RegisterSuccessContract {
     interface View extends BaseView<Presenter> {
-
+        void startDashboardActivity();
     }
 
     interface Presenter extends BasePresenter {

@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.constants.Constants;
-import com.goitho.customerapp.screen.diary.DiaryActivity;
-import com.goitho.customerapp.screen.farmer.FarmerActivity;
+import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import butterknife.Bind;
@@ -78,9 +76,9 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         int heightCover = imgCover.getDrawable().getIntrinsicHeight();
         int heightLogo = imgLogo.getDrawable().getIntrinsicHeight();
         RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams) layout.getLayoutParams();
-        relativeParams.setMargins(0, (heightCover - (heightLogo/2)), 0, 0);  // left, top, right, bottom
+        relativeParams.setMargins(0, (heightCover - (heightLogo / 2)), 0, 0);  // left, top, right, bottom
         layout.setLayoutParams(relativeParams);
-        txtSendCode.setPaintFlags(txtSendCode.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        txtSendCode.setPaintFlags(txtSendCode.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
     }
 
     @Override
@@ -110,11 +108,16 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         mPresenter.stop();
     }
 
-    @OnClick(R.id.btn_login)
-    public void login() {
-
+    @OnClick(R.id.btn_verification)
+    public void verification() {
+        startEditAddressActivity();
     }
 
+
+    @Override
+    public void startEditAddressActivity() {
+        EditAddressActivity.start(getContext());
+    }
 
     @Override
     public void showError() {

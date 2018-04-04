@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar"
+        android:background="@drawable/bg_round_corner_blue_background"
+        android:orientation="horizontal"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_order_history"
+                android:layout_marginStart="@dimen/distance_19dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_16sp"
+                android:textAllCaps="true"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_49dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="#80ff8a22"
+        app:tabSelectedTextColor="@color/mangoSix"
+        android:background="@color/whiteThree"
+        app:tabIndicatorColor="@color/mangoSix"
+        app:tabIndicatorHeight="5dp"
+        >
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tabItem"
+            android:text="@string/text_doing"
+            />
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tabItem0"
+            android:text="@string/text_completed"
+            />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tabItem1"
+            android:text="@string/text_cancel"
+            />
+
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</LinearLayout>

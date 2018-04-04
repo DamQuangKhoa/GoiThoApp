@@ -9,16 +9,27 @@ import com.goitho.customerapp.app.di.module.RepositoryModule;
 import com.goitho.customerapp.app.di.module.UseCaseModule;
 import com.goitho.customerapp.screen.add_action.AddActionComponent;
 import com.goitho.customerapp.screen.add_action.AddActionModule;
+import com.goitho.customerapp.screen.blog.BlogComponent;
+import com.goitho.customerapp.screen.blog.BlogModule;
+import com.goitho.customerapp.screen.booking.BookingModule;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessComponent;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
 import com.goitho.customerapp.screen.certificate.CertificateComponent;
 import com.goitho.customerapp.screen.certificate.CertificateModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
+import com.goitho.customerapp.screen.dashboard.DashboardComponent2;
 import com.goitho.customerapp.screen.dashboard.DashboardModule;
 import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
+<<<<<<< HEAD
 import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionComponent;
 import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionModule;
+=======
+import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
+import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
+>>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
@@ -27,19 +38,12 @@ import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryComponent;
 import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryModule;
 import com.goitho.customerapp.screen.edit_profile.EditProfileComponent;
 import com.goitho.customerapp.screen.edit_profile.EditProfileModule;
-import com.goitho.customerapp.screen.exhibition.ExhibitionComponent;
-import com.goitho.customerapp.screen.exhibition.ExhibitionModule;
-import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelComponent;
-import com.goitho.customerapp.screen.exhibition_cancel.ExhibitionCancelModule;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingComponent;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingModule;
-import com.goitho.customerapp.screen.exhibition_doing.ExhibitionDoingPresenter;
-import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneComponent;
-import com.goitho.customerapp.screen.exhibition_done.ExhibitionDoneModule;
 import com.goitho.customerapp.screen.farmer.FarmerComponent;
 import com.goitho.customerapp.screen.farmer.FarmerModule;
 import com.goitho.customerapp.screen.history.HistoryComponent;
 import com.goitho.customerapp.screen.history.HistoryModule;
+import com.goitho.customerapp.screen.home.HomeComponent;
+import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
 import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionComponent;
@@ -48,8 +52,20 @@ import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
 import com.goitho.customerapp.screen.notification.NotificationModule;
+import com.goitho.customerapp.screen.order.OrderComponent;
+import com.goitho.customerapp.screen.order.OrderModule;
+import com.goitho.customerapp.screen.order_cancel.OrderCancelComponent;
+import com.goitho.customerapp.screen.order_cancel.OrderCancelModule;
+import com.goitho.customerapp.screen.order_doing.OrderDoingComponent;
+import com.goitho.customerapp.screen.order_doing.OrderDoingModule;
+import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
+import com.goitho.customerapp.screen.order_done.OrderDoneModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
+import com.goitho.customerapp.screen.post.PostComponent;
+import com.goitho.customerapp.screen.post.PostModule;
+import com.goitho.customerapp.screen.rating.RatingComponent;
+import com.goitho.customerapp.screen.rating.RatingModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
 import com.goitho.customerapp.screen.register.RegisterModule;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
@@ -109,17 +125,38 @@ public interface ApplicationComponent {
 
     HistoryComponent plus(HistoryModule historyModule);
 
-    DashboardComponent plus(DashboardModule dashboardModule);
+    DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
+                            BookingModule bookingModule,
+                            NotificationModule notificationModule, UserModule userModule);
 
     NotificationComponent plus(NotificationModule notificationModule);
 
     RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
-    ExhibitionDoingComponent plus(ExhibitionDoingModule exhibitionDoingModule);
 
-    ExhibitionDoneComponent plus(ExhibitionDoneModule exhibitionDoingModule);
+    OrderDoingComponent plus(OrderDoingModule exhibitionDoingModule);
 
-    ExhibitionCancelComponent plus(ExhibitionCancelModule exhibitionDoingModule);
+    OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
+<<<<<<< HEAD
     ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
     DetailPromotionComponent plus(DetailPromotionModule exhibitionDoingModule);
+=======
+    OrderCancelComponent plus(OrderCancelModule exhibitionDoingModule);
+
+    HomeComponent plus(HomeModule homeModule);
+
+    DetailOrderComponent plus(DetailOrderModule detailOrderModule);
+
+    OrderComponent plus(OrderModule orderModule);
+
+    RatingComponent plus(RatingModule ratingModule);
+
+    DashboardComponent2 plus(DashboardModule dashboardModule);
+
+    BlogComponent plus(BlogModule blogModule);
+
+    PostComponent plus(PostModule postModule);
+
+    BookingSuccessComponent plus(BookingSuccessModule bookingSuccessModule);
+>>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
 }

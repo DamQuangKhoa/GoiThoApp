@@ -26,7 +26,7 @@ public class CustomDialogForgetPassword extends DialogFragment {
         Dialog dialog = new Dialog(getActivity());
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-                , WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+                , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         dialog.setContentView(R.layout.dialog_forget_password);
         dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
         EditText etUsername = dialog.findViewById(R.id.et_username);

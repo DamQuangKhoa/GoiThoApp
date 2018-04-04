@@ -21,12 +21,10 @@ import java.util.ArrayList;
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder>{
 
     private ArrayList<ImageEntity> list;
-    private final ImageAdapter.OnItemClickListener listener;
     private Context context;
 
-    public ImageAdapter(ArrayList<ImageEntity> list, Context context, ImageAdapter.OnItemClickListener listener) {
+    public ImageAdapter(ArrayList<ImageEntity> list, Context context) {
         this.list = list;
-        this.listener = listener;
         this.context = context;
     }
 
@@ -47,7 +45,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public void onBindViewHolder(ImageAdapter.ImageViewHolder holder, int position) {
         if (list != null && 0 <= position && position < list.size()) {
             setDataToViews(holder, position);
-            holder.bind(list.get(position), listener);
         }
 
     }

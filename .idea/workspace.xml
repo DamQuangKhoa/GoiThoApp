@@ -21,141 +21,348 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e96ced9-251f-49bc-b3cc-c759a27c248d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_android_26.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GoiTho-AppKhach.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_common_1_0_3_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_common_1_0_3_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/cn_pedant_sweetalert_library_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/cn_pedant_sweetalert_library_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_afollestad_material_dialogs_commons_0_9_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_afollestad_material_dialogs_commons_0_9_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_afollestad_material_dialogs_core_0_9_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_afollestad_material_dialogs_core_0_9_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_customtabs_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_customtabs_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_25_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_25_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_mediarouter_v7_24_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_mediarouter_v7_24_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_instrumentation_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_instrumentation_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_palette_v7_24_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_palette_v7_24_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_25_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_25_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_27_0_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_27_0_2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v13_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v13_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_transition_25_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_transition_25_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_answers_1_3_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_answers_1_3_11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_beta_1_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_beta_1_2_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_crashlytics_2_6_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_crashlytics_2_6_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_crashlytics_core_2_3_15.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_crashlytics_sdk_android_crashlytics_core_2_3_15.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_android_sdk_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_android_sdk_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_applinks_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_applinks_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_common_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_common_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_core_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_core_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_login_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_login_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_messenger_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_messenger_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_places_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_places_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_share_4_31_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_share_4_31_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_fernandocejas_frodo_frodo_api_0_8_3_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_fernandocejas_frodo_frodo_api_0_8_3_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_fernandocejas_frodo_frodo_runtime_0_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_fernandocejas_frodo_frodo_runtime_0_8_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_getkeepsafe_relinker_relinker_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_getkeepsafe_relinker_relinker_1_2_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_flexbox_0_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_flexbox_0_2_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_clearcut_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_clearcut_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_dagger_dagger_2_0_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_dagger_dagger_2_0_2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_10_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_3_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_3_0_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_googlecode_libphonenumber_libphonenumber_8_0_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_googlecode_libphonenumber_libphonenumber_8_0_0_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_jakewharton_butterknife_7_0_1_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_jakewharton_butterknife_7_0_1_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_makeramen_roundedimageview_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_makeramen_roundedimageview_2_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_android_1_4_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_android_1_4_0_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_applinks_1_4_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_applinks_1_4_0_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_tasks_1_4_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_tasks_1_4_0_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_pnikosis_materialish_progress_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_pnikosis_materialish_progress_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_android_times_square_1_6_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_squareup_android_times_square_1_6_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_4_1_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_4_1_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_otto_1_3_8_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_squareup_otto_1_3_8_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_picasso_picasso_2_5_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_squareup_picasso_picasso_2_5_2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_wdullaer_materialdatetimepicker_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_wdullaer_materialdatetimepicker_2_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/de_hdodenhof_circleimageview_2_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/de_hdodenhof_circleimageview_2_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/io_fabric_sdk_android_fabric_1_3_15.xml" afterPath="$PROJECT_DIR$/.idea/libraries/io_fabric_sdk_android_fabric_1_3_15.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxandroid_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxandroid_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/io_realm_realm_android_library_2_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/io_realm_realm_android_library_2_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/me_zhanghai_android_materialprogressbar_library_1_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/me_zhanghai_android_materialprogressbar_library_1_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/pl_droidsonroids_gif_android_gif_drawable_1_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/pl_droidsonroids_gif_android_gif_drawable_1_2_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/uk_co_chrisjenx_calligraphy_2_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/uk_co_chrisjenx_calligraphy_2_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/data.iml" afterPath="$PROJECT_DIR$/data/data.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/domain.iml" afterPath="$PROJECT_DIR$/domain/domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/build.gradle" afterPath="$PROJECT_DIR$/goitho/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/goitho.iml" afterPath="$PROJECT_DIR$/goitho/goitho.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_add_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_calendar_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_edit_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_home_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_home_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_like_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_mess_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_next_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_next_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_order_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_order_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_order_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_put_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_star_empty_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_user_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_user_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_watch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_watch_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/img_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/img_cover_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/img_cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/img_item_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/img_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_add_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_calendar_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_edit_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_home_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_home_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_like_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_mess_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_next_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_next_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_order_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_order_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_order_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_put_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_star_empty_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_user_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_user_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_watch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_watch_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/img_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/img_cover_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/img_cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/img_item_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/img_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_add_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_calendar_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_edit_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_home_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_home_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_like_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_mess_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_next_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_next_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_order_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_order_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_order_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_put_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_star_empty_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_user_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_user_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_watch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_watch_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/img_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/img_cover_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/img_cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/img_item_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/img_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_add_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_calendar_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_edit_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_home_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_home_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_like_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_mess_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_next_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_next_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_order_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_order_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_order_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_put_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_star_empty_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_user_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_user_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_watch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_watch_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/img_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/img_cover_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/img_cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/img_item_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/img_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_add_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_calendar_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_edit_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_home_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_home_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_like_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_mess_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_next_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_next_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_order_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_order_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_order_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_put_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_star_empty_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_user_main_selete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_user_main_unselete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_watch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/ic_watch_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/img_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/img_cover_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/img_cover_post.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/img_item_blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxxhdpi/img_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/PostEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/RatingEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/BlogAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/BlogStackAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/RatingAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogCancelOrder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogEditContentOrder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogLogOut.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogRating.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogReasonCancel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/blog/BlogPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking/BookingComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking/BookingContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking/BookingFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking/BookingModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking/BookingPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardComponent2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/home/HomeComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/home/HomeContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/home/HomeFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/home/HomeModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/home/HomePresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order/OrderComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order/OrderContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order/OrderModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order/OrderPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_cancel/OrderCancelComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_cancel/OrderCancelModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_doing/OrderDoingComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_doing/OrderDoingModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_doing/OrderDoingPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_done/OrderDoneComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_done/OrderDoneModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/post/PostPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/rating/RatingPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/CircleTransform.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/CustomViewPager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customStackView/CustomStackView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customStackView/OrientedViewPager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customStackView/StackPageTransformer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customStackView/utilities/ValueInterpolator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_blue_stroke_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_corner_ice_blue_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_corner_white_nineteen_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_greeny_blue_stroke_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_orange_stroke_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/circle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_cancel_order.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_edit_content_order.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_logout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_rating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_reason_order.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_blog.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_booking.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_booking_success.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_order.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_home.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_post.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_rating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_blog.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_rating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_stack_blog.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionContract.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionPresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_cancel/ExhibitionCancelComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_cancel/ExhibitionCancelModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_doing/ExhibitionDoingComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_doing/ExhibitionDoingModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_doing/ExhibitionDoingPresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_done/ExhibitionDoneComponent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_done/ExhibitionDoneModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_exhibition.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_close.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-hdpi/ic_close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_close.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-mdpi/ic_close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_close.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xhdpi/ic_close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_close.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable-xxhdpi/ic_close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/goitho/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/offline/ImageEntity.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/offline/ImageEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/goitho/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ImageAdapter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ImageAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/app/base/BaseActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/app/base/BaseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/app/di/component/ApplicationComponent.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/app/di/component/ApplicationComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/constants/Constants.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/constants/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogForgetPassword.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogForgetPassword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogLibraryCapture.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogLibraryCapture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogNotification.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/dialogs/CustomDialogNotification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/certificate/CertificateFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/certificate/CertificateFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardComponent.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardPresenter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/dashboard/DashboardPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_address/EditAddressFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_detail_diary/EditDetailDiaryFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_detail_diary/EditDetailDiaryFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_profile/EditProfileActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/edit_profile/EditProfileActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingComponent.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/landing/LandingFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginPresenter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/notification/NotificationComponent.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/notification/NotificationComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/phone_verification/PhoneVerificationContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/phone_verification/PhoneVerificationContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/phone_verification/PhoneVerificationFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/phone_verification/PhoneVerificationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/register_success/RegisterSuccessFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/splash/SplashActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/splash/SplashActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserPresenter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/user/UserPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customtablayout/CustomTabLayout.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customtablayout/CustomTabLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_textview_noti_toolbar.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/drawable/bg_textview_noti_toolbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/activity_base.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/activity_base.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/activity_splash.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_library_capture.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/dialog_library_capture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_dashboard_main.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_dashboard_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_edit_address.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_edit_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_notification.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_notification.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_phone_verification.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_phone_verification.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_register_success.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_register_success.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_user.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_user.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_cancel.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_cancel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_doing.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_doing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_done.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_exhibition_done.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/item_imageview.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_imageview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/item_notification.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/item_notification.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/layout_tab_top.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/layout_tab_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/values/attrs.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/values/attrs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/thirdparty.iml" afterPath="$PROJECT_DIR$/thirdparty/thirdparty.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/utils.iml" afterPath="$PROJECT_DIR$/utils/utils.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goitho/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/values/styles.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/ExhibitionEntity.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/demo/architect/data/model/OrderEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ExhibitionCancelAdapter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/OrderCancelAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ExhibitionDoingAdapter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/OrderDoingAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ExhibitionDoneAdapter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/OrderDoneAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_order/DetailOrderActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition/ExhibitionFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order/OrderFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_cancel/ExhibitionCancelContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_done/OrderDoneContract.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_cancel/ExhibitionCancelFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_cancel/OrderCancelFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_cancel/ExhibitionCancelPresenter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_cancel/OrderCancelPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_doing/ExhibitionDoingContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_doing/OrderDoingContract.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_doing/ExhibitionDoingFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_doing/OrderDoingFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_done/ExhibitionDoneContract.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_cancel/OrderCancelContract.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_done/ExhibitionDoneFragment.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_done/OrderDoneFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/exhibition_done/ExhibitionDonePresenter.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/order_done/OrderDonePresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/notification/NotificationActivity.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/booking_success/BookingSuccessActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customeCodeInput/CodeInput.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customCodeInput/CodeInput.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customeCodeInput/data/FixedStack.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customCodeInput/data/FixedStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customeCodeInput/model/Underline.java" afterPath="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/widgets/customCodeInput/model/Underline.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_exhibition.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_order.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_exhibition_main.xml" afterPath="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_order_main.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -198,9 +405,42 @@
       <file leaf-file-name="fragment_detail_promotion.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_promotion.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="2793">
-              <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="156">
+              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+              <folding>
+                <element signature="e#483#501#0" expanded="true" />
+                <element signature="e#3720#3748#0" expanded="true" />
+                <element signature="e#3784#3807#0" expanded="true" />
+                <element signature="e#3841#3864#0" expanded="true" />
+                <element signature="e#3886#3913#0" expanded="true" />
+                <element signature="e#4355#4383#0" expanded="true" />
+                <element signature="e#4419#4442#0" expanded="true" />
+                <element signature="e#4476#4499#0" expanded="true" />
+                <element signature="e#4521#4545#0" expanded="true" />
+                <element signature="e#5005#5028#0" expanded="true" />
+                <element signature="e#5062#5090#0" expanded="true" />
+                <element signature="e#5112#5139#0" expanded="true" />
+                <element signature="e#5548#5576#0" expanded="true" />
+                <element signature="e#5612#5635#0" expanded="true" />
+                <element signature="e#5669#5692#0" expanded="true" />
+                <element signature="e#5714#5739#0" expanded="true" />
+                <element signature="e#6306#6328#0" expanded="true" />
+                <element signature="e#6362#6384#0" expanded="true" />
+                <element signature="e#6420#6443#0" expanded="true" />
+                <element signature="e#6636#6667#0" expanded="true" />
+                <element signature="e#7357#7385#0" expanded="true" />
+                <element signature="e#7421#7444#0" expanded="true" />
+                <element signature="e#7478#7501#0" expanded="true" />
+                <element signature="e#7523#7555#0" expanded="true" />
+                <element signature="e#7939#7967#0" expanded="true" />
+                <element signature="e#8003#8025#0" expanded="true" />
+                <element signature="e#8059#8087#0" expanded="true" />
+                <element signature="e#8109#8133#0" expanded="true" />
+                <element signature="e#8388#8410#0" expanded="true" />
+                <element signature="e#8489#8517#0" expanded="true" />
+                <element signature="e#8553#8576#0" expanded="true" />
+                <element signature="e#8610#8632#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2">
@@ -208,31 +448,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailPromotionFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_promotion/add_action/DetailPromotionFragment.java">
+      <file leaf-file-name="fragment_list_promotion.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_list_promotion.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="-1256">
+              <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
               <folding>
-                <element signature="e#3204#3205#0" expanded="true" />
-                <element signature="e#3242#3243#0" expanded="true" />
+                <element signature="e#621#643#0" expanded="true" />
+                <element signature="e#673#695#0" expanded="true" />
+                <element signature="e#726#748#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListPromotionActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="25" />
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_landing.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml">
+      <file leaf-file-name="fragment_booking.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_booking.xml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -244,51 +478,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListPromotionFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1491#1492#0" expanded="false" />
-                <element signature="e#1541#1542#0" expanded="false" />
-                <element signature="e#2498#2499#0" expanded="false" />
-                <element signature="e#2524#2525#0" expanded="false" />
-                <element signature="e#2772#2773#0" expanded="false" />
-                <element signature="e#2808#2809#0" expanded="false" />
-                <element signature="e#2859#2860#0" expanded="false" />
-                <element signature="e#2895#2896#0" expanded="false" />
-                <element signature="e#3946#3947#0" expanded="false" />
-                <element signature="e#3984#3985#0" expanded="false" />
-                <element signature="e#4037#4038#0" expanded="false" />
-                <element signature="e#4075#4076#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1722">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+      <file leaf-file-name="fragment_detail_order.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_order.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-manifest">
+          <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailPromotionActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_promotion/add_action/DetailPromotionActivity.java">
+      <file leaf-file-name="fragment_landing.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="circle.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/circle.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1281">
-              <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bg_orange_stroke_background.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/bg_orange_stroke_background.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bg_greeny_blue_stroke_background.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/bg_greeny_blue_stroke_background.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/values/dimens.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goitho/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -319,6 +580,7 @@
       <find>text_register</find>
       <find>Diary</find>
       <find>AddAction</find>
+      <find>deepSkyBlueTwo</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -9280,7 +9542,6 @@
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_diary/DetailDiaryActivity.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/AddActionContract.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionModule.java" />
-        <option value="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_list_promotion.xml" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionPresenter.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ExhibitionCancelAdapter.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionActivity.java" />
@@ -9294,8 +9555,9 @@
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_promotion/add_action/DetailPromotionActivity.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionFragment.java" />
         <option value="$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_promotion/add_action/DetailPromotionFragment.java" />
-        <option value="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_promotion.xml" />
         <option value="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml" />
+        <option value="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_promotion.xml" />
+        <option value="$PROJECT_DIR$/goitho/src/main/res/layout/fragment_list_promotion.xml" />
       </list>
     </option>
   </component>
@@ -9515,7 +9777,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Android/Image/GoiTho_Image/rectangle7.png" />
+    <property name="last_opened_file_path" value="D:/Android/EnvironmentFinal" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.3.1" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="lastFolderRoot" value="$PROJECT_DIR$/../Android/Image/GoiTho_Image/rectangle7.png" />
@@ -9624,7 +9886,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522757251981" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522778174236" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -9672,7 +9934,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522757251983" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522778174236" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -9855,7 +10117,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522757251987" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522778174238" />
       </method>
     </configuration>
     <list size="1">
@@ -9907,6 +10169,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2206107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -9915,7 +10178,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28854963" sideWeight="0.72" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2519084" sideWeight="0.72" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35496184" sideWeight="0.47809523" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -9928,7 +10191,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27099237" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -9940,100 +10202,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/diary/DiaryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3654">
-          <caret line="229" column="34" lean-forward="false" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/notification/NotificationComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/notification/NotificationModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/login/LoginModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/phone_verification/PhoneVerificationModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/list_promotion/add_action/ListPromotionPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/DetailDiaryAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ActionSpinnerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/ExhibitionCancelAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="40" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/adapter/PromotionAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/item_promotion.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/app/di/component/ApplicationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
@@ -10296,17 +10464,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_list_promotion.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goitho/src/main/res/mipmap-mdpi/ic_supporter.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -10329,9 +10486,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/goitho/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1722">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1848">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <marker date="1522757660764" expanded="true" signature="7165:7166" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-manifest">
@@ -10370,24 +10529,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_promotion.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2793">
-          <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goitho/src/main/java/com/goitho/customerapp/screen/detail_promotion/add_action/DetailPromotionFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1890">
-          <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
-            <element signature="e#3204#3205#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3204#3205#0" expanded="false" />
+            <element signature="e#3242#3243#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -10400,7 +10548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml">
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/item_notification.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -10408,6 +10556,190 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/item_rating.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_post.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_rating.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_booking_success.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_booking.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_order.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/bg_textview_noti_toolbar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_landing.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/circle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/bg_orange_stroke_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/drawable/bg_greeny_blue_stroke_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_detail_promotion.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#483#501#0" expanded="true" />
+            <element signature="e#3720#3748#0" expanded="true" />
+            <element signature="e#3784#3807#0" expanded="true" />
+            <element signature="e#3841#3864#0" expanded="true" />
+            <element signature="e#3886#3913#0" expanded="true" />
+            <element signature="e#4355#4383#0" expanded="true" />
+            <element signature="e#4419#4442#0" expanded="true" />
+            <element signature="e#4476#4499#0" expanded="true" />
+            <element signature="e#4521#4545#0" expanded="true" />
+            <element signature="e#5005#5028#0" expanded="true" />
+            <element signature="e#5062#5090#0" expanded="true" />
+            <element signature="e#5112#5139#0" expanded="true" />
+            <element signature="e#5548#5576#0" expanded="true" />
+            <element signature="e#5612#5635#0" expanded="true" />
+            <element signature="e#5669#5692#0" expanded="true" />
+            <element signature="e#5714#5739#0" expanded="true" />
+            <element signature="e#6306#6328#0" expanded="true" />
+            <element signature="e#6362#6384#0" expanded="true" />
+            <element signature="e#6420#6443#0" expanded="true" />
+            <element signature="e#6636#6667#0" expanded="true" />
+            <element signature="e#7357#7385#0" expanded="true" />
+            <element signature="e#7421#7444#0" expanded="true" />
+            <element signature="e#7478#7501#0" expanded="true" />
+            <element signature="e#7523#7555#0" expanded="true" />
+            <element signature="e#7939#7967#0" expanded="true" />
+            <element signature="e#8003#8025#0" expanded="true" />
+            <element signature="e#8059#8087#0" expanded="true" />
+            <element signature="e#8109#8133#0" expanded="true" />
+            <element signature="e#8388#8410#0" expanded="true" />
+            <element signature="e#8489#8517#0" expanded="true" />
+            <element signature="e#8553#8576#0" expanded="true" />
+            <element signature="e#8610#8632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goitho/src/main/res/layout/fragment_list_promotion.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1256">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="e#621#643#0" expanded="true" />
+            <element signature="e#673#695#0" expanded="true" />
+            <element signature="e#726#748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/distance_10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/distance_15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_notification"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/distance_15dp"
+            android:layout_marginEnd="@dimen/distance_15dp"
+            android:textSize="@dimen/text_14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_2dp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/distance_15dp"
+            android:layout_marginEnd="@dimen/distance_15dp"
+            android:text="@string/text_no_rating"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/distance_8dp"
+            android:background="@color/whiteNineteen" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_2dp"
+            android:gravity="center"
+            android:id="@+id/txt_close"
+            android:text="@string/text_ok"
+            android:paddingBottom="@dimen/distance_15dp"
+            android:paddingTop="@dimen/distance_8dp"
+            android:textColor="@color/lightNavyTwo"
+            android:textSize="@dimen/text_14sp" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

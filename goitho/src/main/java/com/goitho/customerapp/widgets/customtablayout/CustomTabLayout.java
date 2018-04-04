@@ -42,9 +42,6 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
     private int mCurrentTab;
     private int mLastTab;
     private int mTabCount;
-    /**
-     * 用于绘制显示器
-     */
     private Rect mIndicatorRect = new Rect();
     private GradientDrawable mIndicatorDrawable = new GradientDrawable();
 
@@ -61,9 +58,6 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
     private boolean mTabSpaceEqual;
     private float mTabWidth;
 
-    /**
-     * indicator
-     */
     private int mIndicatorColor;
     private float mIndicatorHeight;
     private float mIndicatorWidth;
@@ -215,17 +209,11 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
         notifyDataSetChanged();
     }
 
-    /**
-     * 关联数据支持同时切换fragments
-     */
     public void setTabData(ArrayList<CustomTabEntity> tabEntitys, FragmentActivity fa, int containerViewId, ArrayList<Fragment> fragments) {
         mFragmentChangeManager = new FragmentChangeManager(fa.getSupportFragmentManager(), containerViewId, fragments);
         setTabData(tabEntitys);
     }
 
-    /**
-     * 更新数据
-     */
     public void notifyDataSetChanged() {
         mTabsContainer.removeAllViews();
         this.mTabCount = mTabEntitys.size();
@@ -242,9 +230,6 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
         updateTabStyles();
     }
 
-    /**
-     * 创建并添加tab
-     */
     private void addTab(final int position, View tabView) {
         TextView tv_tab_title = (TextView) tabView.findViewById(R.id.tv_tab_title);
         tv_tab_title.setText(mTabEntitys.get(position).getTabTitle());
@@ -268,7 +253,6 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
             }
         });
 
-        /** 每一个Tab的布局参数 */
         LinearLayout.LayoutParams lp_tab = mTabSpaceEqual ?
                 new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f) :
                 new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
@@ -799,18 +783,9 @@ public class CustomTabLayout extends FrameLayout implements ValueAnimator.Animat
         return tv_tab_title;
     }
 
-    //setter and getter
-
-    // show MsgTipView
     private Paint mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private SparseArray<Boolean> mInitSetMap = new SparseArray<>();
 
-    /**
-     * 显示未读消息
-     *
-     * @param position 显示tab位置
-     * @param num      num小于等于0显示红点,num大于0显示数字
-     */
     public void showMsg(int position, int num) {
         if (position >= mTabCount) {
             position = mTabCount - 1;
