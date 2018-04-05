@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/distance_24dp"
+    android:paddingEnd="@dimen/distance_24dp"
+    android:paddingTop="@dimen/distance_14dp"
+    android:paddingBottom="@dimen/distance_35dp"
+    android:background="@drawable/bg_round_corner_white_nine_background">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_answer"
+        android:textColor="@color/brownishGrey"
+        android:textSize="@dimen/text_12sp"
+        android:text="I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking it was a pretty impressive piece of electronic hardware. It was really cool looking"/>
+
+</LinearLayout>

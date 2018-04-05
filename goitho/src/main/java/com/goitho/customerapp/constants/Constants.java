@@ -22,4 +22,5 @@ public class Constants {
     public static final String KEY_DETAIL_ORDER_ACTIVITY = "DETAIL_ORDER_ACTIVITY";
     public static final String KEY_CHECK_LOGIN = "CHECK_LOGIN";
     public static final String KEY_POST_ACTIVITY = "POST_ACTIVITY";
+    public static final int REQUEST_CODE_BOOKING= 250;
 }

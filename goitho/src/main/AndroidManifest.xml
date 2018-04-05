@@ -68,7 +68,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.goitho.customerapp.screen.exhibition.ExhibitionActivity"/> // start app
         <activity android:name="com.goitho.customerapp.screen.farmer.FarmerActivity" />
         <activity android:name="com.goitho.customerapp.screen.diary.DiaryActivity" />
         <activity android:name="com.goitho.customerapp.screen.detail_diary.DetailDiaryActivity" />
@@ -78,38 +77,22 @@
         <activity android:name="com.goitho.customerapp.screen.add_action.AddActionActivity" />
         <activity android:name="com.goitho.customerapp.screen.delete_action.DeleteActionActivity" />
         <activity android:name="com.goitho.customerapp.screen.history.HistoryActivity" />
-<<<<<<< HEAD
-        <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionActivity"/>
-
-
-        <activity android:name="com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-=======
         <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity" />
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity" />
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity" />
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity" />
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity" />
+        <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity" />
+        <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity" />
         <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity" />
         <activity android:name=".screen.register_success.RegisterSuccessActivity" />
         <activity android:name=".screen.rating.RatingActivity" />
         <activity android:name=".screen.dashboard.DashboardActivity" />
-        <activity android:name=".screen.blog.BlogActivity"/>
-        <activity android:name=".screen.post.PostActivity"/>
-        <activity android:name=".screen.booking_success.BookingSuccessActivity"/>
->>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
-
+        <activity android:name=".screen.blog.BlogActivity" />
+        <activity android:name=".screen.post.PostActivity" />
+        <activity android:name=".screen.booking_success.BookingSuccessActivity" />
+        <activity android:name=".screen.question.QuestionActivity" />
+        <activity android:name=".screen.support_center.SupportCenterActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

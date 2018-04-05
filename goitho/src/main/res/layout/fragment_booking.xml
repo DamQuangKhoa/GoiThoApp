@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteTwentyTwo"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -36,15 +37,511 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_116dp"
-        android:background="@drawable/bg_round_corner_blue_background">
+        android:layout_height="wrap_content">
 
-        <View
+        <LinearLayout
+            android:id="@+id/layout1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/distance_31dp"
-            android:background="@color/whiteThree" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_116dp"
+                    android:background="@drawable/bg_round_corner_blue_background"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/distance_31dp"
+                        android:background="@color/whiteThree" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_26dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/size_11dp"
+                                android:layout_height="@dimen/size_11dp"
+                                android:src="@drawable/circle_orange" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/distance_6dp"
+                                android:text="B1: Nhu cầu sửa chữa"
+                                android:textColor="@color/whiteThree"
+                                android:textSize="@dimen/text_15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/size_11dp"
+                                android:layout_height="@dimen/size_11dp"
+                                android:src="@drawable/circle_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/distance_6dp"
+                                android:text="B2: Thông tin liên hệ"
+                                android:textColor="#66ffffff"
+                                android:textSize="@dimen/text_15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/distance_8dp"
+                    android:layout_marginStart="@dimen/distance_8dp"
+                    android:layout_marginTop="@dimen/distance_75dp"
+                    app:cardCornerRadius="@dimen/distance_14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_7dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/distance_20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_want"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cobalt"
+                            android:textSize="@dimen/text_22sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/distance_7dp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_40dp"
+                                android:background="@drawable/bg_round_corner_edittext_white_background"
+                                android:hint="@string/text_describe"
+                                android:paddingEnd="@dimen/distance_44dp"
+                                android:paddingStart="@dimen/distance_17dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/text_14sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/distance_17dp"
+                                android:src="@drawable/ic_micro" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/distance_21dp"
+                            android:text="@string/text_at_time"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cobalt"
+                            android:textSize="@dimen/text_22sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/distance_10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/distance_16dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_date"
+                                    android:textColor="#80000000"
+                                    android:textSize="@dimen/text_12sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/distance_9dp"
+                                    android:text="20 tháng 12, 2017"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_16sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/distance_5dp"
+                                android:background="@color/pinkishGreyFour" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/distance_17dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_hour"
+                                    android:textColor="#80000000"
+                                    android:textSize="@dimen/text_12sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_hour"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/distance_9dp"
+                                    android:text="3h30 pm"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_16sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_down" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="@dimen/distance_30dp"
+                            android:layout_marginTop="@dimen/distance_13dp"
+                            android:background="@color/pinkishGreyFour" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/layout_capture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_image"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_capture_booking" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_6dp"
+                        android:text="@string/text_attach_image"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/distance_5dp"
+                    android:background="@color/pinkishGreyFour" />
+
+                <LinearLayout
+                    android:id="@+id/layout_promotion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_promotion_booking" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_6dp"
+                        android:text="@string/text_id_promotion_booking"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_8dp"
+                android:layout_marginStart="@dimen/distance_8dp"
+                android:layout_marginTop="@dimen/distance_24dp"
+                android:background="@drawable/bg_orange_stroke_background"
+                android:gravity="center"
+                android:paddingBottom="@dimen/distance_14dp"
+                android:paddingTop="@dimen/distance_14dp">
+
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/distance_16dp"
+                    android:text="@string/text_continue"
+                    android:textAllCaps="true"
+                    android:textColor="@color/whiteThree"
+                    android:textSize="@dimen/text_14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/distance_8dp"
+                    android:layout_toRightOf="@+id/txt_title"
+                    android:src="@drawable/ic_next_home" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_116dp"
+                    android:background="@drawable/bg_round_corner_blue_background"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/distance_31dp"
+                        android:background="@color/whiteThree" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_26dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/size_11dp"
+                                android:layout_height="@dimen/size_11dp"
+                                android:src="@drawable/circle_orange" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/distance_6dp"
+                                android:text="B1: Nhu cầu sửa chữa"
+                                android:textColor="#66ffffff"
+                                android:textSize="@dimen/text_15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/size_11dp"
+                                android:layout_height="@dimen/size_11dp"
+                                android:src="@drawable/circle_orange" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/distance_6dp"
+                                android:text="B2: Thông tin liên hệ"
+                                android:textColor="@color/whiteThree"
+                                android:textSize="@dimen/text_15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/distance_8dp"
+                    android:layout_marginStart="@dimen/distance_8dp"
+                    android:layout_marginTop="@dimen/distance_75dp"
+                    app:cardCornerRadius="@dimen/distance_14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_7dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/distance_20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_provided"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cobalt"
+                            android:textSize="@dimen/text_22sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_40dp"
+                            android:layout_marginTop="@dimen/distance_10dp"
+                            android:background="@drawable/bg_round_corner_edittext_white_background"
+                            android:drawablePadding="@dimen/distance_10dp"
+                            android:drawableStart="@drawable/ic_username"
+                            android:hint="@string/text_address_repair"
+                            android:paddingEnd="@dimen/distance_44dp"
+                            android:paddingStart="@dimen/distance_17dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/text_14sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_40dp"
+                            android:layout_marginTop="@dimen/distance_10dp"
+                            android:background="@drawable/bg_round_corner_edittext_white_background"
+                            android:drawablePadding="@dimen/distance_10dp"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:hint="@string/text_phone_repair"
+                            android:paddingEnd="@dimen/distance_44dp"
+                            android:paddingStart="@dimen/distance_17dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/text_14sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/edt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_40dp"
+                            android:layout_marginBottom="@dimen/distance_30dp"
+                            android:layout_marginTop="@dimen/distance_10dp"
+                            android:background="@drawable/bg_round_corner_edittext_white_background"
+                            android:drawablePadding="@dimen/distance_10dp"
+                            android:drawableStart="@drawable/ic_username"
+                            android:hint="@string/text_name_repair"
+                            android:paddingEnd="@dimen/distance_44dp"
+                            android:paddingStart="@dimen/distance_17dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/text_14sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_8dp"
+                android:layout_marginStart="@dimen/distance_8dp"
+                android:layout_marginTop="@dimen/distance_35dp"
+                android:background="@drawable/bg_orange_stroke_background"
+                android:gravity="center"
+                android:paddingBottom="@dimen/distance_14dp"
+                android:paddingTop="@dimen/distance_14dp">
+
+
+                <TextView
+                    android:id="@+id/txt_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/distance_16dp"
+                    android:text="@string/text_booking"
+                    android:textAllCaps="true"
+                    android:textColor="@color/whiteThree"
+                    android:textSize="@dimen/text_14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/distance_8dp"
+                    android:layout_toRightOf="@+id/txt_title1"
+                    android:src="@drawable/ic_next_home" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

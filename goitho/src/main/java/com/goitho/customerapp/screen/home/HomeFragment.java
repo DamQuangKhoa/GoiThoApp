@@ -20,6 +20,7 @@ import com.goitho.customerapp.adapter.RatingAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.blog.BlogActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
+import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.customStackView.CustomStackView;
 
@@ -152,6 +153,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     @OnClick(R.id.btn_blog)
     public void blog(){
         BlogActivity.start(getContext());
+    }
+
+    @OnClick(R.id.layout_promotion)
+    public void promotion(){
+        ListPromotionActivity.start(getActivity());
     }
 
     @Override

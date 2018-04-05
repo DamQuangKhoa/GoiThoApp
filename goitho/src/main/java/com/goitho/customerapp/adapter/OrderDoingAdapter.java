@@ -53,7 +53,7 @@ public class OrderDoingAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflter.inflate(R.layout.item_exhibition_doing, null);
+        view = inflter.inflate(R.layout.item_order_doing, null);
         LinearLayout layout = view.findViewById(R.id.layout_main);
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
 //                86);

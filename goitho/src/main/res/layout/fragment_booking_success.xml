@@ -244,7 +244,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_id_promotion"
+                        android:text="@string/text_id_promotion_booking_success"
                         android:textColor="@color/blackThree"
                         android:textSize="@dimen/text_12sp"
                         android:textStyle="bold" />
@@ -270,6 +270,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/distance_16dp"
+                android:id="@+id/layout_register"
                 android:orientation="vertical">
 
                 <LinearLayout

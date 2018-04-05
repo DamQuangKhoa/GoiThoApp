@@ -192,7 +192,6 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_IMAGE) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
-            imgAvatar.setImageBitmap(photo);
         }
     }
 

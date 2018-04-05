@@ -23,6 +23,7 @@ import com.goitho.customerapp.dialogs.CustomDialogEditContentOrder;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.dialogs.CustomDialogReasonCancel;
 import com.goitho.customerapp.screen.rating.RatingActivity;
+import com.goitho.customerapp.screen.support_center.SupportCenterActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import java.io.File;
@@ -219,6 +220,11 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     @OnClick(R.id.img_add_image)
     public void addImage() {
         startDialogLibraryCapture();
+    }
+
+    @OnClick(R.id.layout_support_center)
+    public void supportCenter(){
+        SupportCenterActivity.start(getContext());
     }
 
     @Override

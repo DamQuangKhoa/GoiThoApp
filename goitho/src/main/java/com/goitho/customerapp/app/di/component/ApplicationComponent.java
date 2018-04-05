@@ -23,13 +23,10 @@ import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
-<<<<<<< HEAD
-import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionComponent;
-import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionModule;
-=======
 import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
 import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
->>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
+import com.goitho.customerapp.screen.detail_promotion.DetailPromotionComponent;
+import com.goitho.customerapp.screen.detail_promotion.DetailPromotionModule;
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
@@ -46,8 +43,8 @@ import com.goitho.customerapp.screen.home.HomeComponent;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
-import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionComponent;
-import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionModule;
+import com.goitho.customerapp.screen.list_promotion.ListPromotionComponent;
+import com.goitho.customerapp.screen.list_promotion.ListPromotionModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
 import com.goitho.customerapp.screen.login.LoginModule;
 import com.goitho.customerapp.screen.notification.NotificationComponent;
@@ -64,12 +61,16 @@ import com.goitho.customerapp.screen.phone_verification.PhoneVerificationCompone
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.post.PostComponent;
 import com.goitho.customerapp.screen.post.PostModule;
+import com.goitho.customerapp.screen.question.QuestionComponent;
+import com.goitho.customerapp.screen.question.QuestionModule;
 import com.goitho.customerapp.screen.rating.RatingComponent;
 import com.goitho.customerapp.screen.rating.RatingModule;
 import com.goitho.customerapp.screen.register.RegisterComponent;
 import com.goitho.customerapp.screen.register.RegisterModule;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessModule;
+import com.goitho.customerapp.screen.support_center.SupportCenterComponent;
+import com.goitho.customerapp.screen.support_center.SupportCenterModule;
 import com.goitho.customerapp.screen.user.UserComponent;
 import com.goitho.customerapp.screen.user.UserModule;
 
@@ -127,7 +128,8 @@ public interface ApplicationComponent {
 
     DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
                             BookingModule bookingModule,
-                            NotificationModule notificationModule, UserModule userModule);
+                            NotificationModule notificationModule, UserModule userModule,
+                            BookingSuccessModule bookingSuccessModule);
 
     NotificationComponent plus(NotificationModule notificationModule);
 
@@ -137,10 +139,10 @@ public interface ApplicationComponent {
 
     OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
-<<<<<<< HEAD
     ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
+
     DetailPromotionComponent plus(DetailPromotionModule exhibitionDoingModule);
-=======
+
     OrderCancelComponent plus(OrderCancelModule exhibitionDoingModule);
 
     HomeComponent plus(HomeModule homeModule);
@@ -158,5 +160,8 @@ public interface ApplicationComponent {
     PostComponent plus(PostModule postModule);
 
     BookingSuccessComponent plus(BookingSuccessModule bookingSuccessModule);
->>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
+
+    SupportCenterComponent plus(SupportCenterModule supportCenterModule);
+
+    QuestionComponent plus(QuestionModule questionModule);
 }

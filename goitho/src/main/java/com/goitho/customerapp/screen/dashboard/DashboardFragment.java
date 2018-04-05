@@ -1,6 +1,7 @@
 package com.goitho.customerapp.screen.dashboard;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,14 +10,19 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.screen.booking.BookingFragment;
 import com.goitho.customerapp.screen.booking.BookingModule;
+import com.goitho.customerapp.screen.booking.BookingPresenter;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessFragment;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessPresenter;
 import com.goitho.customerapp.screen.home.HomeFragment;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.home.HomePresenter;
@@ -27,8 +33,6 @@ import com.goitho.customerapp.screen.notification.NotificationPresenter;
 import com.goitho.customerapp.screen.order.OrderFragment;
 import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.order.OrderPresenter;
-import com.goitho.customerapp.screen.booking.BookingFragment;
-import com.goitho.customerapp.screen.booking.BookingPresenter;
 import com.goitho.customerapp.screen.user.UserFragment;
 import com.goitho.customerapp.screen.user.UserModule;
 import com.goitho.customerapp.screen.user.UserPresenter;
@@ -68,7 +72,10 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     OrderPresenter orderPresenter;
 
     @Inject
-    BookingPresenter orderRepairPresenter;
+    BookingPresenter bookingPresenter;
+
+    @Inject
+    BookingSuccessPresenter bookingSuccessPresenter;
 
     @Bind(R.id.tabs)
     CustomTabLayout tabLayout;
@@ -76,13 +83,16 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Bind(R.id.viewpager)
     CustomViewPager viewPager;
 
+    @Bind(R.id.layout_main)
+    RelativeLayout rlMain;
+
     private HomeFragment homeFragment;
     private OrderFragment orderFragment;
     private NotificationFragment notificationFragment;
     private UserFragment userFragment;
-    private BookingFragment orderRepairFragment;
+    private BookingFragment bookingFragment;
     private LandingFragment landingFragment;
-
+    private BookingSuccessFragment bookingSuccessFragment;
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private String[] mTitles = {"Trang chủ", "Đơn hàng", "", "Tin nhắn", "Tài khoản"};
     private int[] mIconUnselectIds = {R.drawable.ic_home_main_unselete, R.drawable.ic_order_main_unselete,
@@ -135,28 +145,36 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
             orderFragment = OrderFragment.newInstance();
         }
 
-        if (orderRepairFragment == null) {
-            orderRepairFragment = BookingFragment.newInstance();
+        if (bookingFragment == null) {
+            bookingFragment = BookingFragment.newInstance();
         }
 
         if (userFragment == null) {
             userFragment = UserFragment.newInstance();
         }
-        if (landingFragment == null){
+        if (landingFragment == null) {
             landingFragment = LandingFragment.newInstance();
+        }
+        if (bookingSuccessFragment == null) {
+            bookingSuccessFragment = BookingSuccessFragment.newInstance();
         }
         CoreApplication.getInstance().getApplicationComponent()
                 .plus(new HomeModule(homeFragment),
                         new OrderModule(orderFragment),
-                        new BookingModule(orderRepairFragment),
+                        new BookingModule(bookingFragment),
                         new NotificationModule(notificationFragment),
-                        new UserModule(userFragment))
+                        new UserModule(userFragment),
+                        new BookingSuccessModule(bookingSuccessFragment))
                 .inject(this);
 
     }
 
     private void initView() {
-
+        if (!hasNavBar(getContext().getResources())) {
+            float scale = getResources().getDisplayMetrics().density;
+            int dpAsPixels = (int) (47 * scale + 0.5f);
+            rlMain.setPadding(0, 0, 0, dpAsPixels);
+        }
         setupViewPager(viewPager);
         setupTabItem(tabLayout);
 
@@ -203,7 +221,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         tabLayout.showMsg(3, 5);
         tabLayout.setMsgMargin(3, -20, 8);
 
-
     }
 
 
@@ -211,18 +228,22 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(homeFragment);
         adapter.addFragment(orderFragment);
-        adapter.addFragment(orderRepairFragment);
+        adapter.addFragment(bookingFragment);
         adapter.addFragment(notificationFragment);
         if (SharedPreferenceHelper.getInstance(getContext())
-                .getBoolean(Constants.KEY_CHECK_LOGIN, false)){
+                .getBoolean(Constants.KEY_CHECK_LOGIN, false)) {
             adapter.addFragment(userFragment);
-        }else {
+        } else {
             adapter.addFragment(landingFragment);
         }
         viewPager.setAdapter(adapter);
         viewPager.setPagingEnabled(false);
     }
 
+    public boolean hasNavBar(Resources resources) {
+        int id = resources.getIdentifier("config_showNavigationBar", "bool", "android");
+        return id > 0 && resources.getBoolean(id);
+    }
 
     @Override
     public void setPresenter(DashboardContract.Presenter presenter) {
@@ -250,7 +271,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     }
 
     @OnClick(R.id.layout_booking)
-    public void booking(){
+    public void booking() {
         tabLayout.setCurrentTab(2);
         viewPager.setCurrentItem(2);
     }
@@ -280,7 +301,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         public void addFragment(Fragment fragment) {
             mFragmentList.add(fragment);
         }
-
     }
 
 

@@ -11,15 +11,15 @@ import dagger.Provides;
 
 @Module
 public class DashboardModule {
-    private final DashboardContract.View HistoryContractView;
+    private final DashboardContract.View DashboardContractView;
 
-    public DashboardModule(DashboardContract.View HistoryContractView) {
-        this.HistoryContractView = HistoryContractView;
+    public DashboardModule(DashboardContract.View DashboardContractView) {
+        this.DashboardContractView = DashboardContractView;
     }
 
     @Provides
     @NonNull
-    DashboardContract.View provideHistoryContractView() {
-        return this.HistoryContractView;
+    DashboardContract.View provideDashboardContractView() {
+        return this.DashboardContractView;
     }
 }

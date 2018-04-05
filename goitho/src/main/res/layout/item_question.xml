@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteFifteen"
+    android:paddingTop="@dimen/distance_15dp"
+    android:paddingBottom="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/distance_22dp"
+        android:paddingEnd="@dimen/distance_19dp"
+        android:paddingStart="@dimen/distance_29dp"
+        android:paddingTop="@dimen/distance_25dp"
+        android:id="@+id/layout_main"
+        android:background="@drawable/bg_corner_white_stroke_background">
+
+        <TextView
+            android:id="@+id/txt_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/distance_10dp"
+            android:textSize="@dimen/text_16sp" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/distance_2dp"
+            android:src="@drawable/arrow_blue" />
+    </RelativeLayout>
+</RelativeLayout>

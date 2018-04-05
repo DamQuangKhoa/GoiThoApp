@@ -85,4 +85,11 @@
     <color name="lightNavy90">#e51451a2</color>
     <color name="whiteTwentyOne">#e6e6e6</color>
     <color name="pinkishGreyThree">#c0c0c0</color>
+    <color name="cobalt">#194d95</color>
+    <color name="pinkishGreyFour">#cccccc</color>
+    <color name="pinkishGreyFive">#cecece</color>
+    <color name="whiteTwentyTwo">#f2f2f2</color>
+    <color name="pinkishGreySix">#cacaca</color>
+    <color name="brownishGrey">#606060</color>
+    <color name="paleOrangeTwo">#ffaf51</color>
 </resources>

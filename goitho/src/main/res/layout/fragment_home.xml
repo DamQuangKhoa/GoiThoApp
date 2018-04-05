@@ -142,6 +142,7 @@
                     android:layout_marginTop="@dimen/distance_16dp"
                     android:background="@drawable/bg_greeny_blue_stroke_background"
                     android:paddingBottom="@dimen/distance_9dp"
+                    android:id="@+id/layout_promotion"
                     android:paddingEnd="@dimen/distance_29dp"
                     android:paddingStart="@dimen/distance_15dp"
                     android:paddingTop="@dimen/distance_9dp">

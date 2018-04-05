@@ -2,6 +2,8 @@ package com.goitho.customerapp.screen.dashboard;
 
 import com.goitho.customerapp.app.di.ActivityScope;
 import com.goitho.customerapp.screen.booking.BookingModule;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessActivity;
+import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.notification.NotificationModule;
 import com.goitho.customerapp.screen.order.OrderModule;
@@ -14,7 +16,8 @@ import dagger.Subcomponent;
  */
 
 @ActivityScope
-@Subcomponent(modules = {HomeModule.class, OrderModule.class, BookingModule.class ,NotificationModule.class, UserModule.class})
+@Subcomponent(modules = {HomeModule.class, OrderModule.class, BookingModule.class ,
+        NotificationModule.class, UserModule.class, BookingSuccessModule.class})
 public interface DashboardComponent {
     void inject(DashboardFragment fragment);
 
