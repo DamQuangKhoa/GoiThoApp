@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.demo.architect.data.model.PostEntity;
 import com.demo.architect.data.repository.base.local.LocalRepository;
+import com.goitho.customerapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +52,7 @@ public class BlogPresenter implements BlogContract.Presenter {
     public List<PostEntity> blogList() {
         List<PostEntity> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add(new PostEntity("Trang trí nội thất theo phong cách châu Âu ", "Sep 10, 2017",
+            list.add(new PostEntity("Trang trí nội thất theo phong cách châu Âu ", R.drawable.img_blog, "Sep 10, 2017",
                     1237, 815));
         }
         return list;

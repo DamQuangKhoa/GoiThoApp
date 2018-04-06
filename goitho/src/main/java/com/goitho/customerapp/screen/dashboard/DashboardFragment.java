@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -170,11 +172,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     }
 
     private void initView() {
-        if (!hasNavBar(getContext().getResources())) {
-            float scale = getResources().getDisplayMetrics().density;
-            int dpAsPixels = (int) (47 * scale + 0.5f);
-            rlMain.setPadding(0, 0, 0, dpAsPixels);
-        }
         setupViewPager(viewPager);
         setupTabItem(tabLayout);
 
@@ -238,11 +235,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         }
         viewPager.setAdapter(adapter);
         viewPager.setPagingEnabled(false);
-    }
-
-    public boolean hasNavBar(Resources resources) {
-        int id = resources.getIdentifier("config_showNavigationBar", "bool", "android");
-        return id > 0 && resources.getBoolean(id);
     }
 
     @Override

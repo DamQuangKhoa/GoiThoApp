@@ -83,7 +83,8 @@
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity" />
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity" />
         <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity" />
-        <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity" />
+        <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity"/>
+
         <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity" />
         <activity android:name=".screen.register_success.RegisterSuccessActivity" />
         <activity android:name=".screen.rating.RatingActivity" />

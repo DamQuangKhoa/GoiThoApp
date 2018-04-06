@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +8,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_60dp"
+        android:layout_height="@dimen/size_toolbar"
         android:background="@drawable/bg_toolbar"
         android:orientation="horizontal"
         app:contentInsetEnd="0dp"
@@ -24,7 +22,6 @@
             android:id="@+id/layout_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -159,7 +156,6 @@
         android:background="@drawable/bg_round_corner_button_blue_background"
         android:drawableStart="@mipmap/ic_supporter"
         android:text="@string/promotion_button_text"
-        android:textAlignment="textStart"
         android:textColor="@color/button_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

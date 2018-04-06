@@ -1,6 +1,7 @@
 package com.goitho.customerapp.screen.home;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,18 +12,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.demo.architect.data.model.PostEntity;
 import com.demo.architect.data.model.OrderEntity;
+import com.demo.architect.data.model.PostEntity;
 import com.demo.architect.data.model.RatingEntity;
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.adapter.BlogStackAdapter;
 import com.goitho.customerapp.adapter.RatingAdapter;
+import com.goitho.customerapp.adapter.StackAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.blog.BlogActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
 import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
 import com.goitho.customerapp.util.Precondition;
-import com.goitho.customerapp.widgets.customStackView.CustomStackView;
+import com.goitho.customerapp.widgets.customStackView.Align;
+import com.goitho.customerapp.widgets.customStackView.Config;
+import com.goitho.customerapp.widgets.customStackView.StackLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +42,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     private final String TAG = HomeFragment.class.getName();
     private HomeContract.Presenter mPresenter;
 
-    private BlogStackAdapter blogAdapter;
+    private RatingAdapter ratingAdapter;
+    private StackAdapter stackAdapter;
 
     @Bind(R.id.rv_rating)
     RecyclerView rvRating;
-
-    private RatingAdapter ratingAdapter;
 
     @Bind(R.id.img_cover)
     ImageView imgCover;
@@ -52,8 +54,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     @Bind(R.id.layout_content)
     LinearLayout layout;
 
-    @Bind(R.id.sv_blog)
-    CustomStackView svBlog;
+    @Bind(R.id.rv_blog)
+    RecyclerView rvBlog;
 
     private int heightLayout = 0;
 
@@ -89,6 +91,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     }
 
     private void initStackView() {
+
+
 
     }
 
@@ -146,17 +150,17 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     }
 
     @OnClick(R.id.cv_order)
-    public void order(){
+    public void order() {
         startDetailOrder();
     }
 
     @OnClick(R.id.btn_blog)
-    public void blog(){
+    public void blog() {
         BlogActivity.start(getContext());
     }
 
     @OnClick(R.id.layout_promotion)
-    public void promotion(){
+    public void promotion() {
         ListPromotionActivity.start(getActivity());
     }
 
@@ -167,20 +171,27 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     @Override
     public void showBlogList(List<PostEntity> list) {
-        blogAdapter = new BlogStackAdapter(getContext(),list,
-                new BlogStackAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(int position) {
+        Config config = new Config();
+        config.secondaryScale = 0.8f;
+        config.scaleRatio = 0.4f;
+        config.maxStackCount = 3;
+        config.initialStackCount = (list.size() - 1);
+        config.space = getResources().getDimensionPixelOffset(R.dimen.distance_30dp);
+        config.align = Align.RIGHT;
+        rvBlog.setLayoutManager(new StackLayoutManager(config));
+        stackAdapter = new StackAdapter(list, getContext(), new StackAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(PostEntity item) {
 
-                    }
-                });
-        svBlog.initStack(3);
-        svBlog.setAdapter(blogAdapter);
+            }
+        });
+        rvBlog.setAdapter(stackAdapter);
+        rvBlog.setHasFixedSize(false);
     }
 
     @Override
     public void startDetailOrder() {
         DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
-      
+
     }
 }

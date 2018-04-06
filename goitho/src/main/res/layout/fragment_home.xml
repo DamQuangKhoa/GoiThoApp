@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whiteFive"
@@ -279,32 +280,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/distance_19dp"
-                    android:orientation="vertical"
-                    android:paddingEnd="@dimen/distance_24dp"
-                    android:paddingStart="@dimen/distance_30dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_take_care_home"
                         android:textColor="@color/lightNavyTwo"
+                        android:paddingEnd="@dimen/distance_24dp"
+                        android:paddingStart="@dimen/distance_30dp"
                         android:textSize="@dimen/text_17sp"
                         android:textStyle="bold" />
 
-                    <com.goitho.customerapp.widgets.customStackView.CustomStackView
-                        android:id="@+id/sv_blog"
-                        android:layout_width="match_parent"
-                        android:layout_height="332dp"
-                        android:layout_marginTop="@dimen/distance_20dp"
-                        android:animateLayoutChanges="true"
-                        android:rotation="-180"
-                        android:verticalScrollbarPosition="defaultPosition" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_blog"
+                        android:layout_width="370dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:layout_marginStart="@dimen/distance_10dp"
+                        android:layout_marginTop="@dimen/distance_16dp"
+                        app:layoutManager="@string/stacklayoutmanager"
+                        tools:listitem="@layout/item_stack_blog" />
 
                     <Button
                         android:layout_width="@dimen/size_148dp"
                         android:layout_height="@dimen/size_34dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/size_24dp"
+                        android:paddingEnd="@dimen/distance_24dp"
+                        android:paddingStart="@dimen/distance_30dp"
                         android:background="@drawable/bg_round_corner_button_blue_stroke_background"
                         android:text="@string/text_blog_goi_tho"
                         android:textAllCaps="false"
@@ -317,14 +322,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/distance_19dp"
                     android:orientation="vertical"
-                    android:paddingEnd="@dimen/distance_24dp"
-                    android:paddingStart="@dimen/distance_30dp">
+                   >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_customer_talk_app"
                         android:textColor="@color/lightNavyTwo"
+                        android:paddingEnd="@dimen/distance_24dp"
+                        android:paddingStart="@dimen/distance_30dp"
                         android:textSize="@dimen/text_17sp"
                         android:textStyle="bold" />
 
@@ -332,7 +338,9 @@
                         android:id="@+id/rv_rating"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/distance_20dp" />
+                        android:layout_marginTop="@dimen/distance_20dp"
+                        android:paddingEnd="@dimen/distance_24dp"
+                        android:paddingStart="@dimen/distance_30dp"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
