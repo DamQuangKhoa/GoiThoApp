@@ -23,13 +23,13 @@ import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
 import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
 import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
-<<<<<<< HEAD
+
 import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionComponent;
 import com.goitho.customerapp.screen.detail_promotion.add_action.DetailPromotionModule;
-=======
+
 import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
 import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
->>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
+
 import com.goitho.customerapp.screen.diary.DiaryComponent;
 import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
@@ -137,10 +137,10 @@ public interface ApplicationComponent {
 
     OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
-<<<<<<< HEAD
+
     ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
     DetailPromotionComponent plus(DetailPromotionModule exhibitionDoingModule);
-=======
+
     OrderCancelComponent plus(OrderCancelModule exhibitionDoingModule);
 
     HomeComponent plus(HomeModule homeModule);
@@ -158,5 +158,5 @@ public interface ApplicationComponent {
     PostComponent plus(PostModule postModule);
 
     BookingSuccessComponent plus(BookingSuccessModule bookingSuccessModule);
->>>>>>> b5e5d98c525b1eb00b29ffc06aa20986e4399116
+
 }

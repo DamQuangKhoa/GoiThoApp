@@ -31,7 +31,7 @@ public class SplashActivity extends BaseActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
 // finally change the color
-        window.setStatusBarColor(getResources().getColor(R.color.whiteThree));
+//        window.setStatusBarColor(getResources().getColor(R.color.whiteThree));
 
         CountDownTimer countDownTimer = new CountDownTimer(3000,1000) {
             @Override
