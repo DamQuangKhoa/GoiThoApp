@@ -121,4 +121,9 @@
     <dimen name="promotion_20dp">20dp</dimen>
     <dimen name="promotion_8dp">8dp</dimen>
     <dimen name="promotion_0dp">0dp</dimen>
+    <dimen name="size_7dp">7dp</dimen>
+    <dimen name="size_11dp">11dp</dimen>
+    <dimen name="distance_60dp">60dp</dimen>
+    <dimen name="size_8dp">8dp</dimen>
+    <dimen name="size_13dp">13dp</dimen>
 </resources>

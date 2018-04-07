@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +8,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_60dp"
+        android:layout_height="@dimen/size_toolbar"
         android:background="@drawable/bg_toolbar"
         android:orientation="horizontal"
         app:contentInsetEnd="@dimen/promotion_0dp"
@@ -24,14 +22,13 @@
             android:id="@+id/layout_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/img_back"
-                android:layout_width="@dimen/size_40dp"
-                android:layout_height="@dimen/size_40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 

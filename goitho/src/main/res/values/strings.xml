@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GoiThoCustomer</string>
+    <string name="app_name">Chủ Nhà</string>
 
     <string name="permission_setting">Setting</string>
     <string name="permission_close">Close</string>
@@ -70,7 +70,8 @@
     <string name="text_time">Thời gian</string>
     <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
-    <string name="text_id_promotion">Mã Khuyến mãi:</string>
+    <string name="text_id_promotion_booking_success">Mã Khuyến mãi:</string>
+    <string name="text_id_promotion_booking">Mã Khuyến mãi</string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -184,6 +185,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
         tin nhắn xác minh tại đây</string>
     <string name="text_get_pass">Lấy mật khẩu mới</string>
     <string name="text_toolbar_profile">THÔNG TIN TÀI KHOẢN</string>
+    <string name="text_support_center">Trung tâm hỗ trợ</string>
     <string name="text_address_profile">ĐỊA CHỈ SỬA CHỮA</string>
 
     <string name="text_toolbar_account">TÀI KHOẢN</string>
@@ -191,6 +193,13 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
         công trên hệ thống Gọi Thợ. Hãy luôn mở App Chủ Nhà nhé.</string>
     <string name="text_go_home">Về trang chủ</string>
+    <string name="text_describe">Mô tả hư hỏng cần sửa</string>
+    <string name="text_address_repair">Địa chỉ sửa chữa</string>
+    <string name="text_phone_repair">Số điện thoại liên hệ</string>
+    <string name="text_name_repair">Tên người liên hệ</string>
+    <string name="text_want">Tôi muốn:</string>
+    <string name="text_provided">Cung cấp thông tin liên hệ:</string>
+    <string name="text_at_time">Vào lúc:</string>
     <string name="text_manager_account">QUẢN LÝ TÀI KHOẢN</string>
     <string name="text_content_add_profile">Để kích hoạt tài khoản, hãy cung cấp đầy đủ các \n thông tin sau</string>
     <string name="text_choose_avatar">Chọn hình đại diện</string>
@@ -201,6 +210,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_open_order">Mở lại đơn hàng</string>
     <string name="text_comment">Nhận xét</string>
     <string name="text_booking">Đặt lịch</string>
+    <string name="text_customer_care">BỘ PHẬN CHĂM SÓC KHÁCH HÀNG</string>
     <string name="text_blog">Blog</string>
     <string name="promotion_welcome">Chào mừng thành viên mới</string>
     <string name="promotion_text">Mã khuyến mãi:</string>
@@ -209,4 +219,13 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="promotion_button_text">TRUNG TÂM HỖ TRỢ</string>
     <string name="promotion_text_example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis finibus massa, eget feugiat justo ullamcorper quis. Aenean et neque eu nisi eleifend ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae mi est. Quisque eget nulla nulla. Etiam eget bibendum ligula. Cras venenatis, nunc nec convallis accumsan, mi lacus bibendum elit, vitae vestibulum felis enim nec orci.</string>
     <string name="promotion_date">01/03/2018</string>
+    <string name="text_date">Ngày</string>
+    <string name="text_hour">Giờ</string>
+    <string name="text_continue">Tiếp tục</string>
+    <string name="text_attach_image">Đính kèm ảnh</string>
+    <string name="text_chat">Chat với CSKH</string>
+    <string name="text_question_library">THƯ VIỆN CÂU HỎI FAQ</string>
+    <string name="text_access_faq">Truy cập FAQ</string>
+    <string name="text_call_hotline">Gọi tới hotline CSKH</string>
+    <string name="stacklayoutmanager">com.goitho.customerapp.widgets.customStackView.StackLayoutManager</string>
 </resources>

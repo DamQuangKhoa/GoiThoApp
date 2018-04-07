@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class PostEntity implements Serializable{
     private String title;
-    private String urlImage;
+    private int image;
     private String dateCreate;
     private int view;
     private int like;
@@ -16,8 +16,9 @@ public class PostEntity implements Serializable{
     public PostEntity() {
     }
 
-    public PostEntity(String title, String dateCreate, int view, int like) {
+    public PostEntity(String title, int image, String dateCreate, int view, int like) {
         this.title = title;
+        this.image = image;
         this.dateCreate = dateCreate;
         this.view = view;
         this.like = like;
@@ -37,5 +38,9 @@ public class PostEntity implements Serializable{
 
     public int getLike() {
         return like;
+    }
+
+    public int getImage() {
+        return image;
     }
 }

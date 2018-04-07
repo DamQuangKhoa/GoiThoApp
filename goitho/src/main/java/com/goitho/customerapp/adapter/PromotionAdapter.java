@@ -1,8 +1,6 @@
 package com.goitho.customerapp.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +11,7 @@ import android.widget.Toast;
 
 
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.screen.list_promotion.add_action.ListPromotionFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

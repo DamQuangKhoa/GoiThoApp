@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +9,8 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/distance_50dp"
+        android:layout_height="@dimen/size_toolbar"
+
         android:background="@drawable/bg_toolbar"
         android:orientation="horizontal"
         app:contentInsetEnd="0dp"
@@ -25,7 +24,6 @@
             android:id="@+id/layout_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/distance_20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -108,7 +106,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar2"
                 app:srcCompat="@drawable/img_promotion" />
 
             <TextView
@@ -141,6 +138,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="0dp"
@@ -154,6 +152,28 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
+=======
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_40dp"
+        android:layout_marginBottom="@dimen/promotion_8dp"
+        android:layout_marginEnd="@dimen/promotion_8dp"
+        android:layout_marginStart="@dimen/promotion_23dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_round_corner_button_blue_background"
+        android:drawableStart="@mipmap/ic_supporter"
+        android:text="@string/promotion_button_text"
+        android:textColor="@color/button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
+>>>>>>> dc19ac431072f6bf70d4695123b6ebb6d5d086c0
 
             <TextView
                 android:id="@+id/textView4"
@@ -172,7 +192,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn"
                 android:layout_width="0dp"
                 android:layout_height="37dp"
                 android:layout_marginBottom="8dp"
@@ -198,11 +218,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="212dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/promotion_date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
-                tools:layout_editor_absoluteY="307dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <TextView
                 android:id="@+id/textView7"

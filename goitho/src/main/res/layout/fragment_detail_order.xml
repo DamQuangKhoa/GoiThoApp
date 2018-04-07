@@ -472,6 +472,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginEnd="@dimen/distance_8dp"
+                android:id="@+id/layout_support_center"
                 android:layout_marginStart="@dimen/distance_8dp"
                 android:background="@drawable/bg_round_corner_button_blue_background"
                 android:gravity="center"

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteFifteen"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar"
+        android:background="@drawable/bg_round_corner_blue_background"
+        android:orientation="horizontal"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/distance_10dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/distance_8dp"
+                android:gravity="center"
+                android:text="Đơn hàng A1234"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_corner_blue_background"
+        android:gravity="center"
+        android:paddingBottom="@dimen/distance_20dp"
+        android:paddingEnd="@dimen/distance_32dp"
+        android:paddingStart="@dimen/distance_32dp"
+        android:paddingTop="@dimen/distance_19dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:background="@drawable/bg_round_corner_edittext_white"
+                android:hint="@string/text_search"
+                android:paddingEnd="@dimen/distance_40dp"
+                android:paddingStart="@dimen/distance_19dp"
+                android:textColor="#59000000"
+                android:textSize="@dimen/text_12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/distance_4dp"
+                android:src="@drawable/ic_search" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.goitho.customerapp.widgets.AnimatedExpandableListView
+        android:id="@+id/elv_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/distance_2dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="true"
+        android:paddingEnd="@dimen/distance_22dp"
+        android:paddingStart="@dimen/distance_22dp" />
+</LinearLayout>

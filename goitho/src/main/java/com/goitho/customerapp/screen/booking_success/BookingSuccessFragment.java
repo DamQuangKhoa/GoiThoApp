@@ -5,20 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.dialogs.CustomDialogForgetPassword;
 import com.goitho.customerapp.screen.dashboard.DashboardActivity;
-import com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -29,18 +22,6 @@ import butterknife.OnClick;
 public class BookingSuccessFragment extends BaseFragment implements BookingSuccessContract.View {
     private final String TAG = BookingSuccessFragment.class.getName();
     private BookingSuccessContract.Presenter mPresenter;
-
-    @Bind(R.id.et_id)
-    EditText etId;
-
-    @Bind(R.id.et_password)
-    EditText etPassword;
-
-    @Bind(R.id.txt_forgot)
-    TextView txtForgot;
-
-    @Bind(R.id.btn_login)
-    Button btnLogin;
 
 
     public BookingSuccessFragment() {
@@ -100,8 +81,16 @@ public class BookingSuccessFragment extends BaseFragment implements BookingSucce
         mPresenter.stop();
     }
 
+    @OnClick(R.id.layout_go_home)
+    public void goHome() {
+        DashboardActivity.start(getContext());
+        getActivity().finish();
+    }
 
-
+    @OnClick(R.id.layout_register)
+    public void register() {
+        RegisterActivity.start(getContext());
+    }
 
 
 }

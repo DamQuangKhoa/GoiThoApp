@@ -48,6 +48,12 @@ public class BaseFragment extends Fragment {
         transaction.addToBackStack(tag);
         transaction.commit();
     }
+    public void replaceFragment(@NonNull Fragment fragment, @NonNull String tag, int frameId) {
+        checkNotNull(fragment);
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(frameId, fragment, tag);
+        transaction.commit();
+    }
 
     public void popFragment() {
         getChildFragmentManager().popBackStack();
