@@ -543,5 +543,289 @@
                     android:src="@drawable/ic_next_home" />
             </RelativeLayout>
         </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/sv_success">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/distance_8dp"
+                android:paddingStart="@dimen/distance_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_booking_success"
+                    android:textColor="@color/paleOrange"
+                    android:textSize="@dimen/text_17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/distance_12dp"
+                    android:gravity="center"
+                    android:text="@string/text_content_booking_success"
+                    android:textStyle="normal" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/distance_18dp"
+                    app:cardCornerRadius="@dimen/distance_14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingEnd="@dimen/distance_12dp"
+                            android:paddingStart="@dimen/distance_12dp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/distance_24dp"
+                                    android:layout_marginEnd="@dimen/distance_22dp"
+                                    android:layout_marginStart="@dimen/distance_11dp"
+                                    android:layout_marginTop="@dimen/distance_16dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_title3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/text_need_repair"
+                                        android:textColor="@color/blackThree"
+                                        android:textSize="@dimen/text_12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txt_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/txt_title3"
+                                        android:layout_marginTop="@dimen/distance_4dp"
+                                        android:text="Đơn hàng ABC123 dfgdfgdfgdfgfgfgfgfgfgfg"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_14sp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whiteSixteen" />
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/distance_16dp"
+                                    android:layout_marginEnd="@dimen/distance_12dp"
+                                    android:layout_marginStart="@dimen/distance_12dp"
+                                    android:layout_marginTop="@dimen/distance_16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/text_time"
+                                        android:id="@+id/txt_title2"
+                                        android:textColor="@color/blackThree"
+                                        android:textSize="@dimen/text_12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txt_time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/txt_title2"
+                                        android:layout_marginTop="@dimen/distance_4dp"
+                                        android:text="3:30 pm, 24 th12 2017"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_14sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whiteSixteen" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/distance_16dp"
+                            android:layout_marginTop="@dimen/distance_15dp"
+                            android:orientation="vertical"
+                            android:paddingEnd="@dimen/distance_12dp"
+                            android:paddingStart="@dimen/distance_12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/text_info_contact"
+                                android:textColor="@color/blackThree"
+                                android:textSize="@dimen/text_12sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/distance_7dp"
+                                android:layout_marginTop="@dimen/distance_13dp"
+                                android:drawablePadding="@dimen/distance_8dp"
+                                android:drawableStart="@drawable/ic_location"
+                                android:text="81/117 Thái Hà, Trung Liệt, Đống Đa, Hà Nội"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/distance_7dp"
+                                android:layout_marginTop="@dimen/distance_13dp"
+                                android:drawablePadding="@dimen/distance_8dp"
+                                android:drawableStart="@drawable/ic_phone"
+                                android:gravity="center"
+                                android:text="0969 696 969"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/distance_7dp"
+                                android:layout_marginTop="@dimen/distance_13dp"
+                                android:drawablePadding="@dimen/distance_8dp"
+                                android:drawableStart="@drawable/ic_username"
+                                android:gravity="center"
+                                android:text="A. Thắng"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whiteSixteen" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/distance_24dp"
+                            android:layout_marginTop="@dimen/distance_13dp"
+                            android:orientation="horizontal"
+                            android:paddingEnd="@dimen/distance_12dp"
+                            android:paddingStart="@dimen/distance_12dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_id_promotion_booking_success"
+                                android:textColor="@color/blackThree"
+                                android:textSize="@dimen/text_12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/distance_4dp"
+                                android:text="NEW50 -50.000đ/ tổng hoá đơn"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14sp"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_16dp"
+                        android:id="@+id/layout_register"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/layout_create_account"
+                            android:layout_marginEnd="@dimen/distance_8dp"
+                            android:layout_marginStart="@dimen/distance_8dp"
+                            android:background="@drawable/bg_round_corner_button_blue_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/distance_18dp"
+                            android:paddingTop="@dimen/distance_18dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_create_account"
+                                android:textColor="@color/whiteThree"
+                                android:textSize="@dimen/text_14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_go_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/distance_8dp"
+                            android:layout_marginStart="@dimen/distance_8dp"
+                            android:layout_marginTop="@dimen/distance_9dp"
+                            android:background="@drawable/bg_round_corner_button_peach_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/distance_18dp"
+                            android:paddingTop="@dimen/distance_18dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_go_home"
+                                android:textColor="@color/whiteThree"
+                                android:textSize="@dimen/text_14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </LinearLayout>

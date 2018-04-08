@@ -76,9 +76,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Inject
     BookingPresenter bookingPresenter;
 
-    @Inject
-    BookingSuccessPresenter bookingSuccessPresenter;
-
     @Bind(R.id.tabs)
     CustomTabLayout tabLayout;
 
@@ -94,7 +91,6 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     private UserFragment userFragment;
     private BookingFragment bookingFragment;
     private LandingFragment landingFragment;
-    private BookingSuccessFragment bookingSuccessFragment;
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private String[] mTitles = {"Trang chủ", "Đơn hàng", "", "Tin nhắn", "Tài khoản"};
     private int[] mIconUnselectIds = {R.drawable.ic_home_main_unselete, R.drawable.ic_order_main_unselete,
@@ -157,16 +153,12 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         if (landingFragment == null) {
             landingFragment = LandingFragment.newInstance();
         }
-        if (bookingSuccessFragment == null) {
-            bookingSuccessFragment = BookingSuccessFragment.newInstance();
-        }
         CoreApplication.getInstance().getApplicationComponent()
                 .plus(new HomeModule(homeFragment),
                         new OrderModule(orderFragment),
                         new BookingModule(bookingFragment),
                         new NotificationModule(notificationFragment),
-                        new UserModule(userFragment),
-                        new BookingSuccessModule(bookingSuccessFragment))
+                        new UserModule(userFragment))
                 .inject(this);
 
     }
@@ -203,8 +195,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
             }
         });
-        tabLayout.setCurrentTab(0);
-        viewPager.setCurrentItem(0);
+        openHome();
 
     }
 
@@ -271,6 +262,11 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Override
     public void setupView(boolean login) {
 
+    }
+
+    public void openHome(){
+        tabLayout.setCurrentTab(0);
+        viewPager.setCurrentItem(0);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

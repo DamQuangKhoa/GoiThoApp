@@ -17,7 +17,7 @@ import dagger.Subcomponent;
 
 @ActivityScope
 @Subcomponent(modules = {HomeModule.class, OrderModule.class, BookingModule.class ,
-        NotificationModule.class, UserModule.class, BookingSuccessModule.class})
+        NotificationModule.class, UserModule.class})
 public interface DashboardComponent {
     void inject(DashboardFragment fragment);
 

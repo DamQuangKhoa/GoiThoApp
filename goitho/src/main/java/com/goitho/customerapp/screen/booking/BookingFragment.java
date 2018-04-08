@@ -11,13 +11,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.screen.booking_success.BookingSuccessActivity;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.dashboard.DashboardFragment;
 import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
+import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;
@@ -52,6 +55,9 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @Bind(R.id.layout_image)
     RelativeLayout rlImage;
+
+    @Bind(R.id.sv_success)
+    ScrollView svSuccess;
 
     public BookingFragment() {
         // Required empty public constructor
@@ -115,7 +121,6 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     @OnClick(R.id.layout_booking)
     public void booking(){
         startBookingSuccess();
-
     }
 
     @OnClick(R.id.layout_promotion)
@@ -140,10 +145,22 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         });
     }
 
+    @OnClick(R.id.layout_go_home)
+    public void goHome() {
+        Fragment parentFragment = getParentFragment();
+        if(parentFragment != null && parentFragment instanceof DashboardFragment){
+            ((DashboardFragment)parentFragment).openHome();
+        }    }
+
+    @OnClick(R.id.layout_register)
+    public void register() {
+        RegisterActivity.start(getContext());
+    }
+
     @Override
     public void startBookingSuccess() {
-       BookingSuccessActivity.start(getActivity());
-       getActivity().finish();
+        svSuccess.setVisibility(View.VISIBLE);
+        layout2.setVisibility(View.GONE);
     }
 
     @Override

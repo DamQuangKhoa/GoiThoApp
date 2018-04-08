@@ -134,8 +134,7 @@ public interface ApplicationComponent {
 
     DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
                             BookingModule bookingModule,
-                            NotificationModule notificationModule, UserModule userModule,
-                            BookingSuccessModule bookingSuccessModule);
+                            NotificationModule notificationModule, UserModule userModule);
 
     NotificationComponent plus(NotificationModule notificationModule);
 
