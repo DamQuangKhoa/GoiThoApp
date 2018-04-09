@@ -6,15 +6,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
-import android.view.WindowManager;
 
-import com.demo.architect.data.model.ActivityEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
-import com.goitho.customerapp.constants.Constants;
-import com.goitho.customerapp.screen.certificate.CertificateModule;
 
 import javax.inject.Inject;
 

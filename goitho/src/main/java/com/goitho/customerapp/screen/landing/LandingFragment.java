@@ -6,20 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.screen.diary.DiaryActivity;
-import com.goitho.customerapp.screen.farmer.FarmerActivity;
 import com.goitho.customerapp.screen.login.LoginActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
-import com.goitho.customerapp.util.Precondition;
-import com.goitho.customerapp.widgets.scviewpager.SCViewPager;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

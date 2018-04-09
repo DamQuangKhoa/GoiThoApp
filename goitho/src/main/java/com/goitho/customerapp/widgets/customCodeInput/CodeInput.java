@@ -65,6 +65,7 @@ public class CodeInput extends View {
     private int mInputType;
 
     private codeReadyListener listener;
+    private OnTextChangedListener onTextChangedListener;
 
     public CodeInput(Context context) {
         super(context);
@@ -89,6 +90,11 @@ public class CodeInput extends View {
         this.listener = listener;
     }
 
+    public void setOnTextChangedListener(OnTextChangedListener onTextChangedListener) {
+        this.onTextChangedListener = onTextChangedListener;
+    }
+
+
     private void init(AttributeSet attributeset) {
         initDefaultAttributes();
         initDataStructures();
@@ -102,6 +108,15 @@ public class CodeInput extends View {
         // need to pass relevant arguments related to the event triggered
         public void onCodeReady(Character[] code);
 
+    }
+
+    public interface OnTextChangedListener {
+        void onTextChanged(int size);
+    }
+
+    public void setTextColor(int color) {
+        this.textColor = color;
+        initPaint();
     }
 
     private void initDefaultAttributes() {

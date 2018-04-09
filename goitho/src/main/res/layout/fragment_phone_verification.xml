@@ -68,7 +68,7 @@
                 android:textColor="@color/tomato"
                 android:textSize="@dimen/text_16sp" />
             <Button
-                android:id="@+id/btn_verification"
+                android:id="@+id/btn_active"
                 android:layout_width="@dimen/size_319dp"
                 android:layout_height="@dimen/size_42dp"
                 android:layout_marginTop="@dimen/distance_24dp"

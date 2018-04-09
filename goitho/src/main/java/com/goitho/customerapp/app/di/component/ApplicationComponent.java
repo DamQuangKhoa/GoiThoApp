@@ -7,44 +7,20 @@ import com.goitho.customerapp.app.di.module.ApplicationModule;
 import com.goitho.customerapp.app.di.module.NetModule;
 import com.goitho.customerapp.app.di.module.RepositoryModule;
 import com.goitho.customerapp.app.di.module.UseCaseModule;
-import com.goitho.customerapp.screen.add_action.AddActionComponent;
-import com.goitho.customerapp.screen.add_action.AddActionModule;
 import com.goitho.customerapp.screen.blog.BlogComponent;
 import com.goitho.customerapp.screen.blog.BlogModule;
 import com.goitho.customerapp.screen.booking.BookingModule;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessComponent;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
-import com.goitho.customerapp.screen.certificate.CertificateComponent;
-import com.goitho.customerapp.screen.certificate.CertificateModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent2;
 import com.goitho.customerapp.screen.dashboard.DashboardModule;
-import com.goitho.customerapp.screen.delete_action.DeleteActionComponent;
-import com.goitho.customerapp.screen.delete_action.DeleteActionModule;
-import com.goitho.customerapp.screen.detail_diary.DetailDiaryComponent;
-import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule;
-
-import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
-import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
-
-
 import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
 import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
 import com.goitho.customerapp.screen.detail_promotion.DetailPromotionComponent;
 import com.goitho.customerapp.screen.detail_promotion.DetailPromotionModule;
-
-import com.goitho.customerapp.screen.diary.DiaryComponent;
-import com.goitho.customerapp.screen.diary.DiaryModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;
 import com.goitho.customerapp.screen.edit_address.EditAddressModule;
-import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryComponent;
-import com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryModule;
 import com.goitho.customerapp.screen.edit_profile.EditProfileComponent;
 import com.goitho.customerapp.screen.edit_profile.EditProfileModule;
-import com.goitho.customerapp.screen.farmer.FarmerComponent;
-import com.goitho.customerapp.screen.farmer.FarmerModule;
-import com.goitho.customerapp.screen.history.HistoryComponent;
-import com.goitho.customerapp.screen.history.HistoryModule;
 import com.goitho.customerapp.screen.home.HomeComponent;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
@@ -114,23 +90,7 @@ public interface ApplicationComponent {
 
     PhoneVerificationComponent plus(PhoneVerificationModule phoneVerificationModule);
 
-    FarmerComponent plus(FarmerModule farmerModule);
-
-    DiaryComponent plus(DiaryModule diaryModule);
-
-    DetailDiaryComponent plus(DetailDiaryModule detailDiaryModule);
-
     EditProfileComponent plus(EditProfileModule editProfileModule);
-
-    CertificateComponent plus(CertificateModule certificateModule);
-
-    EditDetailDiaryComponent plus(EditDetailDiaryModule editDetailDiaryModule);
-
-    AddActionComponent plus(AddActionModule addActionModule);
-
-    DeleteActionComponent plus(DeleteActionModule deleteActionModule);
-
-    HistoryComponent plus(HistoryModule historyModule);
 
     DashboardComponent plus(HomeModule homeModule, OrderModule orderModule,
                             BookingModule bookingModule,
@@ -164,9 +124,6 @@ public interface ApplicationComponent {
     BlogComponent plus(BlogModule blogModule);
 
     PostComponent plus(PostModule postModule);
-
-    BookingSuccessComponent plus(BookingSuccessModule bookingSuccessModule);
-
 
     SupportCenterComponent plus(SupportCenterModule supportCenterModule);
 

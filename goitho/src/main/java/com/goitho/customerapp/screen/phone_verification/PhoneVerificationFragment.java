@@ -1,6 +1,5 @@
 package com.goitho.customerapp.screen.phone_verification;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -13,13 +12,15 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.dialogs.CustomNotiDialog;
 import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
 import com.goitho.customerapp.util.Precondition;
+import com.goitho.customerapp.widgets.customCodeInput.CodeInput;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * Created by MSI on 26/11/2017.
@@ -27,6 +28,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class PhoneVerificationFragment extends BaseFragment implements PhoneVerificationContract.View {
 
+    private static final String TAG = PhoneVerificationFragment.class.getName();
     private PhoneVerificationContract.Presenter mPresenter;
 
 
@@ -39,9 +41,22 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
     @Bind(R.id.layout)
     RelativeLayout layout;
 
+    @Bind(R.id.codeInput)
+    CodeInput codeInput;
+
     @Bind(R.id.txt_send_code)
     TextView txtSendCode;
 
+    @Bind(R.id.txt_error_code)
+    TextView txtError;
+
+    private int userId;
+
+    private String newPassword;
+
+    private String newPhone;
+
+    private int verificationType;
 
     public PhoneVerificationFragment() {
         // Required empty public constructor
@@ -68,6 +83,10 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_phone_verification, container, false);
         ButterKnife.bind(this, view);
+        userId = getActivity().getIntent().getIntExtra(Constants.KEY_USER_ID, 0);
+        newPhone = getActivity().getIntent().getStringExtra(PhoneVerificationActivity.KEY_NEW_PHONE);
+        newPassword = getActivity().getIntent().getStringExtra(PhoneVerificationActivity.KEY_NEW_PASSWORD);
+        verificationType = getActivity().getIntent().getIntExtra(PhoneVerificationActivity.KEY_VERIFICATION_TYPE, 0);
         setBackground();
         return view;
     }
@@ -79,6 +98,18 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         relativeParams.setMargins(0, (heightCover - (heightLogo / 2)), 0, 0);  // left, top, right, bottom
         layout.setLayoutParams(relativeParams);
         txtSendCode.setPaintFlags(txtSendCode.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+    }
+
+    private void initView() {
+        codeInput.setOnTextChangedListener(new CodeInput.OnTextChangedListener() {
+            @Override
+            public void onTextChanged(int size) {
+                if (size == 3) {
+                    txtError.setVisibility(View.GONE);
+                    codeInput.setTextColor(getActivity().getResources().getColor(R.color.lightNavyThree));
+                }
+            }
+        });
     }
 
     @Override
@@ -108,11 +139,32 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         mPresenter.stop();
     }
 
-    @OnClick(R.id.btn_verification)
-    public void verification() {
-        startEditAddressActivity();
+    @OnClick(R.id.btn_active)
+    public void active() {
+        String authCode = "";
+        for (int i = 0; i < codeInput.getCode().length; i++) {
+            authCode += codeInput.getCode()[i];
+        }
+        if (authCode.length() < 4) {
+            showDialog(getString(R.string.text_code_null));
+            return;
+        }
+
+
+        if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_REGISTER) {
+            mPresenter.activeRegisterUser(userId, authCode);
+        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PASSWORD) {
+            mPresenter.activeResetPassword(userId, authCode, newPassword);
+        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PHONE) {
+            mPresenter.activeResetPhone(userId, authCode, newPhone);
+        }
+
     }
 
+    @OnClick(R.id.txt_send_code)
+    public void sendActive() {
+        mPresenter.sendActive(userId);
+    }
 
     @Override
     public void startEditAddressActivity() {
@@ -120,20 +172,31 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
     }
 
     @Override
+    public void showSuccessAndFinishActivity() {
+        CustomNotiDialog dialog = new CustomNotiDialog();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setContent(getString(R.string.text_reset_password_successfully));
+        dialog.setCloseButtonText(getString(R.string.text_agree));
+        dialog.setListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                getActivity().finish();
+            }
+        });
+    }
+
+    @Override
+    public void showDialog(String content) {
+
+        CustomNotiDialog dialog = new CustomNotiDialog();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setContent(content);
+    }
+
+    @Override
     public void showError() {
-        Activity activity = getActivity();
-        if (activity != null) {
-            new SweetAlertDialog(activity, SweetAlertDialog.ERROR_TYPE)
-                    .setTitleText(getString(R.string.text_sweet_dialog_title))
-                    .setContentText(getString(R.string.text_sweet_dialog_check_username_password))
-                    .setConfirmText(getString(R.string.text_sweet_dialog_confirm_text))
-                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            sweetAlertDialog.dismiss();
-                        }
-                    })
-                    .show();
-        }
+        txtError.setVisibility(View.VISIBLE);
+        codeInput.setTextColor(getActivity().getResources().getColor(R.color.tomato));
     }
 }

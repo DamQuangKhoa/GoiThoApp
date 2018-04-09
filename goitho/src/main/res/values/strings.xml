@@ -187,7 +187,9 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_toolbar_profile">THÔNG TIN TÀI KHOẢN</string>
     <string name="text_support_center">Trung tâm hỗ trợ</string>
     <string name="text_address_profile">ĐỊA CHỈ SỬA CHỮA</string>
-
+    <string name="text_username_null">Tài khoản đăng nhập có ít nhất 6 ký tự, \n vui lòng nhập lại</string>
+    <string name="text_password_null">Mật khẩu có ít nhất 6 ký tự, \n vui lòng nhập lại</string>
+    <string name="text_phone_null">Bạn chưa nhập đủ số điện thoại, vui \n lòng nhập lại</string>
     <string name="text_toolbar_account">TÀI KHOẢN</string>
     <string name="text_register_success">TẠO TÀI KHOẢN THÀNH CÔNG</string>
     <string name="text_content_register_success">Xin chúc mừng bạn đã tạo tài khoản thành \n
@@ -228,4 +230,9 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_access_faq">Truy cập FAQ</string>
     <string name="text_call_hotline">Gọi tới hotline CSKH</string>
     <string name="stacklayoutmanager">com.goitho.customerapp.widgets.customStackView.StackLayoutManager</string>
+    <string name="text_new_password">Mật khẩu mới</string>
+    <string name="text_re_enter">Nhập lại</string>
+    <string name="text_reset_password_successfully">Thay đổi mật khẩu thành công, vui lòng đăng nhập lại</string>
+    <string name="text_code_null">Bạn chưa nhập đủ mã xác minh, vui \n lòng nhập lại</string>
+    <string name="text_account_exist">Tài khoản đã tồn tại, vui lòng \n Đăng nhập hoặc chọn Quên mật khẩu</string>
 </resources>

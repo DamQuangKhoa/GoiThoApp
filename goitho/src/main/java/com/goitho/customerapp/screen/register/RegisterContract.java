@@ -9,11 +9,12 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface RegisterContract {
     interface View extends BaseView<Presenter> {
+        void startPhoneVerificationActivity(int userId);
         void startLoginActivity();
-        void startVerificationActivity();
-        void showError();
+        void showErrorAccountExists();
     }
 
     interface Presenter extends BasePresenter {
+        void register(String username, String password, String phone);
     }
 }
