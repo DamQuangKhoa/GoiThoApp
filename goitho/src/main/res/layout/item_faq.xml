@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cnsFaq"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="@dimen/distance_23dp"
+        android:layout_marginRight="@dimen/distance_22dp"
+        android:layout_marginTop="@dimen/distance_16dp"
+
+        app:cardCornerRadius="@dimen/promotion_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/distance_29dp"
+                android:layout_marginEnd="@dimen/size_42dp"
+                android:layout_marginStart="@dimen/distance_27dp"
+                android:layout_marginTop="@dimen/distance_24dp"
+                android:layout_weight="1"
+                android:text="Nếu không hài lòng với thợ hiện tại tôi có được đổi thợ mới không?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="@dimen/promotion_0dp"
+                android:layout_height="@dimen/promotion_0dp"
+                android:layout_marginBottom="@dimen/distance_47dp"
+                android:layout_marginEnd="@dimen/distance_19dp"
+                android:layout_marginStart="@dimen/distance_8dp"
+                android:layout_marginTop="@dimen/distance_30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.354"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.433"
+                app:srcCompat="@drawable/ic_left" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

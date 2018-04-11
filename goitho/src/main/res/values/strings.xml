@@ -228,4 +228,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_access_faq">Truy cập FAQ</string>
     <string name="text_call_hotline">Gọi tới hotline CSKH</string>
     <string name="stacklayoutmanager">com.goitho.customerapp.widgets.customStackView.StackLayoutManager</string>
+    <string name="promotion">Khuyến mãi</string>
+
+    <string name="promotionCode"><b>Mã khuyến mãi NEW034</b>-Tặng 50.000đ cho tài khoản đăng ký mới</string>
 </resources>

@@ -82,10 +82,11 @@
         <activity android:name="com.goitho.customerapp.screen.edit_address.EditAddressActivity"/>
         <!--<activity android:name="com.goitho.customerapp.screen.notification.NotificationActivity"/>-->
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
-        <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.list_faq.ListFaqActivity"/>
+        <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity"/>
 
 
-        <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity">
+        <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
-
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity;
 
 import java.util.List;
 
@@ -19,13 +18,13 @@ import java.util.List;
  * Created by Admin on 4/1/2018.
  */
 
-public class PromotionAdapter extends BaseAdapter {
+public class FAQ_Adapter extends BaseAdapter {
 	Context context=null;
 	List myArray=null;
 	int layoutId;
 	LayoutInflater inflater;
 
-	public PromotionAdapter(Context applicationContext, List list) {
+	public FAQ_Adapter(Context applicationContext, List list) {
 
 		this.context = applicationContext;
 		this.myArray = list;
@@ -52,13 +51,13 @@ public class PromotionAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int i, View view, ViewGroup viewGroup) {
+		
+		view=inflater.inflate(R.layout.item_faq, null);
 
-		view=inflater.inflate(R.layout.item_promotion, null);
 
-
-		Button btnAdd = view.findViewById(R.id.btn_add_promotion);
+		ImageButton btnAdd = view.findViewById(R.id.btnLeft);
 		btnAdd.setOnClickListener(p -> {
-			DetailPromotionActivity.start(context);
+			Toast.makeText(context, "Hello world", Toast.LENGTH_SHORT).show();
 		});
 		return view;
 	}

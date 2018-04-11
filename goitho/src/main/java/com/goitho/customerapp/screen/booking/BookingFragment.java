@@ -16,14 +16,10 @@ import android.widget.ScrollView;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessActivity;
-import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.dashboard.DashboardFragment;
-import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
+import com.goitho.customerapp.screen.list_faq.ListFaqActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
-import com.goitho.customerapp.widgets.CircleTransform;
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -165,7 +161,7 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @Override
     public void startListPromotionActivity() {
-        ListPromotionActivity.start(getActivity());
+        ListFaqActivity.start(getActivity());
     }
 
     public void startCamera() {

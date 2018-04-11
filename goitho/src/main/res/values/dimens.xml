@@ -126,4 +126,6 @@
     <dimen name="distance_60dp">60dp</dimen>
     <dimen name="size_8dp">8dp</dimen>
     <dimen name="size_13dp">13dp</dimen>
+    <dimen name="distance_37dp">37dp</dimen>
+    <dimen name="distance_27dp">27dp</dimen>
 </resources>

@@ -1,7 +1,6 @@
 package com.goitho.customerapp.screen.home;
 
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +20,7 @@ import com.goitho.customerapp.adapter.StackAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.blog.BlogActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
+import com.goitho.customerapp.screen.list_faq.ListFaqActivity;
 import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.customStackView.Align;

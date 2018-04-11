@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.list_promotion;
+package com.goitho.customerapp.screen.list_faq;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,14 +21,14 @@ import javax.inject.Inject;
  * Created by Skull on 11/12/2017.
  */
 
-public class ListPromotionActivity extends BaseActivity {
+public class ListFaqActivity extends BaseActivity {
     @Inject
-    com.goitho.customerapp.screen.list_promotion.ListPromotionPresenter ListPromotionPresenter;
+    ListFaqPresenter ListFaqPresenter;
 
-    ListPromotionFragment fragment;
+    ListFaqFragment fragment;
 
     public static void start(Activity activity) {
-        Intent intent = new Intent(activity, ListPromotionActivity.class);
+        Intent intent = new Intent(activity, ListFaqActivity.class);
         activity.startActivityForResult(intent, Constants.REQUEST_CODE_BOOKING);
     }
 
@@ -43,7 +43,7 @@ public class ListPromotionActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new ListPromotionModule(fragment))
+                .plus(new ListFaqModule(fragment))
                 .inject(this);
 
         Window window = this.getWindow();
@@ -58,14 +58,14 @@ public class ListPromotionActivity extends BaseActivity {
     }
 
     private void initFragment() {
-        fragment = (ListPromotionFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (ListFaqFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = ListPromotionFragment.newInstance();
+            fragment = ListFaqFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(ListPromotionFragment fragment, int frameId) {
+    private void addFragmentToBackStack(ListFaqFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);

@@ -1,19 +1,23 @@
-package com.goitho.customerapp.screen.detail_promotion;
+package com.goitho.customerapp.screen.list_faq;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.goitho.customerapp.R;
+import com.goitho.customerapp.adapter.FAQ_Adapter;
+import com.goitho.customerapp.adapter.PromotionAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.list_faq.ListFaqContract;
 import com.goitho.customerapp.util.Precondition;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,19 +28,22 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  * Created by Mind on 11/12/2017.
  */
 
-public class DetailPromotionFragment extends BaseFragment implements DetailPromotionContract.View {
+public class ListFaqFragment extends BaseFragment implements ListFaqContract.View {
 
-    private DetailPromotionContract.Presenter mPresenter;
+    private ListFaqContract.Presenter mPresenter;
+    public final String TAG = ListFaqFragment.class.getName();
 
-@Bind(R.id.txtPromotion)
-    TextView txtPromotionCode;
 
-    public DetailPromotionFragment() {
+    @Bind(R.id.lvFAQ)
+    ListView lvFAQ;
+
+
+    public ListFaqFragment() {
         // Required empty public constructor
     }
 
-    public static DetailPromotionFragment newInstance() {
-        DetailPromotionFragment fragment = new DetailPromotionFragment();
+    public static ListFaqFragment newInstance() {
+        ListFaqFragment fragment = new ListFaqFragment();
         return fragment;
     }
 
@@ -51,23 +58,42 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
     }
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_detail_promotion, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_faq, container, false);
         ButterKnife.bind(this, view);
-        getIntent();
-        txtPromotionCode.setText(Html.fromHtml(getResources().getString(R.string.promotionCode)));
+        initListView();
+
         return view;
     }
 
+    private void initListView() {
+        List<String> arr = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            arr.add("A");
+            makeLog("Vao Init ListView");
+        }
+
+        FAQ_Adapter adapter = new FAQ_Adapter(
+                getActivity(), arr
+        );
+        makeLog("Adapter: " + adapter);
+        lvFAQ.setAdapter(adapter);
+
+
+    }
+
+    private void makeLog(String message) {
+        Log.e(TAG, message);
+    }
+
     private void getIntent() {
+
     }
 
     @Override
-    public void setPresenter(DetailPromotionContract.Presenter presenter) {
+    public void setPresenter(ListFaqContract.Presenter presenter) {
         this.mPresenter = Precondition.checkNotNull(presenter);
     }
 
@@ -117,10 +143,8 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
     }
 
     @OnClick(R.id.img_back)
-    public void back(){
+    public void back() {
         getActivity().finish();
     }
-
-
 
 }
