@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.adapter.PromotionAdapter;
+import com.goitho.customerapp.adapter.IdPromotionAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.util.Precondition;
 
@@ -32,7 +32,7 @@ public class ListPromotionFragment extends BaseFragment implements ListPromotion
     public final String TAG = ListPromotionFragment.class.getName();
 
 
-    @Bind(R.id.lvPromotion)
+    @Bind(R.id.lv_id_promotion)
     ListView lvPromotion;
 
 
@@ -73,7 +73,7 @@ public class ListPromotionFragment extends BaseFragment implements ListPromotion
             makeLog("Vao Init ListView");
         }
 
-        PromotionAdapter adapter = new PromotionAdapter(
+        IdPromotionAdapter adapter = new IdPromotionAdapter(
                 getActivity(), arr
         );
         makeLog("Adapter: " + adapter);

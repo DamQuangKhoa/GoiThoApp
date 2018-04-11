@@ -45,6 +45,8 @@ import com.goitho.customerapp.screen.phone_verification.PhoneVerificationCompone
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.post.PostComponent;
 import com.goitho.customerapp.screen.post.PostModule;
+import com.goitho.customerapp.screen.promotion.PromotionComponent;
+import com.goitho.customerapp.screen.promotion.PromotionModule;
 import com.goitho.customerapp.screen.question.QuestionComponent;
 import com.goitho.customerapp.screen.question.QuestionModule;
 import com.goitho.customerapp.screen.rating.RatingComponent;
@@ -131,5 +133,7 @@ public interface ApplicationComponent {
     SupportCenterComponent plus(SupportCenterModule supportCenterModule);
 
     QuestionComponent plus(QuestionModule questionModule);
+
+    PromotionComponent plus(PromotionModule promotionModule);
 
 }

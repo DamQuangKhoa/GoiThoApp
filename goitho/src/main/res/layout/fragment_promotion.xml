@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteFifteen"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -15,7 +16,7 @@
         app:contentInsetRight="0dp"
         app:contentInsetStart="0dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -23,31 +24,31 @@
 
             <ImageView
                 android:id="@+id/img_back"
-                android:layout_width="@dimen/size_40dp"
-                android:layout_height="@dimen/size_40dp"
-                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 
             <TextView
+                android:id="@+id/txt_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/distance_8dp"
-                android:layout_toRightOf="@+id/img_back"
                 android:gravity="center"
-                android:text="@string/text_blog"
+                android:text="@string/text_promotion"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
 
-
-        </RelativeLayout>
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <WebView
-        android:id="@+id/wv_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_promotion"
+        android:paddingStart="@dimen/distance_23dp"
+        android:paddingEnd="@dimen/distance_23dp"
+        android:layout_marginTop="@dimen/distance_17dp"/>
 </LinearLayout>

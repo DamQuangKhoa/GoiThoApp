@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/whiteFifteen">
 
     <android.support.v7.widget.Toolbar
@@ -40,7 +40,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
                 android:gravity="start|center_vertical"
-                android:text="Khuyến mãi"
+                android:text="@string/text_add_id_promotion"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_14sp"
@@ -77,15 +77,12 @@
     </android.support.v7.widget.Toolbar>
 
     <ListView
-        android:id="@+id/lvPromotion"
-        android:layout_width="0dp"
+        android:id="@+id/lv_id_promotion"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="24dp"
+        android:paddingStart="@dimen/distance_8dp"
+        android:paddingEnd="@dimen/distance_8dp"
         android:layout_marginTop="16dp"
         android:divider="@null"
-        android:dividerHeight="@dimen/promotion_0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
-</android.support.constraint.ConstraintLayout>
+        android:dividerHeight="@dimen/distance_18dp" />
+</LinearLayout>

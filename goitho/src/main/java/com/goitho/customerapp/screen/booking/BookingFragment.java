@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
+import android.widget.Toolbar;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
@@ -52,8 +52,11 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     @Bind(R.id.layout_image)
     RelativeLayout rlImage;
 
-    @Bind(R.id.sv_success)
-    ScrollView svSuccess;
+    @Bind(R.id.layout_success)
+    LinearLayout llSuccess;
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     public BookingFragment() {
         // Required empty public constructor
@@ -109,23 +112,23 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     }
 
     @OnClick(R.id.layout_continue)
-    public void next(){
+    public void next() {
         layout2.setVisibility(View.VISIBLE);
         layout1.setVisibility(View.GONE);
     }
 
     @OnClick(R.id.layout_booking)
-    public void booking(){
+    public void booking() {
         startBookingSuccess();
     }
 
     @OnClick(R.id.layout_promotion)
-    public void promotion(){
+    public void promotion() {
         startListPromotionActivity();
     }
 
     @OnClick(R.id.layout_capture)
-    public void capture(){
+    public void capture() {
         CustomDialogLibraryCapture dialog = new CustomDialogLibraryCapture();
         dialog.show(getActivity().getFragmentManager(), TAG);
         dialog.setListener(new CustomDialogLibraryCapture.OnOpenCameraListener() {
@@ -144,9 +147,10 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     @OnClick(R.id.layout_go_home)
     public void goHome() {
         Fragment parentFragment = getParentFragment();
-        if(parentFragment != null && parentFragment instanceof DashboardFragment){
-            ((DashboardFragment)parentFragment).openHome();
-        }    }
+        if (parentFragment != null && parentFragment instanceof DashboardFragment) {
+            ((DashboardFragment) parentFragment).openHome();
+        }
+    }
 
     @OnClick(R.id.layout_register)
     public void register() {
@@ -155,7 +159,11 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @Override
     public void startBookingSuccess() {
-        svSuccess.setVisibility(View.VISIBLE);
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
+        params.height = 47;
+        toolbar.setLayoutParams(params);
+
+        llSuccess.setVisibility(View.VISIBLE);
         layout2.setVisibility(View.GONE);
     }
 
@@ -182,13 +190,13 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_PICK_IMAGE) {
             final Uri imageUri = data.getData();
-           // Picasso.with(getContext()).load(imageUri).transform(new CircleTransform()).into(imgAvatar);
+            // Picasso.with(getContext()).load(imageUri).transform(new CircleTransform()).into(imgAvatar);
 
         }
 
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_IMAGE) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
-           //Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
+            //Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
 
         }
     }

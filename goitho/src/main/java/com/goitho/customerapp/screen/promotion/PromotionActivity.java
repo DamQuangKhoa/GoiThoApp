@@ -1,4 +1,4 @@
-package com.goitho.customerapp.screen.detail_promotion;
+package com.goitho.customerapp.screen.promotion;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,28 +7,30 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.demo.architect.data.model.PostEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.constants.Constants;
 
 import javax.inject.Inject;
 
 /**
- * Created by Skull on 11/12/2017.
+ * Created by MSI on 26/11/2017.
  */
 
-public class DetailPromotionActivity extends BaseActivity {
+public class PromotionActivity extends BaseActivity {
     @Inject
-    DetailPromotionPresenter DetailPromotionPresenter;
+    PromotionPresenter postPresenter;
 
-    DetailPromotionFragment fragment;
+    PromotionFragment fragment;
 
-    public static void start(Context context) {
-        Intent intent = new Intent(context, DetailPromotionActivity.class);
+    public static void start(Context context, PostEntity item) {
+        Intent intent = new Intent(context, PromotionActivity.class);
+        intent.putExtra(Constants.KEY_POST_ACTIVITY, item);
         context.startActivity(intent);
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,29 +41,24 @@ public class DetailPromotionActivity extends BaseActivity {
 
         // Create the presenter
         CoreApplication.getInstance().getApplicationComponent()
-                .plus(new DetailPromotionModule(fragment))
+                .plus(new PromotionModule(fragment))
                 .inject(this);
 
-        Window window = this.getWindow();
-        // clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        Window w = getWindow(); // in Activity's onCreate() for instance
 
-// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-// finally change the color
-//        window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
     }
 
     private void initFragment() {
-        fragment = (DetailPromotionFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        fragment = (PromotionFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = DetailPromotionFragment.newInstance();
+            fragment = PromotionFragment.newInstance();
             addFragmentToBackStack(fragment, R.id.fragmentContainer);
         }
     }
 
-    private void addFragmentToBackStack(DetailPromotionFragment fragment, int frameId) {
+    private void addFragmentToBackStack(PromotionFragment fragment, int frameId) {
         Precondition.checkNotNull(fragment);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);

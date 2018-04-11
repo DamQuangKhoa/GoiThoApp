@@ -1,67 +1,98 @@
 package com.goitho.customerapp.adapter;
 
 import android.content.Context;
-import android.util.Log;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.TextView;
 
-
+import com.demo.architect.data.model.PromotionEntity;
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity;
+import com.goitho.customerapp.widgets.RoundishImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 /**
- * Created by Admin on 4/1/2018.
+ * Created by Skull on 11/12/2017.
  */
 
-public class PromotionAdapter extends BaseAdapter {
-	Context context=null;
-	List myArray=null;
-	int layoutId;
-	LayoutInflater inflater;
+public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.PromotionHolder> {
 
-	public PromotionAdapter(Context applicationContext, List list) {
+    private List<PromotionEntity> list;
+    private Context context;
+    private final OnItemClickListener listener;
 
-		this.context = applicationContext;
-		this.myArray = list;
-		inflater = (LayoutInflater.from(applicationContext));
-		makeLog(myArray.size()+" ");
-	}
-	public void makeLog(String message){
-		Log.e("ListFaqFragment",message);
-	}
-	@Override
-	public int getCount() {
-		return myArray.size();
-	}
+    public PromotionAdapter(List<PromotionEntity> list, Context context, OnItemClickListener listener) {
+        this.list = list;
+        this.context = context;
+        this.listener = listener;
+    }
 
-	@Override
-	public Object getItem(int i) {
-		return myArray.get(i);
-	}
+    public void setData(List<PromotionEntity> list) {
+        this.list = list;
+        notifyDataSetChanged();
+    }
 
-	@Override
-	public long getItemId(int i) {
-		return 0;
-	}
+    @Override
+    public PromotionHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_promotion, parent, false);
+        PromotionHolder holder = new PromotionHolder(view);
+        return holder;
+    }
 
-	@Override
-	public View getView(int i, View view, ViewGroup viewGroup) {
+    @Override
+    public void onBindViewHolder(PromotionHolder holder, int position) {
+        if (list != null && 0 <= position && position < list.size()) {
+            setDataToViews(holder, position);
+            holder.bind(list.get(position), listener);
+        }
 
-		view=inflater.inflate(R.layout.item_promotion, null);
+    }
 
+    private void setDataToViews(PromotionHolder holder, int position) {
+        Picasso.with(context).load(R.drawable.img_promotion).into(holder.imgCover);
+        holder.txtTitle.setText(list.get(position).getPromotionName());
+        holder.txtDate.setText(list.get(position).getPromotionDate());
+        holder.txtIdPromotion.setText(list.get(position).getPromotionContent()+"");
 
-		Button btnAdd = view.findViewById(R.id.btn_add_promotion);
-		btnAdd.setOnClickListener(p -> {
-			DetailPromotionActivity.start(context);
-		});
-		return view;
-	}
+    }
 
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    public class PromotionHolder extends RecyclerView.ViewHolder {
+
+        private RoundishImageView imgCover;
+        private TextView txtTitle;
+        private TextView txtDate;
+        private TextView txtIdPromotion;
+
+        private PromotionHolder(View v) {
+            super(v);
+            imgCover = (RoundishImageView) v.findViewById(R.id.img_cover);
+            txtTitle =  (TextView) v.findViewById(R.id.txt_title);
+            txtDate = (TextView) v.findViewById(R.id.txt_expiry_date);
+            txtIdPromotion = (TextView) v.findViewById(R.id.txt_id_promotion);
+        }
+
+        private void bind(final PromotionEntity item, final OnItemClickListener listener) {
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(PromotionEntity item);
+    }
 
 }

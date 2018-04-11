@@ -71,7 +71,7 @@
     <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
     <string name="text_id_promotion_booking_success">Mã Khuyến mãi:</string>
-    <string name="text_id_promotion_booking"><b><i>Mã Khuyến mãi NEW034</i></b> - Tặng 50.000đ cho tài khoản đăng ký mới.</string>
+    <string name="text_id_promotion_booking">Mã Khuyến mãi</string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -141,7 +141,7 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_setting">Cài đặt</string>
     <string name="text_order">Đặt lịch sửa chữa</string>
     <string name="text_send_rating">Gửi đánh giá</string>
-    <string name="text_promotion">KHUYẾN MÃI</string>
+    <string name="text_promotion">Khuyến mãi</string>
     <string name="text_booking_success">ĐẶT LỊCH THÀNH CÔNG</string>
     <string name="text_content_booking_success">Mã đơn hàng: A123. Gọi Thợ sẽ liên hệ với bạn sau ít \n phút để xác nhận thông tin.</string>
     <string name="text_related_posts">Bài viết liên quan</string>
@@ -240,5 +240,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_reset_password_successfully">Thay đổi mật khẩu thành công, vui lòng đăng nhập lại</string>
     <string name="text_code_null">Bạn chưa nhập đủ mã xác minh, vui \n lòng nhập lại</string>
     <string name="text_account_exist">Tài khoản đã tồn tại, vui lòng \n Đăng nhập hoặc chọn Quên mật khẩu</string>
+    <string name="text_add_id_promotion">Thêm mã khuyến mãi</string>
 
 </resources>
