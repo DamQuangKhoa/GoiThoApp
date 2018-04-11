@@ -128,4 +128,6 @@
     <dimen name="size_13dp">13dp</dimen>
     <dimen name="distance_37dp">37dp</dimen>
     <dimen name="distance_27dp">27dp</dimen>
+    <dimen name="distance_42dp">42dp</dimen>
+    <dimen name="size_26dp">26dp</dimen>
 </resources>

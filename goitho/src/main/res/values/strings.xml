@@ -71,7 +71,7 @@
     <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
     <string name="text_id_promotion_booking_success">Mã Khuyến mãi:</string>
-    <string name="text_id_promotion_booking">Mã Khuyến mãi</string>
+    <string name="text_id_promotion_booking"><b><i>Mã Khuyến mãi NEW034</i></b> - Tặng 50.000đ cho tài khoản đăng ký mới.</string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -215,8 +215,8 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_customer_care">BỘ PHẬN CHĂM SÓC KHÁCH HÀNG</string>
     <string name="text_blog">Blog</string>
     <string name="promotion_welcome">Chào mừng thành viên mới</string>
-    <string name="promotion_text">Mã khuyến mãi:</string>
-    <string name="promotion_expired">Hạn sử dụng:</string>
+    <string name="promotion_text">Mã khuyến mãi</string>
+    <string name="promotion_expired">Hạn sử dụng: \u0020</string>
     <string name="promotion_rules">Điều khoản sử dụng:</string>
     <string name="promotion_button_text">TRUNG TÂM HỖ TRỢ</string>
     <string name="promotion_text_example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis finibus massa, eget feugiat justo ullamcorper quis. Aenean et neque eu nisi eleifend ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae mi est. Quisque eget nulla nulla. Etiam eget bibendum ligula. Cras venenatis, nunc nec convallis accumsan, mi lacus bibendum elit, vitae vestibulum felis enim nec orci.</string>

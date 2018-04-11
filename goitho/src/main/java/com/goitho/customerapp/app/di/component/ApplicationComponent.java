@@ -13,19 +13,8 @@ import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent2;
 import com.goitho.customerapp.screen.dashboard.DashboardModule;
-
-import com.goitho.customerapp.screen.delete_action.DeleteActionModule_ProvideDeleteActionContractViewFactory;
-import com.goitho.customerapp.screen.delete_action.DeleteActionModule_ProvideDeleteActionContractViewFactory;
-import com.goitho.customerapp.screen.detail_diary.DetailDiaryModule_ProvideDetailDiaryContractViewFactory;
-
 import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
 import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
-
-
-
-import com.goitho.customerapp.screen.detail_order.DetailOrderComponent;
-import com.goitho.customerapp.screen.detail_order.DetailOrderModule;
-
 import com.goitho.customerapp.screen.detail_promotion.DetailPromotionComponent;
 import com.goitho.customerapp.screen.detail_promotion.DetailPromotionModule;
 import com.goitho.customerapp.screen.edit_address.EditAddressComponent;

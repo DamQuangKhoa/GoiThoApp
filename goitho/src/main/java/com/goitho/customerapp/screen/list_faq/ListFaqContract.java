@@ -10,10 +10,8 @@ import com.goitho.customerapp.app.base.BaseView;
 public interface ListFaqContract {
     interface View extends BaseView<Presenter> {
         void showError();
-        void finishActivity();
     }
 
     interface Presenter extends BasePresenter {
-        void createActionProduct(String name);
     }
 }

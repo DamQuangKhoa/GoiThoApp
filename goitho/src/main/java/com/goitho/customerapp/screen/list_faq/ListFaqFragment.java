@@ -11,9 +11,7 @@ import android.widget.ListView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.FAQ_Adapter;
-import com.goitho.customerapp.adapter.PromotionAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.screen.list_faq.ListFaqContract;
 import com.goitho.customerapp.util.Precondition;
 
 import java.util.ArrayList;
@@ -137,10 +135,6 @@ public class ListFaqFragment extends BaseFragment implements ListFaqContract.Vie
         }
     }
 
-    @Override
-    public void finishActivity() {
-        getActivity().finish();
-    }
 
     @OnClick(R.id.img_back)
     public void back() {

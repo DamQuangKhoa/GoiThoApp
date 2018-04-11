@@ -62,20 +62,13 @@
         <activity android:name="com.goitho.customerapp.screen.login.LoginActivity" />
         <activity android:name="com.goitho.customerapp.app.permission.PermissionActivity" />
         <activity android:name="com.goitho.customerapp.screen.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
-
-        <activity android:name="com.goitho.customerapp.screen.farmer.FarmerActivity" />
-        <activity android:name="com.goitho.customerapp.screen.diary.DiaryActivity" />
-        <activity android:name="com.goitho.customerapp.screen.detail_diary.DetailDiaryActivity" />
         <activity android:name="com.goitho.customerapp.screen.edit_profile.EditProfileActivity" />
-        <activity android:name="com.goitho.customerapp.screen.certificate.CertificateActivity" />
-        <activity android:name="com.goitho.customerapp.screen.edit_detail_diary.EditDetailDiaryActivity" />
-        <activity android:name="com.goitho.customerapp.screen.add_action.AddActionActivity" />
-        <activity android:name="com.goitho.customerapp.screen.delete_action.DeleteActionActivity" />
-        <activity android:name="com.goitho.customerapp.screen.history.HistoryActivity" />
-
         <activity android:name="com.goitho.customerapp.screen.register.RegisterActivity"/>
         <activity android:name="com.goitho.customerapp.screen.landing.LandingActivity"/>
         <activity android:name="com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity"/>
@@ -84,30 +77,13 @@
         <activity android:name="com.goitho.customerapp.screen.user.UserActivity"/>
         <activity android:name="com.goitho.customerapp.screen.list_faq.ListFaqActivity"/>
         <activity android:name="com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity"/>
-
-
-        <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-
+        <activity android:name="com.goitho.customerapp.screen.list_promotion.ListPromotionActivity"/>
         <activity android:name="com.goitho.customerapp.screen.detail_order.DetailOrderActivity" />
         <activity android:name=".screen.register_success.RegisterSuccessActivity" />
         <activity android:name=".screen.rating.RatingActivity" />
         <activity android:name=".screen.dashboard.DashboardActivity" />
-
         <activity android:name=".screen.blog.BlogActivity"/>
         <activity android:name=".screen.post.PostActivity"/>
-        <activity android:name=".screen.booking_success.BookingSuccessActivity"/>
-
-
-
-
         <activity android:name=".screen.question.QuestionActivity" />
         <activity android:name=".screen.support_center.SupportCenterActivity" />
 
