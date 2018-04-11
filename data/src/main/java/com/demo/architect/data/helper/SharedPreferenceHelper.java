@@ -2,9 +2,9 @@ package com.demo.architect.data.helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 
-import com.demo.architect.data.model.EmployeeEntity;
-import com.demo.architect.data.model.FarmerEntity;
+import com.demo.architect.data.model.UserEntity;
 import com.google.gson.Gson;
 
 /**
@@ -14,10 +14,8 @@ import com.google.gson.Gson;
 public class SharedPreferenceHelper {
     private static final String PREFERENCE_MAIN = "com.demo.uyminhduc.MAIN";
     private static final String MY_PREFERENCE = "com.demo.uyminhduc.MAIN.MY_PREFERENCE";
-    private static final String ACCESS_TOKEN = "access_token";
-    private static final String FARMER_USER = "FARMER_USER";
-    private static final String EMPLOYEE_USER = "EMPLOYEE_USER";
     private static final String WAS_STARTED = "WAS_STARTED";
+    private static final String USER = "USER";
     private SharedPreferences sharedPreferences;
 
     private static SharedPreferenceHelper _instance;
@@ -60,34 +58,25 @@ public class SharedPreferenceHelper {
     public boolean existKey(String key) {
         return sharedPreferences.contains(key);
     }
-
-    public void pushEmployeeObject( EmployeeEntity object) {
+    public void pushUserObject(UserEntity object) {
         SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(object);
-        prefsEditor.putString(EMPLOYEE_USER, json);
+        String json = "";
+        if (object != null) {
+            Gson gson = new Gson();
+            json = gson.toJson(object);
+        }
+        prefsEditor.putString(USER, json);
         prefsEditor.commit();
     }
 
-    public EmployeeEntity getEmployeeObject ( String def) {
+    public UserEntity getUserObject() {
         Gson gson = new Gson();
-        String json = sharedPreferences.getString(EMPLOYEE_USER, def);
-        EmployeeEntity obj = gson.fromJson(json, EmployeeEntity.class);
+        String json = sharedPreferences.getString(USER, "");
+        UserEntity obj = null;
+        if (!TextUtils.isEmpty(json)) {
+            obj = gson.fromJson(json, UserEntity.class);
+        }
         return obj;
     }
 
-    public void pushFarmerObject( FarmerEntity object) {
-        SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(object);
-        prefsEditor.putString(FARMER_USER, json);
-        prefsEditor.commit();
-    }
-
-    public FarmerEntity getFarmerObject ( String def) {
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString(FARMER_USER, def);
-        FarmerEntity obj = gson.fromJson(json, FarmerEntity.class);
-        return obj;
-    }
 }

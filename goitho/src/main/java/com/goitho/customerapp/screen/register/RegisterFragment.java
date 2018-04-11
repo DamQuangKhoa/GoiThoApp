@@ -1,16 +1,19 @@
 package com.goitho.customerapp.screen.register;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.dialogs.CustomNotiDialog;
 import com.goitho.customerapp.screen.login.LoginActivity;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity;
 import com.goitho.customerapp.util.Precondition;
@@ -18,7 +21,6 @@ import com.goitho.customerapp.util.Precondition;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * Created by MSI on 26/11/2017.
@@ -26,8 +28,17 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class RegisterFragment extends BaseFragment implements RegisterContract.View {
 
+    private static final String TAG = RegisterFragment.class.getName();
     private RegisterContract.Presenter mPresenter;
 
+    @Bind(R.id.et_username)
+    EditText etUsername;
+
+    @Bind(R.id.et_password)
+    EditText etPassword;
+
+    @Bind(R.id.et_phone)
+    EditText etPhone;
 
     @Bind(R.id.img_cover)
     ImageView imgCover;
@@ -37,6 +48,8 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.V
 
     @Bind(R.id.layout)
     RelativeLayout layout;
+
+    private boolean isClicked = false;
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -110,35 +123,59 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.V
 
     @OnClick(R.id.btn_register)
     public void register() {
-        startVerificationActivity();
+        if (etUsername.getText().toString().length() < 6) {
+            startDialogNoti(getActivity().getString(R.string.text_username_null));
+            return;
+        }
+        if (etPassword.getText().toString().length() < 6) {
+            startDialogNoti(getActivity().getString(R.string.text_password_null));
+            return;
+        }
+        if (etPhone.getText().toString().length() < 10) {
+            startDialogNoti(getActivity().getString(R.string.text_phone_null));
+            return;
+        }
+        mPresenter.register(etUsername.getText().toString(), etPassword.getText().toString(),
+                etPhone.getText().toString());
+    }
+
+    @OnClick(R.id.img_see_password)
+    public void seePassword() {
+        if (!isClicked) {
+            isClicked = true;
+        } else {
+            isClicked = false;
+        }
+        etPassword.setInputType(
+                !isClicked ? InputType.TYPE_TEXT_VARIATION_PASSWORD : InputType.TYPE_CLASS_TEXT);
+        etPassword.setTransformationMethod(
+                !isClicked ? PasswordTransformationMethod.getInstance() : null);
+    }
+
+    public void startDialogNoti(String content) {
+        CustomNotiDialog dialog = new CustomNotiDialog();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setContent(content);
+    }
+
+    @Override
+    public void startPhoneVerificationActivity(int userId) {
+        PhoneVerificationActivity.startFromRegister(getActivity(), userId);
+        getActivity().finish();
     }
 
     @Override
     public void startLoginActivity() {
         LoginActivity.start(getActivity());
-    }
-
-    @Override
-    public void startVerificationActivity() {
-        PhoneVerificationActivity.start(getActivity());
+        getActivity().finish();
     }
 
 
     @Override
-    public void showError() {
-        Activity activity = getActivity();
-        if (activity != null) {
-            new SweetAlertDialog(activity, SweetAlertDialog.ERROR_TYPE)
-                    .setTitleText(getString(R.string.text_sweet_dialog_title))
-                    .setContentText(getString(R.string.text_sweet_dialog_check_username_password))
-                    .setConfirmText(getString(R.string.text_sweet_dialog_confirm_text))
-                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            sweetAlertDialog.dismiss();
-                        }
-                    })
-                    .show();
-        }
+    public void showErrorAccountExists() {
+        CustomNotiDialog dialog = new CustomNotiDialog();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setContent(getString(R.string.text_account_exist));
+        dialog.setCloseButtonText(getString(R.string.text_agree));
     }
 }

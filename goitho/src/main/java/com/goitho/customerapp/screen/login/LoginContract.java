@@ -10,12 +10,16 @@ import com.goitho.customerapp.app.base.BaseView;
 public interface LoginContract {
     interface View extends BaseView<Presenter> {
         void startRegisterActivity();
-        void startDialogDashboardActivity();
+        void startDashboardActivity();
         void startDialogForgetPass();
+        void startPhoneVerificationActivity(int userId, String newPassword);
+        void showError();
+        void showErrorResetPassword();
 
     }
 
     interface Presenter extends BasePresenter {
-        void login();
+        void login(String phone, String password);
+        void resetPassword(String username, String phone, String newPassword);
     }
 }

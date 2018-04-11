@@ -1,32 +1,18 @@
 package com.goitho.customerapp.app.di.module;
 
-import com.demo.architect.data.repository.action.product.remote.ActionProductRepository;
-import com.demo.architect.data.repository.action.product.remote.ActionProductRepositoryImple;
-import com.demo.architect.data.repository.activity.remote.ActivityRepository;
-import com.demo.architect.data.repository.activity.remote.ActivityRepositoryImpl;
+import com.demo.architect.data.repository.auth.remote.AuthRepository;
+import com.demo.architect.data.repository.auth.remote.AuthRepositoryImpl;
 import com.demo.architect.data.repository.base.local.LocalRepository;
 import com.demo.architect.data.repository.base.remote.RemoteRepository;
 import com.demo.architect.data.repository.base.remote.RemoteRepositoryImpl;
 import com.demo.architect.data.repository.base.local.DatabaseRealm;
 import com.demo.architect.data.repository.base.local.LocalRepositoryImpl;
-import com.demo.architect.data.repository.bill.remote.BillRepository;
-import com.demo.architect.data.repository.bill.remote.BillRepositoryImpl;
-import com.demo.architect.data.repository.buy.fetilizer.activity.remote.ActivityBuyFertilizerRepository;
-import com.demo.architect.data.repository.buy.fetilizer.activity.remote.ActivityBuyFertilizerRepositoryImpl;
-import com.demo.architect.data.repository.certificate.remote.CertificateRepository;
-import com.demo.architect.data.repository.certificate.remote.CertificateRepositoryImpl;
-import com.demo.architect.data.repository.employee.remote.EmployeeRepository;
-import com.demo.architect.data.repository.employee.remote.EmployeeRepositoryImpl;
-import com.demo.architect.data.repository.farmer.remote.FarmerRepository;
-import com.demo.architect.data.repository.farmer.remote.FarmerRepositoryImpl;
-import com.demo.architect.data.repository.login.remote.LoginRepository;
-import com.demo.architect.data.repository.login.remote.LoginRepositoryImpl;
-import com.demo.architect.data.repository.product.remote.ProductRepository;
-import com.demo.architect.data.repository.product.remote.ProductRepositoryImpl;
+import com.demo.architect.data.repository.order.remote.OrderRepository;
+import com.demo.architect.data.repository.order.remote.OrderRepositoryImpl;
+import com.demo.architect.data.repository.profile.remote.ProfileRepository;
+import com.demo.architect.data.repository.profile.remote.ProfileRepositoryImpl;
 import com.demo.architect.data.repository.upload.remote.UploadRepository;
 import com.demo.architect.data.repository.upload.remote.UploadRepositoryImpl;
-import com.demo.architect.data.repository.use.fertilizer.activity.remote.ActivityUseFertilizerRepository;
-import com.demo.architect.data.repository.use.fertilizer.activity.remote.ActivityUseFertilizerRepositoryImpl;
 
 import javax.inject.Singleton;
 
@@ -56,42 +42,13 @@ public class RepositoryModule {
 
     @Provides
     @Singleton
-    BillRepository provideBillRepository(BillRepositoryImpl billRepository) {
-        return billRepository;
-    }
-    @Provides
-    @Singleton
-    LoginRepository provideLoginRepository(LoginRepositoryImpl apiServiceImp) {
+    AuthRepository provideAuthRepository(AuthRepositoryImpl apiServiceImp) {
         return apiServiceImp;
     }
 
     @Provides
     @Singleton
-    EmployeeRepository provideEmployeeRepository(EmployeeRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    FarmerRepository provideFarmerRepository(FarmerRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    ActivityRepository provideActivityRepository(ActivityRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    ProductRepository provideProductRepository(ProductRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    ActionProductRepository provideActionProductRepository(ActionProductRepositoryImple apiServiceImp) {
+    ProfileRepository provideProfileRepository(ProfileRepositoryImpl apiServiceImp) {
         return apiServiceImp;
     }
 
@@ -103,19 +60,7 @@ public class RepositoryModule {
 
     @Provides
     @Singleton
-    CertificateRepository provideCertificateRepository(CertificateRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    ActivityBuyFertilizerRepository provideActivityBuyFertilizerRepository(ActivityBuyFertilizerRepositoryImpl apiServiceImp) {
-        return apiServiceImp;
-    }
-
-    @Provides
-    @Singleton
-    ActivityUseFertilizerRepository provideActivityUseFertilizerRepository(ActivityUseFertilizerRepositoryImpl apiServiceImp) {
+    OrderRepository provideOrderRepository(OrderRepositoryImpl apiServiceImp) {
         return apiServiceImp;
     }
 }

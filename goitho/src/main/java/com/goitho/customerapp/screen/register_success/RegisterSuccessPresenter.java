@@ -3,14 +3,7 @@ package com.goitho.customerapp.screen.register_success;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-import com.demo.architect.domain.usecase.BaseUseCase;
-import com.demo.architect.domain.usecase.GetListEmployeeUseCase;
-import com.demo.architect.domain.usecase.GetListFarmerUsecase;
-import com.demo.architect.domain.usecase.GetProductUsecase;
-import com.demo.architect.domain.usecase.LoginEmployeeUsecase;
-import com.demo.architect.domain.usecase.LoginFarmerUsecase;
 
 import javax.inject.Inject;
 

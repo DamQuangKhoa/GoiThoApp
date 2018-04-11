@@ -45,7 +45,7 @@ public class PostImageUsecase extends BaseUseCase {
             public void onError(Throwable e) {
                 Log.d(TAG, "onError: " + e.toString());
                 if (useCaseCallback != null) {
-                    useCaseCallback.onError(new PostImageUsecase.ErrorValue());
+                    useCaseCallback.onError(new ErrorValue());
                 }
             }
 
@@ -53,9 +53,9 @@ public class PostImageUsecase extends BaseUseCase {
             public void onNext(UploadEntity data) {
                 if (useCaseCallback != null) {
                     if (data != null ) {
-                        useCaseCallback.onSuccess(new PostImageUsecase.ResponseValue(data));
+                        useCaseCallback.onSuccess(new ResponseValue(data));
                     } else {
-                        useCaseCallback.onError(new PostImageUsecase.ErrorValue());
+                        useCaseCallback.onError(new ErrorValue());
                     }
                 }
             }

@@ -3,10 +3,7 @@ package com.goitho.customerapp.screen.landing;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-import com.goitho.customerapp.app.CoreApplication;
-import com.goitho.customerapp.manager.UserManager;
 
 import javax.inject.Inject;
 

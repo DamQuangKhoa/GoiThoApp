@@ -1,7 +1,6 @@
 package com.goitho.customerapp.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.demo.architect.data.model.RatingEntity;
-import com.demo.architect.data.model.offline.ImageEntity;
-import com.demo.architect.utils.view.RoundedImageView;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;

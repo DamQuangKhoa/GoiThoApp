@@ -21,13 +21,39 @@ import javax.inject.Inject;
  */
 
 public class PhoneVerificationActivity extends BaseActivity {
+
+    public static final int VERIFICATION_TYPE_REGISTER = 1;
+    public static final int VERIFICATION_TYPE_RESET_PASSWORD = 2;
+    public static final int VERIFICATION_TYPE_RESET_PHONE = 3;
+    public static final String KEY_VERIFICATION_TYPE = "KEY_VERIFICATION_TYPE";
+    public static final String KEY_NEW_PHONE = "KEY_NEW_PHONE";
+    public static final String KEY_NEW_PASSWORD = "KEY_NEW_PASSWORD";
+
     @Inject
     PhoneVerificationPresenter registerPresenter;
 
     PhoneVerificationFragment fragment;
 
-    public static void start(Context context) {
+    public static void startFromResetPhone(Context context, int userId, String newPhone) {
         Intent intent = new Intent(context, PhoneVerificationActivity.class);
+        intent.putExtra(Constants.KEY_USER_ID, userId);
+        intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_RESET_PHONE);
+        intent.putExtra(KEY_NEW_PHONE, newPhone);
+        context.startActivity(intent);
+    }
+
+    public static void startFromResetPassword(Context context, int userId, String newPassword) {
+        Intent intent = new Intent(context, PhoneVerificationActivity.class);
+        intent.putExtra(Constants.KEY_USER_ID, userId);
+        intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_RESET_PASSWORD);
+        intent.putExtra(KEY_NEW_PASSWORD, newPassword);
+        context.startActivity(intent);
+    }
+
+    public static void startFromRegister(Context context, int userId) {
+        Intent intent = new Intent(context, PhoneVerificationActivity.class);
+        intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_REGISTER);
+        intent.putExtra(Constants.KEY_USER_ID, userId);
         context.startActivity(intent);
     }
 

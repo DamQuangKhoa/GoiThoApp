@@ -1,13 +1,9 @@
 package com.goitho.customerapp.screen.edit_address;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,26 +11,17 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.demo.architect.data.model.offline.ImageEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessActivity;
-import com.goitho.customerapp.screen.register_success.RegisterSuccessComponent;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

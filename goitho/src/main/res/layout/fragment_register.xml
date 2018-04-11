@@ -57,27 +57,42 @@
                 android:textColorHint="@color/black"
                 android:textSize="@dimen/text_14sp" />
 
-            <EditText
-                android:id="@+id/et_password"
+            <RelativeLayout
                 android:layout_width="@dimen/size_319dp"
                 android:layout_height="@dimen/size_40dp"
-                android:layout_marginTop="@dimen/distance_16dp"
-                android:background="@drawable/bg_round_corner_edtittext_white_three_background"
-                android:drawableEnd="@drawable/ic_show_pass"
-                android:drawablePadding="@dimen/distance_10dp"
-                android:drawableStart="@drawable/ic_lock"
-                android:ellipsize="end"
-                android:hint="@string/text_password"
-                android:inputType="textPassword"
-                android:paddingLeft="@dimen/distance_16dp"
-                android:paddingRight="@dimen/distance_16dp"
-                android:scrollHorizontally="true"
-                android:singleLine="true"
-                android:textColorHint="@color/black"
-                android:textSize="@dimen/text_14sp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_24dp">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="@dimen/size_319dp"
+                    android:layout_height="@dimen/size_40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_round_corner_edtittext_white_three_background"
+                    android:drawablePadding="@dimen/distance_10dp"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:ellipsize="end"
+                    android:hint="@string/text_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/distance_16dp"
+                    android:paddingRight="@dimen/distance_44dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/text_14sp" />
+
+                <ImageView
+                    android:id="@+id/img_see_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance_16dp"
+                    android:src="@drawable/ic_show_pass" />
+            </RelativeLayout>
 
             <EditText
-                android:id="@+id/et_id"
+                android:id="@+id/et_phone"
                 android:layout_width="@dimen/size_319dp"
                 android:layout_height="@dimen/size_40dp"
                 android:layout_marginTop="@dimen/distance_16dp"

@@ -13,7 +13,6 @@ public interface DetailPromotionContract {
         void finishActivity();
     }
 
-    interface Presenter extends BasePresenter {
-        void createActionProduct(String name);
+        interface Presenter extends BasePresenter {
     }
 }

@@ -1,7 +1,6 @@
 package com.goitho.customerapp.screen.detail_order;
 
 import android.graphics.BitmapFactory;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -11,7 +10,6 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 

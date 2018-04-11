@@ -14,6 +14,5 @@ public interface ListPromotionContract {
     }
 
     interface Presenter extends BasePresenter {
-        void createActionProduct(String name);
     }
 }

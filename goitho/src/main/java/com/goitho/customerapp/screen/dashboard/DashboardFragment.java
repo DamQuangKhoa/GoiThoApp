@@ -1,14 +1,11 @@
 package com.goitho.customerapp.screen.dashboard;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.KeyCharacterMap;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +19,6 @@ import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.screen.booking.BookingFragment;
 import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.booking.BookingPresenter;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessFragment;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessModule;
-import com.goitho.customerapp.screen.booking_success.BookingSuccessPresenter;
 import com.goitho.customerapp.screen.home.HomeFragment;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.home.HomePresenter;
