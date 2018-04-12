@@ -4,15 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Window;
-import android.view.WindowManager;
 
-import com.demo.architect.data.model.PostEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
 import com.goitho.customerapp.app.base.BaseActivity;
 import com.goitho.customerapp.app.di.Precondition;
-import com.goitho.customerapp.constants.Constants;
 
 import javax.inject.Inject;
 
@@ -26,9 +22,8 @@ public class PromotionActivity extends BaseActivity {
 
     PromotionFragment fragment;
 
-    public static void start(Context context, PostEntity item) {
+    public static void start(Context context) {
         Intent intent = new Intent(context, PromotionActivity.class);
-        intent.putExtra(Constants.KEY_POST_ACTIVITY, item);
         context.startActivity(intent);
     }
 
@@ -43,10 +38,6 @@ public class PromotionActivity extends BaseActivity {
         CoreApplication.getInstance().getApplicationComponent()
                 .plus(new PromotionModule(fragment))
                 .inject(this);
-
-        Window w = getWindow(); // in Activity's onCreate() for instance
-
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 

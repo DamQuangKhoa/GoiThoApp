@@ -2,11 +2,9 @@ package com.goitho.customerapp.screen.edit_address;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
-import android.view.WindowManager;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.CoreApplication;
@@ -42,10 +40,6 @@ public class EditAddressActivity extends BaseActivity {
                 .inject(this);
 
         Window w = getWindow(); // in Activity's onCreate() for instance
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
-        }
 
     }
 

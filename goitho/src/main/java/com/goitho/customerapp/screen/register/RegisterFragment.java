@@ -123,20 +123,21 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.V
 
     @OnClick(R.id.btn_register)
     public void register() {
-        if (etUsername.getText().toString().length() < 6) {
-            startDialogNoti(getActivity().getString(R.string.text_username_null));
-            return;
-        }
-        if (etPassword.getText().toString().length() < 6) {
-            startDialogNoti(getActivity().getString(R.string.text_password_null));
-            return;
-        }
-        if (etPhone.getText().toString().length() < 10) {
-            startDialogNoti(getActivity().getString(R.string.text_phone_null));
-            return;
-        }
-        mPresenter.register(etUsername.getText().toString(), etPassword.getText().toString(),
-                etPhone.getText().toString());
+//        if (etUsername.getText().toString().length() < 6) {
+//            startDialogNoti(getActivity().getString(R.string.text_username_null));
+//            return;
+//        }
+//        if (etPassword.getText().toString().length() < 6) {
+//            startDialogNoti(getActivity().getString(R.string.text_password_null));
+//            return;
+//        }
+//        if (etPhone.getText().toString().length() < 10) {
+//            startDialogNoti(getActivity().getString(R.string.text_phone_null));
+//            return;
+//        }
+//        mPresenter.register(etUsername.getText().toString(), etPassword.getText().toString(),
+//                etPhone.getText().toString());
+        startPhoneVerificationActivity(0);
     }
 
     @OnClick(R.id.img_see_password)

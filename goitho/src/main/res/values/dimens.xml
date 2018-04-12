@@ -131,4 +131,5 @@
     <dimen name="distance_42dp">42dp</dimen>
     <dimen name="size_26dp">26dp</dimen>
     <dimen name="distance_43dp">43dp</dimen>
+    <dimen name="distance_62dp">62dp</dimen>
 </resources>

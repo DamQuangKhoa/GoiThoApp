@@ -32,10 +32,10 @@
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/brown</item>
     </style>
-
-    <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/black</item>
-        <item name="colorControlActivated">@color/star_yellow</item>
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">50dp</item>
     </style>
 
 

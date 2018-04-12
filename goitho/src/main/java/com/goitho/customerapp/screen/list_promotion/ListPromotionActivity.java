@@ -23,7 +23,7 @@ import javax.inject.Inject;
 
 public class ListPromotionActivity extends BaseActivity {
     @Inject
-    com.goitho.customerapp.screen.list_promotion.ListPromotionPresenter ListPromotionPresenter;
+    ListPromotionPresenter ListPromotionPresenter;
 
     ListPromotionFragment fragment;
 

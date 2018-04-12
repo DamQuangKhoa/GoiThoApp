@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.phone_verification.PhoneVerificationActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import butterknife.Bind;
@@ -25,7 +26,6 @@ import butterknife.OnClick;
 public class EditProfileFragment extends BaseFragment implements EditProfileContract.View {
 
     private EditProfileContract.Presenter mPresenter;
-
 
     @Bind(R.id.txt_back)
     TextView txtBack;
@@ -87,10 +87,8 @@ public class EditProfileFragment extends BaseFragment implements EditProfileCont
 
     @OnClick(R.id.btn_update)
     public void updateProfile() {
-
+        PhoneVerificationActivity.startFromResetPhone(getContext(),0,"");
     }
-
-
 
     @Override
     public void setPresenter(EditProfileContract.Presenter presenter) {

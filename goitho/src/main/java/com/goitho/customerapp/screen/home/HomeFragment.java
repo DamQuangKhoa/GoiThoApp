@@ -18,10 +18,12 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.RatingAdapter;
 import com.goitho.customerapp.adapter.StackAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.dialogs.CustomDialogBooking;
 import com.goitho.customerapp.screen.blog.BlogActivity;
+import com.goitho.customerapp.screen.booking.BookingActivity;
 import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
-import com.goitho.customerapp.screen.list_faq.ListFaqActivity;
-import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
+import com.goitho.customerapp.screen.post.PostActivity;
+import com.goitho.customerapp.screen.promotion.PromotionActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.customStackView.Align;
 import com.goitho.customerapp.widgets.customStackView.Config;
@@ -93,12 +95,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
     private void initStackView() {
 
 
-
     }
 
     private void setView(View view) {
         int heightCover = imgCover.getDrawable().getIntrinsicHeight();
-        final RelativeLayout rlOrderRepair = (RelativeLayout) view.findViewById(R.id.layout_order_repair);
+        final RelativeLayout rlOrderRepair = (RelativeLayout) view.findViewById(R.id.layout_order_booking);
 
         rlOrderRepair.post(new Runnable() {
             @Override
@@ -161,7 +162,18 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     @OnClick(R.id.layout_promotion)
     public void promotion() {
-        ListPromotionActivity.start(getActivity());
+        PromotionActivity.start(getActivity());
+    }
+
+    @OnClick(R.id.layout_order_booking)
+    public void booking() {
+        BookingActivity.start(getContext());
+    }
+
+    @OnClick(R.id.layout_booking_hotline)
+    public void bookingHotline() {
+        CustomDialogBooking dialog = new CustomDialogBooking();
+        dialog.show(getActivity().getFragmentManager(), TAG);
     }
 
     @Override
@@ -182,7 +194,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
         stackAdapter = new StackAdapter(list, getContext(), new StackAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(PostEntity item) {
-
+                PostActivity.start(getContext(), item);
             }
         });
         rvBlog.setAdapter(stackAdapter);

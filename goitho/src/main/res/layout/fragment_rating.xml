@@ -34,115 +34,129 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/distance_8dp"
-                android:gravity="center"
+                android:layout_weight="1"
                 android:text="@string/text_rating_orders"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_21dp"
+                android:src="@drawable/ic_call" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/distance_16dp">
-
-        <ImageView
-            android:id="@+id/img_avatar"
-            android:layout_width="@dimen/size_48dp"
-            android:layout_height="@dimen/size_48dp"/>
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/txt_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="name"
-        android:layout_marginTop="@dimen/distance_2dp"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_14sp" />
-
-    <TextView
-        android:id="@+id/txt_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Mã thợ"
-        android:layout_marginTop="@dimen/distance_2dp"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_14sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Cho điểm"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/distance_24dp"
-        android:textColor="@color/lightNavyTwo"
-        android:textSize="@dimen/text_14sp" />
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/distance_8dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_empty_big"
-            android:layout_marginEnd="@dimen/distance_9dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_empty_big"
-            android:layout_marginEnd="@dimen/distance_9dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_empty_big"
-            android:layout_marginEnd="@dimen/distance_9dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_empty_big"
-            android:layout_marginEnd="@dimen/distance_9dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star_empty_big"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/text_comment"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/distance_24dp"
-        android:textColor="@color/lightNavyTwo"
-        android:textSize="@dimen/text_14sp" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_round_corner_edittext_white_six_background"
-        android:layout_marginTop="@dimen/distance_20dp"
-        android:lines="5"
-        android:gravity="top|left"
-        android:textColor="@color/black"
-        android:layout_margin="@dimen/distance_20dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:textSize="@dimen/text_14sp"
-        android:textColor="@color/whiteThree"
-        android:textAllCaps="false"
-        android:id="@+id/btn_send"
-        android:layout_height="wrap_content"
-        android:text="@string/text_send_rating"
-        android:background="@drawable/bg_round_corner_button_yellow_background"
-        android:layout_marginTop="@dimen/distance_30dp"
-        android:layout_marginStart="@dimen/distance_50dp"
-        android:layout_marginEnd="@dimen/distance_50dp"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_16dp">
+
+                <ImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="@dimen/size_48dp"
+                    android:layout_height="@dimen/size_48dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_2dp"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14sp" />
+
+            <TextView
+                android:id="@+id/txt_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_2dp"
+                android:text="Mã thợ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_24dp"
+                android:text="Cho điểm"
+                android:textColor="@color/lightNavyTwo"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/CustomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_24dp"
+                android:text="@string/text_comment"
+                android:textColor="@color/lightNavyTwo"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/distance_20dp"
+                android:layout_marginTop="@dimen/distance_20dp"
+                android:background="@drawable/bg_round_corner_edittext_white_six_background"
+                android:gravity="top|left"
+                android:lines="5"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_50dp"
+                android:layout_marginStart="@dimen/distance_50dp"
+                android:layout_marginTop="@dimen/distance_30dp"
+                android:background="@drawable/bg_round_corner_button_yellow_background"
+                android:text="@string/text_send_rating"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteThree"
+                android:textSize="@dimen/text_14sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

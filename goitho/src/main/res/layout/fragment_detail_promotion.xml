@@ -33,6 +33,7 @@
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 
+
             <TextView
                 android:id="@+id/txt_toolbar"
                 android:layout_width="match_parent"

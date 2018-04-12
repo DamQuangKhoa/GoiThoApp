@@ -26,12 +26,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/distance_19dp"
-                android:gravity="center"
                 android:text="@string/text_notification"
+                android:layout_weight="1"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
 
         </LinearLayout>
 
@@ -40,8 +51,9 @@
     <ListView
         android:id="@+id/lv_notification"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/distance_4dp"
+        android:layout_marginBottom="@dimen/distance_20dp"
         android:background="@color/whiteFifteen"
         android:divider="@android:color/transparent"
         android:dividerHeight="@dimen/distance_11dp"

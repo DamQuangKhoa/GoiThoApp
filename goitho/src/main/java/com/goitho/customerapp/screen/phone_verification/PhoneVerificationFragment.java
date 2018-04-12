@@ -141,24 +141,24 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
 
     @OnClick(R.id.btn_active)
     public void active() {
-        String authCode = "";
-        for (int i = 0; i < codeInput.getCode().length; i++) {
-            authCode += codeInput.getCode()[i];
-        }
-        if (authCode.length() < 4) {
-            showDialog(getString(R.string.text_code_null));
-            return;
-        }
-
-
-        if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_REGISTER) {
-            mPresenter.activeRegisterUser(userId, authCode);
-        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PASSWORD) {
-            mPresenter.activeResetPassword(userId, authCode, newPassword);
-        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PHONE) {
-            mPresenter.activeResetPhone(userId, authCode, newPhone);
-        }
-
+//        String authCode = "";
+//        for (int i = 0; i < codeInput.getCode().length; i++) {
+//            authCode += codeInput.getCode()[i];
+//        }
+//        if (authCode.length() < 4) {
+//            showDialog(getString(R.string.text_code_null));
+//            return;
+//        }
+//
+//
+//        if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_REGISTER) {
+//            mPresenter.activeRegisterUser(userId, authCode);
+//        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PASSWORD) {
+//            mPresenter.activeResetPassword(userId, authCode, newPassword);
+//        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PHONE) {
+//            mPresenter.activeResetPhone(userId, authCode, newPhone);
+//        }
+        startEditAddressActivity();
     }
 
     @OnClick(R.id.txt_send_code)

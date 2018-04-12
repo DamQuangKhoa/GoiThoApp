@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
@@ -28,6 +29,9 @@ public class RatingFragment extends BaseFragment implements RatingContract.View 
 
     @Bind(R.id.img_avatar)
     ImageView imgAvatar;
+
+    @Bind(R.id.ratingBar)
+    RatingBar ratingBar;
 
     public RatingFragment() {
         // Required empty public constructor
@@ -54,8 +58,11 @@ public class RatingFragment extends BaseFragment implements RatingContract.View 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_rating, container, false);
         ButterKnife.bind(this, view);
-
+        initRatingBar();
         return view;
+    }
+
+    private void initRatingBar() {
     }
 
 

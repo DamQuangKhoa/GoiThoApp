@@ -11,6 +11,6 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(modules = {BookingModule.class})
 public interface BookingComponent {
-    void inject(BookingFragment fragment);
+    void inject(BookingActivity activity);
 
 }

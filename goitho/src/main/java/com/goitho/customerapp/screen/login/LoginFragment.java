@@ -11,8 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.constants.Constants;
 import com.goitho.customerapp.dialogs.CustomDialogForgetPassword;
 import com.goitho.customerapp.dialogs.CustomNotiDialog;
 import com.goitho.customerapp.screen.dashboard.DashboardActivity;
@@ -105,7 +107,8 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     @OnClick(R.id.btn_login)
     public void login() {
-
+        SharedPreferenceHelper.getInstance(getContext()).pushBoolean(Constants.KEY_CHECK_LOGIN, true);
+        startDashboardActivity();
     }
 
 
@@ -176,7 +179,6 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
         notiDialog.show(getActivity().getFragmentManager(), TAG);
         notiDialog.setCloseButtonText(getString(R.string.text_sweet_dialog_confirm_text));
         notiDialog.setContent(getString(R.string.text_sweet_dialog_error));
-
     }
 
 

@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/img_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 
@@ -46,31 +46,17 @@
                 android:textSize="@dimen/text_14sp"
                 android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/rl_detail_promotion"
-                android:layout_width="@dimen/md_icon_max_size"
-                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call"
+                    android:layout_marginEnd="@dimen/distance_21dp"/>
 
                 <ImageView
-                    android:id="@+id/img_detaik_promotion"
-                    android:layout_width="@dimen/mr_controller_volume_group_list_item_icon_size"
-                    android:layout_height="@dimen/size_40dp"
-                    android:src="@mipmap/ic_call_real" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_detail_promotion2"
-                android:layout_width="@dimen/size_40dp"
-                android:layout_height="@dimen/size_40dp">
-
-                <ImageView
-                    android:id="@+id/img_detail_promotion"
-                    android:layout_width="@dimen/mr_controller_volume_group_list_item_icon_size"
-                    android:layout_height="@dimen/size_40dp"
-                    android:src="@mipmap/ic_call" />
-
-            </RelativeLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/distance_9dp"
+                    android:src="@drawable/ic_chat" />
 
         </LinearLayout>
 
@@ -79,7 +65,7 @@
     <ListView
         android:id="@+id/lv_id_promotion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingStart="@dimen/distance_8dp"
         android:paddingEnd="@dimen/distance_8dp"
         android:layout_marginTop="16dp"

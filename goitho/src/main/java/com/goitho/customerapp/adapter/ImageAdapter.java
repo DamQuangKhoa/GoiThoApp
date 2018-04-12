@@ -6,10 +6,10 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.demo.architect.data.model.offline.ImageEntity;
 import com.goitho.customerapp.R;
+import com.goitho.customerapp.widgets.RoundishImageView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -67,11 +67,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
     public class ImageViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView image;
+        private RoundishImageView image;
 
         private ImageViewHolder(View v) {
             super(v);
-            image = (ImageView) v.findViewById(R.id.image);
+            image = (RoundishImageView) v.findViewById(R.id.image);
         }
 
         private void bind(final ImageEntity item, final ImageAdapter.OnItemClickListener listener) {

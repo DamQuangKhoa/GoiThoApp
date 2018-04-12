@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
+import com.goitho.customerapp.screen.support_center.SupportCenterActivity;
 import com.goitho.customerapp.util.Precondition;
 
 import butterknife.Bind;
@@ -26,7 +27,7 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
 
     private DetailPromotionContract.Presenter mPresenter;
 
-    @Bind(R.id.txt_title)
+    @Bind(R.id.txt_id_promotion)
     TextView txtPromotionCode;
 
     public DetailPromotionFragment() {
@@ -119,5 +120,8 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
         getActivity().finish();
     }
 
-
+    @OnClick(R.id.layout_support_center)
+    public void supportCenter() {
+        SupportCenterActivity.start(getContext());
+    }
 }

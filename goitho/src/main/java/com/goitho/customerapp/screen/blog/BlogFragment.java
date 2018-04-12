@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.demo.architect.data.model.PostEntity;
@@ -16,6 +15,7 @@ import com.goitho.customerapp.adapter.BlogAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.app.di.Precondition;
 import com.goitho.customerapp.screen.post.PostActivity;
+import com.goitho.customerapp.widgets.RoundishImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class BlogFragment extends BaseFragment implements BlogContract.View {
     RelativeLayout layout;
 
     @Bind(R.id.img_cover_blog)
-    ImageView imgCover;
+    RoundishImageView imgCover;
 
     @Bind(R.id.rv_blog)
     RecyclerView rvBlog;
@@ -126,6 +126,10 @@ public class BlogFragment extends BaseFragment implements BlogContract.View {
         getActivity().finish();
     }
 
+    @OnClick(R.id.img_cover_blog)
+    public void detailPost(){
+        PostActivity.start(getContext(), new PostEntity());
+    }
 
     @Override
     public void showBlogList(List<PostEntity> list) {

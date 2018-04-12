@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_hanoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_4dp"
+            android:layout_marginTop="@dimen/distance_2dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/distance_8dp"
+            android:paddingEnd="@dimen/distance_30dp"
+            android:paddingStart="@dimen/distance_30dp"
+            android:paddingTop="@dimen/distance_8dp"
+            android:text="@string/text_booking_hanoi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="@dimen/distance_10dp"
+            android:layout_marginStart="@dimen/distance_10dp"
+            android:background="@color/whiteSeven" />
+
+        <TextView
+            android:id="@+id/txt_hcm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/distance_8dp"
+            android:paddingEnd="@dimen/distance_30dp"
+            android:paddingStart="@dimen/distance_30dp"
+            android:paddingTop="@dimen/distance_8dp"
+            android:layout_marginBottom="@dimen/distance_4dp"
+            android:layout_marginTop="@dimen/distance_2dp"
+            android:text="@string/text_booking_hcm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

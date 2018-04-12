@@ -43,7 +43,25 @@
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_function"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call"
+                    android:layout_marginEnd="@dimen/distance_21dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/distance_9dp"
+                    android:src="@drawable/ic_chat" />
+            </LinearLayout>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -62,12 +80,14 @@
             android:paddingEnd="@dimen/distance_8dp"
             android:paddingStart="@dimen/distance_8dp">
 
-            <ImageView
+            <com.goitho.customerapp.widgets.RoundishImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
                 android:id="@+id/img_cover_blog"
-                android:src="@drawable/img_cover_blog" />
+                android:scaleType="centerCrop"
+                app:cornerRadius="14dp"
+                android:src="@drawable/img_cover_blog"
+                app:roundedCorners="topLeft|topRight|bottomLeft|bottomRight" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,6 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/distance_22dp"
             android:layout_below="@+id/layout_cover"
+            android:layout_marginBottom="@dimen/distance_20dp"
             android:id="@+id/rv_blog"
             android:paddingEnd="@dimen/distance_8dp"
             android:paddingStart="@dimen/distance_8dp" />

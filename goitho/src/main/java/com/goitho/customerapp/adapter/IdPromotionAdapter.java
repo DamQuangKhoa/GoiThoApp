@@ -8,9 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 
-
 import com.goitho.customerapp.R;
-import com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity;
 
 import java.util.List;
 
@@ -57,7 +55,7 @@ public class IdPromotionAdapter extends BaseAdapter {
 
 		Button btnAdd = view.findViewById(R.id.btn_add_promotion);
 		btnAdd.setOnClickListener(p -> {
-			DetailPromotionActivity.start(context);
+
 		});
 		return view;
 	}

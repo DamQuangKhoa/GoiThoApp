@@ -81,9 +81,15 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
 
     @Bind(R.id.layout_cancel)
     LinearLayout llCancel;
+
     @Bind(R.id.txt_content)
     TextView txtContent;
 
+    @Bind(R.id.layout_status)
+    LinearLayout llStatus;
+
+    @Bind(R.id.layout_function)
+    LinearLayout llFunction;
     private OrderEntity order;
 
     public DetailOrderFragment() {
@@ -128,23 +134,27 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
                 cvCancel.setVisibility(GONE);
                 txtTitlePrice.setText("Báo giá sửa chữa");
                 cvRating.setVisibility(GONE);
+                llStatus.setBackground(getActivity().getResources().getDrawable(R.drawable.bg_ln_round_whitethree_orange));
                 break;
             case 2:
                 cvCancel.setVisibility(GONE);
                 llOpen.setVisibility(GONE);
                 if (order.getPoint() > 0) {
-
                     llRating.setVisibility(GONE);
                 } else {
                     cvRating.setVisibility(GONE);
                 }
                 llCancel.setVisibility(GONE);
+                llFunction.setVisibility(View.VISIBLE);
+                llStatus.setBackground(getActivity().getResources().getDrawable(R.drawable.bg_ln_round_whitethree_green));
                 break;
+
             case 3:
                 cvStatus.setVisibility(GONE);
                 cvRating.setVisibility(GONE);
                 llButton.setVisibility(GONE);
                 llCancel.setVisibility(GONE);
+                llFunction.setVisibility(View.VISIBLE);
                 break;
         }
 
@@ -223,7 +233,7 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     }
 
     @OnClick(R.id.layout_support_center)
-    public void supportCenter(){
+    public void supportCenter() {
         SupportCenterActivity.start(getContext());
     }
 

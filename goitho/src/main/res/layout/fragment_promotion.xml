@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/img_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
                 android:padding="@dimen/distance_10dp"
                 android:src="@drawable/ic_back" />
 
@@ -34,12 +34,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/distance_8dp"
-                android:gravity="center"
                 android:text="@string/text_promotion"
+                android:layout_weight="1"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -49,6 +59,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/rv_promotion"
         android:paddingStart="@dimen/distance_23dp"
-        android:paddingEnd="@dimen/distance_23dp"
-        android:layout_marginTop="@dimen/distance_17dp"/>
+        android:paddingEnd="@dimen/distance_23dp"/>
 </LinearLayout>

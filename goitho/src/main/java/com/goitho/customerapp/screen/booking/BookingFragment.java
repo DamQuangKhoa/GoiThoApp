@@ -9,15 +9,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toolbar;
+import android.widget.TextView;
 
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
+import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.dashboard.DashboardFragment;
-import com.goitho.customerapp.screen.list_faq.ListFaqActivity;
+import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 
@@ -55,8 +57,16 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     @Bind(R.id.layout_success)
     LinearLayout llSuccess;
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+    @Bind(R.id.view)
+    View view;
+
+    @Bind(R.id.img_back)
+    ImageView imgBack;
+
+    @Bind(R.id.txt_title_toolbar)
+    TextView txtTitleToolbar;
+
+    private int type;
 
     public BookingFragment() {
         // Required empty public constructor
@@ -78,10 +88,20 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_booking, container, false);
-
         ButterKnife.bind(this, view);
-
+        type = getActivity().getIntent().getIntExtra(BookingActivity.KEY_HOME, 0);
+        initView();
         return view;
+    }
+
+    private void initView() {
+        float scale = getResources().getDisplayMetrics().density;
+        int dpAsPixels = (int) (19 * scale + 0.5f);
+        if (type == 1) {
+            imgBack.setVisibility(View.VISIBLE);
+        } else {
+            txtTitleToolbar.setPadding(dpAsPixels, 0, 0, 0);
+        }
     }
 
     @Override
@@ -146,9 +166,14 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @OnClick(R.id.layout_go_home)
     public void goHome() {
-        Fragment parentFragment = getParentFragment();
-        if (parentFragment != null && parentFragment instanceof DashboardFragment) {
-            ((DashboardFragment) parentFragment).openHome();
+        if (type == 0) {
+            Fragment parentFragment = getParentFragment();
+            if (parentFragment != null && parentFragment instanceof DashboardFragment) {
+                ((DashboardFragment) parentFragment).openHome();
+            }
+        }else {
+            DashboardActivity.start(getContext());
+            getActivity().finish();
         }
     }
 
@@ -157,19 +182,23 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         RegisterActivity.start(getContext());
     }
 
+    @OnClick(R.id.img_back)
+    public void back() {
+        DashboardActivity.start(getContext());
+        getActivity().finish();
+    }
+
     @Override
     public void startBookingSuccess() {
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
-        params.height = 47;
-        toolbar.setLayoutParams(params);
 
         llSuccess.setVisibility(View.VISIBLE);
         layout2.setVisibility(View.GONE);
+        view.setVisibility(View.GONE);
     }
 
     @Override
     public void startListPromotionActivity() {
-        ListFaqActivity.start(getActivity());
+        ListPromotionActivity.start(getActivity());
     }
 
     public void startCamera() {

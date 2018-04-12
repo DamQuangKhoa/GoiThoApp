@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteThree"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -40,7 +41,23 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_call"
+                android:layout_toStartOf="@+id/img_chat"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_chat"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
 
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
@@ -48,6 +65,6 @@
     <WebView
         android:id="@+id/wv_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

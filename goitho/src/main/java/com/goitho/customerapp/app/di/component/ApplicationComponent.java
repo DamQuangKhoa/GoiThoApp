@@ -9,6 +9,7 @@ import com.goitho.customerapp.app.di.module.RepositoryModule;
 import com.goitho.customerapp.app.di.module.UseCaseModule;
 import com.goitho.customerapp.screen.blog.BlogComponent;
 import com.goitho.customerapp.screen.blog.BlogModule;
+import com.goitho.customerapp.screen.booking.BookingComponent;
 import com.goitho.customerapp.screen.booking.BookingModule;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent;
 import com.goitho.customerapp.screen.dashboard.DashboardComponent2;
@@ -25,8 +26,6 @@ import com.goitho.customerapp.screen.home.HomeComponent;
 import com.goitho.customerapp.screen.home.HomeModule;
 import com.goitho.customerapp.screen.landing.LandingComponent;
 import com.goitho.customerapp.screen.landing.LandingModule;
-import com.goitho.customerapp.screen.list_faq.ListFaqComponent;
-import com.goitho.customerapp.screen.list_faq.ListFaqModule;
 import com.goitho.customerapp.screen.list_promotion.ListPromotionComponent;
 import com.goitho.customerapp.screen.list_promotion.ListPromotionModule;
 import com.goitho.customerapp.screen.login.LoginComponent;
@@ -108,8 +107,6 @@ public interface ApplicationComponent {
 
     OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
-
-    ListFaqComponent plus(ListFaqModule exhibitionDoingModule);
     ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
 
     DetailPromotionComponent plus(DetailPromotionModule exhibitionDoingModule);
@@ -135,5 +132,7 @@ public interface ApplicationComponent {
     QuestionComponent plus(QuestionModule questionModule);
 
     PromotionComponent plus(PromotionModule promotionModule);
+
+    BookingComponent plus(BookingModule bookingModule);
 
 }

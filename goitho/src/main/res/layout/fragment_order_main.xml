@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/whiteNine">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_toolbar"
@@ -25,9 +26,20 @@
                 android:layout_marginStart="@dimen/distance_19dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_16sp"
-                android:textAllCaps="true"
-                android:gravity="center"/>
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14sp"
+                android:textAllCaps="true"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
 
         </LinearLayout>
 

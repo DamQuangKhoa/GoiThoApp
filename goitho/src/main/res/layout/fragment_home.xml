@@ -27,13 +27,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/distance_19dp"
-                android:gravity="center"
+                android:layout_weight="1"
                 android:text="@string/text_title_home"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_14sp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
@@ -65,7 +75,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/layout_order_repair"
+                    android:id="@+id/layout_order_booking"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_blue_stroke_background"
@@ -105,6 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/distance_16dp"
+                    android:id="@+id/layout_booking_hotline"
                     android:background="@drawable/bg_orange_stroke_background"
                     android:paddingBottom="@dimen/distance_9dp"
                     android:paddingEnd="@dimen/distance_29dp"
@@ -162,6 +173,7 @@
                         android:layout_marginStart="@dimen/distance_16dp"
                         android:layout_toRightOf="@+id/img_icon2"
                         android:text="@string/text_promotion"
+                        android:textAllCaps="true"
                         android:textColor="@color/whiteThree"
                         android:textSize="@dimen/text_15sp"
                         android:textStyle="bold" />

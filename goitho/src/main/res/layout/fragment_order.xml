@@ -13,6 +13,7 @@
         android:background="@color/whiteFifteen"
         android:divider="@android:color/transparent"
         android:dividerHeight="@dimen/distance_11dp"
+        android:layout_marginBottom="@dimen/distance_30dp"
         />
 
 </LinearLayout>

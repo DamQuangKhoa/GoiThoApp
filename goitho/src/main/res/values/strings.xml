@@ -9,6 +9,8 @@
     <string name="text_farmer">Nông hộ</string>
     <string name="text_login">Đăng nhập</string>
     <string name="text_update">Cập nhật</string>
+    <string name="text_booking_hanoi">Đặt lịch tại Hà Nội</string>
+    <string name="text_booking_hcm">Đặt lịch tại HCM</string>
     <string name="text_capture">Chụp ảnh</string>
     <string name="text_choose_album">Chọn từ Albums</string>
     <string name="text_complete">Hoàn thành</string>

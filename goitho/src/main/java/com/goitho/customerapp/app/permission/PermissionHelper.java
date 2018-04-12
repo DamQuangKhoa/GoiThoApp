@@ -22,9 +22,6 @@ public class PermissionHelper {
     }
 
 
-
-
-
     public PermissionHelper setPermissionListener(PermissionListener listener) {
 
         instance.listener = listener;
@@ -148,8 +145,6 @@ public class PermissionHelper {
 
 
     public void check() {
-
-
         if (instance.listener == null) {
             throw new NullPointerException("You must setPermissionListener() on PermissionHelper");
         } else if (ObjectUtils.isEmpty(instance.permissions)) {

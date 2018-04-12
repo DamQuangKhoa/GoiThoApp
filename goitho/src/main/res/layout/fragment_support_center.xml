@@ -42,6 +42,17 @@
                 android:textColor="@color/whiteThree"
                 android:textSize="@dimen/text_16sp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call"
+                android:layout_marginEnd="@dimen/distance_21dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_9dp"
+                android:src="@drawable/ic_chat" />
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
@@ -107,7 +118,7 @@
                     android:textStyle="normal" />
 
                 <RelativeLayout
-                    android:id="@+id/layout_order_repair"
+                    android:id="@+id/layout_order_booking"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/distance_13dp"

@@ -82,7 +82,7 @@ public class RegisterSuccessFragment extends BaseFragment implements RegisterSuc
     @OnClick(R.id.btn_gohome)
     public void goHome() {
         startDashboardActivity();
-        getActivity().finish();
+        getActivity().finishAffinity();
     }
 
     @OnClick(R.id.img_back)

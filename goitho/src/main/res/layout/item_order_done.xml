@@ -5,17 +5,16 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_white_stroke"
     android:orientation="horizontal"
-    android:weightSum="3">
+    android:weightSum="5">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginBottom="@dimen/distance_16dp"
         android:layout_marginEnd="@dimen/distance_12dp"
         android:layout_marginStart="@dimen/distance_16dp"
         android:layout_marginTop="@dimen/distance_16dp"
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <TextView
@@ -42,16 +41,16 @@
         android:layout_height="match_parent"
         android:background="@color/warmGreyTwo" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="2"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/layout_evaluate"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerInParent="true"
             android:background="@drawable/bg_yellow_background"
             android:gravity="center"
             android:orientation="vertical">
@@ -70,7 +69,6 @@
             android:id="@+id/layout_evaluated"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerInParent="true"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -119,6 +117,6 @@
             </LinearLayout>
 
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

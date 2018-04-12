@@ -1,15 +1,19 @@
 package com.goitho.customerapp.screen.dashboard;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.view.WindowManager;
 
 import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.goitho.customerapp.R;
@@ -38,6 +42,7 @@ import com.goitho.customerapp.widgets.customtablayout.TabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.CustomTabEntity;
 import com.goitho.customerapp.widgets.customtablayout.listener.OnTabSelectListener;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,8 +81,8 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     @Bind(R.id.viewpager)
     CustomViewPager viewPager;
 
-    @Bind(R.id.layout_main)
-    RelativeLayout rlMain;
+    @Bind(R.id.view)
+    View view;
 
     private HomeFragment homeFragment;
     private OrderFragment orderFragment;
@@ -158,6 +163,9 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
     }
 
     private void initView() {
+        if (checkNavigationBarSize() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.setVisibility(View.VISIBLE);
+        }
         setupViewPager(viewPager);
         setupTabItem(tabLayout);
 
@@ -188,6 +196,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
             public void onPageScrollStateChanged(int state) {
 
             }
+
         });
         openHome();
 
@@ -258,7 +267,7 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
 
     }
 
-    public void openHome(){
+    public void openHome() {
         tabLayout.setCurrentTab(0);
         viewPager.setCurrentItem(0);
     }
@@ -285,5 +294,43 @@ public class DashboardFragment extends BaseFragment implements DashboardContract
         }
     }
 
+    public boolean checkNavigationBarSize() {
+        Point appUsableSize = getAppUsableScreenSize();
+        Point realScreenSize = getRealScreenSize();
+        boolean check = false;
+        // navigation bar at the bottom
+        if (appUsableSize.y < realScreenSize.y) {
+            check = true;
+        }
+        // navigation bar is not present
+        return check;
+    }
 
+    public Point getAppUsableScreenSize() {
+        WindowManager windowManager = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return size;
+    }
+
+    public Point getRealScreenSize() {
+        WindowManager windowManager = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+        Point size = new Point();
+
+        if (Build.VERSION.SDK_INT >= 17) {
+            display.getRealSize(size);
+        } else if (Build.VERSION.SDK_INT >= 14) {
+            try {
+                size.x = (Integer) Display.class.getMethod("getRawWidth").invoke(display);
+                size.y = (Integer) Display.class.getMethod("getRawHeight").invoke(display);
+            } catch (IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            } catch (NoSuchMethodException e) {
+            }
+        }
+
+        return size;
+    }
 }

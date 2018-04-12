@@ -149,7 +149,6 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     }
 
 
-
     private int fillFromRight(RecyclerView.Recycler recycler, int dy) {
 
         if (mTotalOffset + dy < 0 || (mTotalOffset + dy + 0f) / mUnit > getItemCount() - 1)
@@ -239,7 +238,6 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
 
         return dy;
     }
-
 
 
     private RecyclerView.OnFlingListener mOnFlingListener = new RecyclerView.OnFlingListener() {

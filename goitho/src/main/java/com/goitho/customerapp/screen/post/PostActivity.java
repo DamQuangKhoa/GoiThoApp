@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
-import android.view.WindowManager;
 
 import com.demo.architect.data.model.PostEntity;
 import com.goitho.customerapp.R;
@@ -46,7 +45,6 @@ public class PostActivity extends BaseActivity {
 
         Window w = getWindow(); // in Activity's onCreate() for instance
 
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 
