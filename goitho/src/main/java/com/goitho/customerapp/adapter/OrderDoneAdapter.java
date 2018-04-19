@@ -58,11 +58,11 @@ public class OrderDoneAdapter extends BaseAdapter {
 //                86);
 //        layout.setLayoutParams(lp);
         TextView txtContent = (TextView) view.findViewById(R.id.txt_content);
-        txtContent.setText(list.get(i).getContent());
+        txtContent.setText(list.get(i).getOrderContent());
         View view1 = view.findViewById(R.id.view);
         LinearLayout llEvaluate = view.findViewById(R.id.layout_evaluate);
         LinearLayout llEvaluated = view.findViewById(R.id.layout_evaluated);
-        if (list.get(i).getPoint() == 0) {
+        if (list.get(i).getRatePoint() == 0) {
             view1.setVisibility(View.GONE);
             llEvaluated.setVisibility(View.GONE);
         } else {

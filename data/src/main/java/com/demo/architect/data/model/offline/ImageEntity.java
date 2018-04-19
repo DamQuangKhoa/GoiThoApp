@@ -1,51 +1,38 @@
 package com.demo.architect.data.model.offline;
 
-import android.graphics.Bitmap;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by Skull on 30/11/2017.
  */
 
 public class ImageEntity {
-    private String uri;
-    private Bitmap bitmap;
-    private Integer rscImage;
+    @SerializedName("imageId")
+    @Expose
+    private String imageId;
 
-    public ImageEntity(Integer rscImage) {
-        this.rscImage = rscImage;
+    @SerializedName("imageUrl")
+    @Expose
+    private String imageUrl;
+
+    public String getImageId() {
+        return imageId;
     }
 
-
-
-    public Integer getRscImage() {
-        return rscImage;
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
     }
 
-    public void setRscImage(Integer rscImage) {
-        this.rscImage = rscImage;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public ImageEntity(String uri) {
-        this.uri = uri;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
-    public ImageEntity(Bitmap bitmap) {
-        this.bitmap = bitmap;
-    }
-
-    public String getUri() {
-        return uri;
-    }
-
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
-    public Bitmap getBitmap() {
-        return bitmap;
-    }
-
-    public void setBitmap(Bitmap bitmap) {
-        this.bitmap = bitmap;
+    public ImageEntity(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

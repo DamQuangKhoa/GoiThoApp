@@ -10,7 +10,7 @@ import com.goitho.customerapp.app.base.BaseView;
 public interface BookingContract {
     interface View extends BaseView<Presenter> {
         void startBookingSuccess();
-        void startListPromotionActivity();
+        void startDialogPromotion();
     }
 
     interface Presenter extends BasePresenter {

@@ -203,7 +203,9 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     @Override
     public void startDetailOrder() {
-        DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
+        OrderEntity orderEntity = new OrderEntity();
+        orderEntity.setStatus(1);
+        DetailOrderActivity.start(getActivity(), orderEntity);
 
     }
 }

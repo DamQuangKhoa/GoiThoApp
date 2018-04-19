@@ -55,14 +55,11 @@ public class OrderDoingAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_order_doing, null);
         LinearLayout layout = view.findViewById(R.id.layout_main);
-//        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                86);
-//        layout.setLayoutParams(lp);
 
         TextView txtContent = (TextView) view.findViewById(R.id.txt_content);
-        txtContent.setText(list.get(i).getContent());
+        txtContent.setText(list.get(i).getOrderContent());
         TextView txtTime = (TextView) view.findViewById(R.id.txt_time);
-        txtTime.setText(list.get(i).getTimeEdit());
+        txtTime.setText(list.get(i).getAcceptanceTime());
         ImageView imgNext = (ImageView) view.findViewById(R.id.img_next);
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -54,13 +54,10 @@ public class OrderCancelAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.item_order_cancel, null);
         LinearLayout layout = view.findViewById(R.id.layout_main);
-//        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                86);
-//        layout.setLayoutParams(lp);
         TextView txtContent = (TextView) view.findViewById(R.id.txt_content);
-        txtContent.setText(list.get(i).getContent());
+        txtContent.setText(list.get(i).getOrderContent());
         TextView txtReason = (TextView) view.findViewById(R.id.txt_reason);
-        txtReason.setText(list.get(i).getReason());
+        txtReason.setText(list.get(i).getOrderName());
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

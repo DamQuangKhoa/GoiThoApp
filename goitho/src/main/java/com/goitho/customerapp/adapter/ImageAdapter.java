@@ -2,7 +2,6 @@ package com.goitho.customerapp.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
  * Created by Skull on 30/11/2017.
  */
 
-public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder>{
+public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
 
     private ArrayList<ImageEntity> list;
     private Context context;
@@ -50,14 +49,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     private void setDataToViews(ImageViewHolder holder, int position) {
+        Picasso.with(context).load(R.drawable.image).into(holder.image);
 
-        if(!TextUtils.isEmpty(list.get(position).getUri())){
-            Picasso.with(context).load(list.get(position).getUri()).into(holder.image);
-        }else {
-            if(list.get(position).getBitmap() != null){
-                holder.image.setImageBitmap(list.get(position).getBitmap());
-            }
-        }
     }
 
     @Override
@@ -77,7 +70,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         private void bind(final ImageEntity item, final ImageAdapter.OnItemClickListener listener) {
 
             itemView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     listener.onItemClick(item);
                 }
             });

@@ -1,44 +1,55 @@
 package com.demo.architect.data.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Yen on 3/26/2018.
  */
 
 public class NotificationEntity {
-    private String title;
-    private String content;
-    private int type;
+    @SerializedName("notificationId")
+    @Expose
+    private String notificationId;
+    @SerializedName("notificationName")
+    @Expose
+    private String notificationName;
+    @SerializedName("notificationContent")
+    @Expose
+    private String notificationContent;
+    @SerializedName("status")
+    @Expose
+    private Integer status;
 
-    public NotificationEntity() {
+    public String getNotificationId() {
+        return notificationId;
     }
 
-    public NotificationEntity(String title, String content, int type) {
-        this.title = title;
-        this.content = content;
-        this.type = type;
+    public void setNotificationId(String notificationId) {
+        this.notificationId = notificationId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getNotificationName() {
+        return notificationName;
     }
 
-    public String getContent() {
-        return content;
+    public void setNotificationName(String notificationName) {
+        this.notificationName = notificationName;
     }
 
-    public int getType() {
-        return type;
+    public String getNotificationContent() {
+        return notificationContent;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNotificationContent(String notificationContent) {
+        this.notificationContent = notificationContent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

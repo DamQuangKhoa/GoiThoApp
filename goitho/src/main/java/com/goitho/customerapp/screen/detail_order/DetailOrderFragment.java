@@ -139,7 +139,7 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
             case 2:
                 cvCancel.setVisibility(GONE);
                 llOpen.setVisibility(GONE);
-                if (order.getPoint() > 0) {
+                if (order.getRatePoint() > 0) {
                     llRating.setVisibility(GONE);
                 } else {
                     cvRating.setVisibility(GONE);
@@ -212,8 +212,10 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
     }
 
     @OnClick(R.id.layout_open_order)
-    public void openOrder() {
-        DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 1, 0, ""));
+    public void openOrder() { OrderEntity orderEntity = new OrderEntity();
+        orderEntity.setStatus(1);
+        orderEntity.setRatePoint(0);
+        DetailOrderActivity.start(getActivity(), orderEntity);
         getActivity().finish();
     }
 
@@ -254,7 +256,10 @@ public class DetailOrderFragment extends BaseFragment implements DetailOrderCont
         dialog.setListener(new CustomDialogCancelOrder.OnCancelClickListener() {
             @Override
             public void onCancelClick() {
-                DetailOrderActivity.start(getActivity(), new OrderEntity("", "", 3, 0, ""));
+                OrderEntity orderEntity = new OrderEntity();
+                orderEntity.setStatus(3);
+                orderEntity.setRatePoint(0);
+                DetailOrderActivity.start(getActivity(),orderEntity);
                 getActivity().finish();
             }
         }, new CustomDialogCancelOrder.OnNoCheckListener() {

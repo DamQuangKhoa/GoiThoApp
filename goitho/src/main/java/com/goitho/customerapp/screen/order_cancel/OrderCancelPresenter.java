@@ -51,9 +51,14 @@ public class OrderCancelPresenter implements OrderCancelContract.Presenter{
     public List<OrderEntity> list() {
         List<OrderEntity> list = new ArrayList<>();
         for(int i =0; i< 10; i++){
-            list.add(new OrderEntity("Lắp hai điều hoà tầng ba, bốn. " +
-                    "Bảo dưỡng một điều hoà tầng 1", "3:30pm, \n 24 th12 2017", 3,
-                    0, "Báo giá đắt"));
+            OrderEntity orderEntity = new OrderEntity();
+            orderEntity.setOrderContent("Lắp hai điều hoà tầng ba, bốn. " +
+                    "Bảo dưỡng một điều hoà tầng 1");
+            orderEntity.setAcceptanceTime("\"3:30pm, \\n 24 th12 2017\"");
+            orderEntity.setStatus(2);
+            orderEntity.setRatePoint(3);
+
+            list.add(orderEntity);
         }
         return list;
     }

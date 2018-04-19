@@ -3,9 +3,11 @@ package com.goitho.customerapp.screen.order;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.demo.architect.data.model.OrderEntity;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-import com.goitho.customerapp.screen.notification.NotificationContract;
-import com.goitho.customerapp.screen.notification.NotificationPresenter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -36,7 +38,8 @@ public class OrderPresenter implements OrderContract.Presenter {
     @Override
     public void start() {
         Log.d(TAG, TAG + ".start() called");
-
+        view.showOrderDoingList(orderDoingList());
+        view.showOrderDoneList(orderDoneList());
     }
 
     @Override
@@ -45,4 +48,41 @@ public class OrderPresenter implements OrderContract.Presenter {
     }
 
 
+    @Override
+    public List<OrderEntity> orderDoneList() {
+        List<OrderEntity> list = new ArrayList<>();
+        for (int i = 0; i < 2; i++) {
+            OrderEntity orderEntity = new OrderEntity();
+            orderEntity.setOrderContent("Lắp hai điều hoà tầng ba, bốn. " +
+                    "Bảo dưỡng một điều hoà tầng 1");
+            orderEntity.setAcceptanceTime("3:30pm, \n 24 th12 2017");
+            orderEntity.setStatus(2);
+            orderEntity.setRatePoint(3);
+            list.add(orderEntity);
+        }
+        for (int i = 0; i < 10; i++) {
+            OrderEntity orderEntity = new OrderEntity();
+            orderEntity.setOrderContent("Lắp hai điều hoà tầng ba, bốn. " +
+                    "Bảo dưỡng một điều hoà tầng 1");
+            orderEntity.setAcceptanceTime("3:30pm, \n 24 th12 2017");
+            orderEntity.setStatus(2);
+            orderEntity.setRatePoint(0);
+            list.add(orderEntity);
+        }
+        return list;
+    }
+
+    @Override
+    public List<OrderEntity> orderDoingList() {
+        List<OrderEntity> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            OrderEntity orderEntity = new OrderEntity();
+            orderEntity.setOrderContent("Lắp hai điều hoà tầng ba, bốn. " +
+                    "Bảo dưỡng một điều hoà tầng 1");
+            orderEntity.setAcceptanceTime("3:30pm, \n 24 th12 2017");
+            orderEntity.setStatus(1);
+            list.add(orderEntity);
+        }
+        return list;
+    }
 }

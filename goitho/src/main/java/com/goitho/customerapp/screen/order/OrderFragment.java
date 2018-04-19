@@ -2,20 +2,18 @@ package com.goitho.customerapp.screen.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.demo.architect.data.model.OrderEntity;
 import com.goitho.customerapp.R;
+import com.goitho.customerapp.adapter.OrderDoingAdapter;
+import com.goitho.customerapp.adapter.OrderDoneAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.screen.order_cancel.OrderCancelFragment;
-import com.goitho.customerapp.screen.order_doing.OrderDoingFragment;
-import com.goitho.customerapp.screen.order_done.OrderDoneFragment;
+import com.goitho.customerapp.screen.detail_order.DetailOrderActivity;
+import com.goitho.customerapp.util.Precondition;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,17 +25,17 @@ import butterknife.ButterKnife;
  * Created by Skull on 27/11/2017.
  */
 
-public class OrderFragment extends BaseFragment implements OrderContract.View{
+public class OrderFragment extends BaseFragment implements OrderContract.View {
+    private static final String TAG = OrderFragment.class.getName();
+    private OrderContract.Presenter mPresenter;
+    private OrderDoingAdapter doingAdapter;
+    private OrderDoneAdapter doneAdapter;
 
-    @Bind(R.id.tabs)
-    TabLayout tabLayout;
+    @Bind(R.id.lv_done)
+    ListView lvDone;
 
-    @Bind(R.id.viewpager)
-    ViewPager viewPager;
-
-    private OrderDoingFragment exhibitionDoingFragment;
-    private OrderDoneFragment exhibitionDoneFragment;
-    private OrderCancelFragment exhibitionCancelFragment;
+    @Bind(R.id.lv_doing)
+    ListView lvDoing;
 
     public OrderFragment() {
         // Required empty public constructor
@@ -65,55 +63,47 @@ public class OrderFragment extends BaseFragment implements OrderContract.View{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_order_main, container, false);
         ButterKnife.bind(this, view);
-        configFragments();
-        initView();
+        initRecyclerView();
         return view;
     }
-    
-    private void configFragments() {
-        if (exhibitionDoingFragment == null) {
-            exhibitionDoingFragment = OrderDoingFragment.newInstance();
-        }
 
-        if (exhibitionDoneFragment == null) {
-            exhibitionDoneFragment = OrderDoneFragment.newInstance();
-        }
+    private void initRecyclerView() {
+        doingAdapter = new OrderDoingAdapter(getContext(), new ArrayList<OrderEntity>(),
+                new OrderDoingAdapter.OnNextItemListener() {
+                    @Override
+                    public void onNextItem(OrderEntity item) {
+                        DetailOrderActivity.start(getContext(), item);
+                    }
+                });
+        lvDoing.setAdapter(doingAdapter);
 
-
-        if (exhibitionCancelFragment == null) {
-            exhibitionCancelFragment = OrderCancelFragment.newInstance();
-        }
+        doneAdapter = new OrderDoneAdapter(getContext(), new ArrayList<OrderEntity>(),
+                new OrderDoneAdapter.OnNextItemListener() {
+                    @Override
+                    public void onNextItem(OrderEntity item) {
+                        DetailOrderActivity.start(getContext(), item);
+                    }
+                });
+        lvDone.setAdapter(doneAdapter);
 
     }
-    
 
-    private void initView() {
-        setupViewPager(viewPager);
-        tabLayout.setupWithViewPager(viewPager);
-    }
-
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(exhibitionDoingFragment);
-        adapter.addFragment(exhibitionDoneFragment);
-        adapter.addFragment(exhibitionCancelFragment);
-        viewPager.setAdapter(adapter);
-    }
 
     @Override
     public void onResume() {
         super.onResume();
-
+        mPresenter.start();
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        mPresenter.stop();
     }
 
     @Override
     public void setPresenter(OrderContract.Presenter presenter) {
-
+        this.mPresenter = Precondition.checkNotNull(presenter);
     }
 
     @Override
@@ -126,38 +116,14 @@ public class OrderFragment extends BaseFragment implements OrderContract.View{
 
     }
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
+    @Override
+    public void showOrderDoingList(List<OrderEntity> list) {
+        doingAdapter.setData(list);
+    }
 
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment) {
-            mFragmentList.add(fragment);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getString(R.string.text_doing);
-                case 1:
-                    return getString(R.string.text_completed);
-                case 2:
-                    return getString(R.string.text_cancel);
-            }
-            return mFragmentList.get(position).getClass().getSimpleName();
-        }
+    @Override
+    public void showOrderDoneList(List<OrderEntity> list) {
+        doneAdapter.setData(list);
     }
 }

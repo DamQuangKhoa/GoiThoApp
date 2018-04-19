@@ -51,11 +51,11 @@ public class NotificationPresenter implements NotificationContract.Presenter {
     @Override
     public List<NotificationEntity> notificationList() {
         List<NotificationEntity> list = new ArrayList<>();
-        list.add(new NotificationEntity("Đơn hàng ABC", "Chọn thợ thành công", 0));
-        list.add(new NotificationEntity("Đơn hàng ABC", "Chọn thợ thành công", 0));
         for (int i = 0; i < 10; i++) {
-            list.add(new NotificationEntity(null, "Chào mừng bạn đến vói ứng dụng Gọi" +
-                    "thợ - sửa chữa mọi...", 1));
+            NotificationEntity notificationEntity = new NotificationEntity();
+            notificationEntity.setNotificationContent("Chọn thợ thành công");
+            notificationEntity.setNotificationName("Đơn hàng ABC");
+            list.add(notificationEntity);
         }
         return list;
     }

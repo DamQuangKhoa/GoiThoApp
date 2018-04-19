@@ -17,9 +17,9 @@ import android.widget.TextView;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
+import com.goitho.customerapp.dialogs.CustomDialogPromotion;
 import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.dashboard.DashboardFragment;
-import com.goitho.customerapp.screen.list_promotion.ListPromotionActivity;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 
@@ -65,6 +65,12 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @Bind(R.id.txt_title_toolbar)
     TextView txtTitleToolbar;
+
+    @Bind(R.id.txt_code)
+    TextView txtCode;
+
+    @Bind(R.id.img_promotion)
+    ImageView imgPromotion;
 
     private int type;
 
@@ -144,7 +150,7 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @OnClick(R.id.layout_promotion)
     public void promotion() {
-        startListPromotionActivity();
+        startDialogPromotion();
     }
 
     @OnClick(R.id.layout_capture)
@@ -171,7 +177,7 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
             if (parentFragment != null && parentFragment instanceof DashboardFragment) {
                 ((DashboardFragment) parentFragment).openHome();
             }
-        }else {
+        } else {
             DashboardActivity.start(getContext());
             getActivity().finish();
         }
@@ -197,8 +203,18 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     }
 
     @Override
-    public void startListPromotionActivity() {
-        ListPromotionActivity.start(getActivity());
+    public void startDialogPromotion() {
+        CustomDialogPromotion dialog = new CustomDialogPromotion();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setListener(new CustomDialogPromotion.OnClickListener() {
+            @Override
+            public void onClick(String promotion) {
+                if (!promotion.isEmpty()) {
+                    txtCode.setText(promotion);
+                    imgPromotion.setImageResource(R.drawable.ic_add_promotion);
+                }
+            }
+        });
     }
 
     public void startCamera() {

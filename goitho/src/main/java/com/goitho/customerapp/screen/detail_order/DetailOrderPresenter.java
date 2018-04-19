@@ -1,13 +1,10 @@
 package com.goitho.customerapp.screen.detail_order;
 
-import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.demo.architect.data.model.offline.ImageEntity;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-import com.goitho.customerapp.R;
-import com.goitho.customerapp.app.CoreApplication;
 
 import java.util.ArrayList;
 
@@ -54,9 +51,7 @@ public class DetailOrderPresenter implements DetailOrderContract.Presenter {
     public ArrayList<ImageEntity> imageList() {
         ArrayList<ImageEntity> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            ImageEntity imageEntity = new ImageEntity(0);
-            imageEntity.setBitmap(BitmapFactory.decodeResource(CoreApplication.getInstance().getResources(),
-                    R.drawable.image));
+            ImageEntity imageEntity = new ImageEntity("");
             list.add(imageEntity);
         }
         return list;

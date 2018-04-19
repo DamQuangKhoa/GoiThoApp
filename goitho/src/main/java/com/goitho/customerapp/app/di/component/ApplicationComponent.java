@@ -36,10 +36,6 @@ import com.goitho.customerapp.screen.order.OrderComponent;
 import com.goitho.customerapp.screen.order.OrderModule;
 import com.goitho.customerapp.screen.order_cancel.OrderCancelComponent;
 import com.goitho.customerapp.screen.order_cancel.OrderCancelModule;
-import com.goitho.customerapp.screen.order_doing.OrderDoingComponent;
-import com.goitho.customerapp.screen.order_doing.OrderDoingModule;
-import com.goitho.customerapp.screen.order_done.OrderDoneComponent;
-import com.goitho.customerapp.screen.order_done.OrderDoneModule;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationComponent;
 import com.goitho.customerapp.screen.phone_verification.PhoneVerificationModule;
 import com.goitho.customerapp.screen.post.PostComponent;
@@ -102,10 +98,6 @@ public interface ApplicationComponent {
     NotificationComponent plus(NotificationModule notificationModule);
 
     RegisterSuccessComponent plus(RegisterSuccessModule registerModule);
-
-    OrderDoingComponent plus(OrderDoingModule exhibitionDoingModule);
-
-    OrderDoneComponent plus(OrderDoneModule exhibitionDoingModule);
 
     ListPromotionComponent plus(ListPromotionModule exhibitionDoingModule);
 

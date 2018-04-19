@@ -206,6 +206,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/text_order_doing"
+                            android:textAllCaps="true"
                             android:textColor="@color/lightNavyTwo"
                             android:textSize="@dimen/text_17sp"
                             android:textStyle="bold" />

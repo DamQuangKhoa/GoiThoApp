@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black80"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_orange_background"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginBottom="@dimen/distance_34dp"
+            android:layout_marginEnd="@dimen/distance_28dp"
+            android:layout_marginStart="@dimen/distance_28dp"
+            android:layout_marginTop="@dimen/distance_22dp"
+            android:background="@drawable/bg_round_corner_edittext_white_background"
+            android:hint="@string/text_code_promotion"
+            android:paddingEnd="@dimen/distance_44dp"
+            android:paddingStart="@dimen/distance_17dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:id="@+id/et_promotion_code"
+            android:textSize="@dimen/text_14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ice_blue_background"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="@dimen/size_150dp"
+            android:layout_height="@dimen/size_36dp"
+            android:background="@drawable/bg_button_transparent_background"
+            android:text="@string/text_cancel"
+            android:layout_marginTop="@dimen/distance_20dp"
+            android:layout_marginStart="@dimen/distance_29dp"
+            android:layout_marginBottom="@dimen/distance_10dp"
+            android:textColor="@color/azulTwo"
+            android:id="@+id/btn_cancel"
+            android:textSize="@dimen/text_14sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="@dimen/size_150dp"
+            android:layout_height="@dimen/size_36dp"
+            android:background="@drawable/bg_button_blue_stroke_background"
+            android:text="@string/text_use_code"
+            android:layout_marginTop="@dimen/distance_20dp"
+            android:layout_marginStart="@dimen/distance_16dp"
+            android:layout_marginBottom="@dimen/distance_10dp"
+            android:layout_marginEnd="@dimen/distance_29dp"
+            android:id="@+id/btn_use_code"
+            android:textColor="@color/whiteThree"
+            android:textSize="@dimen/text_14sp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</LinearLayout>
