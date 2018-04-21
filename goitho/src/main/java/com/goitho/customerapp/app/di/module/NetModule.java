@@ -4,8 +4,10 @@ import android.app.Application;
 
 import com.demo.architect.data.repository.auth.remote.AuthApiInterface;
 import com.demo.architect.data.repository.auth.remote.AuthRepositoryImpl;
-import com.demo.architect.data.repository.base.remote.RemoteRepositoryImpl;
 import com.demo.architect.data.repository.base.remote.RemoteApiInterface;
+import com.demo.architect.data.repository.base.remote.RemoteRepositoryImpl;
+import com.demo.architect.data.repository.notification.remote.NotificationApiInterface;
+import com.demo.architect.data.repository.notification.remote.NotificationRepositoryImpl;
 import com.demo.architect.data.repository.order.remote.OrderApiInterface;
 import com.demo.architect.data.repository.order.remote.OrderRepositoryImpl;
 import com.demo.architect.data.repository.profile.remote.ProfileApiInterface;
@@ -120,6 +122,7 @@ public class NetModule {
                 .build();
         return new UploadRepositoryImpl(retrofit.create(UploadApiInterface.class));
     }
+
     @Provides
     @Singleton
     OrderRepositoryImpl provideOrderRetrofit(OkHttpClient okHttpClient, Gson gson, RxJavaCallAdapterFactory rxAdapterFactory) {
@@ -130,6 +133,18 @@ public class NetModule {
                 .client(okHttpClient)
                 .build();
         return new OrderRepositoryImpl(retrofit.create(OrderApiInterface.class));
+    }
+
+    @Provides
+    @Singleton
+    NotificationRepositoryImpl provideNotificationRetrofit(OkHttpClient okHttpClient, Gson gson, RxJavaCallAdapterFactory rxAdapterFactory) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(mBaseUrl)
+                .addCallAdapterFactory(rxAdapterFactory)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(okHttpClient)
+                .build();
+        return new NotificationRepositoryImpl(retrofit.create(NotificationApiInterface.class));
     }
 }
 

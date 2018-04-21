@@ -1,11 +1,14 @@
 package com.goitho.customerapp.app.di.module;
 
 import com.demo.architect.data.repository.auth.remote.AuthRepository;
+import com.demo.architect.data.repository.notification.remote.NotificationRepository;
 import com.demo.architect.data.repository.profile.remote.ProfileRepository;
 import com.demo.architect.data.repository.upload.remote.UploadRepository;
 import com.demo.architect.domain.usecase.ActiveResetPasswordUsecase;
 import com.demo.architect.domain.usecase.ActiveResetPhoneNumberUsecase;
 import com.demo.architect.domain.usecase.ActiveUserUsecase;
+import com.demo.architect.domain.usecase.GetListNotificationsUsecase;
+import com.demo.architect.domain.usecase.GetListPromotionsUsecase;
 import com.demo.architect.domain.usecase.LoginUsecase;
 import com.demo.architect.domain.usecase.PostImageUsecase;
 import com.demo.architect.domain.usecase.RegisterUsecase;
@@ -73,6 +76,16 @@ public class UseCaseModule {
     @Provides
     UpdateUserProfileUsecase provideUpdateUserProfileUsecase(ProfileRepository remoteRepository) {
         return new UpdateUserProfileUsecase(remoteRepository);
+    }
+
+    @Provides
+    GetListNotificationsUsecase provideGetListNotificationsUsecase(NotificationRepository remoteRepository) {
+        return new GetListNotificationsUsecase(remoteRepository);
+    }
+
+    @Provides
+    GetListPromotionsUsecase provideGetListPromotionsUsecase(NotificationRepository remoteRepository) {
+        return new GetListPromotionsUsecase(remoteRepository);
     }
 }
 

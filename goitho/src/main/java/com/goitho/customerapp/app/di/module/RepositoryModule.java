@@ -7,6 +7,8 @@ import com.demo.architect.data.repository.base.remote.RemoteRepository;
 import com.demo.architect.data.repository.base.remote.RemoteRepositoryImpl;
 import com.demo.architect.data.repository.base.local.DatabaseRealm;
 import com.demo.architect.data.repository.base.local.LocalRepositoryImpl;
+import com.demo.architect.data.repository.notification.remote.NotificationRepository;
+import com.demo.architect.data.repository.notification.remote.NotificationRepositoryImpl;
 import com.demo.architect.data.repository.order.remote.OrderRepository;
 import com.demo.architect.data.repository.order.remote.OrderRepositoryImpl;
 import com.demo.architect.data.repository.profile.remote.ProfileRepository;
@@ -61,6 +63,12 @@ public class RepositoryModule {
     @Provides
     @Singleton
     OrderRepository provideOrderRepository(OrderRepositoryImpl apiServiceImp) {
+        return apiServiceImp;
+    }
+
+    @Provides
+    @Singleton
+    NotificationRepository provideNotificationRepository(NotificationRepositoryImpl apiServiceImp) {
         return apiServiceImp;
     }
 }
