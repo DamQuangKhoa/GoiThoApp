@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class VerificationEntity implements Serializable {
     @SerializedName("userId")
     @Expose
-    private int userId;
+    private String userId;
 
     @SerializedName("active")
     @Expose
@@ -18,11 +18,11 @@ public class VerificationEntity implements Serializable {
     @Expose
     private String auth_code = "";
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

@@ -19,7 +19,7 @@ public class ActiveResetPasswordUsecase extends BaseUseCase {
 
     @Override
     protected Observable buildUseCaseObservable() {
-        int userId = ((RequestValue) requestValues).userId;
+        String userId = ((RequestValue) requestValues).userId;
         String authCode = ((RequestValue) requestValues).authCode;
         String newPassword = ((RequestValue) requestValues).newPassword;
         return remoteRepository.activeResetPassword(userId, authCode, newPassword);
@@ -56,11 +56,11 @@ public class ActiveResetPasswordUsecase extends BaseUseCase {
     }
 
     public static final class RequestValue implements RequestValues {
-        public final int userId;
+        public final String userId;
         public final String authCode;
         public final String newPassword;
 
-        public RequestValue(int userId, String authCode, String newPassword) {
+        public RequestValue(String userId, String authCode, String newPassword) {
             this.userId = userId;
             this.authCode = authCode;
             this.newPassword = newPassword;

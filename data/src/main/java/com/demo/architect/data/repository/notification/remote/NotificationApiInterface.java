@@ -22,7 +22,7 @@ public interface NotificationApiInterface {
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
-    @POST("https://callcenter2.goitho.com/api/v2/GoiTho/getListPromotion")
+    @POST("https://callcenter2.goitho.com/api/User/getListPromotion")
     Call<BaseResponse<ListPromotionsEntity>> getListPromotions(@Field("userId") String userId,
                                                                @Field("loaded") int loaded,
                                                                @Field("perload") int perload);

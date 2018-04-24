@@ -64,7 +64,7 @@ public class PhoneVerificationPresenter implements PhoneVerificationContract.Pre
 
 
     @Override
-    public void sendActive(int userId) {
+    public void sendActive(String userId) {
         sendActiveUsecase.executeIO(new SendActiveUsecase.RequestValue(userId),
                 new BaseUseCase.UseCaseCallback<SendActiveUsecase.ResponseValue,
                         SendActiveUsecase.ErrorValue>() {
@@ -83,7 +83,7 @@ public class PhoneVerificationPresenter implements PhoneVerificationContract.Pre
     }
 
     @Override
-    public void activeRegisterUser(int userId, String authCode) {
+    public void activeRegisterUser(String userId, String authCode) {
         activeUserUsecase.executeIO(new ActiveUserUsecase.RequestValue(userId, authCode),
                 new BaseUseCase.UseCaseCallback<ActiveUserUsecase.ResponseValue,
                         ActiveUserUsecase.ErrorValue>() {
@@ -103,7 +103,7 @@ public class PhoneVerificationPresenter implements PhoneVerificationContract.Pre
     }
 
     @Override
-    public void activeResetPassword(int userId, String authCode, String newPassword) {
+    public void activeResetPassword(String userId, String authCode, String newPassword) {
         activeResetPasswordUsecase.executeIO(new ActiveResetPasswordUsecase.RequestValue(userId, authCode, newPassword),
                 new BaseUseCase.UseCaseCallback<ActiveResetPasswordUsecase.ResponseValue,
                         ActiveResetPasswordUsecase.ErrorValue>() {
@@ -120,7 +120,7 @@ public class PhoneVerificationPresenter implements PhoneVerificationContract.Pre
     }
 
     @Override
-    public void activeResetPhone(int userId, String authCode, String newPhone) {
+    public void activeResetPhone(String userId, String authCode, String newPhone) {
 
     }
 }

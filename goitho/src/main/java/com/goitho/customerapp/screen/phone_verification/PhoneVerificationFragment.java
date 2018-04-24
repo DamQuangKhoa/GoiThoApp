@@ -50,7 +50,7 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
     @Bind(R.id.txt_error_code)
     TextView txtError;
 
-    private int userId;
+    private String userId;
 
     private String newPassword;
 
@@ -83,7 +83,7 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_phone_verification, container, false);
         ButterKnife.bind(this, view);
-        userId = getActivity().getIntent().getIntExtra(Constants.KEY_USER_ID, 0);
+        userId = getActivity().getIntent().getStringExtra(Constants.KEY_USER_ID);
         newPhone = getActivity().getIntent().getStringExtra(PhoneVerificationActivity.KEY_NEW_PHONE);
         newPassword = getActivity().getIntent().getStringExtra(PhoneVerificationActivity.KEY_NEW_PASSWORD);
         verificationType = getActivity().getIntent().getIntExtra(PhoneVerificationActivity.KEY_VERIFICATION_TYPE, 0);
@@ -141,23 +141,23 @@ public class PhoneVerificationFragment extends BaseFragment implements PhoneVeri
 
     @OnClick(R.id.btn_active)
     public void active() {
-//        String authCode = "";
-//        for (int i = 0; i < codeInput.getCode().length; i++) {
-//            authCode += codeInput.getCode()[i];
-//        }
-//        if (authCode.length() < 4) {
-//            showDialog(getString(R.string.text_code_null));
-//            return;
-//        }
-//
-//
-//        if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_REGISTER) {
-//            mPresenter.activeRegisterUser(userId, authCode);
-//        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PASSWORD) {
-//            mPresenter.activeResetPassword(userId, authCode, newPassword);
-//        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PHONE) {
-//            mPresenter.activeResetPhone(userId, authCode, newPhone);
-//        }
+        String authCode = "";
+        for (int i = 0; i < codeInput.getCode().length; i++) {
+            authCode += codeInput.getCode()[i];
+        }
+        if (authCode.length() < 4) {
+            showDialog(getString(R.string.text_code_null));
+            return;
+        }
+
+
+        if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_REGISTER) {
+            mPresenter.activeRegisterUser(userId, authCode);
+        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PASSWORD) {
+            mPresenter.activeResetPassword(userId, authCode, newPassword);
+        } else if (verificationType == PhoneVerificationActivity.VERIFICATION_TYPE_RESET_PHONE) {
+            mPresenter.activeResetPhone(userId, authCode, newPhone);
+        }
         startEditAddressActivity();
     }
 

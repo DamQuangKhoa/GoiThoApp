@@ -13,10 +13,10 @@ import com.goitho.customerapp.R;
 import com.goitho.customerapp.adapter.PromotionAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.app.di.Precondition;
+import com.goitho.customerapp.manager.ListPromotionsManager;
 import com.goitho.customerapp.screen.detail_promotion.DetailPromotionActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -70,7 +70,7 @@ public class PromotionFragment extends BaseFragment implements PromotionContract
                 new PromotionAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(PromotionEntity item) {
-                        DetailPromotionActivity.start(getContext());
+                        DetailPromotionActivity.start(getContext(), item.getPromotionId());
                     }
                 });
         LinearLayoutManager layoutManager
@@ -114,7 +114,12 @@ public class PromotionFragment extends BaseFragment implements PromotionContract
 
 
     @Override
-    public void showPromotionList(List<PromotionEntity> list) {
-        adapter.setData(list);
+    public void showPromotionList() {
+        adapter.setData(ListPromotionsManager.getInstance().getListPromotions());
+    }
+
+    @Override
+    public void showError() {
+
     }
 }

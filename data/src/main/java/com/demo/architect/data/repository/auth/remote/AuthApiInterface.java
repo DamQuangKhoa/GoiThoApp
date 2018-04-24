@@ -17,24 +17,25 @@ import retrofit2.http.POST;
  */
 
 public interface AuthApiInterface {
+    @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
-    @POST("https://callcenter2.goitho.com/api/Tho/Login")
+    @POST("https://callcenter2.goitho.com/api/User/Login")
     Call<BaseResponse<UserEntity>> login(@Field("userName") String username, @Field("passWord") String password);
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
-    @POST("https://callcenter2.goitho.com/api/Tho/ActiveUser")
+    @POST("https://callcenter2.goitho.com/api/User/ActiveUser")
     Call<BaseResponse> activeUser(@Field("userId") String userId,
                                   @Field("auth_code") String authCode);
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
-    @POST("https://callcenter2.goitho.com/api/Tho/SendActive")
+    @POST("https://callcenter2.goitho.com/api/User/SendActive")
     Call<BaseResponse<SendActiveEntity>> sendActive(@Field("userId") String userId);
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
-    @POST("https://callcenter2.goitho.com/api/Tho/RegisterUser")
+    @POST("https://callcenter2.goitho.com/api/User/RegisterUser")
     Call<BaseResponse<VerificationEntity>> register(@Field("userName") String username,
                                                     @Field("passWord") String password,
                                                     @Field("mobilePhone") String mobilePhone);

@@ -87,7 +87,7 @@ public class EditProfileFragment extends BaseFragment implements EditProfileCont
 
     @OnClick(R.id.btn_update)
     public void updateProfile() {
-        PhoneVerificationActivity.startFromResetPhone(getContext(),0,"");
+        mPresenter.editAccount(etPassword.getText().toString(), etPhone.getText().toString());
     }
 
     @Override
@@ -120,6 +120,11 @@ public class EditProfileFragment extends BaseFragment implements EditProfileCont
     @Override
     public void showError() {
 
+    }
+
+    @Override
+    public void startPhoneVerificationActivity(String userId, String newPhone) {
+        PhoneVerificationActivity.startFromResetPhone(getContext(), userId, newPhone);
     }
 
 }

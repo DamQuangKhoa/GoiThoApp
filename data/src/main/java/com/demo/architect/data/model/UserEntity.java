@@ -4,19 +4,21 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class UserEntity implements Serializable {
     @SerializedName("userInfo")
     @Expose
     private UserInfo userInfo;
 
+    public UserEntity() {
+    }
+
     public UserEntity(UserInfo userInfo){
         this.userInfo = userInfo;
     }
 
     public String getUserId() {
-        return userInfo == null ? "" : userInfo.userId;
+        return this.userInfo == null ? "" : userInfo.userId;
     }
 
     public void setUserId(String userId) {
@@ -39,20 +41,20 @@ public class UserEntity implements Serializable {
         this.userInfo.userFullName = userFullName;
     }
 
-    public String getAddress() {
-        return userInfo == null ? "" : userInfo.address;
+    public String getAddress1() {
+        return userInfo == null ? "" : userInfo.address1;
     }
 
-    public void setAddress(String address) {
-        this.userInfo.address = address;
+    public void setAddress1(String address1) {
+        this.userInfo.address1 = address1;
     }
 
-    public String getUserIdentify() {
-        return userInfo == null ? "" : userInfo.userIdentify;
+    public String getAddress2() {
+        return userInfo == null ? "" : userInfo.address2;
     }
 
-    public void setUserIdentify(String userIdentify) {
-        this.userInfo.userIdentify = userIdentify;
+    public void setAddress2(String address2) {
+        this.userInfo.address2 = address2;
     }
 
     public String getEmail() {
@@ -61,22 +63,6 @@ public class UserEntity implements Serializable {
 
     public void setEmail(String email) {
         this.userInfo.email = email;
-    }
-
-    public String getImageIDFrontUrl() {
-        return userInfo == null ? "" : userInfo.imageIDFrontUrl;
-    }
-
-    public void setImageIDFrontUrl(String imageIDFrontUrl) {
-        this.userInfo.imageIDFrontUrl = imageIDFrontUrl;
-    }
-
-    public String getImageIDBehind() {
-        return userInfo == null ? "" : userInfo.imageIDBehind;
-    }
-
-    public void setImageIDBehind(String imageIDBehind) {
-        this.userInfo.imageIDBehind = imageIDBehind;
     }
 
     public String getUserName() {
@@ -95,22 +81,6 @@ public class UserEntity implements Serializable {
         this.userInfo.mobilePhone = mobilePhone;
     }
 
-    public String getUserEduLevel() {
-        return userInfo == null ? "" : userInfo.userEduLevel;
-    }
-
-    public void setUserEduLevel(String userEduLevel) {
-        this.userInfo.userEduLevel = userEduLevel;
-    }
-
-    public ArrayList<Field> getListFields() {
-        return userInfo == null ? new ArrayList<Field>() : userInfo.listFields;
-    }
-
-    public void setListFields(ArrayList<Field> listFields) {
-        this.userInfo.listFields = listFields;
-    }
-
     public class UserInfo {
         @SerializedName("userId")
         @Expose
@@ -124,25 +94,17 @@ public class UserEntity implements Serializable {
         @Expose
         private String userFullName;
 
-        @SerializedName("address")
+        @SerializedName("address1")
         @Expose
-        private String address;
+        private String address1;
 
-        @SerializedName("userIdentify")
+        @SerializedName("address2")
         @Expose
-        private String userIdentify;
+        private String address2;
 
         @SerializedName("email")
         @Expose
         private String email;
-
-        @SerializedName("imageIDFrontUrl")
-        @Expose
-        private String imageIDFrontUrl;
-
-        @SerializedName("imageIDBehind")
-        @Expose
-        private String imageIDBehind;
 
         @SerializedName("userName")
         @Expose
@@ -152,26 +114,6 @@ public class UserEntity implements Serializable {
         @Expose
         private String mobilePhone;
 
-        @SerializedName("userEduLevel")
-        @Expose
-        private String userEduLevel;
-
-        @SerializedName("listFields")
-        @Expose
-        private ArrayList<Field> listFields;
-
-        public UserInfo (){
-
-        }
     }
 
-    public class Field {
-        @SerializedName("id")
-        @Expose
-        private String id;
-
-        @SerializedName("name")
-        @Expose
-        private String name;
-    }
 }

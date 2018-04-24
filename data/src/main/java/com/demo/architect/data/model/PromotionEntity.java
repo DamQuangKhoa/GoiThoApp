@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class PromotionEntity {
     @SerializedName("promotionId")
     @Expose
-    private int promotionId;
+    private String promotionId;
 
     @SerializedName("promotionName")
     @Expose
@@ -16,9 +16,9 @@ public class PromotionEntity {
     @Expose
     private String promotionContent;
 
-    @SerializedName("status")
+    @SerializedName("price")
     @Expose
-    private int status;
+    private String price;
 
     @SerializedName("promotionDate")
     @Expose
@@ -32,36 +32,18 @@ public class PromotionEntity {
     @Expose
     private String rule;
 
-    @SerializedName("bonus")
-    @Expose
-    private String bonus;
-
 
     public PromotionEntity() {
     }
 
-    public PromotionEntity(int promotionId, String promotionName, String promotionContent,
-                           int status, String promotionDate, String imageUrl, String rule, String bonus) {
-        this.promotionId = promotionId;
-        this.promotionName = promotionName;
-        this.promotionContent = promotionContent;
-        this.status = status;
-        this.promotionDate = promotionDate;
-        this.imageUrl = imageUrl;
-        this.rule = rule;
-        this.bonus = bonus;
-    }
 
-    public int getPromotionId() {
+
+    public String getPromotionId() {
         return promotionId;
     }
 
     public String getPromotionContent() {
         return promotionContent;
-    }
-
-    public int getStatus() {
-        return status;
     }
 
     public String getPromotionDate() {
@@ -76,12 +58,12 @@ public class PromotionEntity {
         return rule;
     }
 
-    public String getBonus() {
-        return bonus;
-    }
-
     public String getPromotionName() {
         return promotionName;
+    }
+
+    public String getPrice() {
+        return price;
     }
 }
 

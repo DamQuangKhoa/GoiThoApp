@@ -12,7 +12,7 @@ public interface LoginContract {
         void startRegisterActivity();
         void startDashboardActivity();
         void startDialogForgetPass();
-        void startPhoneVerificationActivity(int userId, String newPassword);
+        void startPhoneVerificationActivity(String userId, String newPassword);
         void showError();
         void showErrorResetPassword();
 

@@ -9,7 +9,7 @@ import com.goitho.customerapp.app.base.BaseView;
 
 public interface RegisterContract {
     interface View extends BaseView<Presenter> {
-        void startPhoneVerificationActivity(int userId);
+        void startPhoneVerificationActivity(String userId);
         void startLoginActivity();
         void showErrorAccountExists();
     }

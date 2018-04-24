@@ -3,11 +3,11 @@ package com.goitho.customerapp.screen.promotion;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.demo.architect.data.model.PromotionEntity;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.demo.architect.domain.usecase.BaseUseCase;
+import com.demo.architect.domain.usecase.GetListPromotionsUsecase;
+import com.goitho.customerapp.manager.ListPromotionsManager;
+import com.goitho.customerapp.manager.UserManager;
 
 import javax.inject.Inject;
 
@@ -19,13 +19,15 @@ public class PromotionPresenter implements PromotionContract.Presenter {
 
     private final String TAG = PromotionPresenter.class.getName();
     private final PromotionContract.View view;
+    private final GetListPromotionsUsecase getListPromotionsUsecase;
 
     @Inject
     LocalRepository localRepository;
 
     @Inject
-    PromotionPresenter(@NonNull PromotionContract.View view) {
+    PromotionPresenter(@NonNull PromotionContract.View view, GetListPromotionsUsecase getListPromotionsUsecase) {
         this.view = view;
+        this.getListPromotionsUsecase = getListPromotionsUsecase;
     }
 
     @Inject
@@ -37,7 +39,7 @@ public class PromotionPresenter implements PromotionContract.Presenter {
     @Override
     public void start() {
         Log.d(TAG, TAG + ".start() called");
-        view.showPromotionList(promotionList());
+        getListPromotion(0,20);
     }
 
     @Override
@@ -46,14 +48,22 @@ public class PromotionPresenter implements PromotionContract.Presenter {
     }
 
     @Override
-    public List<PromotionEntity> promotionList() {
-        List<PromotionEntity> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            list.add(new PromotionEntity(i, "Chương trình khuyến mãi",
-                    "Mã khuyến mãi NEW034 - Tặng 50.000đ cho tài khoản đăng " +
-                            "ký mới.", 1, "01/03/2018",
-                    "", "", "100.000"));
-        }
-        return list;
+    public void getListPromotion(int loaded, int perload) {
+        String userId = UserManager.getInstance().getUser() != null ?UserManager.getInstance().getUser().getUserId():
+                null;
+        getListPromotionsUsecase.executeIO(new GetListPromotionsUsecase.RequestValue(userId, loaded, perload),
+                new BaseUseCase.UseCaseCallback
+                        <GetListPromotionsUsecase.ResponseValue, GetListPromotionsUsecase.ErrorValue>() {
+                    @Override
+                    public void onSuccess(GetListPromotionsUsecase.ResponseValue successResponse) {
+                        ListPromotionsManager.getInstance().setListPromotions(successResponse.getListPromotionEntity().getListPromotion());
+                        view.showPromotionList();
+                    }
+
+                    @Override
+                    public void onError(GetListPromotionsUsecase.ErrorValue errorResponse) {
+                        view.showError();
+                    }
+                });
     }
 }

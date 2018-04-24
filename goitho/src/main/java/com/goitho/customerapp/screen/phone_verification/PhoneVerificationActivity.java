@@ -34,7 +34,7 @@ public class PhoneVerificationActivity extends BaseActivity {
 
     PhoneVerificationFragment fragment;
 
-    public static void startFromResetPhone(Context context, int userId, String newPhone) {
+    public static void startFromResetPhone(Context context, String userId, String newPhone) {
         Intent intent = new Intent(context, PhoneVerificationActivity.class);
         intent.putExtra(Constants.KEY_USER_ID, userId);
         intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_RESET_PHONE);
@@ -42,7 +42,7 @@ public class PhoneVerificationActivity extends BaseActivity {
         context.startActivity(intent);
     }
 
-    public static void startFromResetPassword(Context context, int userId, String newPassword) {
+    public static void startFromResetPassword(Context context, String userId, String newPassword) {
         Intent intent = new Intent(context, PhoneVerificationActivity.class);
         intent.putExtra(Constants.KEY_USER_ID, userId);
         intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_RESET_PASSWORD);
@@ -50,7 +50,7 @@ public class PhoneVerificationActivity extends BaseActivity {
         context.startActivity(intent);
     }
 
-    public static void startFromRegister(Context context, int userId) {
+    public static void startFromRegister(Context context, String userId) {
         Intent intent = new Intent(context, PhoneVerificationActivity.class);
         intent.putExtra(KEY_VERIFICATION_TYPE, VERIFICATION_TYPE_REGISTER);
         intent.putExtra(Constants.KEY_USER_ID, userId);

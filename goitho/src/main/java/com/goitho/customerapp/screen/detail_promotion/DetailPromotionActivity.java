@@ -19,13 +19,16 @@ import javax.inject.Inject;
  */
 
 public class DetailPromotionActivity extends BaseActivity {
+    public final static String KEY_PROMOTION_ID = "promotion_id";
+
     @Inject
     DetailPromotionPresenter DetailPromotionPresenter;
 
     DetailPromotionFragment fragment;
 
-    public static void start(Context context) {
+    public static void start(Context context, String promotionId) {
         Intent intent = new Intent(context, DetailPromotionActivity.class);
+        intent.putExtra(KEY_PROMOTION_ID, promotionId);
         context.startActivity(intent);
     }
 

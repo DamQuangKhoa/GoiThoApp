@@ -19,12 +19,12 @@ public interface PhoneVerificationContract {
     }
 
     interface Presenter extends BasePresenter {
-        void sendActive(int userId);
+        void sendActive(String userId);
 
-        void activeRegisterUser(int userId, String authCode);
+        void activeRegisterUser(String userId, String authCode);
 
-        void activeResetPassword(int userId, String authCode, String newPassword);
+        void activeResetPassword(String userId, String authCode, String newPassword);
 
-        void activeResetPhone(int userId, String authCode, String newPhone);
+        void activeResetPhone(String userId, String authCode, String newPhone);
     }
 }

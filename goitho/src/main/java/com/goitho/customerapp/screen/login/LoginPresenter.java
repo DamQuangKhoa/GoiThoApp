@@ -4,12 +4,12 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
 import com.demo.architect.domain.usecase.BaseUseCase;
 import com.demo.architect.domain.usecase.LoginUsecase;
 import com.demo.architect.domain.usecase.ResetPasswordUsecase;
 import com.goitho.customerapp.app.CoreApplication;
+import com.goitho.customerapp.manager.UserManager;
 import com.google.gson.Gson;
 
 import javax.inject.Inject;
@@ -59,27 +59,25 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void login(String phone, String password) {
 
-//        view.showProgressBar();
-//        loginUsecase.executeIO(new LoginUsecase.RequestValue(phone, password), new BaseUseCase.UseCaseCallback
-//                <LoginUsecase.ResponseValue, LoginUsecase.ErrorValue>() {
-//            @Override
-//            public void onSuccess(LoginUsecase.ResponseValue successResponse) {
-//                Log.d(TAG, new Gson().toJson(successResponse.getEntity()));
-//
-//                //Save user entity to shared preferences
-//                SharedPreferenceHelper.getInstance(CoreApplication.getInstance()).pushUserObject(successResponse.getEntity());
-//
-//                //Go to dashboard activity
-//                view.startDashboardActivity();
-//                view.hideProgressBar();
-//            }
-//
-//            @Override
-//            public void onError(LoginUsecase.ErrorValue errorResponse) {
-//                view.showError();
-//                view.hideProgressBar();
-//            }
-//        });
+        view.showProgressBar();
+        loginUsecase.executeIO(new LoginUsecase.RequestValue(phone, password), new BaseUseCase.UseCaseCallback
+                <LoginUsecase.ResponseValue, LoginUsecase.ErrorValue>() {
+            @Override
+            public void onSuccess(LoginUsecase.ResponseValue successResponse) {
+                Log.d(TAG, new Gson().toJson(successResponse.getEntity()));
+                //Save user entity to shared preferences
+                UserManager.getInstance().setUser(successResponse.getEntity());
+                //Go to dashboard activity
+                view.startDashboardActivity();
+                view.hideProgressBar();
+            }
+
+            @Override
+            public void onError(LoginUsecase.ErrorValue errorResponse) {
+                view.showError();
+                view.hideProgressBar();
+            }
+        });
     }
 
     @Override

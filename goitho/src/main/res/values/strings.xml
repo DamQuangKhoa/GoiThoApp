@@ -26,7 +26,6 @@
     <string name="text_choose_farmer">Lựa chọn nông hộ</string>
     <string name="text_famer_id">Mã nông hộ:</string>
     <string name="text_address">Địa chỉ 1</string>
-    <string name="text_address_2">Địa chỉ 2</string>
     <string name="text_diary">Nhật ký sản xuất</string>
     <string name="text_search">Tìm kiếm</string>
     <string name="text_close">Đóng</string>
@@ -73,7 +72,7 @@
     <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
     <string name="text_id_promotion_booking_success">Mã Khuyến mãi:</string>
-    <string name="text_id_promotion_booking">Mã Khuyến mãi</string>
+    <string name="text_id_promotion_booking">Mã Khuyến mãi </string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -124,8 +123,12 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_username">Tên đăng nhập</string>
     <string name="text_personal">Cá nhân</string>
     <string name="text_name">Họ tên</string>
+    <string name="text_name_null">Họ tên không được để trống</string>
+    <string name="text_address_null">Địa chỉ sửa chữa không được để trống</string>
+    <string name="text_email_null">Địa chỉ email không được để trống</string>
     <string name="text_phone">Số điện thoại</string>
     <string name="text_password">Mật khẩu</string>
+    <string name="text_password_profile">Mật khẩu:</string>
     <string name="text_hi">Xin chào</string>
     <string name="text_login_to_continue">Đăng nhập để tiếp tục</string>
     <string name="text_dont_have_account">Chưa có tài khoản? Đăng ký ngay</string>
@@ -245,5 +248,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="text_code_null">Bạn chưa nhập đủ mã xác minh, vui \n lòng nhập lại</string>
     <string name="text_account_exist">Tài khoản đã tồn tại, vui lòng \n Đăng nhập hoặc chọn Quên mật khẩu</string>
     <string name="text_add_id_promotion">Thêm mã khuyến mãi</string>
+    <string name="text_address2">Địa chỉ 2</string>
 
 </resources>

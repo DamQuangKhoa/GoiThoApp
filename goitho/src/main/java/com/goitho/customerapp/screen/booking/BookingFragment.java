@@ -1,38 +1,53 @@
 package com.goitho.customerapp.screen.booking;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.goitho.customerapp.R;
+import com.goitho.customerapp.adapter.ImageOrderAdapter;
 import com.goitho.customerapp.app.base.BaseFragment;
-import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
 import com.goitho.customerapp.dialogs.CustomDialogPromotion;
 import com.goitho.customerapp.screen.dashboard.DashboardActivity;
 import com.goitho.customerapp.screen.dashboard.DashboardFragment;
 import com.goitho.customerapp.screen.register.RegisterActivity;
 import com.goitho.customerapp.util.Precondition;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static android.app.Activity.RESULT_OK;
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by Skull on 27/11/2017.
@@ -44,7 +59,7 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     private static final int REQUEST_CODE_TAKE_IMAGE = 113;
     private static final int REQUEST_CODE_PICK_IMAGE = 123;
     private BookingContract.Presenter mPresenter;
-
+    private ImageOrderAdapter adapter;
     @Bind(R.id.layout1)
     LinearLayout layout1;
 
@@ -72,6 +87,27 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
     @Bind(R.id.img_promotion)
     ImageView imgPromotion;
 
+    @Bind(R.id.edt_description)
+    EditText edtDescripton;
+
+    @Bind(R.id.txt_date)
+    TextView txtDate;
+
+    @Bind(R.id.txt_hour)
+    TextView txtHour;
+
+    @Bind(R.id.edt_name)
+    EditText edtName;
+
+    @Bind(R.id.edt_phone)
+    EditText edtPhone;
+
+    @Bind(R.id.edt_address)
+    EditText edtAddress;
+
+    @Bind(R.id.rv_image)
+    RecyclerView rvImage;
+
     private int type;
 
     public BookingFragment() {
@@ -97,6 +133,7 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         ButterKnife.bind(this, view);
         type = getActivity().getIntent().getIntExtra(BookingActivity.KEY_HOME, 0);
         initView();
+        initRecyclerView();
         return view;
     }
 
@@ -108,6 +145,21 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         } else {
             txtTitleToolbar.setPadding(dpAsPixels, 0, 0, 0);
         }
+    }
+
+    private void initRecyclerView() {
+        adapter = new ImageOrderAdapter(new ArrayList<Bitmap>(), getActivity(),
+                new ImageOrderAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Bitmap itemAsABitmap) {
+                        adapter.removeData(itemAsABitmap);
+                    }
+                });
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        rvImage.setLayoutManager(layoutManager);
+        rvImage.setItemAnimator(new DefaultItemAnimator());
+        rvImage.setAdapter(adapter);
     }
 
     @Override
@@ -145,7 +197,9 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @OnClick(R.id.layout_booking)
     public void booking() {
-        startBookingSuccess();
+        mPresenter.booking(edtDescripton.getText().toString(), txtDate.getText().toString(),
+                txtHour.getText().toString(), txtCode.getText().toString(), edtAddress.getText().toString(),
+                edtPhone.getText().toString(), edtName.getText().toString(),adapter.getListAddedBitmaps());
     }
 
     @OnClick(R.id.layout_promotion)
@@ -153,21 +207,75 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
         startDialogPromotion();
     }
 
+    @OnClick(R.id.img_choose_time)
+    public void chooseTime() {
+        final Calendar currentDate = Calendar.getInstance();
+        new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                String date = (dayOfMonth < 10) ? "0" + dayOfMonth : dayOfMonth + "";
+                String month = ((monthOfYear + 1) < 10) ? "0" + (monthOfYear + 1) : (monthOfYear + 1) + "";
+                txtDate.setText(date + "/" + month + "/" + year);
+                new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+                        txtHour.setText(hourOfDay + ":" + minute + ":" + "00");
+                    }
+                }, currentDate.get(Calendar.HOUR_OF_DAY), currentDate.get(Calendar.MINUTE), false).show();
+            }
+        }, currentDate.get(Calendar.YEAR), currentDate.get(Calendar.MONTH), currentDate.get(Calendar.DATE)).show();
+    }
+
     @OnClick(R.id.layout_capture)
     public void capture() {
-        CustomDialogLibraryCapture dialog = new CustomDialogLibraryCapture();
-        dialog.show(getActivity().getFragmentManager(), TAG);
-        dialog.setListener(new CustomDialogLibraryCapture.OnOpenCameraListener() {
+        showAlertDialogImage(REQUEST_CODE_PICK_IMAGE, REQUEST_CODE_TAKE_IMAGE);
+    }
+
+    public void showAlertDialogImage(int codePickImage, int codeTakeImage) {
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    1);
+            return;
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage(getString(R.string.text_add_image));
+        builder.setCancelable(false);
+        builder.setPositiveButton(getString(R.string.text_pick_picture),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                        photoPickerIntent.setType("image/*");
+                        startActivityForResult(photoPickerIntent, codePickImage);
+                        dialogInterface.dismiss();
+                    }
+                });
+        builder.setNegativeButton(getString(R.string.text_take_picture),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                        startActivityForResult(takePicture, codeTakeImage);
+                        dialog.dismiss();
+                    }
+                });
+        builder.setNeutralButton(getString(R.string.text_cancel), new DialogInterface.OnClickListener() {
             @Override
-            public void onOpenCamera() {
-                startCamera();
-            }
-        }, new CustomDialogLibraryCapture.OnOpenGalleryListener() {
-            @Override
-            public void onOpenGallery() {
-                startGallery();
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
             }
         });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        alertDialog.show();
+
     }
 
     @OnClick(R.id.layout_go_home)
@@ -196,7 +304,6 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
 
     @Override
     public void startBookingSuccess() {
-
         llSuccess.setVisibility(View.VISIBLE);
         layout2.setVisibility(View.GONE);
         view.setVisibility(View.GONE);
@@ -210,57 +317,45 @@ public class BookingFragment extends BaseFragment implements BookingContract.Vie
             @Override
             public void onClick(String promotion) {
                 if (!promotion.isEmpty()) {
-                    txtCode.setText(promotion);
-                    imgPromotion.setImageResource(R.drawable.ic_add_promotion);
+                    mPresenter.checkSaleId(promotion);
                 }
             }
         });
     }
 
-    public void startCamera() {
-
-        Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(takePicture, REQUEST_CODE_TAKE_IMAGE);
+    @Override
+    public void showSaleId(String code) {
+        txtCode.setText(code);
+        imgPromotion.setImageResource(R.drawable.ic_add_promotion);
     }
 
-    public void startGallery() {
-        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-        photoPickerIntent.setType("image/*");
-        startActivityForResult(photoPickerIntent, REQUEST_CODE_PICK_IMAGE);
-
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_PICK_IMAGE) {
-            final Uri imageUri = data.getData();
-            // Picasso.with(getContext()).load(imageUri).transform(new CircleTransform()).into(imgAvatar);
 
-        }
+        if (resultCode == RESULT_OK) {
+            Bitmap selectedImage = null;
+            Uri uri = data.getData();
+            if (uri == null) {
+                selectedImage = (Bitmap) data.getExtras().get("data");
+            } else {
+                try {
+                    InputStream imageStream = getActivity().getContentResolver()
+                            .openInputStream(uri);
+                    selectedImage = BitmapFactory.decodeStream(imageStream);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
 
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_IMAGE) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            //Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
-
+            if (selectedImage != null) {
+                adapter.addData(selectedImage);
+                rlImage.setVisibility(View.GONE);
+                rvImage.setVisibility(View.VISIBLE);
+            }
         }
     }
 
-    private static File persistImage(Bitmap bitmap, String name) {
-        File filesDir = getApplicationContext().getFilesDir();
-        File imageFile = new File(filesDir, name + ".png");
-
-        OutputStream os;
-        try {
-            os = new FileOutputStream(imageFile);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
-            os.flush();
-            os.close();
-        } catch (Exception e) {
-            Log.e(TAG, "Error writing bitmap", e);
-        }
-
-        return imageFile;
-    }
 
 }

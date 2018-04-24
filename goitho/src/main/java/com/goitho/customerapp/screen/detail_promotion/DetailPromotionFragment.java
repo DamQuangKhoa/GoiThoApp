@@ -7,12 +7,15 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.demo.architect.data.model.PromotionEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.screen.support_center.SupportCenterActivity;
 import com.goitho.customerapp.util.Precondition;
+import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,6 +32,20 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
 
     @Bind(R.id.txt_id_promotion)
     TextView txtPromotionCode;
+
+    @Bind(R.id.txt_title)
+    TextView txtTitle;
+
+    @Bind(R.id.txt_expiry_date)
+    TextView txtExpiryDate;
+
+    @Bind(R.id.txt_rule)
+    TextView txtRule;
+
+    @Bind(R.id.iv_cover)
+    ImageView ivCover;
+
+    private String promotionId;
 
     public DetailPromotionFragment() {
         // Required empty public constructor
@@ -55,14 +72,15 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail_promotion, container, false);
-
+        promotionId = getActivity().getIntent().getStringExtra(DetailPromotionActivity.KEY_PROMOTION_ID);
         ButterKnife.bind(this, view);
-        getIntent();
-        txtPromotionCode.setText(Html.fromHtml(getResources().getString(R.string.promotionCode)));
+        initVars();
+
         return view;
     }
 
-    private void getIntent() {
+    private void initVars() {
+        mPresenter.getDetailPromotion(promotionId);
     }
 
     @Override
@@ -111,9 +129,16 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
     }
 
     @Override
-    public void finishActivity() {
-        getActivity().finish();
+    public void showPromotion(PromotionEntity promotion) {
+        txtTitle.setText(promotion.getPromotionName());
+        txtPromotionCode.setText(Html.fromHtml("<b>" + getActivity().getString(R.string.text_id_promotion_booking) + " "
+                + promotion.getPromotionId() + "</b> " + promotion.getPromotionContent()));
+        txtExpiryDate.setText(promotion.getPromotionDate());
+        txtRule.setText(promotion.getRule());
+        Picasso.with(getContext()).load(promotion.getImageUrl()).into(ivCover);
+
     }
+
 
     @OnClick(R.id.img_back)
     public void back() {

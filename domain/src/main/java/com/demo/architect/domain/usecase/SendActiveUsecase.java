@@ -20,7 +20,7 @@ public class SendActiveUsecase extends BaseUseCase {
 
     @Override
     protected Observable buildUseCaseObservable() {
-        int userId = ((RequestValue) requestValues).userId;
+        String userId = ((RequestValue) requestValues).userId;
         return remoteRepository.sendActive(userId+"");
     }
 
@@ -56,9 +56,9 @@ public class SendActiveUsecase extends BaseUseCase {
     }
 
     public static final class RequestValue implements RequestValues {
-        public final int userId;
+        public final String userId;
 
-        public RequestValue(int userId) {
+        public RequestValue(String userId) {
             this.userId = userId;
         }
     }

@@ -2,20 +2,24 @@ package com.goitho.customerapp.app.di.module;
 
 import com.demo.architect.data.repository.auth.remote.AuthRepository;
 import com.demo.architect.data.repository.notification.remote.NotificationRepository;
+import com.demo.architect.data.repository.order.remote.OrderRepository;
 import com.demo.architect.data.repository.profile.remote.ProfileRepository;
 import com.demo.architect.data.repository.upload.remote.UploadRepository;
 import com.demo.architect.domain.usecase.ActiveResetPasswordUsecase;
 import com.demo.architect.domain.usecase.ActiveResetPhoneNumberUsecase;
 import com.demo.architect.domain.usecase.ActiveUserUsecase;
+import com.demo.architect.domain.usecase.BookingUsecase;
+import com.demo.architect.domain.usecase.CheckSaleUsecase;
+import com.demo.architect.domain.usecase.GetInfoPointUsecase;
 import com.demo.architect.domain.usecase.GetListNotificationsUsecase;
 import com.demo.architect.domain.usecase.GetListPromotionsUsecase;
 import com.demo.architect.domain.usecase.LoginUsecase;
-import com.demo.architect.domain.usecase.PostImageUsecase;
 import com.demo.architect.domain.usecase.RegisterUsecase;
 import com.demo.architect.domain.usecase.ResetPasswordUsecase;
 import com.demo.architect.domain.usecase.ResetPhoneNumberUsecase;
 import com.demo.architect.domain.usecase.SendActiveUsecase;
 import com.demo.architect.domain.usecase.UpdateUserProfileUsecase;
+import com.demo.architect.domain.usecase.UploadImageSetCalenderUsecase;
 
 import dagger.Module;
 import dagger.Provides;
@@ -41,11 +45,6 @@ public class UseCaseModule {
     @Provides
     RegisterUsecase provideRegisterUsecase(AuthRepository remoteRepository) {
         return new RegisterUsecase(remoteRepository);
-    }
-
-    @Provides
-    PostImageUsecase providePostImageUsecase(UploadRepository remoteRepository) {
-        return new PostImageUsecase(remoteRepository);
     }
 
     @Provides
@@ -86,6 +85,26 @@ public class UseCaseModule {
     @Provides
     GetListPromotionsUsecase provideGetListPromotionsUsecase(NotificationRepository remoteRepository) {
         return new GetListPromotionsUsecase(remoteRepository);
+    }
+
+    @Provides
+    BookingUsecase provideBookingUsecase(OrderRepository remoteRepository) {
+        return new BookingUsecase(remoteRepository);
+    }
+
+    @Provides
+    CheckSaleUsecase provideCheckSaleUsecase(OrderRepository remoteRepository) {
+        return new CheckSaleUsecase(remoteRepository);
+    }
+
+    @Provides
+    UploadImageSetCalenderUsecase provideUploadImageSetCalenderUsecase(UploadRepository remoteRepository) {
+        return new UploadImageSetCalenderUsecase(remoteRepository);
+    }
+
+    @Provides
+    GetInfoPointUsecase provideGetInfoPointUsecase(ProfileRepository remoteRepository) {
+        return new GetInfoPointUsecase(remoteRepository);
     }
 }
 

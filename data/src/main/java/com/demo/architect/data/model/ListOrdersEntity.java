@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ListOrdersEntity implements Serializable {
@@ -31,4 +30,5 @@ public class ListOrdersEntity implements Serializable {
     public void setListOrders(ArrayList<OrderEntity> listOrders) {
         this.listOrders = listOrders;
     }
+
 }

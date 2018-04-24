@@ -1,5 +1,7 @@
 package com.goitho.customerapp.screen.user;
 
+import com.demo.architect.data.model.PointEntity;
+import com.demo.architect.data.model.UserEntity;
 import com.goitho.customerapp.app.base.BasePresenter;
 import com.goitho.customerapp.app.base.BaseView;
 
@@ -14,10 +16,13 @@ public interface UserContract {
         void startDialogLogOut();
         void startDashboardActivity();
         void showError();
-        void showContent();
+        void showInfoUser(UserEntity userEntity);
+        void showInfoPoint(PointEntity pointEntity);
     }
 
     interface Presenter extends BasePresenter {
         void logout();
+        UserEntity getInfo();
+        void getInfoPoint();
     }
 }

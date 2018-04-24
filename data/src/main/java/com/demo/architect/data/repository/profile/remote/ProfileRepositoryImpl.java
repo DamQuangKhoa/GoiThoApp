@@ -1,6 +1,7 @@
 package com.demo.architect.data.repository.profile.remote;
 
 import com.demo.architect.data.model.BaseResponse;
+import com.demo.architect.data.model.PointEntity;
 import com.demo.architect.data.model.ResetPasswordEntity;
 import com.demo.architect.data.model.UpdateUserEntity;
 import com.demo.architect.data.model.UserEntity;
@@ -119,6 +120,26 @@ public class ProfileRepositoryImpl implements ProfileRepository {
         }
     }
 
+
+    private void handlePointResponse(Call<BaseResponse<PointEntity>> call, Subscriber subscriber) {
+        try {
+            BaseResponse<PointEntity> response = call.execute().body();
+            if (!subscriber.isUnsubscribed()) {
+                if (response != null) {
+                    subscriber.onNext(response);
+                } else {
+                    subscriber.onError(new Exception("Network Error!"));
+                }
+                subscriber.onCompleted();
+            }
+        } catch (Exception e) {
+            if (!subscriber.isUnsubscribed()) {
+                subscriber.onError(e);
+                subscriber.onCompleted();
+            }
+        }
+    }
+
     @Override
     public Observable<BaseResponse<ResetPasswordEntity>> resetPassword(final String username, final String phone) {
         return Observable.create(new Observable.OnSubscribe<BaseResponse<ResetPasswordEntity>>() {
@@ -140,7 +161,7 @@ public class ProfileRepositoryImpl implements ProfileRepository {
     }
 
     @Override
-    public Observable<BaseResponse> activeResetPassword(final int userId, final String authCode, final String newPassword) {
+    public Observable<BaseResponse> activeResetPassword(final String userId, final String authCode, final String newPassword) {
         return Observable.create(new Observable.OnSubscribe<BaseResponse>() {
             @Override
             public void call(Subscriber<? super BaseResponse> subscriber) {
@@ -150,7 +171,7 @@ public class ProfileRepositoryImpl implements ProfileRepository {
     }
 
     @Override
-    public Observable<BaseResponse> activeResetPhoneNumber(final int userId, final String authCode, final String newPhoneNumber) {
+    public Observable<BaseResponse> activeResetPhoneNumber(final String userId, final String authCode, final String newPhoneNumber) {
         return Observable.create(new Observable.OnSubscribe<BaseResponse>() {
             @Override
             public void call(Subscriber<? super BaseResponse> subscriber) {
@@ -167,13 +188,20 @@ public class ProfileRepositoryImpl implements ProfileRepository {
                 handleUpdateUserResponse(mRemoteApiInterface.updateUserInfo(entity.getUserId(),
                         entity.getUserFullName(),
                         entity.getAvatarImageUrl(),
-                        entity.getAddress(),
-                        entity.getUserIdentify(),
+                        entity.getAddress1(),
+                        entity.getAddress2(),
                         entity.getEmail(),
-                        entity.getImageIDFrontUrl(),
-                        entity.getImageIDBehind(),
-                        entity.getListFields(),
-                        entity.getUserEduLevel()), subscriber);
+                        entity.getMobilePhone()), subscriber);
+            }
+        });
+    }
+
+    @Override
+    public Observable<BaseResponse<PointEntity>> getInfoPoint(final String userId) {
+        return Observable.create(new Observable.OnSubscribe<BaseResponse<PointEntity>>() {
+            @Override
+            public void call(Subscriber<? super BaseResponse<PointEntity>> subscriber) {
+                handlePointResponse(mRemoteApiInterface.getInfoPoint(userId),subscriber);
             }
         });
     }

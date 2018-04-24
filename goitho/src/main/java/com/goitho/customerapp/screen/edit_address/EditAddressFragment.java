@@ -2,6 +2,7 @@ package com.goitho.customerapp.screen.edit_address;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLibraryCapture;
+import com.goitho.customerapp.dialogs.CustomNotiDialog;
 import com.goitho.customerapp.screen.register_success.RegisterSuccessActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
@@ -22,6 +24,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.Calendar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -55,6 +58,8 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
     @Bind(R.id.img_avatar)
     ImageView imgAvatar;
 
+    private Bitmap bitmap;
+
     public EditAddressFragment() {
         // Required empty public constructor
     }
@@ -83,8 +88,20 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
 
     @OnClick(R.id.btn_complete)
     public void complete() {
-        startRegisterSuccessActivity();
-        getActivity().finish();
+        if (etName.getText().toString().equals("")) {
+            startDialogNoti(getActivity().getString(R.string.text_name_null));
+            return;
+        }
+        if (etAddress1.getText().toString().equals("") && etAddress2.getText().toString().equals("")) {
+            startDialogNoti(getActivity().getString(R.string.text_address_null));
+            return;
+        } if (etEmail.getText().toString().equals("")) {
+            startDialogNoti(getActivity().getString(R.string.text_email_null));
+            return;
+        }
+        mPresenter.editProfile(bitmap, etName.getText().toString(),
+                etAddress1.getText().toString(), etAddress2.getText().toString(),
+                etEmail.getText().toString());
     }
 
     @OnClick(R.id.layoutCapture)
@@ -127,6 +144,7 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
     @Override
     public void startRegisterSuccessActivity() {
         RegisterSuccessActivity.start(getContext());
+        getActivity().finish();
     }
 
     @Override
@@ -173,12 +191,13 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_PICK_IMAGE) {
             final Uri imageUri = data.getData();
             Picasso.with(getContext()).load(imageUri).transform(new CircleTransform()).into(imgAvatar);
-
+            bitmap = BitmapFactory.decodeFile(imageUri.getPath());
         }
 
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_IMAGE) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            Picasso.with(getContext()).load(persistImage(photo, "yenyen")).transform(new CircleTransform()).into(imgAvatar);
+            bitmap = (Bitmap) data.getExtras().get("data");
+            Picasso.with(getContext()).load(persistImage(bitmap, Calendar.getInstance().toString()))
+                    .transform(new CircleTransform()).into(imgAvatar);
         }
     }
 
@@ -199,6 +218,11 @@ public class EditAddressFragment extends BaseFragment implements EditAddressCont
         return imageFile;
     }
 
+    public void startDialogNoti(String content) {
+        CustomNotiDialog dialog = new CustomNotiDialog();
+        dialog.show(getActivity().getFragmentManager(), TAG);
+        dialog.setContent(content);
+    }
 
 
 }

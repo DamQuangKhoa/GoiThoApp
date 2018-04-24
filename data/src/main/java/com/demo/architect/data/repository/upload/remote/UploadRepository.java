@@ -1,11 +1,7 @@
 package com.demo.architect.data.repository.upload.remote;
 
-import android.net.Uri;
-
 import com.demo.architect.data.model.BaseResponse;
 import com.demo.architect.data.model.UploadEntity;
-
-import java.io.File;
 
 import rx.Observable;
 
@@ -14,5 +10,5 @@ import rx.Observable;
  */
 
 public interface UploadRepository {
-    Observable<UploadEntity> uploadImage(File file);
+    Observable<BaseResponse<UploadEntity>> uploadImageSetCalendar(String userId, String orderId, String image);
 }

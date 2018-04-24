@@ -7,17 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.demo.architect.data.model.PointEntity;
+import com.demo.architect.data.model.UserEntity;
 import com.goitho.customerapp.R;
 import com.goitho.customerapp.app.base.BaseFragment;
 import com.goitho.customerapp.dialogs.CustomDialogLogOut;
 import com.goitho.customerapp.screen.dashboard.DashboardActivity;
-import com.goitho.customerapp.screen.dashboard.DashboardFragment;
 import com.goitho.customerapp.screen.edit_address.EditAddressActivity;
 import com.goitho.customerapp.screen.edit_profile.EditProfileActivity;
-import com.goitho.customerapp.screen.landing.LandingActivity;
 import com.goitho.customerapp.util.Precondition;
 import com.goitho.customerapp.widgets.CircleTransform;
 import com.squareup.picasso.Picasso;
@@ -39,11 +38,14 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     @Bind(R.id.txt_username)
     TextView txtUsername;
 
-    @Bind(R.id.txt_username2)
-    TextView txtUsername2;
+    @Bind(R.id.txt_name2)
+    TextView txtName2;
 
-    @Bind(R.id.txt_address)
+    @Bind(R.id.txt_address1)
     TextView txtAddress;
+
+    @Bind(R.id.txt_address2)
+    TextView txtAddress2;
 
     @Bind(R.id.img_avatar)
     ImageView imgAvatar;
@@ -51,14 +53,11 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     @Bind(R.id.txt_phone)
     TextView txtPhone;
 
-    @Bind(R.id.txt_phone2)
-    TextView txtPhone2;
+    @Bind(R.id.txt_money)
+    TextView txtMoney;
 
-    @Bind(R.id.txt_value)
-    TextView txtValue;
-
-    @Bind(R.id.txt_edited)
-    TextView txtEdited;
+    @Bind(R.id.txt_success)
+    TextView txtSuccess;
 
     @Bind(R.id.txt_point)
     TextView txtPoint;
@@ -69,15 +68,8 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     @Bind(R.id.txt_name)
     TextView txtName;
 
-    @Bind(R.id.txt_name2)
-    TextView txtName2;
-
     @Bind(R.id.txt_email)
     TextView txtEmail;
-
-    @Bind(R.id.layout_add_address)
-    RelativeLayout rlAddAddress;
-
 
     public UserFragment() {
         // Required empty public constructor
@@ -104,7 +96,6 @@ public class UserFragment extends BaseFragment implements UserContract.View {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_user, container, false);
         ButterKnife.bind(this, view);
-
         return view;
     }
 
@@ -141,10 +132,6 @@ public class UserFragment extends BaseFragment implements UserContract.View {
         startEditAddressActivity();
     }
 
-    @OnClick(R.id.btn_delete)
-    public void deleteAddress() {
-
-    }
 
     @OnClick(R.id.btn_edit_info)
     public void editInfo() {
@@ -208,8 +195,22 @@ public class UserFragment extends BaseFragment implements UserContract.View {
     }
 
     @Override
-    public void showContent() {
-        txtUsername.setText("thangnt");
-        Picasso.with(getContext()).load(R.drawable.image).transform(new CircleTransform()).into(imgAvatar);
+    public void showInfoUser(UserEntity user) {
+        txtUsername.setText(getActivity().getString(R.string.text_username)+": "+user.getUserName());
+        txtName2.setText(getActivity().getString(R.string.text_name)+": "+user.getUserFullName());
+        Picasso.with(getContext()).load(user.getAvatarImageUrl()).transform(new CircleTransform()).into(imgAvatar);
+        txtAddress.setText(getActivity().getString(R.string.text_address)+": "+user.getAddress1());
+        txtAddress2.setText(getActivity().getString(R.string.text_address2)+": "+user.getAddress2());
+        txtEmail.setText(getActivity().getString(R.string.text_email)+": "+user.getEmail());
+        txtPhone.setText(getActivity().getString(R.string.text_phone)+": "+user.getMobilePhone());
+        txtName.setText(getActivity().getString(R.string.text_name)+": "+user.getUserFullName());
+
+    }
+
+    @Override
+    public void showInfoPoint(PointEntity pointEntity) {
+        txtSuccess.setText(pointEntity.getTotalSuccess()+"");
+        txtMoney.setText(pointEntity.getTotalSuccess()+" vnđ");
+        txtPoint.setText(pointEntity.getTotalPoint()+"");
     }
 }

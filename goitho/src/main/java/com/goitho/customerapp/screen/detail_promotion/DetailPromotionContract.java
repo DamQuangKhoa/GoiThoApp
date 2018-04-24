@@ -1,5 +1,6 @@
 package com.goitho.customerapp.screen.detail_promotion;
 
+import com.demo.architect.data.model.PromotionEntity;
 import com.goitho.customerapp.app.base.BasePresenter;
 import com.goitho.customerapp.app.base.BaseView;
 
@@ -10,9 +11,11 @@ import com.goitho.customerapp.app.base.BaseView;
 public interface DetailPromotionContract {
     interface View extends BaseView<Presenter> {
         void showError();
-        void finishActivity();
+
+        void showPromotion(PromotionEntity entity);
     }
 
-        interface Presenter extends BasePresenter {
+    interface Presenter extends BasePresenter {
+        void getDetailPromotion(String promotionId);
     }
 }

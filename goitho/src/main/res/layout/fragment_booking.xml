@@ -174,9 +174,10 @@
                                 <EditText
                                     android:layout_width="match_parent"
                                     android:layout_height="@dimen/size_40dp"
+                                    android:id="@+id/edt_description"
                                     android:background="@drawable/bg_round_corner_edittext_white_background"
                                     android:hint="@string/text_describe"
-                                    android:paddingEnd="@dimen/distance_44dp"
+                                    android:paddingEnd="@dimen/distance_17dp"
                                     android:paddingStart="@dimen/distance_17dp"
                                     android:textAllCaps="false"
                                     android:textColor="@color/black"
@@ -184,13 +185,7 @@
                                     android:textSize="@dimen/text_14sp"
                                     android:textStyle="normal" />
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_centerVertical="true"
-                                    android:layout_marginEnd="@dimen/distance_17dp"
-                                    android:src="@drawable/ic_micro" />
+
                             </RelativeLayout>
 
                             <TextView
@@ -249,7 +244,7 @@
                                     android:weightSum="1">
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
+                                        android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:orientation="vertical">
@@ -275,6 +270,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
+                                        android:id="@+id/img_choose_time"
                                         android:src="@drawable/ic_down" />
                                 </LinearLayout>
 
@@ -318,7 +314,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_capture_booking" />
+
                         </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/rv_image"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -497,6 +500,7 @@
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/size_40dp"
+                                android:id="@+id/edt_address"
                                 android:layout_marginTop="@dimen/distance_10dp"
                                 android:background="@drawable/bg_round_corner_edittext_white_background"
                                 android:drawablePadding="@dimen/distance_10dp"
@@ -516,6 +520,8 @@
                                 android:layout_marginTop="@dimen/distance_10dp"
                                 android:background="@drawable/bg_round_corner_edittext_white_background"
                                 android:drawablePadding="@dimen/distance_10dp"
+                                android:id="@+id/edt_phone"
+                                android:inputType="phone"
                                 android:drawableStart="@drawable/ic_phone"
                                 android:hint="@string/text_phone_repair"
                                 android:paddingEnd="@dimen/distance_44dp"

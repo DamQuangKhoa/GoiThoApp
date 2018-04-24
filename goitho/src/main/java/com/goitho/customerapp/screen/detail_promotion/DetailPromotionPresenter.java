@@ -3,11 +3,8 @@ package com.goitho.customerapp.screen.detail_promotion;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.demo.architect.data.helper.SharedPreferenceHelper;
 import com.demo.architect.data.repository.base.local.LocalRepository;
-import com.demo.architect.domain.usecase.BaseUseCase;
-import com.goitho.customerapp.app.CoreApplication;
-import com.goitho.customerapp.constants.Constants;
+import com.goitho.customerapp.manager.ListPromotionsManager;
 
 import javax.inject.Inject;
 
@@ -45,4 +42,8 @@ public class DetailPromotionPresenter implements DetailPromotionContract.Present
     }
 
 
+    @Override
+    public void getDetailPromotion(String promotionId) {
+        view.showPromotion(ListPromotionsManager.getInstance().getPromotionEntityById(promotionId));
+    }
 }
