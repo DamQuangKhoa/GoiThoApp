@@ -6,6 +6,7 @@
     <ImageView
         android:layout_width="@dimen/size_40dp"
         android:layout_height="@dimen/size_40dp"
+        android:scaleType="centerCrop"
         android:id="@+id/img_item"/>
     <TextView
         android:id="@+id/txt_close"

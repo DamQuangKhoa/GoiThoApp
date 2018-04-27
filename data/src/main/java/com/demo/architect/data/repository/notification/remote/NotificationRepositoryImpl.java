@@ -7,6 +7,7 @@ import com.demo.architect.data.model.NotificationEntity;
 
 import java.util.List;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import rx.Observable;
 import rx.Subscriber;
@@ -92,7 +93,12 @@ public class NotificationRepositoryImpl implements NotificationRepository {
         return Observable.create(new Observable.OnSubscribe<BaseResponse<ListPromotionsEntity>>() {
             @Override
             public void call(Subscriber<? super BaseResponse<ListPromotionsEntity>> subscriber) {
-                handleGetListPromotionsResponse(mRemoteApiInterface.getListPromotions(userId, loaded, perLoad), subscriber);
+
+                RequestBody body = RequestBody.create(okhttp3.MediaType
+                                                      .parse("application/json; charset=utf-8"),
+                                "{\"userId\":\""+userId+"\",\"loaded\":\""+loaded+"\",\"" +
+                                             "perload\":\"" +perLoad+"\"}");
+                handleGetListPromotionsResponse(mRemoteApiInterface.getListPromotions(body), subscriber);
             }
         });
     }

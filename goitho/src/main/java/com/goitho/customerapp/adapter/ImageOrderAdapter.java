@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.goitho.customerapp.R;
+import com.goitho.customerapp.widgets.CircleTransform;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +62,6 @@ public class ImageOrderAdapter extends RecyclerView.Adapter<ImageOrderAdapter.Im
     private void setDataToViews(ImageRealViewHolder holder, int position) {
 
         holder.imgReal.setImageBitmap(list.get(position));
-
 
     }
 

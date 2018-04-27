@@ -3,6 +3,7 @@ package com.demo.architect.domain.usecase;
 import android.util.Log;
 
 import com.demo.architect.data.model.BaseResponse;
+import com.demo.architect.data.model.ListSaleEntity;
 import com.demo.architect.data.model.SaleEntity;
 import com.demo.architect.data.repository.order.remote.OrderRepository;
 
@@ -28,7 +29,7 @@ public class CheckSaleUsecase extends BaseUseCase {
 
     @Override
     protected Subscriber buildUseCaseSubscriber() {
-        return new Subscriber<BaseResponse<SaleEntity>>() {
+        return new Subscriber<BaseResponse<ListSaleEntity>>() {
             @Override
             public void onCompleted() {
                 Log.d(TAG, "onCompleted");
@@ -43,10 +44,10 @@ public class CheckSaleUsecase extends BaseUseCase {
             }
 
             @Override
-            public void onNext(BaseResponse<SaleEntity> data) {
+            public void onNext(BaseResponse<ListSaleEntity> data) {
                 Log.d(TAG, "onNext: " + String.valueOf(data.getCode()));
                 if (useCaseCallback != null) {
-                    SaleEntity result = data.getResponse();
+                    ListSaleEntity result = data.getResponse();
                     if (result != null) {
                         useCaseCallback.onSuccess(new ResponseValue(result));
                     } else {
@@ -65,13 +66,13 @@ public class CheckSaleUsecase extends BaseUseCase {
     }
 
     public static final class ResponseValue implements ResponseValues {
-        private SaleEntity entity;
+        private ListSaleEntity entity;
 
-        public ResponseValue(SaleEntity entity) {
+        public ResponseValue(ListSaleEntity entity) {
             this.entity = entity;
         }
 
-        public SaleEntity getEntity() {
+        public ListSaleEntity getEntity() {
             return entity;
         }
     }

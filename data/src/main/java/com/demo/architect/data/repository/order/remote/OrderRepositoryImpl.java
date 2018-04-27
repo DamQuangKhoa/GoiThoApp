@@ -2,6 +2,7 @@ package com.demo.architect.data.repository.order.remote;
 
 import com.demo.architect.data.model.BaseResponse;
 import com.demo.architect.data.model.ListBookingEntity;
+import com.demo.architect.data.model.ListSaleEntity;
 import com.demo.architect.data.model.SaleEntity;
 
 import retrofit2.Call;
@@ -41,9 +42,9 @@ public class OrderRepositoryImpl implements OrderRepository {
         }
     }
 
-    private void handleSaleResponse(Call<BaseResponse<SaleEntity>> call, Subscriber subscriber) {
+    private void handleSaleResponse(Call<BaseResponse<ListSaleEntity>> call, Subscriber subscriber) {
         try {
-            BaseResponse<SaleEntity> response = call.execute().body();
+            BaseResponse<ListSaleEntity> response = call.execute().body();
             if (!subscriber.isUnsubscribed()) {
                 if (response != null) {
                     subscriber.onNext(response);
@@ -76,10 +77,10 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     @Override
-    public Observable<BaseResponse<SaleEntity>> checkSaleId(final String saleId) {
-        return Observable.create(new Observable.OnSubscribe<BaseResponse<SaleEntity>>() {
+    public Observable<BaseResponse<ListSaleEntity>> checkSaleId(final String saleId) {
+        return Observable.create(new Observable.OnSubscribe<BaseResponse<ListSaleEntity>>() {
             @Override
-            public void call(Subscriber<? super BaseResponse<SaleEntity>> subscriber) {
+            public void call(Subscriber<? super BaseResponse<ListSaleEntity>> subscriber) {
                 handleSaleResponse(mRemoteApiInterface.checkSaleId(saleId), subscriber);
             }
         });

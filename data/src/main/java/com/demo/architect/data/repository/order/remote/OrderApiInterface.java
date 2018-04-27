@@ -3,6 +3,7 @@ package com.demo.architect.data.repository.order.remote;
 
 import com.demo.architect.data.model.BaseResponse;
 import com.demo.architect.data.model.ListBookingEntity;
+import com.demo.architect.data.model.ListSaleEntity;
 import com.demo.architect.data.model.SaleEntity;
 
 import retrofit2.Call;
@@ -31,6 +32,6 @@ public interface OrderApiInterface {
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded
     @POST("https://callcenter2.goitho.com/api/User/checkSaleId")
-    Call<BaseResponse<SaleEntity>> checkSaleId(@Field("saleId") String saleId);
+    Call<BaseResponse<ListSaleEntity>> checkSaleId(@Field("saleId") String saleId);
 
 }

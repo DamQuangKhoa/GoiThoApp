@@ -2,6 +2,7 @@ package com.demo.architect.data.repository.order.remote;
 
 import com.demo.architect.data.model.BaseResponse;
 import com.demo.architect.data.model.ListBookingEntity;
+import com.demo.architect.data.model.ListSaleEntity;
 import com.demo.architect.data.model.SaleEntity;
 
 import rx.Observable;
@@ -15,5 +16,5 @@ public interface OrderRepository {
                                                             String dateFix, String saleId, String addressFix,
                                                             String phoneFix, String nameFix);
 
-    Observable<BaseResponse<SaleEntity>> checkSaleId(String saleId);
+    Observable<BaseResponse<ListSaleEntity>> checkSaleId(String saleId);
 }

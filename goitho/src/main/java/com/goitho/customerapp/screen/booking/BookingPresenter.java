@@ -78,7 +78,8 @@ public class BookingPresenter implements BookingContract.Presenter {
     @Override
     public void booking(String contentFix, String dateFix, String timeFix, String saleId,
                         String addressFix, String phoneFix, String nameFix, List<Bitmap> listAddedBitmaps) {
-        String userId = UserManager.getInstance().getUser().getUserId() != null ? UserManager.getInstance().getUser().getUserId() : "";
+
+        String userId = UserManager.getInstance().getUser() != null ? UserManager.getInstance().getUser().getUserId() : "";
         view.showProgressBar();
         bookingUsecase.executeIO(new BookingUsecase.RequestValue(userId,
                         contentFix, dateFix, saleId, addressFix, phoneFix, nameFix),

@@ -50,8 +50,8 @@ public class PromotionPresenter implements PromotionContract.Presenter {
     @Override
     public void getListPromotion(int loaded, int perload) {
         String userId = UserManager.getInstance().getUser() != null ?UserManager.getInstance().getUser().getUserId():
-                null;
-        getListPromotionsUsecase.executeIO(new GetListPromotionsUsecase.RequestValue(userId, loaded, perload),
+                "";
+        getListPromotionsUsecase.executeIO(new GetListPromotionsUsecase.RequestValue(userId.trim(), loaded, perload),
                 new BaseUseCase.UseCaseCallback
                         <GetListPromotionsUsecase.ResponseValue, GetListPromotionsUsecase.ErrorValue>() {
                     @Override
