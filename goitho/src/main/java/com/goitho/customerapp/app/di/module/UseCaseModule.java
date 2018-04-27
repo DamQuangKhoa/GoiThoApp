@@ -13,6 +13,7 @@ import com.demo.architect.domain.usecase.CheckSaleUsecase;
 import com.demo.architect.domain.usecase.GetInfoPointUsecase;
 import com.demo.architect.domain.usecase.GetListNotificationsUsecase;
 import com.demo.architect.domain.usecase.GetListPromotionsUsecase;
+import com.demo.architect.domain.usecase.GetListPromotionsWithUserIdUsecase;
 import com.demo.architect.domain.usecase.LoginUsecase;
 import com.demo.architect.domain.usecase.RegisterUsecase;
 import com.demo.architect.domain.usecase.ResetPasswordUsecase;
@@ -83,8 +84,8 @@ public class UseCaseModule {
     }
 
     @Provides
-    GetListPromotionsUsecase provideGetListPromotionsUsecase(NotificationRepository remoteRepository) {
-        return new GetListPromotionsUsecase(remoteRepository);
+    GetListPromotionsWithUserIdUsecase provideGetListPromotionsWithUserIdUsecase(NotificationRepository remoteRepository) {
+        return new GetListPromotionsWithUserIdUsecase(remoteRepository);
     }
 
     @Provides
@@ -105,6 +106,11 @@ public class UseCaseModule {
     @Provides
     GetInfoPointUsecase provideGetInfoPointUsecase(ProfileRepository remoteRepository) {
         return new GetInfoPointUsecase(remoteRepository);
+    }
+
+    @Provides
+    GetListPromotionsUsecase provideGetListPromotionsUsecase(NotificationRepository remoteRepository) {
+        return new GetListPromotionsUsecase(remoteRepository);
     }
 }
 

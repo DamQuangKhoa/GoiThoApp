@@ -85,11 +85,20 @@ public class NotificationRepositoryImpl implements NotificationRepository {
     }
 
 
+    @Override
+    public Observable<BaseResponse<ListPromotionsEntity>> getListPromotions(final int loaded, final int perLoad) {
+        return Observable.create(new Observable.OnSubscribe<BaseResponse<ListPromotionsEntity>>() {
+            @Override
+            public void call(Subscriber<? super BaseResponse<ListPromotionsEntity>> subscriber) {
+                handleGetListPromotionsResponse(mRemoteApiInterface.getListPromotions(loaded, perLoad), subscriber);
+            }
+        });
+    }
 
     @Override
-    public Observable<BaseResponse<ListPromotionsEntity>> getListPromotions(final String userId,
-                                                                              final int loaded,
-                                                                              final int perLoad) {
+    public Observable<BaseResponse<ListPromotionsEntity>> getListPromotionsWithUserId(final String userId,
+                                                                                      final int loaded,
+                                                                                      final int perLoad) {
         return Observable.create(new Observable.OnSubscribe<BaseResponse<ListPromotionsEntity>>() {
             @Override
             public void call(Subscriber<? super BaseResponse<ListPromotionsEntity>> subscriber) {
@@ -98,7 +107,7 @@ public class NotificationRepositoryImpl implements NotificationRepository {
                                                       .parse("application/json; charset=utf-8"),
                                 "{\"userId\":\""+userId+"\",\"loaded\":\""+loaded+"\",\"" +
                                              "perload\":\"" +perLoad+"\"}");
-                handleGetListPromotionsResponse(mRemoteApiInterface.getListPromotions(body), subscriber);
+                handleGetListPromotionsResponse(mRemoteApiInterface.getListPromotionsWithUserId(body), subscriber);
             }
         });
     }

@@ -53,7 +53,7 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prom
     }
 
     private void setDataToViews(PromotionHolder holder, int position) {
-        Picasso.with(context).load(R.drawable.img_promotion).into(holder.imgCover);
+        Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imgCover);
         holder.txtTitle.setText(list.get(position).getPromotionName());
         holder.txtDate.setText(list.get(position).getPromotionDate());
         holder.txtIdPromotion.setText(list.get(position).getPromotionContent()+"");

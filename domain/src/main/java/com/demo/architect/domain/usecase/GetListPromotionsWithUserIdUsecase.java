@@ -12,19 +12,20 @@ import rx.Subscriber;
 /**
  * Created by Skull on 12/04/2018.
  */
-public class GetListPromotionsUsecase extends BaseUseCase {
-    private static final String TAG = GetListPromotionsUsecase.class.getSimpleName();
+public class GetListPromotionsWithUserIdUsecase extends BaseUseCase {
+    private static final String TAG = GetListPromotionsWithUserIdUsecase.class.getSimpleName();
     private final NotificationRepository remoteRepository;
 
-    public GetListPromotionsUsecase(NotificationRepository remoteRepository) {
+    public GetListPromotionsWithUserIdUsecase(NotificationRepository remoteRepository) {
         this.remoteRepository = remoteRepository;
     }
 
     @Override
     protected Observable buildUseCaseObservable() {
+        String userId = ((RequestValue) requestValues).userId;
         int loaded = ((RequestValue) requestValues).loaded;
         int perLoad = ((RequestValue) requestValues).perLoad;
-        return remoteRepository.getListPromotions(loaded, perLoad);
+        return remoteRepository.getListPromotionsWithUserId(userId, loaded, perLoad);
     }
 
     @Override
@@ -59,10 +60,12 @@ public class GetListPromotionsUsecase extends BaseUseCase {
     }
 
     public static final class RequestValue implements RequestValues {
+        public final String userId;
         public final int loaded;
         public final int perLoad;
 
-        public RequestValue(int loaded, int perLoad) {
+        public RequestValue(String userId, int loaded, int perLoad) {
+            this.userId = userId;
             this.loaded = loaded;
             this.perLoad = perLoad;
         }

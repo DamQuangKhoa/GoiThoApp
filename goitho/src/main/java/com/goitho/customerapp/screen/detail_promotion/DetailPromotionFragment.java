@@ -131,7 +131,7 @@ public class DetailPromotionFragment extends BaseFragment implements DetailPromo
     @Override
     public void showPromotion(PromotionEntity promotion) {
         txtTitle.setText(promotion.getPromotionName());
-        txtPromotionCode.setText(Html.fromHtml("<b>" + getActivity().getString(R.string.text_id_promotion_booking) + " "
+        txtPromotionCode.setText(Html.fromHtml("<b>" + getActivity().getString(R.string.text_id_promotion_booking) + " - "
                 + promotion.getPromotionId() + "</b> " + promotion.getPromotionContent()));
         txtExpiryDate.setText(promotion.getPromotionDate());
         txtRule.setText(promotion.getRule());

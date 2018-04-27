@@ -22,16 +22,16 @@ import retrofit2.http.POST;
 
 public interface NotificationApiInterface {
 
-//    @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
-//    @FormUrlEncoded
-//    @POST("https://callcenter2.goitho.com/api/User/getListPromotion")
-//    Call<BaseResponse<ListPromotionsEntity>> getListPromotions(@Field("userId") String userId,
-//                                                               @Field("loaded") int loaded,
-//                                                               @Field("perload") int perload);
+    @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
+    @FormUrlEncoded
+    @POST("https://callcenter2.goitho.com/api/User/getListPromotion")
+    Call<BaseResponse<ListPromotionsEntity>> getListPromotions(
+            @Field("loaded") int loaded,
+            @Field("perload") int perload);
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @POST("https://callcenter2.goitho.com/api/User/getListPromotion")
-    Call<BaseResponse<ListPromotionsEntity>> getListPromotions(@Body RequestBody requestBody);
+    Call<BaseResponse<ListPromotionsEntity>> getListPromotionsWithUserId(@Body RequestBody requestBody);
 
     @Headers("Authorization: Basic Y2FsbGNlbnRlcl9nb2l0aG86Y2FsbCEjQCNAJCNAQEA=")
     @FormUrlEncoded

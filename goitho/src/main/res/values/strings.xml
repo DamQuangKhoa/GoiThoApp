@@ -71,8 +71,8 @@
     <string name="text_time">Thời gian</string>
     <string name="text_info_contact">Thông tin liên hệ</string>
     <string name="text_picture">Ảnh hiện trạng</string>
-    <string name="text_id_promotion_booking_success">Mã Khuyến mãi:</string>
-    <string name="text_id_promotion_booking">Mã Khuyến mãi </string>
+    <string name="text_id_promotion_booking_success">Mã khuyến mãi:</string>
+    <string name="text_id_promotion_booking">Mã khuyến mãi </string>
     <string name="text_rating">Đánh giá</string>
     <string name="text_updated">đã cập nhật lúc</string>
     <string name="day">Ngày</string>
@@ -239,8 +239,6 @@ Hãy theo dõi thông báo để nhận thông tin \n update trên hệ thống 
     <string name="stacklayoutmanager">com.goitho.customerapp.widgets.customStackView.StackLayoutManager</string>
 
     <string name="promotion">Khuyến mãi</string>
-
-    <string name="promotionCode"><b>Mã khuyến mãi NEW034</b>-Tặng 50.000đ cho tài khoản đăng ký mới</string>
 
     <string name="text_new_password">Mật khẩu mới</string>
     <string name="text_re_enter">Nhập lại</string>

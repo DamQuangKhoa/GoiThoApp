@@ -14,8 +14,8 @@ import rx.Observable;
  */
 
 public interface NotificationRepository {
-
-    Observable<BaseResponse<ListPromotionsEntity>> getListPromotions(String userId, int loaded, int perLoad);
+    Observable<BaseResponse<ListPromotionsEntity>> getListPromotions(int loaded, int perLoad);
+    Observable<BaseResponse<ListPromotionsEntity>> getListPromotionsWithUserId(String userId, int loaded, int perLoad);
 
     Observable<BaseResponse<ListNotificationsEntity>> getListNotifications(String userId, int loaded, int perLoad);
 
